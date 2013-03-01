@@ -10,7 +10,10 @@
         <div class="container">
             <div class="row">
                 <div class="twelvecol">
-                    <p>FIRST Scout: Login</p>
+                    <p class="title">FIRST Scout: Login</p>
+                    <?php if(isset($_GET('error'))) {
+                       echo '<p>' . $_GET('error') . '</p>'; 
+                    }?>
                     <form method="post" action="login/submit.php">
                         <input type="text" name="team_number" placeholder="Team Number"><br> 
                         <input type="email" name="user_email" placeholder="Email Address"><br>
