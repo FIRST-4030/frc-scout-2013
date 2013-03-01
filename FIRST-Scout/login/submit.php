@@ -3,9 +3,9 @@
     $userEmail = $_POST['user_email'];
     $userPass = $_POST['user_password'];
     
-    $teamNum = intval($teamNum);
+    $teamNumInt = intval($teamNum);
     
-    if($teamNum == 0) {
+    if($teamNumInt == 0) {
         header('location: /index.php?error=' . urlencode("NullPointerException: team number not valid."));
     }
     
