@@ -1,0 +1,22 @@
+/* 
+    Document   : style
+    Created on : Mar 1, 2013, 12:09:44 AM
+    Author     : DrCoffey
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+
+body {
+    background: rgb(200, 200, 200);
+    font-family: Ubuntu, Arial, sans-serif;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
