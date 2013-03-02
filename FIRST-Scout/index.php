@@ -36,7 +36,7 @@
                 <input type="text" name="team_number" id="teamNumber" class="form_widgets" /><br> 
                 <input type="email" name="user_email" id="emailAddress" class="form_widgets" /><br>
                 <input type="password" name="user_password" id="password" class="form_widgets" /><br>
-                <input type="submit" value="Log In" id='SubmitButton' class="form_widgets" />
+                <input type="submit" value="Log In" id='SubmitButton' class="form_widgets" /><br><br>
             </form>
         </div>
     </body>
