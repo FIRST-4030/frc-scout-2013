@@ -20,9 +20,9 @@
         <script type="text/javascript">
             $(document).ready(function() {
                $("#SubmitButton").jqxButton({ width: '160px', height: '30px', theme: 'theme'});
-               $("#teamNumber").jqxInput({width: '160px', height: '30px', theme: 'theme', placeHolder: 'Team Number'});
-               $("#emailAddress").jqxInput({width: '160px', height: '30px', theme: 'theme', placeHolder: 'Email Address'});
-               $("#password").jqxInput({width: '160px', height: '30px', theme: 'theme', placeHolder: 'Password'});
+               $("#teamNumber").jqxInput({width: '160px', height: '30px', theme: 'theme', placeHolder: ' Team Number'});
+               $("#emailAddress").jqxInput({width: '160px', height: '30px', theme: 'theme', placeHolder: ' Email Address'});
+               $("#password").jqxInput({width: '160px', height: '30px', theme: 'theme', placeHolder: ' Tean Password'});
 
             });
         </script>
@@ -35,7 +35,7 @@
             <form class="form_entry" method="post" action="submit.php">
                 <input type="text" name="team_number" id="teamNumber" class="form_widgets" /><br> 
                 <input type="email" name="user_email" id="emailAddress" class="form_widgets" /><br>
-                <input type="password" name="user_password" id="password" class="form_widgets" /><br>
+                <input type="password" name="user_password" id="password" class="form_widgets" /><br><br>
                 <input type="submit" value="Log In" id='SubmitButton' class="form_widgets" /><br><br>
             </form>
         </div>
