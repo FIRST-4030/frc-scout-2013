@@ -22,7 +22,7 @@
                $("#SubmitButton").jqxButton({ width: '160px', height: '30px', theme: 'theme'});
                $("#teamNumber").jqxInput({width: '160px', height: '30px', theme: 'theme', placeHolder: ' Team Number'});
                $("#emailAddress").jqxInput({width: '160px', height: '30px', theme: 'theme', placeHolder: ' Email Address'});
-               $("#password").jqxInput({width: '160px', height: '30px', theme: 'theme', placeHolder: ' Tean Password'});
+               $("#password").jqxInput({width: '160px', height: '30px', theme: 'theme', placeHolder: ' Team Password'});
 
             });
         </script>
