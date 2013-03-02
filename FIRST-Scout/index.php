@@ -10,9 +10,9 @@
         <div class="container">
             <div class="row">
                 <div class="twelvecol">
-                    <? echo $_GET['error']; ?>
+                    <? echo stripcslashes($_GET['error']); ?>
                     <p class="title">FIRST Scout: Login</p>
-                    <form method="post" action="login/submit.php">
+                    <form method="post" action="submit.php">
                         <input type="text" name="team_number" placeholder="Team Number"><br> 
                         <input type="email" name="user_email" placeholder="Email Address"><br>
                         <input type="password" name="user_password" placeholder="Password"><br>
