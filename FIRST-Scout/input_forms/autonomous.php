@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>    
     <head>
-        <title>FIRST Scout: Login</title>
+        <title>Autonomous Recording</title>
         <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
         <link href="../css/style.css" rel="stylesheet" type="text/css">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -14,6 +14,7 @@
         <script type="text/javascript" src="../jqwidgets/jqwidgets/jqxcore.js"></script>
         <script type="text/javascript" src="../jqwidgets/jqwidgets/jqxbuttons.js"></script>
         <script type="text/javascript" src="../jqwidgets/jqwidgets/jqxinput.js"></script>
+        <script type="test/javascript" src="../includes/Cookies.js"></script>
     </head>
     <body>
         <script type="text/javascript">
@@ -21,12 +22,12 @@
                 var pointsScored = 0;
          
                 $("#SixPointPlus").jqxRepeatButton({delay: 0, width: '100', height: '50', theme: 'theme'});
-                $("#SixPointMinus").jqxRepeatButton({delay: 0, width: '40', height: '50', theme: 'theme'});
+                $("#SixPointMinus").jqxRepeatButton({delay: 0, width: '50', height: '50', theme: 'theme'});
                 $("#FourPointPlus").jqxRepeatButton({delay: 0, width: '100', height: '50', theme: 'theme'});
-                $("#FourPointMinus").jqxRepeatButton({delay: 0, width: '40', height: '50', theme: 'theme'});
+                $("#FourPointMinus").jqxRepeatButton({delay: 0, width: '50', height: '50', theme: 'theme'});
                 $("#TwoPointPlus").jqxRepeatButton({delay: 0, width: '100', height: '50', theme: 'theme'});
-                $("#TwoPointMinus").jqxRepeatButton({delay: 0, width: '40', height: '50', theme: 'theme'});
-                $("#NextPageButton").jqxButton({ width: '220px', height: '30px', theme: 'theme'});
+                $("#TwoPointMinus").jqxRepeatButton({delay: 0, width: '50', height: '50', theme: 'theme'});
+                $("#NextPageButton").jqxButton({ width: '252px', height: '50px', theme: 'theme'});
                 
                 $("#SixPointPlus").on("click", function() {
                     pointsScored += 6;
@@ -60,6 +61,9 @@
                     }
                     document.getElementById('totalPoints').innerHTML = "Total points scored: " + pointsScored;
                 });
+                $("#NextPageButton").on("click", function() {
+                    window.location = "teleop.php";
+                });
             });
         </script>
 
@@ -67,11 +71,11 @@
             <p class="title">Autonomous Mode</p>
             <p><i>Record points for each goal</i></p>
             6 Point Goal: <input type="button" id="SixPointPlus" value="Add" class="input_forms" />
-            <input type="button" id="SixPointMinus" value="-" class="input_forms" /> <br><br>
+            <input type="button" id="SixPointMinus" value="&mdash;" class="input_forms" /> <br><br>
             4 Point Goal: <input type="button" id="FourPointPlus" value="Add" class="input_forms" />
-            <input type="button" id="FourPointMinus" value="-" class="input_forms" /> <br><br>
+            <input type="button" id="FourPointMinus" value="&mdash;" class="input_forms" /> <br><br>
             2 Point Goal: <input type="button" id="TwoPointPlus" value="Add" class="input_forms" />
-            <input type="button" id="TwoPointMinus" value="-" class="input_forms" /> <br>
+            <input type="button" id="TwoPointMinus" value="&mdash;" class="input_forms" /> <br>
             <p id="totalPoints" style="font-weight: bold"></p>
             <input type="button" id="NextPageButton" value="Continue to Teleoperated &rarr;">
             <br><br>
