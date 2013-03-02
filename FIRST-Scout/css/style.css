@@ -37,3 +37,14 @@ body {
 .form_entry {
     font-size: 20px;
 }
+
+.form_widgets {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.input_forms {
+    font-weight: bolder;
+    font-size: 48px;
+    font-family: Arial, sans-serif;
+}
