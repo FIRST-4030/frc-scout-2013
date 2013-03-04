@@ -16,15 +16,19 @@
         <script type="text/javascript" src="../jqwidgets/jqwidgets/jqxinput.js"></script>
         <script type="text/javascript" src="../jqwidgets/jqwidgets/jqxnumberinput.js"></script>
         <script type="text/javascript" src="../jqwidgets/jqwidgets/jqxradiobutton.js"></script>
+        <script type="text/javascript" src="../jqwidgets/jqwidgets/jqxcheckbox.js"></script>
+
         <link href='../css/custom.css' rel="stylesheet" type="text/css">
 
         <script type="text/javascript">
             $(document).ready(function() {
                 $("#teamNumber").jqxInput({width: '100', height: '30', theme: 'custom', placeHolder: ' Team Number'});
                 $("#matchNumber").jqxInput({width: '100', height: '30', theme: 'custom', placeHolder: ' Match Number'});
-                
-                $("#redAlliance").jqxRadioButton({ width: 100, height: 25, theme: 'custom', checked: 'true' });
-                $("#blueAlliance").jqxRadioButton({ width: 100, height: 25, theme: 'custom' });
+
+                $("#redAlliance").jqxRadioButton({width: 25, height: 25, theme: 'custom', checked: 'true'});
+                $("#blueAlliance").jqxRadioButton({width: 25, height: 25, theme: 'custom'});
+                $("#present").jqxCheckBox({width: 120, height: 25, theme: 'custom'});
+
             });
         </script>
     </head>
@@ -32,13 +36,13 @@
     <body>
         <div class="container" id="jqxWidget">
             <p class="title">Pre-match Information</p>
-            
+            <div id="present" style="margin-left: auto; margin-right: auto">Present</div>
             <input id="teamNumber" />
             <input id="matchNumber" />
             <p>Choose Alliance</p>
-            <div id="redAlliance"><font color="red"><span>Red</span></font></div>
-            <div id='blueAlliance'><font color='blue'><span>Blue</span></font></div>
-        </div>
-    </body>
+            <span id="redAlliance"><font color="red">Red</span></font></span>
+        <span id='blueAlliance'><font color='blue'>Blue</font></span>
+    </div>
+</body>
 </html>
 

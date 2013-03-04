@@ -13,6 +13,7 @@ root {
 body {
     background: rgb(200, 200, 200);
     font-family: Ubuntu, Arial, sans-serif;
+    text-align: center;
 }
 
 .container {
@@ -48,4 +49,9 @@ body {
     font-weight: bolder;
     font-size: 48px;
     font-family: Arial, sans-serif;
+}
+
+.centered {
+    margin-left: auto;
+    margin-right: auto;
 }
