@@ -16,6 +16,7 @@
         <script type="text/javascript" src="../jqwidgets/jqwidgets/jqxinput.js"></script>
         <script type="test/javascript" src="../includes/Cookies.js"></script>
         <script type="text/javascript" src="../jqwidgets/jqwidgets/jqxcheckbox.js"></script>
+        <link href='../css/custom.css' rel="stylesheet" type="text/css">
 
     </head>
     <body>
@@ -25,19 +26,21 @@
              * points and subtract them dynamically
              */
             $(document).ready(function() {
+                window.scrollTo(0, 1);
+                
                 var pointsScored6 = 0;
                 var pointsScored4 = 0;
                 var pointsScored2 = 0;
 
 
-                $("#SixPointPlus").jqxRepeatButton({delay: 0, width: '100', height: '50', theme: 'theme'});
-                $("#SixPointMinus").jqxRepeatButton({delay: 0, width: '50', height: '50', theme: 'theme'});
-                $("#FourPointPlus").jqxRepeatButton({delay: 0, width: '100', height: '50', theme: 'theme'});
-                $("#FourPointMinus").jqxRepeatButton({delay: 0, width: '50', height: '50', theme: 'theme'});
-                $("#TwoPointPlus").jqxRepeatButton({delay: 0, width: '100', height: '50', theme: 'theme'});
-                $("#TwoPointMinus").jqxRepeatButton({delay: 0, width: '50', height: '50', theme: 'theme'});
-                $("#NextPageButton").jqxButton({width: '252px', height: '50px', theme: 'theme'});
-                $("#usedKinect").jqxCheckBox({ width: 120, height: 25, theme: 'theme'});
+                $("#SixPointPlus").jqxRepeatButton({delay: 0, width: '100', height: '50', theme: 'custom'});
+                $("#SixPointMinus").jqxRepeatButton({delay: 0, width: '50', height: '50', theme: 'custom'});
+                $("#FourPointPlus").jqxRepeatButton({delay: 0, width: '100', height: '50', theme: 'custom'});
+                $("#FourPointMinus").jqxRepeatButton({delay: 0, width: '50', height: '50', theme: 'custom'});
+                $("#TwoPointPlus").jqxRepeatButton({delay: 0, width: '100', height: '50', theme: 'custom'});
+                $("#TwoPointMinus").jqxRepeatButton({delay: 0, width: '50', height: '50', theme: 'custom'});
+                $("#NextPageButton").jqxButton({width: '252px', height: '50px', theme: 'custom'});
+                $("#usedKinect").jqxCheckBox({ width: 100, height: 30, theme: 'theme'});
                 
                 $("#SixPointPlus").on("click", function() {
                     pointsScored6++;
@@ -85,6 +88,7 @@
 
         <div class="container">
             <p class="title">Autonomous Mode</p>
+            <div id="usedKinect" style="margin-left: auto; margin-right: auto; margin-top: 5px; margin-bottom: 5px; font-family: Ubuntu, Arial, sans-serif; font-size: 18px">Used Kinect</div>
             <p><i>Record points for each goal</i></p>
             6 Point Goal: <input type="button" id="SixPointPlus" value="Add" class="input_forms" />
             <input type="button" id="SixPointMinus" value="&mdash;" class="input_forms" /> <br><br>
@@ -93,9 +97,8 @@
             2 Point Goal: <input type="button" id="TwoPointPlus" value="Add" class="input_forms" />
             <input type="button" id="TwoPointMinus" value="&mdash;" class="input_forms" /> <br>
             <p style="font-weight: bold">Total Points: <span id="totalPoints"></span></p>
-            <div id="usedKinect">Used Kinect</div>
         <input type="button" class="centered" id="NextPageButton" value="Continue to Teleoperated &rarr;">
-        <br><br>
+        <br>
     </div>
 </body>
 </html>

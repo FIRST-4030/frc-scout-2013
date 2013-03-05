@@ -33,7 +33,7 @@
             <? echo stripcslashes($_GET['error']); ?>
             <p class="title">FIRST Scout: Login</p>
             <form class="form_entry" method="post" action="submit.php">
-                <input type="text" name="team_number" id="teamNumber" class="form_widgets" /><br> 
+                <input type="number" name="team_number" id="teamNumber" class="form_widgets" /><br> 
                 <input type="email" name="user_email" id="emailAddress" class="form_widgets" /><br>
                 <input type="password" name="user_password" id="password" class="form_widgets" /><br><br>
                 <input type="submit" value="Log In" id='SubmitButton' class="form_widgets" /><br><br>
