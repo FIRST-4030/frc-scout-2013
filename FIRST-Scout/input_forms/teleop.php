@@ -34,13 +34,18 @@
         - robot speed (1-10)
         - robot maneuverability (1-10)
         - goals blocked (number)
+        - shots missed 
         -->
 
         <script type="text/javascript">
             $(document).ready(function() {
-                var pointsScored6 = 0;
-                var pointsScored4 = 0;
-                var pointsScored2 = 0;
+                var teleopPointsScored6 = 0;
+                var teleopPointsScored4 = 0;
+                var teleopPointsScored2 = 0;
+
+
+                var options = ["Less than half court", "Half court", "Full Court"];
+                $("#shootingRange").jqxDropDownList({source: options, width: '205', height: '25', theme: 'theme', selectedIndex: 0});
 
 
                 $("#SixPointPlus").jqxRepeatButton({delay: 0, width: '100', height: '50', theme: 'custom'});
@@ -51,45 +56,60 @@
                 $("#TwoPointMinus").jqxRepeatButton({delay: 0, width: '50', height: '50', theme: 'custom'});
                 $("#NextPageButton").jqxButton({width: '252px', height: '50px', theme: 'custom'});
                 $("#usedKinect").jqxCheckBox({width: 100, height: 30, theme: 'theme'});
-                var options = ["Less than half court", "Half court", "Full Court"];
-                $("#shootingRange").jqxDropDownList({ source: options, width: '205', height: '25', theme: 'theme', selectedIndex: 0 });
 
                 $("#SixPointPlus").on("click", function() {
-                    pointsScored6++;
-                    updateTotals(pointsScored6, pointsScored4, pointsScored2);
+                    teleopPointsScored6++;
+                    updateTotals(teleopPointsScored6, teleopPointsScored4, teleopPointsScored2);
+                    updateIndividualTotals();
                 });
                 $("#SixPointMinus").on("click", function() {
-                    if (pointsScored6 >= 0) {
-                        pointsScored6--;
-                        updateTotals(pointsScored6, pointsScored4, pointsScored2);
+                    if (teleopPointsScored6 > 0) {
+                        teleopPointsScored6--;
+                        updateTotals(teleopPointsScored6, teleopPointsScored4, teleopPointsScored2);
+                        updateIndividualTotals();
                     }
                 });
 
                 $("#FourPointPlus").on("click", function() {
-                    pointsScored4++;
-                    updateTotals(pointsScored6, pointsScored4, pointsScored2);
+                    teleopPointsScored4++;
+                    updateTotals(teleopPointsScored6, teleopPointsScored4, teleopPointsScored2);
+                    updateIndividualTotals();
 
                 });
                 $("#FourPointMinus").on("click", function() {
-                    if (pointsScored4 >= 0) {
-                        pointsScored4--;
-                        updateTotals(pointsScored6, pointsScored4, pointsScored2);
+                    if (teleopPointsScored4 > 0) {
+                        teleopPointsScored4--;
+                        updateTotals(teleopPointsScored6, teleopPointsScored4, teleopPointsScored2);
+                        updateIndividualTotals();
 
                     }
                 });
 
                 $("#TwoPointPlus").on("click", function() {
-                    pointsScored2++;
-                    updateTotals(pointsScored6, pointsScored4, pointsScored2);
+                    teleopPointsScored2++;
+                    updateTotals(teleopPointsScored6, teleopPointsScored4, teleopPointsScored2);
+                    updateIndividualTotals();
                 });
+                
                 $("#TwoPointMinus").on("click", function() {
-                    if (pointsScored2 >= 0) {
-                        pointsScored2--;
-                        updateTotals(pointsScored6, pointsScored4, pointsScored2);
+                    if (teleopPointsScored2 > 0) {
+                        teleopPointsScored2--;
+                        updateTotals(teleopPointsScored6, teleopPointsScored4, teleopPointsScored2);
+                        updateIndividualTotals();
                     }
                 });
+                
+                $("#NextPageButton").on("click", function() {
+                    window.location = "teleop.php";
+                });
+                
+                function updateIndividualTotals() {
+                    document.getElementById('teleopSixPoint').innerHTML = teleopPointsScored6;
+                    document.getElementById('teleopFourPoint').innerHTML = teleopPointsScored4;
+                    document.getElementById('teleopTwoPoint').innerHTML = teleopPointsScored2;
+                }
             });
-            
+
             function updateTotals(ps6, ps4, ps2) {
                 document.getElementById('totalPoints').innerHTML = (ps6 * 6) + (ps4 * 4) + (ps2 * 2);
             }
@@ -97,15 +117,27 @@
         <div class="container">
             <p class="title">Teleop Recording</p>
             <p><i>Record points for each goal</i></p>
-            6 Point Goal: <input type="button" id="SixPointPlus" value="Add" class="input_forms" />
-            <input type="button" id="SixPointMinus" value="&mdash;" class="input_forms" /> <br><br>
-            4 Point Goal: <input type="button" id="FourPointPlus" value="Add" class="input_forms" />
-            <input type="button" id="FourPointMinus" value="&mdash;" class="input_forms" /> <br><br>
-            2 Point Goal: <input type="button" id="TwoPointPlus" value="Add" class="input_forms" />
-            <input type="button" id="TwoPointMinus" value="&mdash;" class="input_forms" /> <br>
+            <input type="button" id="SixPointPlus" value="+6" class="input_forms" />
+            <input type="button" id="SixPointMinus" value="&mdash;" class="input_forms" /> 
+            <span id="teleopSixPoint" class="autonomousIndividual">0</span>
+            <br><br>
+            <input type="button" id="FourPointPlus" value="+4" class="input_forms" />
+            <input type="button" id="FourPointMinus" value="&mdash;" class="input_forms" /> 
+            <span id="teleopFourPoint" class="autonomousIndividual">0</span>
+
+            <br><br>
+            <input type="button" id="TwoPointPlus" value="+2" class="input_forms" />
+            <input type="button" id="TwoPointMinus" value="&mdash;" class="input_forms" /> 
+            <span id="teleopTwoPoint" class="autonomousIndividual">0</span>
             <p style="font-weight: bold">Total Points: <span id="totalPoints"></span></p>
+
             <p style="margin-bottom: 2px"><i>Shooting range</i></p>
             <div id="shootingRange" style="margin-left: auto; margin-right: auto; margin-top: 5px"></div>
+
+
+            <br />
+            <input type="button" class="centered" id="NextPageButton" value="Continue to Climbing &rarr;">
+
         </div>
     </body>
 </html>

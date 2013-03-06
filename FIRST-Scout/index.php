@@ -38,6 +38,7 @@
                 <input type="password" name="user_password" id="password" class="form_widgets" /><br><br>
                 <input type="submit" value="Log In" id='SubmitButton' class="form_widgets" /><br><br>
             </form>
+            <p><a href='/input_forms/prematch.php'>Go to forms &rarr;</a></p>
         </div>
     </body>
 </html>
