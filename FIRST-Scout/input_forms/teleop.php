@@ -56,63 +56,13 @@
                 $("#TwoPointMinus").jqxRepeatButton({delay: 0, width: '50', height: '50', theme: 'custom'});
                 $("#NextPageButton").jqxButton({width: '252px', height: '50px', theme: 'custom'});
                 $("#usedKinect").jqxCheckBox({width: 100, height: 30, theme: 'theme'});
-
-                $("#SixPointPlus").on("click", function() {
-                    teleopPointsScored6++;
-                    updateTotals(teleopPointsScored6, teleopPointsScored4, teleopPointsScored2);
-                    updateIndividualTotals();
-                });
-                $("#SixPointMinus").on("click", function() {
-                    if (teleopPointsScored6 > 0) {
-                        teleopPointsScored6--;
-                        updateTotals(teleopPointsScored6, teleopPointsScored4, teleopPointsScored2);
-                        updateIndividualTotals();
-                    }
-                });
-
-                $("#FourPointPlus").on("click", function() {
-                    teleopPointsScored4++;
-                    updateTotals(teleopPointsScored6, teleopPointsScored4, teleopPointsScored2);
-                    updateIndividualTotals();
-
-                });
-                $("#FourPointMinus").on("click", function() {
-                    if (teleopPointsScored4 > 0) {
-                        teleopPointsScored4--;
-                        updateTotals(teleopPointsScored6, teleopPointsScored4, teleopPointsScored2);
-                        updateIndividualTotals();
-
-                    }
-                });
-
-                $("#TwoPointPlus").on("click", function() {
-                    teleopPointsScored2++;
-                    updateTotals(teleopPointsScored6, teleopPointsScored4, teleopPointsScored2);
-                    updateIndividualTotals();
-                });
-                
-                $("#TwoPointMinus").on("click", function() {
-                    if (teleopPointsScored2 > 0) {
-                        teleopPointsScored2--;
-                        updateTotals(teleopPointsScored6, teleopPointsScored4, teleopPointsScored2);
-                        updateIndividualTotals();
-                    }
-                });
                 
                 $("#NextPageButton").on("click", function() {
                     window.location = "teleop.php";
                 });
-                
-                function updateIndividualTotals() {
-                    document.getElementById('teleopSixPoint').innerHTML = teleopPointsScored6;
-                    document.getElementById('teleopFourPoint').innerHTML = teleopPointsScored4;
-                    document.getElementById('teleopTwoPoint').innerHTML = teleopPointsScored2;
-                }
             });
 
-            function updateTotals(ps6, ps4, ps2) {
-                document.getElementById('totalPoints').innerHTML = (ps6 * 6) + (ps4 * 4) + (ps2 * 2);
-            }
+            
         </script>
         <div class="container">
             <p class="title">Teleop Recording</p>

@@ -29,13 +29,14 @@
             $(document).ready(function() {
                 $("#teamNumber").jqxInput({width: '100', height: '30', theme: 'custom', placeHolder: ' Team Number'});
                 $("#matchNumber").jqxInput({width: '100', height: '30', theme: 'custom', placeHolder: ' Match Number'});
-
+                
+                /*
                 $("#alliancePartner1").jqxInput({width: '100', height: '30', theme: 'custom', placeHolder: ' Partner #1'});
                 $("#alliancePartner2").jqxInput({width: '100', height: '30', theme: 'custom', placeHolder: ' Partner #2'});
                 $("#opposition1").jqxInput({width: '100', height: '30', theme: 'custom', placeHolder: ' Opposition #1'});
                 $("#opposition2").jqxInput({width: '100', height: '30', theme: 'custom', placeHolder: ' Opposition #2'});
                 $("#opposition3").jqxInput({width: '100', height: '30', theme: 'custom', placeHolder: ' Opposition #3'});
-
+                */
                 var options = ["<font color='red'>Red Alliance</font>", "<font color='blue'>Blue Alliance</font>"];
                 $("#whichAlliance").jqxDropDownList({ source: options, width: '205', height: '25', theme: 'theme', selectedIndex: 0 });
                 $("#present").jqxCheckBox({width: 70, height: 25, theme: 'theme', checked: true});
@@ -74,13 +75,13 @@
             <input id="teamNumber" type="number" />
             <input id="matchNumber" type="number" />  
             <div id="whichAlliance" style="margin-left: auto; margin-right: auto; margin-top: 5px"></div>
-            <p style="margin-bottom: 2px;" id="alliance">Alliance Partners:</p>
+            <!--<p style="margin-bottom: 2px;" id="alliance">Alliance Partners:</p>
             <input id="alliancePartner1" type="number" />
             <input id="alliancePartner2" type="number" />
             <p style="margin-bottom: 2px;" id="opposition">Opposing Alliance:</p>
             <input id="opposition1" type="number" />
             <input id="opposition2" type="number" />
-            <input id="opposition3" type="number" /><br /><br />
+            <input id="opposition3" type="number" />--><br /><br />
             <input type="button" class="centered" id="NextPageButton" value="Continue to Autonomous &rarr;">
             <br />
         </div>
