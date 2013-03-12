@@ -37,58 +37,64 @@
             <input type="button" onclick="update(2, false);" id="TwoPointPlus" value="+2" class="input_forms" />
             <input type="button" onclick="update(2, true);" id="TwoPointMinus" value="&mdash;" class="input_forms" /> 
             <span id="autoTwoPoint" class="autonomousIndividual">0</span>
-
+            
+            <br><br>
+            <input type="button" onclick="update(3, false);" id="MissedPointPlus" value="Missed" class="input_forms" />
+            <input type="button" onclick="update(3, true);" id="MissedPointMinus" value="&mdash;" class="input_forms" /> 
+            <span id="autoMissedPoints" class="autonomousIndividual">0</span>
+            
             <br>
-            <p style="font-weight: bold">Total Points: <span id="totalPoints"></span></p>
+            <p style="font-weight: bold">Total Points: <span id="totalPoints">0</span></p>
 
             <input type="button" class="centered" id="NextPageButton" value="Continue to Teleoperated &rarr;">
             <br>
             <p id="id" />
         </div>
         <script type="text/javascript">
-                autonomousPoints = [0, 0, 0];
+            var autonomousPoints = [0, 0, 0, 0];
 
-                $(document).ready(function() {
-                    window.scrollTo(0, 1);
+            $(document).ready(function() {
+                //get rid of the title bar if it's a mobile device
+                window.scrollTo(0, 1)
 
-                    var autoPointsScored6 = 0;
-                    var autoPointsScored4 = 0;
-                    var autoPointsScored2 = 0;
+                $("#SixPointPlus").jqxRepeatButton({delay: 100, width: '100', height: '50', theme: 'custom'});
+                $("#SixPointMinus").jqxRepeatButton({delay: 100, width: '50', height: '50', theme: 'custom'});
+                $("#FourPointPlus").jqxRepeatButton({delay: 100, width: '100', height: '50', theme: 'custom'});
+                $("#FourPointMinus").jqxRepeatButton({delay: 100, width: '50', height: '50', theme: 'custom'});
+                $("#TwoPointPlus").jqxRepeatButton({delay: 100, width: '100', height: '50', theme: 'custom'});
+                $("#TwoPointMinus").jqxRepeatButton({delay: 100, width: '50', height: '50', theme: 'custom'});
+                $("#MissedPointPlus").jqxRepeatButton({delay: 100, width: '100', height: '50', theme: 'custom'});
+                $("#MissedPointMinus").jqxRepeatButton({delay: 100, width: '50', height: '50', theme: 'custom'});
+                $("#NextPageButton").jqxButton({width: '252px', height: '50px', theme: 'custom'});
+                $("#usedKinect").jqxCheckBox({width: 150, height: 20, theme: 'theme'});
 
-                    $("#SixPointPlus").jqxRepeatButton({delay: 0, width: '100', height: '50', theme: 'custom'});
-                    $("#SixPointMinus").jqxRepeatButton({delay: 0, width: '50', height: '50', theme: 'custom'});
-                    $("#FourPointPlus").jqxRepeatButton({delay: 0, width: '100', height: '50', theme: 'custom'});
-                    $("#FourPointMinus").jqxRepeatButton({delay: 0, width: '50', height: '50', theme: 'custom'});
-                    $("#TwoPointPlus").jqxRepeatButton({delay: 0, width: '100', height: '50', theme: 'custom'});
-                    $("#TwoPointMinus").jqxRepeatButton({delay: 0, width: '50', height: '50', theme: 'custom'});
-                    $("#NextPageButton").jqxButton({width: '252px', height: '50px', theme: 'custom'});
-                    $("#usedKinect").jqxCheckBox({width: 150, height: 30, theme: 'theme'});
-
-                    $("#NextPageButton").on("click", function() {
-                        window.location = "teleop.php";
-                    });
+                $("#NextPageButton").on("click", function() {
+                    window.location = "teleop.php";
                 });
+            });
+                
 
-                function update(index, negative) {
-                    if (autonomousPoints[index] > 0) {
-                        autonomousPoints[index] += 1 * negative ? (-1) : (1);
-                    } else if (!negative) {
-                        autonomousPoints[index]++;
-                    }
-                    updateIndividualTotals();
-                    updateTotals();
-                    
+            function update(index, negative) {
+                if (autonomousPoints[index] > 0) {
+                    autonomousPoints[index] += 1 * negative ? (-1) : (1);
+                } else if (!negative) {
+                    autonomousPoints[index]++;
                 }
+                updateIndividualTotals();
+                updateTotals();
+            }
 
-                function updateIndividualTotals() {
-                    document.getElementById('autoSixPoint').innerHTML = autonomousPoints[0];
-                    document.getElementById('autoFourPoint').innerHTML = autonomousPoints[1];
-                    document.getElementById('autoTwoPoint').innerHTML = autonomousPoints[2];
-                }
+            function updateIndividualTotals() {
+                document.getElementById('autoSixPoint').innerHTML = autonomousPoints[0];
+                document.getElementById('autoFourPoint').innerHTML = autonomousPoints[1];
+                document.getElementById('autoTwoPoint').innerHTML = autonomousPoints[2];
+                document.getElementById('autoMissedPoints').innerHTML = autonomousPoints[3];
+            }
 
-                function updateTotals() {
-                    document.getElementById('totalPoints').innerHTML = (autonomousPoints[0] * 6) + (autonomousPoints[1] * 4) + (autonomousPoints[2] * 2);
-                }
+            function updateTotals() {
+                document.getElementById('totalPoints').innerHTML = (autonomousPoints[0] * 6) + (autonomousPoints[1] * 4) + (autonomousPoints[2] * 2);
+            }
+                
         </script>
     </body>
 </html>

@@ -20,13 +20,33 @@
         <script type="text/javascript" src="../jqwidgets/jqwidgets/jqxlistbox.js"></script>
         <script type="text/javascript" src="../jqwidgets/jqwidgets/jqxdropdownlist.js"></script>
         <script type="text/javascript" src="../jqwidgets/jqwidgets/jqxcheckbox.js"></script>
+        <script type="text/javascript" src="../jqwidgets/jqwidgets/jqxslider.js"></script>
 
         <link href='../css/custom.css' rel="stylesheet" type="text/css">
     </head>
 
     <body>
+
+        <div class="container">
+            <p class="title" id ="title" style="margin-bottom: 1px">Pre-match Information</p>
+            <div id="present" style="margin-left: auto; margin-right: auto; display: inline-block">Present</div>
+            <div id="deadRobot" style="margin-left: auto; margin-right: auto; display: inline-block">Dead Robot</div>
+            <br />
+            <input style="margin-bottom: 2px" id="Location" /><br />
+
+            <input id="teamNumber" type="number" />
+            <input id="matchNumber" type="number" />  
+            <!--<div id="whichAlliance" style="margin-left: auto; margin-right: auto; margin-top: 5px"></div>-->
+            <div style="margin-top: 10px" id="allianceChecker"><font color="red">Red Alliance</font></div>
+            <div style="margin-left: auto; margin-right: auto" id="allianceSlider"></div>
+            <input style="margin-top: 10px" type="button" class="centered" id="NextPageButton" value="Continue to Autonomous &rarr;">
+            <br /><br />
+        </div>
+
         <script type="text/javascript">
             $(document).ready(function() {
+                window.scrollTo(0, 1);
+                $("#Location").jqxInput({width: '205', height: '30', theme: 'custom', placeHolder: ' Location'});
                 $("#teamNumber").jqxInput({width: '100', height: '30', theme: 'custom', placeHolder: ' Team Number'});
                 $("#matchNumber").jqxInput({width: '100', height: '30', theme: 'custom', placeHolder: ' Match Number'});
                 
@@ -36,9 +56,9 @@
                 $("#opposition1").jqxInput({width: '100', height: '30', theme: 'custom', placeHolder: ' Opposition #1'});
                 $("#opposition2").jqxInput({width: '100', height: '30', theme: 'custom', placeHolder: ' Opposition #2'});
                 $("#opposition3").jqxInput({width: '100', height: '30', theme: 'custom', placeHolder: ' Opposition #3'});
-                */
-                var options = ["<font color='red'>Red Alliance</font>", "<font color='blue'>Blue Alliance</font>"];
-                $("#whichAlliance").jqxDropDownList({ source: options, width: '205', height: '25', theme: 'theme', selectedIndex: 0 });
+                 */
+                //$("#whichAlliance").jqxDropDownList({ source: options, width: '205', height: '25', theme: 'theme', selectedIndex: 0 });
+                $("#allianceSlider").jqxSlider({min: 0, max: 1, ticksFrequency: 1,  value: 0, step: 1, theme: 'theme', mode: 'fixed', width: '100'});
                 $("#present").jqxCheckBox({width: 70, height: 25, theme: 'theme', checked: true});
                 $("#deadRobot").jqxCheckBox({width: 80, height: 25, theme: 'theme', checked: false});
                 
@@ -47,44 +67,21 @@
                     window.location = "autonomous.php";
                 });
                 
-                /*$("#whichAlliance").on("change", function() {
-                    // @param label
-                    var selectedItemObject = $("#whichAlliance").jqxDropDownList('getSelectedItem');
-                    var selectedItem = selectedItemObject
-                    document.getElementById('foo').innerHTML = selectedItem;
-                    var selected;
-                    var opposing;
-                    if(selectedItem.contains("Red")) {
-                        opposing = "blue";
-                        selected = "red";
-                    } else {
-                        opposing = "red";
-                        selected = "blue";
-                    }
-                    document.getElementById('alliance').innerHTML = "<font color='" + selected + "'>Alliance Partners:</font>";
-                    document.getElementById('opposition').innerHTML = "<font color='" + opposing + "'>Opposing Alliance:</font>";
-                });*/
+                var options = ["<font color='red'>Red Alliance</font>", "<font color='blue'>Blue Alliance</font>"];
+                $('#allianceSlider').on('change', function (event) {
+                    document.getElementById('allianceChecker').innerHTML = options[$('#allianceSlider').jqxSlider('value').toString(16)];
+                });
             }); 
         </script>
-        <div class="container">
-            <p class="title" style="margin-bottom: 1px">Pre-match Information</p>
-            <p style="margin-top: 1px; margin-bottom: 5px;"><i>Location: Seattle, WA</i></p>
-            <div id="present" style="margin-left: auto; margin-right: auto; display: inline-block">Present</div>
-            <div id="deadRobot" style="margin-left: auto; margin-right: auto; display: inline-block">Dead Robot</div>
-            <br />
-            <input id="teamNumber" type="number" />
-            <input id="matchNumber" type="number" />  
-            <div id="whichAlliance" style="margin-left: auto; margin-right: auto; margin-top: 5px"></div>
-            <!--<p style="margin-bottom: 2px;" id="alliance">Alliance Partners:</p>
-            <input id="alliancePartner1" type="number" />
-            <input id="alliancePartner2" type="number" />
-            <p style="margin-bottom: 2px;" id="opposition">Opposing Alliance:</p>
-            <input id="opposition1" type="number" />
-            <input id="opposition2" type="number" />
-            <input id="opposition3" type="number" />--><br /><br />
-            <input type="button" class="centered" id="NextPageButton" value="Continue to Autonomous &rarr;">
-            <br />
-        </div>
     </body>
 </html>
+<!--
+keep this just in case we decide to use it
+<p style="margin-bottom: 2px;" id="alliance">Alliance Partners:</p>
+<input id="alliancePartner1" type="number" />
+<input id="alliancePartner2" type="number" />
+<p style="margin-bottom: 2px;" id="opposition">Opposing Alliance:</p>
+<input id="opposition1" type="number" />
+<input id="opposition2" type="number" />
+<input id="opposition3" type="number" />-->
 
