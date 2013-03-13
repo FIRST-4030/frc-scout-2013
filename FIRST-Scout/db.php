@@ -30,7 +30,7 @@ try {
 
 # Prepare and run a query
 try {
-	$stmt = $db->prepare('SELECT FROM ' . $TABLE . 'WHERE col1=? AND col2=?');
+	$stmt = $db->prepare('SELECT * FROM ' . $TABLE . ' WHERE col1=? AND col2=?');
 	$stmt->execute(array('val1', 'val2'));
 	$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 	foreach ($rows as $row) {
@@ -41,12 +41,12 @@ try {
 		print "\n";
 	}
 } catch(PDOException $ex) {
-	die("Unable to read from DB\n");
+	die("Unable to read from DB\n<br>" . $ex -> getMessage());
 }
 
 # Prepare and run a query
 try {
-	$stmt = $db->prepare('INSERT INTO ' . $TABLE . '(col1, col2) VALUES (?, ?)');
+	$stmt = $db->prepare('INSERT INTO ' . $TABLE . ' (col1, col2) VALUES (?, ?)');
 	$stmt->execute(array('val1', 'val2'));
 	print 'Wrote ' . $db->affectedRows() . " rows\n";
 } catch(PDOException $ex) {
