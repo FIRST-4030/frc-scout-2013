@@ -1,10 +1,8 @@
 <?php
+require('includes/constants.php');
 
 # Config
-$DB_NAME   = 'testDB';
-$DSN       = 'mysql:host=localhost;dbname=' . $DB_NAME . ';charset=utf8';
-$DB_USER   = 'DB_UNAME';
-$DB_PASSWD = 'DB_PASSWD';
+$DSN       = 'mysql:host=localhost;dbname=' . DB_NAME . ';charset=utf8';
 $TABLE     = 'testTable';
 
 
@@ -24,7 +22,7 @@ $_SESSION['testData'] = 'val3';
 
 # Connect to the DB
 try {
-	$db = new PDO($DSN, $DB_USER, $DB_PASSWD);
+	$db = new PDO($DSN, DB_USER, DB_PASSWORD);
 	$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch(PDOException $ex) {
 	die("Unable to connect to DB\n");

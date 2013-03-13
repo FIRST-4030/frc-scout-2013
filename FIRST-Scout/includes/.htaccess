@@ -1,0 +1,4 @@
+<File constants.php>
+  Order allow,deny
+  Deny from all
+</File>
