@@ -21,7 +21,7 @@
             $(document).ready(function() {
                $("#SubmitButton").jqxButton({ width: '160px', height: '30px', theme: 'theme'});
                $("#teamNumber").jqxInput({width: '160px', height: '30px', theme: 'theme', placeHolder: ' Team Number'});
-               $("#emailAddress").jqxInput({width: '160px', height: '30px', theme: 'theme', placeHolder: ' Email Address'});
+               $("#emailAddress").jqxInput({width: '160px', height: '30px', theme: 'theme', placeHolder: ' User ID'});
                $("#password").jqxInput({width: '160px', height: '30px', theme: 'theme', placeHolder: ' Team Password'});
 
             });
@@ -32,9 +32,9 @@
             <br>
             <? echo stripcslashes($_GET['error']); ?>
             <p class="title">FIRST Scout: Login</p>
-            <form class="form_entry" method="post" action="submit.php">
+            <form class="form_entry" method="post" action="login.php">
                 <input type="number" name="team_number" id="teamNumber" class="form_widgets" /><br> 
-                <input type="email" name="user_email" id="emailAddress" class="form_widgets" /><br>
+                <input type="user_id" name="user_id" id="emailAddress" class="form_widgets" /><br>
                 <input type="password" name="user_password" id="password" class="form_widgets" /><br><br>
                 <input type="submit" value="Log In" id='SubmitButton' class="form_widgets" /><br><br>
             </form>

@@ -140,5 +140,6 @@
             }
             
         </script>
-    </body>
+         <form id="sendForm" action="../processdata.php" class="invisible_form" method="post"></div>
+   </body>
 </html>

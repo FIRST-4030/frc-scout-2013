@@ -10,7 +10,7 @@
         <!-- These work! -->
         <script type="text/javascript" src="../jqwidgets/scripts/gettheme.js"></script>
         <link rel="stylesheet" href="../jqwidgets/jqwidgets/styles/jqx.base.css" type="text/css" />
-        <script type="text/javascript" src="../jqwidgets/scripts/jquery-1.8.2.min.js"></script>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
         <script type="text/javascript" src="../jqwidgets/jqwidgets/jqxcore.js"></script>
         <script type="text/javascript" src="../jqwidgets/jqwidgets/jqxbuttons.js"></script>
         <script type="text/javascript" src="../jqwidgets/jqwidgets/jqxinput.js"></script>
@@ -29,51 +29,53 @@
 
         <div class="container">
             <p class="title" id ="title" style="margin-bottom: 1px">Pre-match Information</p>
-            <div id="present" style="margin-left: auto; margin-right: auto; display: inline-block">Present</div>
-            <div id="deadRobot" style="margin-left: auto; margin-right: auto; display: inline-block">Dead Robot</div>
-            <br />
-            <input style="margin-bottom: 2px" id="Location" /><br />
-
-            <input id="teamNumber" type="number" />
-            <input id="matchNumber" type="number" />  
-            <!--<div id="whichAlliance" style="margin-left: auto; margin-right: auto; margin-top: 5px"></div>-->
-            <div style="margin-top: 10px" id="allianceChecker"><font color="red">Red Alliance</font></div>
-            <div style="margin-left: auto; margin-right: auto" id="allianceSlider"></div>
-            <input style="margin-top: 10px" type="button" class="centered" id="NextPageButton" value="Continue to Autonomous &rarr;">
-            <br /><br />
+            <div id="inputContainer">
+                <div id="present" style="margin-left: auto; margin-right: auto; display: inline-block">Present</div>
+                <div id="deadRobot" style="margin-left: auto; margin-right: auto; display: inline-block">Dead Robot</div><br />
+                <input name="location" style="margin-bottom: 2px" id="Location" /><br />
+                <input id="teamNumber" type="number" />
+                <input id="matchNumber" type="number" />  
+                <div style="margin-top: 10px" id="allianceChecker"><font color="red">Red Alliance</font></div>
+                <div style="margin-left: auto; margin-right: auto" id="allianceSlider"></div>
+                <input type="button" style="margin-top: 10px" onclick="sendData()" class="centered" id="NextPageButton" value="Continue to Autonomous &rarr;">
+                <br /><br />
+            </div>
         </div>
 
         <script type="text/javascript">
+            
+            
             $(document).ready(function() {
                 window.scrollTo(0, 1);
                 $("#Location").jqxInput({width: '205', height: '30', theme: 'custom', placeHolder: ' Location'});
                 $("#teamNumber").jqxInput({width: '100', height: '30', theme: 'custom', placeHolder: ' Team Number'});
                 $("#matchNumber").jqxInput({width: '100', height: '30', theme: 'custom', placeHolder: ' Match Number'});
-                
-                /*
-                $("#alliancePartner1").jqxInput({width: '100', height: '30', theme: 'custom', placeHolder: ' Partner #1'});
-                $("#alliancePartner2").jqxInput({width: '100', height: '30', theme: 'custom', placeHolder: ' Partner #2'});
-                $("#opposition1").jqxInput({width: '100', height: '30', theme: 'custom', placeHolder: ' Opposition #1'});
-                $("#opposition2").jqxInput({width: '100', height: '30', theme: 'custom', placeHolder: ' Opposition #2'});
-                $("#opposition3").jqxInput({width: '100', height: '30', theme: 'custom', placeHolder: ' Opposition #3'});
-                 */
-                //$("#whichAlliance").jqxDropDownList({ source: options, width: '205', height: '25', theme: 'theme', selectedIndex: 0 });
-                $("#allianceSlider").jqxSlider({min: 0, max: 1, ticksFrequency: 1,  value: 0, step: 1, theme: 'theme', mode: 'fixed', width: '100'});
+                $("#allianceSlider").jqxSlider({min: 0, max: 1, ticksFrequency: 1, value: 0, step: 1, theme: 'theme', mode: 'fixed', width: '100'});
                 $("#present").jqxCheckBox({width: 70, height: 25, theme: 'theme', checked: true});
                 $("#deadRobot").jqxCheckBox({width: 80, height: 25, theme: 'theme', checked: false});
-                
                 $("#NextPageButton").jqxButton({width: '252px', height: '50px', theme: 'custom'});
-                $("#NextPageButton").on("click", function() {
-                    window.location = "autonomous.php";
-                });
-                
                 var options = ["<font color='red'>Red Alliance</font>", "<font color='blue'>Blue Alliance</font>"];
-                $('#allianceSlider').on('change', function (event) {
+                $('#allianceSlider').on('change', function(event) {
                     document.getElementById('allianceChecker').innerHTML = options[$('#allianceSlider').jqxSlider('value').toString(16)];
                 });
-            }); 
+
+            });
+            
+            function updateCheckbox(num) {
+                
+            }
+            
+            function sendData() {
+                $('#inputContainer').children(function() {
+                   var val 
+                });
+                var location = $("#Location").val().toString();
+                document.getElementById('test').innerHTML = location;
+            }
+
         </script>
-    </body>
+        <form id="sendForm" action="../processdata.php" class="invisible_form" method="post"></div>
+</body>
 </html>
 <!--
 keep this just in case we decide to use it
