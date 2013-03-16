@@ -43,6 +43,8 @@
         </div>
 
         <script type="text/javascript">                  
+            
+            
             $(document).ready(function() {
                 window.scrollTo(0, 1);
                 $("#Location").jqxInput({width: '205', height: '30', theme: 'custom', placeHolder: ' Location'});
@@ -70,7 +72,6 @@
                 var location = $("#Location").val().toString();
                 document.getElementById('test').innerHTML = location;
             }
-
 
         </script>
         <form id="sendForm" action="../processdata.php" class="invisible_form" method="post"></div>
