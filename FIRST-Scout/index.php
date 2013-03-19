@@ -26,7 +26,7 @@
             <? echo stripcslashes($_GET['error']); ?>
             <p class="title" style="margin-bottom: 20px;">FIRST Scout: Login</p>
             <form class="form_entry" method="post" action="login.php?intent=login">
-                <input type="number" name="team_number" placeholder="Team Number" id="teamNumber" /><br> 
+                <input type="number" name="team_id" placeholder="Team ID" id="teamNumber" /><br> 
                 <input type="text" name="user_id" placeholder="User ID" id="emailAddress" /><br>
                 <input type="password" name="user_password" placeholder="Password" id="password" /><br><br>
                 <button class="btn" type="submit" id='SubmitButton'>Log In</button>

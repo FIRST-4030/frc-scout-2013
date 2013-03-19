@@ -3,7 +3,7 @@
 session_start();
 $intent = $_GET['intent'];
 if ($intent == "login") {
-    $loggedInTeam = $_POST['team_number'];
+    $loggedInTeam = $_POST['team_id'];
     $userID = $_POST['user_id'];
     $_SESSION['TeamID'] = $loggedInTeam;
     $_SESSION['UserID'] = $userID;
