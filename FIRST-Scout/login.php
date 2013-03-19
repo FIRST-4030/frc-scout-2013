@@ -1,5 +1,4 @@
 <?php
-
 session_start();
 $intent = $_GET['intent'];
 if ($intent == "login") {
@@ -17,7 +16,5 @@ if ($intent == "login") {
         header('location: index.php?error=' . urlencode("You weren't logged in, whoops!"));
     }
 }
-
-
 //print_r($_POST);
 ?>

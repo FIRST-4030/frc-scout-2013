@@ -23,8 +23,12 @@
         <div class="container">
             <!--<a href="/index.php">--><img src="/images/ram-logo.png" alt="FIRST Scout"><!--</a>-->
             <br>
-            <? echo stripcslashes($_GET['error']); ?>
+            
             <p class="title" style="margin-bottom: 20px;">FIRST Scout: Login</p>
+            <div class="alert alert-danger" >
+                <button type="button" class="close" onclick="$('.alert').hide()">&times;</button>
+                <strong id='alertError'><? echo stripcslashes($_GET['error']); ?></strong>
+            </div>
             <form class="form_entry" method="post" action="login.php?intent=login">
                 <input type="number" name="team_id" placeholder="Team ID" id="teamNumber" /><br> 
                 <input type="text" name="user_id" placeholder="User ID" id="emailAddress" /><br>
@@ -34,5 +38,14 @@
         </div>
         <br />
         <p><a href='/input_forms/'>Go to forms &rarr;</a></p>
+        <script type="text/javascript">
+            $(document).ready(function() {
+               $('.alert').hide(); 
+               
+               if(document.getElementById('alertError').toString() !== "") {
+                   $('.alert').show();
+               }
+            });
+        </script>
     </body>
 </html>
