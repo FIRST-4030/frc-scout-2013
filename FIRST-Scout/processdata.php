@@ -1,3 +1,4 @@
 <?php
-print_r($_POST);
+$postData = $_POST;
+print_r($postData);
 ?>

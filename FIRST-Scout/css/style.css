@@ -2,7 +2,7 @@
     Document   : style
     Created on : Mar 1, 2013, 12:09:44 AM
     Author     : DrCoffey
-    Description:
+    Description: To do cool styling stuff
         Purpose of the stylesheet follows.
 */
 
@@ -17,17 +17,18 @@ body {
 }
 
 .container {
+    margin-top: 5px;
     border: 8px solid rgb(220,220,220);
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    max-width: 480px;
+    max-width: 95%;
     background-color: rgb(220,220,220);
 
 }
 
 .title {
-    margin: 5px;
+    margin: 10px;
     font-size: 30px;
 }
 
@@ -71,4 +72,18 @@ input[type=number]::-webkit-outer-spin-button {
 
 .invisible_form {
     display: none; 
+}
+
+.small_title {
+    margin-top: 8px;
+    margin-bottom: 2px;
+}
+
+.plus_minus_buttons {
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+.slider {
+    height: 50px;
 }
