@@ -18,7 +18,6 @@
         <!-- css -->
         <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
         <link href="../css/style.css" rel="stylesheet" type="text/css">
-        <link href="../jqwidgets_unused/jqwidgets/styles/jqx.base.css" rel="stylesheet" type="text/css" />
 
         <!-- bootstrap -->
         <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>        
@@ -27,14 +26,11 @@
     <body>
         <script type="text/javascript">
             $(document).ready(function() {
-                $("#AttemptsPlus").jqxRepeatButton({delay: 100, width: '150', height: '50', theme: 'custom'});
-                $("#AttemptsMinus").jqxRepeatButton({delay: 100, width: '50', height: '50', theme: 'custom'});
-                $("#DisksDroppedPlus").jqxRepeatButton({delay: 100, width: '150', height: '50', theme: 'custom'});
-                $("#DisksDroppedMinus").jqxRepeatButton({delay: 100, width: '50', height: '50', theme: 'custom'}); 
+                window.scrollTo(0, 1);
             });
         </script>
         <div class="container">
-            <p class="title">Climb and Disk Drop: <b><?php echo $_COOKIE['TeamNumber']?></b></p>
+            <p class="title">Climb and Disk Drop: <b><?php echo $_COOKIE['TeamNumber'] ?></b></p>
             <p class="small_title"><i>Record attempts and disks dropped:</i></p>
             <button class="btn plus_minus_buttons" style="height: 50px; width: 100px" onclick="update(0, false)">Attempts</button>
             <button class="btn plus_minus_buttons" style="height: 50px; width: 50px" onclick="update(0, true)">&mdash;</button>
@@ -73,20 +69,28 @@
                 }
                 updateIndividualTotals();
             }
-            
+
             function updateIndividualTotals() {
                 document.getElementById('attempts').innerHTML = climbing[0];
                 document.getElementById('disksDropped').innerHTML = climbing[1];
 
             }
-            
+
             function sendData() {
                 var climbStyle = 0;
-                switch($(".climbStyle .active").text()) {
-                    case "n/a": climbStyle = 0; break;
-                    case "Corner": climbStyle = 1; break;
-                    case "Inside": climbStyle = 2; break;
-                    case "Face" : climbStyle = 3; break;         
+                switch ($(".climbStyle .active").text()) {
+                    case "n/a":
+                        climbStyle = 0;
+                        break;
+                    case "Corner":
+                        climbStyle = 1;
+                        break;
+                    case "Inside":
+                        climbStyle = 2;
+                        break;
+                    case "Face" :
+                        climbStyle = 3;
+                        break;
                 }
                 var invisibleForm = document.getElementById('sendForm');
                 invisibleForm.innerHTML += "<input type='text' name='next_page' value='" + "forms/results.php" + "'</input>";

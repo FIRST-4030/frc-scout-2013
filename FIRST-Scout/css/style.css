@@ -23,6 +23,7 @@ body {
     margin-right: auto;
     text-align: center;
     max-width: 95%;
+    height: 95%;
     background-color: rgb(220,220,220);
 
 }
@@ -30,6 +31,7 @@ body {
 .title {
     margin: 10px;
     font-size: 28px;
+    line-height: 30px;
 }
 
 .title_image {
@@ -90,4 +92,10 @@ input[type=number]::-webkit-outer-spin-button {
 
 .btn-small {
     font-weight: 600;
+}
+
+.homepage_buttons {
+    width: 200px;
+    height: 50px;
+    margin: 10px;
 }

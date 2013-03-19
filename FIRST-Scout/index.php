@@ -16,12 +16,12 @@
 
         <script type="text/javascript">
             $(document).ready(function() {
-
+                window.scrollTo(0, 1);
             });
         </script>
 
         <div class="container">
-            <a href="/index.php"><img src="/images/ram-logo.png" alt="FIRST Scout"></a>
+            <!--<a href="/index.php">--><img src="/images/ram-logo.png" alt="FIRST Scout"><!--</a>-->
             <br>
             <? echo stripcslashes($_GET['error']); ?>
             <p class="title" style="margin-bottom: 20px;">FIRST Scout: Login</p>

@@ -14,7 +14,7 @@
     </head>
     <body>
         <div class="container">
-            <p class="title" id ="title" style="margin-bottom: 10px;">Match Results: <b><?php echo $_COOKIE['TeamNumber']?></b></p>
+            <p class="title" id ="title" style="margin-bottom: 10px;">Match Results: <b><?php echo $_COOKIE['TeamNumber'] ?></b></p>
             <div class="btn-group" data-toggle="buttons-radio" style="margin-bottom: 10px">
                 <button class="btn btn-danger active" onclick="update(0)">Lose</button>
                 <button class="btn btn-success" onclick="update(1)">Win</button>
@@ -32,29 +32,32 @@
             <br />
         </div>
         <script type="text/javascript">
-            var fouls = 0;
-            var loseWinTie = 0;
-            function updateFouls(negative) {
-                if (fouls > 0) {
-                    fouls += 1 * negative ? (-1) : (1);
-                } else if (!negative) {
-                    fouls++;
-                }
-                document.getElementById('foulsIndicator').innerHTML = fouls;
-            }
-                
-            function update(nVal) {
-                loseWinTie = nVal;
-            }
+                    $(document).ready(function() {
+                        window.scrollTo(0, 1);
+                    });
+                    var fouls = 0;
+                    var loseWinTie = 0;
+                    function updateFouls(negative) {
+                        if (fouls > 0) {
+                            fouls += 1 * negative ? (-1) : (1);
+                        } else if (!negative) {
+                            fouls++;
+                        }
+                        document.getElementById('foulsIndicator').innerHTML = fouls;
+                    }
 
-            function sendData() {
-                var invisibleForm = document.getElementById('sendForm');
-                invisibleForm.innerHTML += "<input type='text' name='next_page' value='" + "options" + "'</input>";
-                invisibleForm.innerHTML += "<input type='number' name='results_match_outcome' value='" + loseWinTie + "'</input>";
-                invisibleForm.innerHTML += "<input type='number' name='results_fouls' value='" + fouls + "'</input>";
-                invisibleForm.innerHTML += "<input type='text' name='results_comments' value='" + $("#comments").val() + "'</input>";
-                invisibleForm.submit();
-            }
+                    function update(nVal) {
+                        loseWinTie = nVal;
+                    }
+
+                    function sendData() {
+                        var invisibleForm = document.getElementById('sendForm');
+                        invisibleForm.innerHTML += "<input type='text' name='next_page' value='" + "options" + "'</input>";
+                        invisibleForm.innerHTML += "<input type='number' name='results_match_outcome' value='" + loseWinTie + "'</input>";
+                        invisibleForm.innerHTML += "<input type='number' name='results_fouls' value='" + fouls + "'</input>";
+                        invisibleForm.innerHTML += "<input type='text' name='results_comments' value='" + $("#comments").val() + "'</input>";
+                        invisibleForm.submit();
+                    }
         </script>
         <form id="sendForm" action="../processdata.php" class="invisible_form" method="post"></form>
     </body>

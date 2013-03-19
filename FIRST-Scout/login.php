@@ -1,17 +1,21 @@
 <?php
 
+session_start();
 $intent = $_GET['intent'];
 if ($intent == "login") {
     $loggedInTeam = $_POST['team_number'];
     $userID = $_POST['user_id'];
-    setcookie("FIRSTScoutLoggedInTeam", $loggedInTeam, time() + 3600);
-    setcookie("FIRSTScoutLoggedInUserID", $userID, time() + 3600);
+    $_SESSION['TeamID'] = $loggedInTeam;
+    $_SESSION['UserID'] = $userID;
     header('location: options');
-    
 } else if ($intent == "logout") {
-    setcookie("FIRSTScoutLoggedInTeam", $loggedInTeam, time() - 3600);
-    setcookie("FIRSTScoutLoggedInUserID", $userID, time() - 3600);
-    header('location: index.php?error=' . urlencode("Successfully logged out!"));
+    if (isset($_SESSION['TeamID'])) {
+        session_destroy();
+        header('location: index.php?error=' . urlencode("Successfully logged out!"));
+    } else {
+
+        header('location: index.php?error=' . urlencode("You weren't logged in, whoops!"));
+    }
 }
 
 
