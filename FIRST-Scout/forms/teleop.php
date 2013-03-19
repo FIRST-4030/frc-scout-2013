@@ -10,7 +10,7 @@
         <!-- css -->
         <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
         <link href="../css/style.css" rel="stylesheet" type="text/css">
-        <link href="../jqwidgets/jqwidgets/styles/jqx.base.css" rel="stylesheet" type="text/css" />
+        <link href="../jqwidgets_unused/jqwidgets/styles/jqx.base.css" rel="stylesheet" type="text/css" />
 
         <!--jqwidgets and bootstrap -->
         <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>        

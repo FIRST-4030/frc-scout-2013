@@ -18,16 +18,16 @@
         <!-- css -->
         <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
         <link href="../css/style.css" rel="stylesheet" type="text/css">
-        <link href="../jqwidgets/jqwidgets/styles/jqx.base.css" rel="stylesheet" type="text/css" />
+        <link href="../jqwidgets_unused/jqwidgets/styles/jqx.base.css" rel="stylesheet" type="text/css" />
 
         <!--jqwidgets and bootstrap -->
         <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>        
         <script type="text/javascript" src="../bootstrap/js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="../jqwidgets/scripts/gettheme.js"></script>
-        <script type="text/javascript" src="../jqwidgets/scripts/jquery-1.8.2.min.js"></script>
-        <script type="text/javascript" src="../jqwidgets/jqwidgets/jqxcore.js"></script>
-        <script type="text/javascript" src="../jqwidgets/jqwidgets/jqxbuttons.js"></script>
-        <script type="text/javascript" src="../jqwidgets/jqwidgets/jqxinput.js"></script>
+        <script type="text/javascript" src="../jqwidgets_unused/scripts/gettheme.js"></script>
+        <script type="text/javascript" src="../jqwidgets_unused/scripts/jquery-1.8.2.min.js"></script>
+        <script type="text/javascript" src="../jqwidgets_unused/jqwidgets/jqxcore.js"></script>
+        <script type="text/javascript" src="../jqwidgets_unused/jqwidgets/jqxbuttons.js"></script>
+        <script type="text/javascript" src="../jqwidgets_unused/jqwidgets/jqxinput.js"></script>
     </head>
     <body>
         <script type="text/javascript">

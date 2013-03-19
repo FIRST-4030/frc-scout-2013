@@ -5,11 +5,11 @@
         <meta name="description" content="The jqxButton widget allows you to display a button on the Web page." />
         <title id='Description'>The jqxButton widget allows you to display a button on the Web
             page.</title>
-        <script type="text/javascript" src="jqwidgets/scripts/gettheme.js"></script>
+        <script type="text/javascript" src="jqwidgets_unused/scripts/gettheme.js"></script>
         <link rel="stylesheet" href="jqwidgets/styles/jqx.base.css" type="text/css" />
-        <script type="text/javascript" src="jqwidgets/scripts/jquery-1.8.2.min.js"></script>
-        <script type="text/javascript" src="jqwidgets/jqwidgets/jqxcore.js"></script>
-        <script type="text/javascript" src="jqwidgets/jqwidgets/jqxbuttons.js"></script>
+        <script type="text/javascript" src="jqwidgets_unused/scripts/jquery-1.8.2.min.js"></script>
+        <script type="text/javascript" src="jqwidgets_unused/jqwidgets/jqxcore.js"></script>
+        <script type="text/javascript" src="jqwidgets_unused/jqwidgets/jqxbuttons.js"></script>
     </head>
     <body class='default'>
         <div id='content'>
