@@ -17,7 +17,8 @@
     </head>
     <body>
         <div class="container">
-            <p class="title">Autonomous Mode</p>
+            <p class="title">Autonomous: <b><?php echo $_COOKIE['TeamNumber']?></b></p>
+            
             <button id="usedKinect" onclick="updateKinect()" class="btn btn-success" data-toggle="button" style="margin-top: 3px; margin-bottom: 8px;">Used Kinect?</button>
             <p><i>Record points for each goal</i></p>
             <button class="btn plus_minus_buttons" style="height: 50px; width: 100px" onclick="update(0, false)">+6</button>
@@ -78,7 +79,7 @@
 
             function sendData() {
                 var invisibleForm = document.getElementById('sendForm');
-
+                invisibleForm.innerHTML += "<input type='text' name='next_page' value='" + "forms/teleop.php" + "'</input>";
                 invisibleForm.innerHTML += "<input type='text' name='autonomous_top_goals' value='" + autonomousPoints[0] + "'</input>";
                 invisibleForm.innerHTML += "<input type='text' name='autonomous_middle_goals' value='" + autonomousPoints[1] + "'</input>";
                 invisibleForm.innerHTML += "<input type='text' name='autonomous_bottom_goals' value='" + autonomousPoints[2] + "'</input>";

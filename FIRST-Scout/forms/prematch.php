@@ -60,6 +60,7 @@
 
             function sendData() {
                 var invisibleForm = document.getElementById('sendForm');            
+                invisibleForm.innerHTML += "<input type='text' name='next_page' value='" + "forms/autonomous.php" + "'</input>";
                 invisibleForm.innerHTML += "<input type='text' name='prematch_team_present' value='" + present + "'></input>";
                 invisibleForm.innerHTML += "<input type='text' name='prematch_dead_robot' value='" + deadRobot + "'></input>";
                 invisibleForm.innerHTML += "<input type='text' name='prematch_location' value='" + $("#location").val() + "'></input>";

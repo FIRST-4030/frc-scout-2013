@@ -21,7 +21,7 @@
 
     <body>
         <div class="container">
-            <p class="title">Teleoperated Mode</p>
+            <p class="title">Teleoperated: <b><?php echo $_COOKIE['TeamNumber']?></b></p>
             <button id="frisbeePickup" onclick="updateCanPickupFrisbees()" class="btn btn-success" data-toggle="button" style="margin-top: 3px; margin-bottom: 8px;">Can pick up Frisbees?</button>
             <p><i>Record points for each goal</i></p>
 
@@ -143,6 +143,7 @@
             
             function sendData() {
                 var invisibleForm = document.getElementById('sendForm');
+                invisibleForm.innerHTML += "<input type='text' name='next_page' value='" + "forms/climb.php" + "'</input>";
                 invisibleForm.innerHTML += "<input type='text' name='teleop_can_pickup_frisbees' value='" + canPickupFrisbees + "'</input>";
                 invisibleForm.innerHTML += "<input type='text' name='teleop_top_goals' value='" + teleopPoints[0] + "'</input>";
                 invisibleForm.innerHTML += "<input type='text' name='teleop_middle_goals' value='" + teleopPoints[1] + "'</input>";

@@ -20,14 +20,9 @@
         <link href="../css/style.css" rel="stylesheet" type="text/css">
         <link href="../jqwidgets_unused/jqwidgets/styles/jqx.base.css" rel="stylesheet" type="text/css" />
 
-        <!--jqwidgets and bootstrap -->
+        <!-- bootstrap -->
         <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>        
         <script type="text/javascript" src="../bootstrap/js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="../jqwidgets_unused/scripts/gettheme.js"></script>
-        <script type="text/javascript" src="../jqwidgets_unused/scripts/jquery-1.8.2.min.js"></script>
-        <script type="text/javascript" src="../jqwidgets_unused/jqwidgets/jqxcore.js"></script>
-        <script type="text/javascript" src="../jqwidgets_unused/jqwidgets/jqxbuttons.js"></script>
-        <script type="text/javascript" src="../jqwidgets_unused/jqwidgets/jqxinput.js"></script>
     </head>
     <body>
         <script type="text/javascript">
@@ -39,7 +34,7 @@
             });
         </script>
         <div class="container">
-            <p class="title">Climb and Disk Drop</p>
+            <p class="title">Climb and Disk Drop: <b><?php echo $_COOKIE['TeamNumber']?></b></p>
             <p class="small_title"><i>Record attempts and disks dropped:</i></p>
             <button class="btn plus_minus_buttons" style="height: 50px; width: 100px" onclick="update(0, false)">Attempts</button>
             <button class="btn plus_minus_buttons" style="height: 50px; width: 50px" onclick="update(0, true)">&mdash;</button>
@@ -80,8 +75,8 @@
             }
             
             function updateIndividualTotals() {
-                document.getElementById('Attempts').innerHTML = climbing[0];
-                document.getElementById('DisksDropped').innerHTML = climbing[1];
+                document.getElementById('attempts').innerHTML = climbing[0];
+                document.getElementById('disksDropped').innerHTML = climbing[1];
 
             }
             
@@ -94,6 +89,7 @@
                     case "Face" : climbStyle = 3; break;         
                 }
                 var invisibleForm = document.getElementById('sendForm');
+                invisibleForm.innerHTML += "<input type='text' name='next_page' value='" + "forms/results.php" + "'</input>";
                 invisibleForm.innerHTML += "<input type='number' name='climb_attempts' value='" + climbing[0] + "'</input>";
                 invisibleForm.innerHTML += "<input type='number' name='climb_disks_dropped' value='" + climbing[1] + "'</input>";
                 invisibleForm.innerHTML += "<input type='number' name='climb_level_reached' value='" + $(".levelReached .active").text() + "'</input>";

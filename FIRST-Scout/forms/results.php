@@ -3,7 +3,7 @@
     <head>
         <title>Match Results</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <meta name="viewport" content="width=350px, initial-scale=1, maximum-scale=1, user-scalable=0"/> <!--320-->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/> <!--320-->
         <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
 
         <!-- These work! -->
@@ -14,7 +14,7 @@
     </head>
     <body>
         <div class="container">
-            <p class="title" id ="title" style="margin-bottom: 10px;">Match Results</p>
+            <p class="title" id ="title" style="margin-bottom: 10px;">Match Results: <b><?php echo $_COOKIE['TeamNumber']?></b></p>
             <div class="btn-group" data-toggle="buttons-radio" style="margin-bottom: 10px">
                 <button class="btn btn-danger active" onclick="update(0)">Lose</button>
                 <button class="btn btn-success" onclick="update(1)">Win</button>
@@ -49,6 +49,7 @@
 
             function sendData() {
                 var invisibleForm = document.getElementById('sendForm');
+                invisibleForm.innerHTML += "<input type='text' name='next_page' value='" + "options" + "'</input>";
                 invisibleForm.innerHTML += "<input type='number' name='results_match_outcome' value='" + loseWinTie + "'</input>";
                 invisibleForm.innerHTML += "<input type='number' name='results_fouls' value='" + fouls + "'</input>";
                 invisibleForm.innerHTML += "<input type='text' name='results_comments' value='" + $("#comments").val() + "'</input>";
