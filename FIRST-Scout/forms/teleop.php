@@ -59,13 +59,37 @@
             </div>
 
 
-            <p style="margin-bottom: 2px; margin-top: 10px;"><i>Robot speed:</i><span id="robotSpeedFeedback"> 1</span></p>
-            <input type="range" min="1" max="10" id="RobotSpeed" value="1"/>
+            <p style="margin-bottom: 2px; margin-top: 10px;" class="small_title"><i>Robot speed</i><!--<span id="robotSpeedFeedback"> 1</span>--></p>
+            <!--<input type="range" min="1" max="10" id="RobotSpeed" value="1"/>-->
+            <div class="btn-group robotSpeed" data-toggle="buttons-radio">
+                <button class="btn btn-small active">1</button>
+                <button class="btn btn-small">2</button>
+                <button class="btn btn-small">3</button>
+                <button class="btn btn-small">4</button>
+                <button class="btn btn-small">5</button>
+                <button class="btn btn-small">6</button>
+                <button class="btn btn-small">7</button>
+                <button class="btn btn-small">8</button>
+                <button class="btn btn-small">9</button>
+                <button class="btn btn-small">10</button>
+            </div>
 
 
-            <p style="margin-bottom: 2px"><i>Robot maneuverability:</i><span id="RobotManeuverabilityFeedback"> 1</span></p>
-            <input type="range" min="1" max="10" id="RobotManeuverability" value="1" />
-            <br />
+            <p style="margin-bottom: 2px" class="small_title"><i>Robot maneuverability</i><!--<span id="RobotManeuverabilityFeedback"> 1</span>--></p>
+            <!--<input type="range" min="1" max="10" id="RobotManeuverability" value="1" />-->
+            <div class="btn-group robotManeuverability" data-toggle="buttons-radio">
+                <button class="btn btn-small active">1</button>
+                <button class="btn btn-small">2</button>
+                <button class="btn btn-small">3</button>
+                <button class="btn btn-small">4</button>
+                <button class="btn btn-small">5</button>
+                <button class="btn btn-small">6</button>
+                <button class="btn btn-small">7</button>
+                <button class="btn btn-small">8</button>
+                <button class="btn btn-small">9</button>
+                <button class="btn btn-small">10</button>
+            </div>
+            <br /><br />
             <button class="btn btn-large" id="NextPageButton" onclick="sendData()">Continue to Climbing &rarr;</button>
             <br /><br />
         </div>
@@ -127,8 +151,8 @@
                 invisibleForm.innerHTML += "<input type='text' name='teleop_blocked_goals' value='" + teleopPoints[4] + "'</input>";
                 invisibleForm.innerHTML += "<input type='text' name='teleop_pyramid_goals' value='" + teleopPoints[5] + "'</input>";
                 invisibleForm.innerHTML += "<input type='text' name='teleop_shooting_range' value='" + range + "'</input>";
-                invisibleForm.innerHTML += "<input type='text' name='teleop_robot_speed' value='" + $("#RobotSpeed").val() + "'</input>";
-                invisibleForm.innerHTML += "<input type='text' name='teleop_robot_maneuverability' value='" + $("#RobotManeuverability").val() + "'</input>";
+                invisibleForm.innerHTML += "<input type='text' name='teleop_robot_speed' value='" + $(".robotSpeed .active").text() + "'</input>";
+                invisibleForm.innerHTML += "<input type='text' name='teleop_robot_maneuverability' value='" + $(".robotManeuverability .active").text() + "'</input>";
                 invisibleForm.submit();      
             }
         </script>

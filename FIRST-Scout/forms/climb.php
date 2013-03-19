@@ -43,22 +43,22 @@
             <p class="small_title"><i>Record attempts and disks dropped:</i></p>
             <button class="btn plus_minus_buttons" style="height: 50px; width: 100px" onclick="update(0, false)">Attempts</button>
             <button class="btn plus_minus_buttons" style="height: 50px; width: 50px" onclick="update(0, true)">&mdash;</button>
-            <span id="Attempts" class="autonomousIndividual">0</span>
+            <span id="attempts" class="autonomousIndividual">0</span>
             <br />
             <button class="btn plus_minus_buttons" style="height: 50px; width: 100px" onclick="update(1, false)">Disks Dropped</button>
             <button class="btn plus_minus_buttons" style="height: 50px; width: 50px" onclick="update(1, true)">&mdash;</button>
-            <span id="DisksDropped" class="autonomousIndividual">0</span>
+            <span id="disksDropped" class="autonomousIndividual">0</span>
 
             <br />
             <p class="small_title">Level Reached</p>
-            <div class="btn-group" data-toggle="buttons-radio">
+            <div class="btn-group levelReached" data-toggle="buttons-radio">
                 <button class="btn active btn-danger">0</button>
                 <button class="btn">1</button>
                 <button class="btn">2</button>
                 <button class="btn">3</button>
             </div>
             <p class="small_title">Climbing Style</p>
-            <div class="btn-group" data-toggle="buttons-radio">
+            <div class="btn-group climbStyle" data-toggle="buttons-radio">
                 <button class="btn active btn-danger">n/a</button>
                 <button class="btn">Corner</button>
                 <button class="btn">Inside</button>
@@ -86,11 +86,22 @@
             }
             
             function sendData() {
-                //TODO: this
-                alert("Not done yet!");
+                var climbStyle = 0;
+                switch($(".climbStyle .active").text()) {
+                    case "n/a": climbStyle = 0; break;
+                    case "Corner": climbStyle = 1; break;
+                    case "Inside": climbStyle = 2; break;
+                    case "Face" : climbStyle = 3; break;         
+                }
+                var invisibleForm = document.getElementById('sendForm');
+                invisibleForm.innerHTML += "<input type='number' name='climb_attempts' value='" + climbing[0] + "'</input>";
+                invisibleForm.innerHTML += "<input type='number' name='climb_disks_dropped' value='" + climbing[1] + "'</input>";
+                invisibleForm.innerHTML += "<input type='number' name='climb_level_reached' value='" + $(".levelReached .active").text() + "'</input>";
+                invisibleForm.innerHTML += "<input type='number' name='climb_climb_style' value='" + climbStyle + "'</input>";
+                invisibleForm.submit();
             }
-
         </script>
+        <form id="sendForm" action="../processdata.php" class="invisible_form" method="post"></form>
     </body>
 </html>
 

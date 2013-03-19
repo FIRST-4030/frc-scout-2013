@@ -33,6 +33,6 @@
             </form>
         </div>
         <br />
-        <p><a href='/input_forms/prematch.php'>Go to forms &rarr;</a></p>
+        <p><a href='/input_forms/'>Go to forms &rarr;</a></p>
     </body>
 </html>

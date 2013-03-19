@@ -39,7 +39,7 @@
             <p style="font-weight: bold; margin-top: 5px">Total Points: <span id="totalPoints">0</span></p>
 
             <button class="btn btn-large" id="NextPageButton" onclick="sendData()">Continue to Teleoperated &rarr;</button>
-            <br>
+            <br /><br />
         </div>
         <script type="text/javascript">
             var autonomousPoints = [0, 0, 0, 0];
