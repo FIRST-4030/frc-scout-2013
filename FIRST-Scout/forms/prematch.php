@@ -16,7 +16,7 @@
         <div class="container">
             <p class="title" id ="title" style="margin-bottom: 10px;">Pre-match Information</p>
             <div id="inputContainer">
-                <div class="alert alert-danger" id="inputError">
+                <div class="alert alert-warning" id="inputError">
                     <button type="button" class="close" onclick="$('.alert').hide()">&times;</button>
                     <strong id='alertError'></strong>
                 </div>

@@ -3,8 +3,8 @@
     <head>
         <title>FIRST Scout: Login</title>
         <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
-        <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-        <link href="css/style.css" rel="stylesheet" type="text/css">
+        <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <link href="/css/style.css" rel="stylesheet" type="text/css">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/> <!--320-->
 
@@ -23,11 +23,10 @@
         <div class="container">
             <!--<a href="/index.php">--><img src="/images/ram-logo.png" alt="FIRST Scout"><!--</a>-->
             <br>
-
             <p class="title" style="margin-bottom: 20px;">FIRST Scout: Login</p>
-            <div class="alert alert-danger" id="inputError">
+            <div class="alert alert-warning" id="inputError">
                 <button type="button" class="close" onclick="$('.alert').hide()">&times;</button>
-                <strong id='alertError'><? echo stripcslashes($_GET['error']); ?></strong>
+                <strong id='alertError'><?php if (isset($_GET['error'])) echo stripcslashes($_GET['error']); ?></strong>
             </div>
             <input type="number" name="team_id" placeholder="Team ID" id="teamID" /><br> 
             <input type="text" name="user_id" placeholder="User ID" id="userID" /><br>
@@ -39,7 +38,7 @@
             $(document).ready(function() {
                 $('#inputError').hide();
 
-                if (document.getElementById('alertError').val() !== "") {
+                if (document.getElementById('alertError').innerHTML !== "") {
                     $('#inputError').show();
                 }
             });
@@ -48,10 +47,10 @@
             function checkInputs() {
                 errors = "Please correct the following errors:";
                 if ($("#teamID").val() === "") {
-                    errors += "<br />&bull; Enter a Team ID.";
+                    errors += "<br />&bull; Enter your Team ID.";
                 }
                 if ($("#userID").val() === "") {
-                    errors += "<br />&bull; Enter a User ID.";
+                    errors += "<br />&bull; Enter your User ID.";
                 }
                 if ($("#teamPassword").val() === "") {
                     errors += "<br />&bull; Enter your team password.";

@@ -59,7 +59,7 @@
             </div>
 
 
-            <p style="margin-bottom: 2px; margin-top: 10px;" class="small_title"><i>Robot speed</i><!--<span id="robotSpeedFeedback"> 1</span>--></p>
+            <p style="margin-bottom: 2px; margin-top: 10px;" class="small_title"><i>Robot speed</i></p>
             <!--<input type="range" min="1" max="10" id="RobotSpeed" value="1"/>-->
             <div class="btn-group robotSpeed" data-toggle="buttons-radio">
                 <button class="btn btn-small active">1</button>
@@ -75,8 +75,7 @@
             </div>
 
 
-            <p style="margin-bottom: 2px" class="small_title"><i>Robot maneuverability</i><!--<span id="RobotManeuverabilityFeedback"> 1</span>--></p>
-            <!--<input type="range" min="1" max="10" id="RobotManeuverability" value="1" />-->
+            <p style="margin-bottom: 2px" class="small_title"><i>Robot maneuverability</i></p>
             <div class="btn-group robotManeuverability" data-toggle="buttons-radio">
                 <button class="btn btn-small active">1</button>
                 <button class="btn btn-small">2</button>

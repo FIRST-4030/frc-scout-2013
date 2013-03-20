@@ -23,7 +23,7 @@ body {
     margin-right: auto;
     text-align: center;
     max-width: 95%;
-    height: 95%;
+    height: 100%;
     background-color: rgb(220,220,220);
 
 }
@@ -91,7 +91,11 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .btn-small {
-    font-weight: 600;
+    font-weight: 500;
+}
+
+.btn.active {
+    font-weight: bold;
 }
 
 .homepage_buttons {
