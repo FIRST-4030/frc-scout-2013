@@ -23,7 +23,7 @@
         }
         if (isset($_POST['error_submit'])) {
             $userMessage = $_POST['error_submit'];
-            mail("terabyte128@gmail.com", "Error $error was encountered on FIRST Scout", "A user encountered error $error and left this message:\r\n\r\n$userMessage");
+            mail("terabyte128@gmail.com", "Error $error was encountered on FIRST Scout", "A user encountered error $error and left this message:\r\n\r\n$userMessage", "From: scout@ingrahamrobotics.org");
             $errorMessage = "Error reported successfully, thanks!";
         }
         if ($errorMessage === "") {
@@ -45,7 +45,7 @@
             <br />
             <button class='btn btn-large btn-success homepage_buttons' onclick='window.location = "index.php"'>Login</button>
             <br />
-            <button class='btn btn-large btn-danger homepage_buttons' onclick='showError()'>Report this error</button>
+            <button class='btn btn-large btn-danger homepage_buttons' id="sendAnError" onclick='showError()'>Report this error</button>
             <form action="/errordoc.php?error=<? echo $error ?>" id="errorForm" method="post">
                 <textarea name="error_submit" placeholder="Enter any information." style="width: 190px; height: 100px"></textarea>
                 <br />
