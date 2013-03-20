@@ -35,10 +35,11 @@
                 <strong id='alertError'><?php echo $errorMessage ?></strong>
             </div>
             <p class="title">Aw, snap! You've encountered an error!</p>
-            <p class='small_title'>What can you do now?</p>
+            <p class='small_title'><strong>What to do now?</strong></p>
+            <button class='btn btn-large btn-info homepage_buttons' onclick='window.location = "options"'>Return Home</button>
             <br />
-            <button class='btn btn-large btn-info' onclick='window.location = "options"'>Return Home</button>
-            <br /> <br /> 
+            <button class='btn btn-large btn-success homepage_buttons' onclick='window.location = "index.php"'>Login</button>
+            <br />
         </div>
     </body>
 </html>
