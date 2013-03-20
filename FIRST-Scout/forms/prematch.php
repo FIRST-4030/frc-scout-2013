@@ -16,6 +16,10 @@
         <div class="container">
             <p class="title" id ="title" style="margin-bottom: 10px;">Pre-match Information</p>
             <div id="inputContainer">
+                <div class="alert alert-danger" id="inputError">
+                    <button type="button" class="close" onclick="$('.alert').hide()">&times;</button>
+                    <strong id='alertError'></strong>
+                </div>
                 <button id="robotPresent" onclick="updateCheckbox(0)" class="btn btn-success active" data-toggle="button">Present</button>
                 <button id="deadRobot" onclick="updateCheckbox(1)" class="btn btn-warning" data-toggle="button">Dead Robot</button>
                 <br />
@@ -34,44 +38,67 @@
         </div>
 
         <script type="text/javascript">
-            var present = true;
-            var deadRobot = false;
-            var redAlliance = true;
-                    
-            $(document).ready(function() {
-                window.scrollTo(0, 1);
-            });  
+                        var present = true;
+                        var deadRobot = false;
+                        var redAlliance = true;
 
-            function updateCheckbox(num) {
-                num === 0 ? present = !present : deadRobot = !deadRobot;
-            }
-                    
-            function updateAlliance(red) {
-                if(red) {
-                    if(!redAlliance) {
-                        redAlliance = !redAlliance;
-                    }
-                } else {
-                    if(redAlliance) {
-                        redAlliance = !redAlliance;
-                    }
-                }
-            }
+                        $(document).ready(function() {
+                            window.scrollTo(0, 1);
+                            $("#inputError").hide();
+                        });
 
-            function sendData() {
-                var invisibleForm = document.getElementById('sendForm');            
-                invisibleForm.innerHTML += "<input type='text' name='next_page' value='" + "forms/autonomous.php" + "'</input>";
-                invisibleForm.innerHTML += "<input type='text' name='prematch_team_present' value='" + present + "'></input>";
-                invisibleForm.innerHTML += "<input type='text' name='prematch_dead_robot' value='" + deadRobot + "'></input>";
-                invisibleForm.innerHTML += "<input type='text' name='prematch_location' value='" + $("#location").val() + "'></input>";
-                invisibleForm.innerHTML += "<input type='number' name='prematch_team_number' value='" + $("#teamNumber").val() + "'></input>";
-                invisibleForm.innerHTML += "<input type='number' name='prematch_match_number' value='" + $("#matchNumber").val() + "'></input>";
-                invisibleForm.innerHTML += "<input type='text' name='prematch_red_alliance' value='" + redAlliance + "'></input>";
-                invisibleForm.submit();
-            }
+                        function updateCheckbox(num) {
+                            num === 0 ? present = !present : deadRobot = !deadRobot;
+                        }
+
+                        function updateAlliance(red) {
+                            if (red) {
+                                if (!redAlliance) {
+                                    redAlliance = !redAlliance;
+                                }
+                            } else {
+                                if (redAlliance) {
+                                    redAlliance = !redAlliance;
+                                }
+                            }
+                        }
+
+                        var errors = "";
+                        function checkInputs() {
+                            errors = "Please correct the following errors:";
+                            if ($("#location").val() === "") {
+                                errors += "<br />&bull; Enter a location.";
+                            }
+                            if ($("#teamNumber").val() === "") {
+                                errors += "<br />&bull; Enter a team number.";
+                            }
+                            if ($("#matchNumber").val() === "") {
+                                errors += "<br />&bull; Enter a match number.";
+                            } else {
+                                return true;
+                            }
+                            return false;
+                        }
+
+                        function sendData() {
+                            if (checkInputs()) {
+                                var invisibleForm = document.getElementById('sendForm');
+                                invisibleForm.innerHTML += "<input type='text' name='next_page' value='" + "forms/autonomous.php" + "'</input>";
+                                invisibleForm.innerHTML += "<input type='text' name='prematch_team_present' value='" + present + "'></input>";
+                                invisibleForm.innerHTML += "<input type='text' name='prematch_dead_robot' value='" + deadRobot + "'></input>";
+                                invisibleForm.innerHTML += "<input type='text' name='prematch_location' value='" + $("#location").val() + "'></input>";
+                                invisibleForm.innerHTML += "<input type='number' name='prematch_team_number' value='" + $("#teamNumber").val() + "'></input>";
+                                invisibleForm.innerHTML += "<input type='number' name='prematch_match_number' value='" + $("#matchNumber").val() + "'></input>";
+                                invisibleForm.innerHTML += "<input type='text' name='prematch_red_alliance' value='" + redAlliance + "'></input>";
+                                invisibleForm.submit();
+                            } else {
+                                document.getElementById('alertError').innerHTML = errors;
+                                $("#inputError").show();
+                            }
+                        }
 
         </script>
-        <form id="sendForm" action="../processdata.php" class="invisible_form" method="post"></form>
+        <form id="sendForm" action="/entry.php" class="invisible_form" method="post"></form>
     </body>
 </html>
 <!--

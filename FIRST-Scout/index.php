@@ -23,29 +23,57 @@
         <div class="container">
             <!--<a href="/index.php">--><img src="/images/ram-logo.png" alt="FIRST Scout"><!--</a>-->
             <br>
-            
+
             <p class="title" style="margin-bottom: 20px;">FIRST Scout: Login</p>
-            <div class="alert alert-danger" >
+            <div class="alert alert-danger" id="inputError">
                 <button type="button" class="close" onclick="$('.alert').hide()">&times;</button>
                 <strong id='alertError'><? echo stripcslashes($_GET['error']); ?></strong>
             </div>
-            <form class="form_entry" method="post" action="login.php?intent=login">
-                <input type="number" name="team_id" placeholder="Team ID" id="teamNumber" /><br> 
-                <input type="text" name="user_id" placeholder="User ID" id="emailAddress" /><br>
-                <input type="password" name="user_password" placeholder="Password" id="password" /><br><br>
-                <button class="btn" type="submit" id='SubmitButton'>Log In</button>
-            </form>
+            <input type="number" name="team_id" placeholder="Team ID" id="teamID" /><br> 
+            <input type="text" name="user_id" placeholder="User ID" id="userID" /><br>
+            <input type="password" name="user_password" placeholder="Password" id="teamPassword" /><br><br>
+            <button class="btn" onclick="sendData()" id='SubmitButton'>Log In</button>
+            <br /><br />
         </div>
-        <br />
-        <p><a href='/input_forms/'>Go to forms &rarr;</a></p>
         <script type="text/javascript">
             $(document).ready(function() {
-               $('.alert').hide(); 
-               
-               if(document.getElementById('alertError').toString() !== "") {
-                   $('.alert').show();
-               }
+                $('#inputError').hide();
+
+                if (document.getElementById('alertError').val() !== "") {
+                    $('#inputError').show();
+                }
             });
+
+            var errors = "";
+            function checkInputs() {
+                errors = "Please correct the following errors:";
+                if ($("#teamID").val() === "") {
+                    errors += "<br />&bull; Enter a Team ID.";
+                }
+                if ($("#userID").val() === "") {
+                    errors += "<br />&bull; Enter a User ID.";
+                }
+                if ($("#teamPassword").val() === "") {
+                    errors += "<br />&bull; Enter your team password.";
+                } else {
+                    return true;
+                }
+                return false;
+            }
+
+            function sendData() {
+                if (checkInputs()) {
+                    var invisibleForm = document.getElementById('sendForm');
+                    invisibleForm.innerHTML += "<input type='text' name='team_id' value='" + $('#teamID').val() + "'</input>";
+                    invisibleForm.innerHTML += "<input type='text' name='user_id' value='" + $('#userID').val() + "'></input>";
+                    invisibleForm.innerHTML += "<input type='password' name='team_password' value='" + $('#teamPassword').val() + "'></input>";
+                    invisibleForm.submit();
+                } else {
+                    document.getElementById('alertError').innerHTML = errors;
+                    $("#inputError").show();
+                }
+            }
         </script>
+        <form id="sendForm" action="/login.php?intent=login" class="invisible_form" method="post"></form>
     </body>
 </html>
