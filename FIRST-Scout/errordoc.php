@@ -30,7 +30,7 @@
             $errorMessage = "Error $error: Unknown error, what did you do?";
         }
         ?>
-        <title>Error <? echo $errorMessage ?></title>
+        <title><? echo $errorMessage ?></title>
         <?php include 'includes/form-headers.html'; ?>
     </head>
     <body>
