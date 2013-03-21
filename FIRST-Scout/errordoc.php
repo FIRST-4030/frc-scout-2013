@@ -20,11 +20,22 @@
             case 500:
                 $errorMessage = "Error 500: Internal server error.";
                 break;
+            case 42:
+                $errorMessage = "Congratulations. You have won the game of Life.";
+                break;
+            case "":
+                $errorMessage = "Somehow you've reached the error page in error. Now how did that happen?";
+                break;
+                
         }
         if (isset($_POST['error_submit'])) {
-            $userMessage = $_POST['error_submit'];
-            mail("terabyte128@gmail.com", "Error $error was encountered on FIRST Scout", "A user encountered error $error and left this message:\r\n\r\n$userMessage", "From: scout@ingrahamrobotics.org");
-            $errorMessage = "Error reported successfully, thanks!";
+            $userMessage = stripslashes($_POST['error_submit']);
+            if ($userMessage != "") {
+                mail("terabyte128@gmail.com", "Error $error was encountered on FIRST Scout", "A user encountered error $error and left this message:\r\n\r\ns$userMessage", "From: scout@ingrahamrobotics.org");
+                $errorMessage = "Error reported successfully, thanks!";
+            } else {
+                $errorMessage = "You didn't enter any information!";
+            }
         }
         if ($errorMessage === "") {
             $errorMessage = "Error $error: Unknown error, what did you do?";
@@ -35,15 +46,15 @@
     </head>
     <body>
         <div class='container'>
-            <img src="/images/ram-logo.png" alt="FIRST Scout">
+            <a href="/options"><img src="/images/ram-logo.png" alt="FIRST Scout"></a>
             <div class="alert alert-warning" id="inputError">
                 <strong id='alertError'><?php echo $errorMessage ?></strong>
             </div>
             <p class="title">Aw, snap! You've encountered an error!</p>
             <p class='small_title'><strong>What to do now?</strong></p>
-            <button class='btn btn-large btn-info homepage_buttons' onclick='window.location = "options"'>Return Home</button>
+            <button class='btn btn-large btn-info homepage_buttons' onclick='window.location = "/options"'>Return home</button>
             <br />
-            <button class='btn btn-large btn-success homepage_buttons' onclick='window.location = "index.php"'>Login</button>
+            <button class='btn btn-large btn-success homepage_buttons' onclick='history.go(-1)'>Go back</button>
             <br />
             <button class='btn btn-large btn-danger homepage_buttons' id="sendAnError" onclick='showError()'>Report this error</button>
             <form action="/errordoc.php?error=<? echo $error ?>" id="errorForm" method="post">
