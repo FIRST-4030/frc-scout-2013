@@ -89,6 +89,10 @@ if (isset($_POST['prematch_team_number'])) {
 	$next_page = 'teleop.php';
 }
 
+# Final DB entry should unset MATCH_ID for safety
+# Nothing explictly breaks if you don't, but it avoids potential user error
+# unset($_SESSION['MATCH_ID']);
+
 # Run any DB query left for us, appending "WHERE uid=<saved match ID>"
 if ($db_stmt !== NULL) {
 	if ($_SESSION['MATCH_ID']) {
