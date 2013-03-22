@@ -98,7 +98,7 @@
                         }
 
         </script>
-        <form id="sendForm" action="/entry.php" class="invisible_form" method="post"></form>
+        <form id="sendForm" action="entry.php" class="invisible_form" method="post"></form>
     </body>
 </html>
 <!--
