@@ -1,3 +1,9 @@
+<?php session_start(); 
+if(!isset($_SESSION['TeamNumber'])) {
+    header("location: /index.php?error=" . urlencode("You must log in first!"));
+}
+
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -14,7 +20,7 @@
     <body>
         <div class="container">
             <p class="title">Welcome to FIRST Scout!</p>
-            <p class="small_title" style="margin-bottom: 10px;">Your are logged in as <b><? echo $_SESSION['UserID'] ?></b> for team <b><? echo $_SESSION["TeamID"] ?></b></p>
+            <p class="small_title" style="margin-bottom: 10px;">Your are logged in as <b><? echo $_SESSION['UserID'] ?></b> for team <b><? echo $_SESSION["TeamNumber"] ?></b></p>
             <button class="btn btn-large btn-success homepage_buttons" onclick="goToPage('/forms/prematch.php')">Scout a new team</button>
             <br />
             <button class="btn btn-large btn-info homepage_buttons">See results</button>
