@@ -1,8 +1,9 @@
-<?php session_start(); 
-if(!isset($_SESSION['TeamNumber'])) {
+<?php
+session_start();
+
+if (!isset($_SESSION['UserID'])) {
     header("location: /index.php?error=" . urlencode("You must log in first!"));
 }
-
 ?>
 <!DOCTYPE html>
 <html>
@@ -29,9 +30,9 @@ if(!isset($_SESSION['TeamNumber'])) {
 
         </div>
         <script type="text/javascript">
-                function goToPage(page) {
-                    window.location = page;
-                }
+            function goToPage(page) {
+                window.location = page;
+            }
         </script>
     </body>
 </html>

@@ -1,7 +1,5 @@
 <?php
-
 session_start();
-
 if ($_GET['intent'] == "logout") {
     unset($_SESSION['TeamNumber']);
     unset($_SESSION['UserID']);
@@ -15,13 +13,12 @@ if (isset($_POST['team_id'])) {
         $db = new PDO(DSN, DB_USER, DB_PASSWD);
         $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     } catch (PDOException $ex) {
-        die("Unable to connect to DB\n " . $ex->getMessage() . "<br>" . $DSN);
+        die("Unable to connect to DB\n " . $ex->getMessage() . "<br>" . DSN);
     }
 
-    $teamID = $_POST['team_id'];
-    $teamID = preg_replace('/[^\w ]/', '', $teamID);
-    $userID = $_POST['user_id'];
-    $userID = preg_replace('/[^\w ]/', '', $userID);
+    $teamID = preg_replace('/[^\w ]/', '', $_POST['team_id']);
+    $userID = preg_replace('/[^\w ]/', '', $_POST['user_id']);
+    
     $teamPassword = $_POST['team_password'];
 
     $authenticate = $db->prepare("SELECT team_number FROM scout_login WHERE team_id = ? AND team_password = md5(?)");

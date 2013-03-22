@@ -17,7 +17,7 @@
     </head>
     <body>
         <div class="container">
-            <p class="title">Autonomous: <b><?php echo $_COOKIE['TeamNumber']?></b></p>
+            <p class="title">Autonomous: <b><?php echo ?></b></p>
             
             <button id="usedKinect" onclick="updateKinect()" class="btn btn-success" data-toggle="button" style="margin-top: 3px; margin-bottom: 8px;">Used Kinect?</button>
             <p><i>Record points for each goal</i></p>
