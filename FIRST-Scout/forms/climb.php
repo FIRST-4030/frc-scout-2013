@@ -30,7 +30,7 @@
             });
         </script>
         <div class="container">
-            <p class="title">Climb and Disk Drop: <b><?php echo $_COOKIE['TeamNumber'] ?></b></p>
+            <p class="title">Climb and Disk Drop: <b><?php echo $scoutedTeamNumber ?></b></p>
             <p class="small_title"><i>Record attempts and disks dropped:</i></p>
             <button class="btn plus_minus_buttons" style="height: 50px; width: 100px" onclick="update(0, false)">Attempts</button>
             <button class="btn plus_minus_buttons" style="height: 50px; width: 50px" onclick="update(0, true)">&mdash;</button>
@@ -95,7 +95,7 @@
                 var invisibleForm = document.getElementById('sendForm');
                 invisibleForm.innerHTML += "<input type='text' name='next_page' value='" + "forms/results.php" + "'</input>";
                 invisibleForm.innerHTML += "<input type='number' name='climb_attempts' value='" + climbing[0] + "'</input>";
-                invisibleForm.innerHTML += "<input type='number' name='climb_disks_dropped' value='" + climbing[1] + "'</input>";
+                invisibleForm.innerHTML += "<input type='number' name='climb_pyramid_goals' value='" + climbing[1] + "'</input>";
                 invisibleForm.innerHTML += "<input type='number' name='climb_level_reached' value='" + $(".levelReached .active").text() + "'</input>";
                 invisibleForm.innerHTML += "<input type='number' name='climb_climb_style' value='" + climbStyle + "'</input>";
                 invisibleForm.submit();

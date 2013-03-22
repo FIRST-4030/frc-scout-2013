@@ -21,7 +21,7 @@
 
     <body>
         <div class="container">
-            <p class="title">Teleoperated: <b><?php echo $_COOKIE['TeamNumber']?></b></p>
+            <p class="title">Teleoperated: <b><?php echo $scoutedTeamNumber ?></b></p>
             <button id="frisbeePickup" onclick="updateCanPickupFrisbees()" class="btn btn-success" data-toggle="button" style="margin-top: 3px; margin-bottom: 8px;">Can pick up Frisbees?</button>
             <p><i>Record points for each goal</i></p>
 

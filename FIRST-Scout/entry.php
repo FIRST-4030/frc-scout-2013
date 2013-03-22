@@ -34,7 +34,7 @@ $db_vals = NULL;
 if (isset($_POST['prematch_team_number'])) {
 
     # Force the data types
-    $robot = intval($_POST['prematch_team_number']);
+    $scoutedTeamNumber = intval($_POST['prematch_team_number']);
     $present = ($_POST['prematch_team_present'] ? true : false);
     $dead = ($_POST['prematch_dead_robot'] ? true : false);
     $alliance = ($_POST['prematch_red_alliance'] ? 'RED' : 'BLUE');
@@ -42,8 +42,8 @@ if (isset($_POST['prematch_team_number'])) {
     # Save the data
     try {
         $db->beginTransaction();
-        $stmt = $db->prepare('INSERT INTO ' . $TABLE . ' (ts, user_id, robot, present, dead, alliance) VALUES (now(), ?, ?, ?, ?, ?)');
-        $stmt->execute(array($_SESSION['UserID'], $robot, $present, $dead, $alliance));
+        $stmt = $db->prepare('INSERT INTO ' . $TABLE . ' (ts, user_id, scouted_team_number, present, dead, alliance) VALUES (now(), ?, ?, ?, ?, ?)');
+        $stmt->execute(array($_SESSION['UserID'], $scoutedTeamNumber, $present, $dead, $alliance));
         $_SESSION['MATCH_ID'] = $db->lastInsertId();
         if (!$_SESSION['MATCH_ID']) {
             throw new PDOException('No auto_ID returned', -1);
@@ -99,8 +99,19 @@ else if (isset($_POST['teleop_can_pickup_frisbees'])) {
 
     # Set the next page
     $next_page = 'climb.php';
+} else if (isset($_POST['climb_attempts'])) {     
+    $db_stmt = "UPDATE " . $TABLE . " SET climb_attempts=?, climb_pyramid_goals=?, climb_level_reached=?, climb_style=?";
+    $db_vals = array($_POST['climb_attempts'], $_POST['climb_pyramid_goals'], $_POST['climb_level_reached'], $_POST['climb_climb_style']);   
+    $next_page = "results.php";
+    
+//        results_match_outcome SMALLINT NOT NULL,
+//        results_fouls SMALLINT NOT NULL,
+//        results_technical_fouls SMALLINT NOT NULL,
+//        results_comments TEXT,
+} else if (isset ($_POST['results_match_outcome'])) {
+    $db_stmt = "UPDATE " . $TABLE . " SET results_match_outcome=?, results_fouls=?, results_technical_fouls=?, results_comments=?";
+    $db_vals = array($_POST['results_match_outcome'], $_POST['results_fouls'], $_POST['results_technical_fouls'], $_POST['results_comments']);
 }
-
 # Final DB entry should unset MATCH_ID for safety
 # Nothing explictly breaks if you don't, but it avoids potential user error
 # Run any DB query left for us, appending "WHERE uid=<saved match ID>"
@@ -126,9 +137,10 @@ if ($db_stmt !== NULL) {
     $db_vals = NULL;
 }
 
-#if ('final.whatever') {
-#    unset($_SESSION['MATCH_ID']);
-#}
+if(isset($_POST['results_fouls'])) {
+    unset($_SESSION['MATCH_ID']);
+    
+}
 
 # Display the next page
 require 'forms/' . $next_page;

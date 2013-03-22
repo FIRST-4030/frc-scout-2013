@@ -14,7 +14,7 @@
     </head>
     <body>
         <div class="container">
-            <p class="title" id ="title" style="margin-bottom: 10px;">Match Results: <b><?php echo $_COOKIE['TeamNumber'] ?></b></p>
+            <p class="title" id ="title" style="margin-bottom: 10px;">Match Results: <b><?php echo $scoutedTeamNumber ?></b></p>
             <div class="btn-group" data-toggle="buttons-radio" style="margin-bottom: 10px">
                 <button class="btn btn-danger active" onclick="update(0)">Lose</button>
                 <button class="btn btn-success" onclick="update(1)">Win</button>
@@ -24,6 +24,11 @@
             <button class="btn" style="height: 50px; width: 100px" onclick="updateFouls(false)">Fouls</button>
             <button class="btn" style="height: 50px; width: 50px" onclick="updateFouls(true)">&mdash;</button>
             <span id="foulsIndicator" class="autonomousIndividual">0</span>
+            
+            <br />
+            <button class="btn" style="height: 50px; width: 100px" onclick="updateTechnicalFouls(false)">Technical Fouls</button>
+            <button class="btn" style="height: 50px; width: 50px" onclick="updateTechnicalFouls(true)">&mdash;</button>
+            <span id="technicalFoulsIndicator" class="autonomousIndividual">0</span>
 
             <p class="small_title">Comments:</p>
             <textarea id="comments" rows="5"></textarea>
@@ -45,6 +50,16 @@
                         }
                         document.getElementById('foulsIndicator').innerHTML = fouls;
                     }
+                    
+                    var technicalFouls = 0;
+                    function updateTechnicalFouls(negative) {
+                        if (technicalFouls > 0) {
+                            technicalFouls += 1 * negative ? (-1) : (1);
+                        } else if (!negative) {
+                            technicalFouls++;
+                        }
+                        document.getElementById('technicalFoulsIndicator').innerHTML = technicalFouls;
+                    }
 
                     function update(nVal) {
                         loseWinTie = nVal;
@@ -55,6 +70,7 @@
                         invisibleForm.innerHTML += "<input type='text' name='next_page' value='" + "options" + "'</input>";
                         invisibleForm.innerHTML += "<input type='number' name='results_match_outcome' value='" + loseWinTie + "'</input>";
                         invisibleForm.innerHTML += "<input type='number' name='results_fouls' value='" + fouls + "'</input>";
+                        invisibleForm.innerHTML += "<input type='number' name='results_technical_fouls' value='" + technicalFouls + "'</input>"; + "'</input>";
                         invisibleForm.innerHTML += "<input type='text' name='results_comments' value='" + $("#comments").val() + "'</input>";
                         invisibleForm.submit();
                     }
