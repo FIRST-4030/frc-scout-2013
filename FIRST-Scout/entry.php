@@ -97,10 +97,13 @@ if ($db_stmt !== NULL) {
 			$stmt = $db->prepare($db_stmt . ' WHERE uid=?');
 			$db_vals[] = $_SESSION['MATCH_ID'];
 			$stmt->execute($db_vals);
+			if (!$stmt->rowCount()) {
+				throw new PDOException('Invalid MATCH_ID: ' . $_SESSION['MATCH_ID'], -2);
+			}
 			$db->commit();
 		} catch(PDOException $ex) {
 			## TODO -- Debug
-				die("Unable to save data\n" . $ex->getMessage() . "\n");
+			die("Unable to save data\n" . $ex->getMessage() . "\n");
 		}
 	} else {
 		$next_page = $PAGE_ONE;
