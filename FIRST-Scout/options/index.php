@@ -8,7 +8,7 @@ if (!isset($_SESSION['UserID'])) {
 <!DOCTYPE html>
 <html>
     <head>
-        <title>FIRST Scout: Home</title>
+        <title>FIRST Scout: Home</title> 
         <!-- These work! -->
         <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -21,10 +21,14 @@ if (!isset($_SESSION['UserID'])) {
     <body>
         <div class="container">
             <p class="title">Welcome to FIRST Scout!</p>
-            <p class="small_title" style="margin-bottom: 10px;">Your are logged in as <b><? echo $_SESSION['UserID'] ?></b> for team <b><? echo $_SESSION["TeamNumber"] ?></b></p>
+            <div class="alert alert-warning" id="inputError">
+                <button type="button" class="close" onclick="$('.alert').hide()">&times;</button>
+                <strong id='alertError'><?php if (isset($_GET['error'])) echo stripcslashes($_GET['error']); ?></strong>
+            </div>
+            <p class="small_title" style="margin-bottom: 10px;">You are logged in as <b><? echo $_SESSION['UserID'] ?></b> for team <b><? echo $_SESSION["TeamNumber"] ?></b></p>
             <button class="btn btn-large btn-success homepage_buttons" onclick="goToPage('/entry.php')">Scout a new team</button>
             <br />
-            <button class="btn btn-large btn-info homepage_buttons">See results</button>
+            <button class="btn btn-large btn-info homepage_buttons" onclick="goToPage('results.php')">See results</button>
             <br />
             <button class="btn btn-large btn-warning homepage_buttons" onclick="goToPage('/login.php?intent=logout')">Log out</button>
 
@@ -33,6 +37,14 @@ if (!isset($_SESSION['UserID'])) {
             function goToPage(page) {
                 window.location = page;
             }
+            
+            $(document).ready(function() {
+                $("#inputError").hide(); 
+                
+                if (document.getElementById('alertError').innerHTML !== "") {
+                    $('#inputError').show();
+                }
+            });
         </script>
     </body>
 </html>

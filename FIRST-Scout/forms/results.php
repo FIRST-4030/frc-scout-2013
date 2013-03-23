@@ -21,13 +21,13 @@
                 <button class="btn btn-warning" onclick="update(2)">Tie</button>
             </div>
             <br />
-            <button class="btn" style="height: 50px; width: 100px" onclick="updateFouls(false)">Fouls</button>
-            <button class="btn" style="height: 50px; width: 50px" onclick="updateFouls(true)">&mdash;</button>
+            <button class="btn plus_minus_buttons" style="height: 50px; width: 100px" onclick="updateFouls(false)">Fouls</button>
+            <button class="btn plus_minus_buttons" style="height: 50px; width: 50px" onclick="updateFouls(true)">&mdash;</button>
             <span id="foulsIndicator" class="autonomousIndividual">0</span>
             
             <br />
-            <button class="btn" style="height: 50px; width: 100px" onclick="updateTechnicalFouls(false)">Technical Fouls</button>
-            <button class="btn" style="height: 50px; width: 50px" onclick="updateTechnicalFouls(true)">&mdash;</button>
+            <button class="btn plus_minus_buttons" style="height: 50px; width: 100px" onclick="updateTechnicalFouls(false)">Technical Fouls</button>
+            <button class="btn plus_minus_buttons" style="height: 50px; width: 50px" onclick="updateTechnicalFouls(true)">&mdash;</button>
             <span id="technicalFoulsIndicator" class="autonomousIndividual">0</span>
 
             <p class="small_title">Comments:</p>

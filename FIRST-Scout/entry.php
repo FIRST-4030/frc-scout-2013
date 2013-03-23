@@ -1,7 +1,7 @@
 <?php
 
 # Config
-include 'includes/constants.php';
+require 'includes/constants.php';
 $TABLE = "scout_recording";
 
 # Start (or resume) a session. $_SESSION will now be available
@@ -35,15 +35,16 @@ if (isset($_POST['prematch_team_number'])) {
 
     # Force the data types
     $scoutedTeamNumber = intval($_POST['prematch_team_number']);
-    $present = ($_POST['prematch_team_present'] ? true : false);
-    $dead = ($_POST['prematch_dead_robot'] ? true : false);
-    $alliance = ($_POST['prematch_red_alliance'] ? 'RED' : 'BLUE');
+    $_SESSION['scouted_team'] = $scoutedTeamNumber;
+    $present = ($_POST['prematch_team_present'] == "true" ? 1 : 0);
+    $dead = ($_POST['prematch_dead_robot'] == "true" ? 1 : 0);
+    $alliance = ($_POST['prematch_red_alliance'] == "true"  ? 'RED' : 'BLUE');
 
     # Save the data
     try {
         $db->beginTransaction();
-        $stmt = $db->prepare('INSERT INTO ' . $TABLE . ' (ts, user_id, scouted_team_number, present, dead, alliance) VALUES (now(), ?, ?, ?, ?, ?)');
-        $stmt->execute(array($_SESSION['UserID'], $scoutedTeamNumber, $present, $dead, $alliance));
+        $stmt = $db->prepare('INSERT INTO ' . $TABLE . ' (ts, user_id, scouted_team_number, present, dead, alliance, location, match_number) VALUES (now(), ?, ?, ?, ?, ?, ?, ?)');
+        $stmt->execute(array($_SESSION['UserID'], $scoutedTeamNumber, $present, $dead, $alliance, $_POST['prematch_location'], $_POST['prematch_match_number']));
         $_SESSION['MATCH_ID'] = $db->lastInsertId();
         if (!$_SESSION['MATCH_ID']) {
             throw new PDOException('No auto_ID returned', -1);
@@ -62,17 +63,17 @@ if (isset($_POST['prematch_team_number'])) {
 
 # Autonomous
 } else if (isset($_POST['autonomous_top_goals'])) {
-
+    $scoutedTeamNumber = $_SESSION['scouted_team'];
     # Force the data types
     $top = intval($_POST['autonomous_top_goals']);
     $middle = intval($_POST['autonomous_middle_goals']);
     $bottom = intval($_POST['autonomous_bottom_goals']);
     $miss = intval($_POST['autonomous_missed_goals']);
-    $kinect = ($_POST['autonomous_used_kinect'] == "true" ? true : false);
+    $kinect = ($_POST['autonomous_used_kinect'] == "true" ? 1 : 0);
 
     # Build a query for the global action
     $db_stmt = 'UPDATE ' . $TABLE . ' SET auto_top=?, auto_middle=?, auto_bottom=?, auto_miss=?, auto_kinect=?';
-    $db_vals = array($top, $middle, $bottom, $miss, $kinect);
+    $db_vals = array($top, $middle, $bottom, $miss, $kinect == true ? 1 : 0);
 
     # Set the next page
     $next_page = 'teleop.php';
@@ -80,7 +81,8 @@ if (isset($_POST['prematch_team_number'])) {
 #Teleop
 else if (isset($_POST['teleop_can_pickup_frisbees'])) {
     # Force the data types
-    $frisbeePickup = ($_POST['teleop_can_pickup_frisbees'] == "true" ? true : false);
+    $scoutedTeamNumber = $_SESSION['scouted_team'];
+    $frisbeePickup = ($_POST['teleop_can_pickup_frisbees'] == "true"  ? 1 : 0);
     $top = intval($_POST['teleop_top_goals']);
     $middle = intval($_POST['teleop_middle_goals']);
     $bottom = intval($_POST['teleop_bottom_goals']);
@@ -100,17 +102,16 @@ else if (isset($_POST['teleop_can_pickup_frisbees'])) {
     # Set the next page
     $next_page = 'climb.php';
 } else if (isset($_POST['climb_attempts'])) {     
+    $scoutedTeamNumber = $_SESSION['scouted_team'];
     $db_stmt = "UPDATE " . $TABLE . " SET climb_attempts=?, climb_pyramid_goals=?, climb_level_reached=?, climb_style=?";
     $db_vals = array($_POST['climb_attempts'], $_POST['climb_pyramid_goals'], $_POST['climb_level_reached'], $_POST['climb_climb_style']);   
     $next_page = "results.php";
     
-//        results_match_outcome SMALLINT NOT NULL,
-//        results_fouls SMALLINT NOT NULL,
-//        results_technical_fouls SMALLINT NOT NULL,
-//        results_comments TEXT,
 } else if (isset ($_POST['results_match_outcome'])) {
-    $db_stmt = "UPDATE " . $TABLE . " SET results_match_outcome=?, results_fouls=?, results_technical_fouls=?, results_comments=?";
+     $scoutedTeamNumber = $_SESSION['scouted_team'];
+   $db_stmt = "UPDATE " . $TABLE . " SET results_match_outcome=?, results_fouls=?, results_technical_fouls=?, results_comments=?";
     $db_vals = array($_POST['results_match_outcome'], $_POST['results_fouls'], $_POST['results_technical_fouls'], $_POST['results_comments']);
+    $next_page = "/options?error=Entry successful!";
 }
 # Final DB entry should unset MATCH_ID for safety
 # Nothing explictly breaks if you don't, but it avoids potential user error
@@ -122,24 +123,23 @@ if ($db_stmt !== NULL) {
             $stmt = $db->prepare($db_stmt . ' WHERE uid=?');
             $db_vals[] = $_SESSION['MATCH_ID'];
             $stmt->execute($db_vals);
-            if (!$stmt->rowCount()) {
-                throw new PDOException('Invalid MATCH_ID: ' . $_SESSION['MATCH_ID'], -2);
-            }
+//            if (!$stmt->rowCount()) {
+//                throw new PDOException('Invalid MATCH_ID: ' . $_SESSION['MATCH_ID'], -2);
+//            }
             $db->commit();
         } catch (PDOException $ex) {
             ## TODO -- Debug
             die("Unable to save data\n" . $ex->getMessage() . "\n");
         }
     } else {
-        $next_page = $PAGE_ONE;
+        $next_page = "/options?error=" . urlencode("You must start from the beginning!");
     }
     $db_stmt = NULL;
     $db_vals = NULL;
 }
 
 if(isset($_POST['results_fouls'])) {
-    unset($_SESSION['MATCH_ID']);
-    
+    header("location: forms/review.php");
 }
 
 # Display the next page

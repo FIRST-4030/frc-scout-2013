@@ -1,3 +1,9 @@
+<?php
+session_start();
+if(isset($_SESSION['UserID'])) {
+    header('location: options?error=' . urlencode("You're logged in!"));
+}
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -31,7 +37,7 @@
             <input type="text" name="team_id" placeholder="Team ID" id="teamID" /><br> 
             <input type="text" name="user_id" placeholder="User ID" id="userID" /><br>
             <input type="password" name="team_password" placeholder="Password" id="teamPassword" /><br><br>
-            <button class="btn" onclick="sendData()" id='SubmitButton'>Log In</button>
+            <button class="btn" type="submit" onclick="sendData()" id='SubmitButton'>Log In</button>
             <br /><br />
         </div>
         <script type="text/javascript">
