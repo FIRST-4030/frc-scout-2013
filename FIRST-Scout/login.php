@@ -31,6 +31,7 @@ if (isset($_POST['team_id'])) {
         # Login success
         $_SESSION['TeamNumber'] = $team_number;
         $_SESSION['UserID'] = $userID;
+        $_SESSION['TeamID'] = $teamID;
         header('location: options');
     } else {
         unset($_SESSION['TeamNumber']);

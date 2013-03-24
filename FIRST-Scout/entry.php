@@ -39,12 +39,12 @@ if (isset($_POST['prematch_team_number'])) {
     $present = ($_POST['prematch_team_present'] == "true" ? 1 : 0);
     $dead = ($_POST['prematch_dead_robot'] == "true" ? 1 : 0);
     $alliance = ($_POST['prematch_red_alliance'] == "true"  ? 'RED' : 'BLUE');
-
+    $teamID = $_SESSION['TeamID'];
     # Save the data
     try {
         $db->beginTransaction();
-        $stmt = $db->prepare('INSERT INTO ' . $TABLE . ' (ts, user_id, scouted_team_number, present, dead, alliance, location, match_number) VALUES (now(), ?, ?, ?, ?, ?, ?, ?)');
-        $stmt->execute(array($_SESSION['UserID'], $scoutedTeamNumber, $present, $dead, $alliance, $_POST['prematch_location'], $_POST['prematch_match_number']));
+        $stmt = $db->prepare('INSERT INTO ' . $TABLE . ' (ts, user_id, team_id, scouted_team_number, present, dead, alliance, location, match_number) VALUES (now(), ?, ?, ?, ?, ?, ?, ?, ?)');
+        $stmt->execute(array($_SESSION['UserID'], $teamID, $scoutedTeamNumber, $present, $dead, $alliance, $_POST['prematch_location'], $_POST['prematch_match_number']));
         $_SESSION['MATCH_ID'] = $db->lastInsertId();
         if (!$_SESSION['MATCH_ID']) {
             throw new PDOException('No auto_ID returned', -1);
@@ -139,7 +139,7 @@ if ($db_stmt !== NULL) {
 }
 
 if(isset($_POST['results_fouls'])) {
-    header("location: forms/review.php");
+    header("location: /options/single-review.php");
 }
 
 # Display the next page

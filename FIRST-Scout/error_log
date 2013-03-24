@@ -435,34 +435,410 @@
 [16-Mar-2013 17:52:20] PHP Notice:  Undefined index:  error in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/index.php on line 25
 [16-Mar-2013 17:52:28] PHP Notice:  Undefined index:  error in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/index.php on line 25
 [16-Mar-2013 17:52:29] PHP Notice:  Undefined index:  error in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/index.php on line 25
-[16-Mar-2013 17:52:57] PHP Notice:  Undefined index:  error in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/index.php on line 26
-[16-Mar-2013 17:54:11] PHP Notice:  Undefined index:  user_email in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/submit.php on line 9
-[16-Mar-2013 17:55:02] PHP Notice:  Undefined index:  error in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/index.php on line 26
-[16-Mar-2013 17:55:11] PHP Notice:  Undefined index:  user_email in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/submit.php on line 9
-[16-Mar-2013 17:56:17] PHP Notice:  Undefined index:  error in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/index.php on line 26
-[16-Mar-2013 17:56:29] PHP Notice:  Undefined index:  error in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/index.php on line 26
-[16-Mar-2013 17:56:45] PHP Notice:  Undefined index:  error in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/index.php on line 26
-[16-Mar-2013 17:57:13] PHP Notice:  Undefined index:  error in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/index.php on line 26
-[16-Mar-2013 18:03:06] PHP Notice:  Undefined index:  error in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/index.php on line 26
-[16-Mar-2013 18:05:25] PHP Notice:  Undefined index:  error in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/index.php on line 26
-[17-Mar-2013 19:21:00] PHP Notice:  Undefined index:  error in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/index.php on line 26
-[17-Mar-2013 21:27:47] PHP Notice:  Undefined index:  error in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/index.php on line 26
-[17-Mar-2013 21:29:08] PHP Notice:  Undefined index:  error in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/index.php on line 26
-[17-Mar-2013 21:29:17] PHP Notice:  Undefined index:  error in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/index.php on line 26
-[17-Mar-2013 21:29:18] PHP Notice:  Undefined index:  error in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/index.php on line 26
-[17-Mar-2013 21:29:43] PHP Notice:  Undefined index:  error in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/index.php on line 26
-[17-Mar-2013 21:29:44] PHP Notice:  Undefined index:  error in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/index.php on line 26
-[17-Mar-2013 21:29:50] PHP Notice:  Undefined index:  error in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/index.php on line 26
-[17-Mar-2013 21:30:22] PHP Notice:  Undefined index:  error in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/index.php on line 26
-[17-Mar-2013 23:01:42] PHP Notice:  Undefined index:  error in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/index.php on line 26
-[18-Mar-2013 00:09:31] PHP Notice:  Undefined index:  error in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/index.php on line 26
-[18-Mar-2013 00:14:43] PHP Notice:  Undefined index:  error in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/index.php on line 26
-[18-Mar-2013 08:36:48] PHP Notice:  Undefined index:  error in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/index.php on line 26
-[18-Mar-2013 13:08:19] PHP Notice:  Undefined index:  error in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/index.php on line 26
-[18-Mar-2013 14:22:52] PHP Notice:  Undefined index:  error in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/index.php on line 26
-[18-Mar-2013 14:25:29] PHP Notice:  Undefined index:  error in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/index.php on line 26
-[18-Mar-2013 14:27:40] PHP Notice:  Undefined index:  error in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/index.php on line 26
-[18-Mar-2013 14:29:18] PHP Notice:  Undefined index:  error in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/index.php on line 26
-[18-Mar-2013 16:25:57] PHP Notice:  Undefined index:  error in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/index.php on line 26
-[18-Mar-2013 16:27:11] PHP Notice:  Undefined index:  error in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/index.php on line 26
-[18-Mar-2013 16:30:39] PHP Notice:  Undefined index:  error in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/index.php on line 26
+[16-Mar-2013 17:52:57] PHP Notice:  Undefined index:  error in /home1/[23-Mar-2013 13:57:29] PHP Warning:  key_exists() [<a href='function.key-exists'>function.key-exists</a>]: The second argument should be either an array or an object in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/login.php on line 29
+[23-Mar-2013 14:01:36] PHP Notice:  Undefined index:  forms/autonomous.php in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 14:01:36] PHP Notice:  Undefined index:  true in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 14:01:36] PHP Notice:  Undefined index:  false in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 14:01:36] PHP Notice:  Undefined index:  Ellensburg in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 14:01:36] PHP Notice:  Undefined index:  4030 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 14:01:36] PHP Notice:  Undefined index:  12 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 14:02:11] PHP Notice:  Undefined index:  forms/autonomous.php in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 14:02:11] PHP Notice:  Undefined index:  true in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 14:02:11] PHP Notice:  Undefined index:  gtyi in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 14:02:11] PHP Notice:  Undefined index:  14 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 14:02:11] PHP Notice:  Undefined index:  89 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 14:02:11] PHP Notice:  Undefined index:  false in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 14:27:23] PHP Notice:  Undefined index:  forms/autonomous.php in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 14:27:23] PHP Notice:  Undefined index:  true in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 14:27:23] PHP Notice:  Undefined index:  false in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 14:27:23] PHP Notice:  Undefined index:  Ellensburg in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 14:27:23] PHP Notice:  Undefined index:  1234 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 14:27:23] PHP Notice:  Undefined index:  12 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 14:27:34] PHP Notice:  Undefined index:  forms/teleop.php in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 14:27:34] PHP Notice:  Undefined index:  4 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 14:27:34] PHP Notice:  Undefined index:  3 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 14:27:34] PHP Notice:  Undefined index:  1 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 14:27:34] PHP Notice:  Undefined index:  true in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 14:28:33] PHP Notice:  Undefined index:  forms/climb.php in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 14:28:33] PHP Notice:  Undefined index:  true in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 14:28:33] PHP Notice:  Undefined index:  7 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 14:28:33] PHP Notice:  Undefined index:  2 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 14:28:33] PHP Notice:  Undefined index:  1 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 14:28:33] PHP Notice:  Undefined index:  3 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 14:28:33] PHP Notice:  Undefined index:  6 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 14:28:33] PHP Notice:  Undefined index:  8 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 14:29:01] PHP Notice:  Undefined index:  forms/results.php in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 14:29:01] PHP Notice:  Undefined index:  3 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 14:29:01] PHP Notice:  Undefined index:  2 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 14:29:57] PHP Notice:  Undefined index:  options in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 14:29:57] PHP Notice:  Undefined index:  1 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 14:29:57] PHP Notice:  Undefined index:  3 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 14:29:57] PHP Notice:  Undefined index:  adsfasdf in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 14:29:57] PHP Warning:  require(forms//options?error=Entry successful!) [<a href='function.require'>function.require</a>]: failed to open stream: No such file or directory in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 146
+[23-Mar-2013 14:29:57] PHP Fatal error:  require() [<a href='function.require'>function.require</a>]: Failed opening required 'forms//options?error=Entry successful!' (include_path='.:/usr/php/54/usr/lib64:/usr/php/54/usr/share/pear') in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 146
+[23-Mar-2013 15:06:08] PHP Warning:  key_exists() [<a href='function.key-exists'>function.key-exists</a>]: The second argument should be either an array or an object in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/login.php on line 29
+[23-Mar-2013 15:06:47] PHP Warning:  key_exists() [<a href='function.key-exists'>function.key-exists</a>]: The second argument should be either an array or an object in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/login.php on line 29
+[23-Mar-2013 15:07:09] PHP Notice:  Undefined index:  forms/autonomous.php in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:07:09] PHP Notice:  Undefined index:  true in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:07:09] PHP Notice:  Undefined index:  false in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:07:09] PHP Notice:  Undefined index:  ellensberg in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:07:09] PHP Notice:  Undefined index:  2605 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:07:09] PHP Notice:  Undefined index:  42 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:07:10] PHP Notice:  Undefined index:  forms/autonomous.php in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:07:10] PHP Notice:  Undefined index:  true in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:07:10] PHP Notice:  Undefined index:  false in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:07:10] PHP Notice:  Undefined index:  ellensburg in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:07:10] PHP Notice:  Undefined index:  2605 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:07:10] PHP Notice:  Undefined index:  12 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:07:20] PHP Warning:  key_exists() [<a href='function.key-exists'>function.key-exists</a>]: The second argument should be either an array or an object in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/login.php on line 29
+[23-Mar-2013 15:07:52] PHP Warning:  key_exists() [<a href='function.key-exists'>function.key-exists</a>]: The second argument should be either an array or an object in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/login.php on line 29
+[23-Mar-2013 15:08:28] PHP Notice:  Undefined index:  forms/autonomous.php in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:08:29] PHP Notice:  Undefined index:  true in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:08:29] PHP Notice:  Undefined index:  false in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:08:29] PHP Notice:  Undefined index:  ellesnberg in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:08:29] PHP Notice:  Undefined index:  2605 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:08:29] PHP Notice:  Undefined index:  42 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:08:59] PHP Notice:  Undefined index:  forms/autonomous.php in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:08:59] PHP Notice:  Undefined index:  true in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:08:59] PHP Notice:  Undefined index:  false in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:08:59] PHP Notice:  Undefined index:  Ellensberg in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:08:59] PHP Notice:  Undefined index:  948 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:08:59] PHP Notice:  Undefined index:  555 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:09:14] PHP Notice:  Undefined index:  forms/teleop.php in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:09:14] PHP Notice:  Undefined index:  2 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:09:14] PHP Notice:  Undefined index:  0 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:09:14] PHP Notice:  Undefined index:  1 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:09:14] PHP Notice:  Undefined index:  false in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:09:14] PHP Notice:  Undefined index:  forms/teleop.php in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:09:14] PHP Notice:  Undefined index:  1 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:09:14] PHP Notice:  Undefined index:  0 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:09:14] PHP Notice:  Undefined index:  false in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:09:15] PHP Notice:  Undefined index:  forms/teleop.php in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:09:15] PHP Notice:  Undefined index:  1 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:09:15] PHP Notice:  Undefined index:  0 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:09:15] PHP Notice:  Undefined index:  false in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:11:01] PHP Notice:  Undefined index:  forms/climb.php in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:11:01] PHP Notice:  Undefined index:  false in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:11:01] PHP Notice:  Undefined index:  9 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:11:01] PHP Notice:  Undefined index:  0 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:11:01] PHP Notice:  Undefined index:  1 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:11:01] PHP Notice:  Undefined index:  3 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:11:01] PHP Notice:  Undefined index:  8 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:11:14] PHP Notice:  Undefined index:  forms/results.php in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:11:14] PHP Notice:  Undefined index:  1 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:11:14] PHP Notice:  Undefined index:  0 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:11:14] PHP Notice:  Undefined index:  3 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:11:17] PHP Notice:  Undefined index:  forms/climb.php in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:11:17] PHP Notice:  Undefined index:  false in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:11:17] PHP Notice:  Undefined index:  10 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:11:17] PHP Notice:  Undefined index:  0 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:11:17] PHP Notice:  Undefined index:  2 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:11:17] PHP Notice:  Undefined index:  4 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:11:17] PHP Notice:  Undefined index:  7 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:11:35] PHP Notice:  Undefined index:  forms/results.php in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:11:35] PHP Notice:  Undefined index:  0 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:12:17] PHP Notice:  Undefined index:  forms/climb.php in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:12:17] PHP Notice:  Undefined index:  false in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:12:17] PHP Notice:  Undefined index:  10 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:12:17] PHP Notice:  Undefined index:  1 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:12:17] PHP Notice:  Undefined index:  0 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:12:17] PHP Notice:  Undefined index:  3 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:12:17] PHP Notice:  Undefined index:  2 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:12:21] PHP Notice:  Undefined index:  forms/results.php in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:12:21] PHP Notice:  Undefined index:  0 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:12:31] PHP Notice:  Undefined index:  options in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:12:31] PHP Notice:  Undefined index:  0 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:12:31] PHP Notice:  Undefined index:  Didn in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:12:31] PHP Warning:  require(forms//options?error=Entry successful!) [<a href='function.require'>function.require</a>]: failed to open stream: No such file or directory in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 146
+[23-Mar-2013 15:12:31] PHP Fatal error:  require() [<a href='function.require'>function.require</a>]: Failed opening required 'forms//options?error=Entry successful!' (include_path='.:/usr/php/54/usr/lib64:/usr/php/54/usr/share/pear') in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 146
+[23-Mar-2013 15:13:44] PHP Notice:  Undefined index:  forms/autonomous.php in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:13:44] PHP Notice:  Undefined index:  true in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:13:44] PHP Notice:  Undefined index:  false in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:13:44] PHP Notice:  Undefined index:  Ellensberg in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:13:44] PHP Notice:  Undefined index:  1983 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:13:44] PHP Notice:  Undefined index:  555 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:14:03] PHP Notice:  Undefined index:  options in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:14:03] PHP Notice:  Undefined index:  0 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:14:03] PHP Notice:  Undefined index:  Process of shooting and reloading continuously.  in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:14:03] PHP Warning:  require(forms//options?error=Entry successful!) [<a href='function.require'>function.require</a>]: failed to open stream: No such file or directory in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 146
+[23-Mar-2013 15:14:03] PHP Fatal error:  require() [<a href='function.require'>function.require</a>]: Failed opening required 'forms//options?error=Entry successful!' (include_path='.:/usr/php/54/usr/lib64:/usr/php/54/usr/share/pear') in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 146
+[23-Mar-2013 15:14:11] PHP Notice:  Undefined index:  options in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:14:11] PHP Notice:  Undefined index:  0 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:14:11] PHP Notice:  Undefined index:  45 degree omnis not machanum in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:14:11] PHP Warning:  require(forms//options?error=Entry successful!) [<a href='function.require'>function.require</a>]: failed to open stream: No such file or directory in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 146
+[23-Mar-2013 15:14:11] PHP Fatal error:  require() [<a href='function.require'>function.require</a>]: Failed opening required 'forms//options?error=Entry successful!' (include_path='.:/usr/php/54/usr/lib64:/usr/php/54/usr/share/pear') in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 146
+[23-Mar-2013 15:14:26] PHP Notice:  Undefined index:  forms/autonomous.php in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:14:26] PHP Notice:  Undefined index:  true in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:14:26] PHP Notice:  Undefined index:  false in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:14:26] PHP Notice:  Undefined index:  Ellensburg in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:14:26] PHP Notice:  Undefined index:  1425 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:14:26] PHP Notice:  Undefined index:  12 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:15:43] PHP Notice:  Undefined index:  forms/autonomous.php in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:15:43] PHP Notice:  Undefined index:  true in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:15:43] PHP Notice:  Undefined index:  false in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:15:43] PHP Notice:  Undefined index:  ellensberg in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:15:43] PHP Notice:  Undefined index:  2517 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:15:43] PHP Notice:  Undefined index:  43 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:16:18] PHP Notice:  Undefined index:  forms/teleop.php in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:16:18] PHP Notice:  Undefined index:  3 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:16:18] PHP Notice:  Undefined index:  0 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:16:18] PHP Notice:  Undefined index:  false in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:16:19] PHP Notice:  Undefined index:  forms/teleop.php in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:16:19] PHP Notice:  Undefined index:  3 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:16:19] PHP Notice:  Undefined index:  0 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:16:19] PHP Notice:  Undefined index:  1 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:16:19] PHP Notice:  Undefined index:  false in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:16:39] PHP Notice:  Undefined index:  forms/teleop.php in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:16:39] PHP Notice:  Undefined index:  4 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:16:39] PHP Notice:  Undefined index:  0 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:16:39] PHP Notice:  Undefined index:  false in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:18:17] PHP Notice:  Undefined index:  forms/climb.php in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:18:17] PHP Notice:  Undefined index:  false in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:18:17] PHP Notice:  Undefined index:  4 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:18:17] PHP Notice:  Undefined index:  8 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:18:17] PHP Notice:  Undefined index:  0 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:18:17] PHP Notice:  Undefined index:  3 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:18:17] PHP Notice:  Undefined index:  2 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:18:17] PHP Notice:  Undefined index:  6 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:18:17] PHP Notice:  Undefined index:  7 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:18:23] PHP Notice:  Undefined index:  forms/climb.php in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:18:23] PHP Notice:  Undefined index:  false in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:18:23] PHP Notice:  Undefined index:  0 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:18:23] PHP Notice:  Undefined index:  10 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:18:23] PHP Notice:  Undefined index:  1 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:18:23] PHP Notice:  Undefined index:  5 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:18:25] PHP Notice:  Undefined index:  forms/results.php in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:18:25] PHP Notice:  Undefined index:  1 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:18:25] PHP Notice:  Undefined index:  0 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:18:25] PHP Notice:  Undefined index:  3 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:18:31] PHP Notice:  Undefined index:  forms/climb.php in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:18:31] PHP Notice:  Undefined index:  false in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:18:31] PHP Notice:  Undefined index:  16 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:18:31] PHP Notice:  Undefined index:  0 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:18:31] PHP Notice:  Undefined index:  1 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:18:31] PHP Notice:  Undefined index:  7 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:18:35] PHP Notice:  Undefined index:  forms/results.php in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:18:35] PHP Notice:  Undefined index:  0 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:18:43] PHP Notice:  Undefined index:  options in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:18:43] PHP Notice:  Undefined index:  1 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:18:43] PHP Notice:  Undefined index:  0 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:18:43] PHP Notice:  Undefined index:   in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:18:43] PHP Warning:  require(forms//options?error=Entry successful!) [<a href='function.require'>function.require</a>]: failed to open stream: No such file or directory in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 146
+[23-Mar-2013 15:18:43] PHP Fatal error:  require() [<a href='function.require'>function.require</a>]: Failed opening required 'forms//options?error=Entry successful!' (include_path='.:/usr/php/54/usr/lib64:/usr/php/54/usr/share/pear') in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 146
+[23-Mar-2013 15:18:47] PHP Notice:  Undefined index:  forms/results.php in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:18:47] PHP Notice:  Undefined index:  0 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:19:10] PHP Notice:  Undefined index:  options in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:19:10] PHP Notice:  Undefined index:  1 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:19:10] PHP Notice:  Undefined index:  0 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:19:10] PHP Notice:  Undefined index:  Wow they are good. Had lots blocked by the silly-looking blocker one. in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:19:10] PHP Warning:  require(forms//options?error=Entry successful!) [<a href='function.require'>function.require</a>]: failed to open stream: No such file or directory in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 146
+[23-Mar-2013 15:19:10] PHP Fatal error:  require() [<a href='function.require'>function.require</a>]: Failed opening required 'forms//options?error=Entry successful!' (include_path='.:/usr/php/54/usr/lib64:/usr/php/54/usr/share/pear') in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 146
+[23-Mar-2013 15:20:29] PHP Notice:  Undefined index:  forms/autonomous.php in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:20:29] PHP Notice:  Undefined index:  true in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:20:29] PHP Notice:  Undefined index:  false in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:20:29] PHP Notice:  Undefined index:  Ellensburg in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:20:29] PHP Notice:  Undefined index:  9999 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:20:29] PHP Notice:  Undefined index:  99 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:21:06] PHP Notice:  Undefined index:  forms/teleop.php in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:21:06] PHP Notice:  Undefined index:  4 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:21:06] PHP Notice:  Undefined index:  3 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:21:06] PHP Notice:  Undefined index:  2 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:21:06] PHP Notice:  Undefined index:  1 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:21:06] PHP Notice:  Undefined index:  false in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:21:09] PHP Notice:  Undefined index:  forms/autonomous.php in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:21:09] PHP Notice:  Undefined index:  true in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:21:09] PHP Notice:  Undefined index:  false in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:21:09] PHP Notice:  Undefined index:  Ellensburg in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:21:09] PHP Notice:  Undefined index:  3789 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:21:09] PHP Notice:  Undefined index:  152 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:21:37] PHP Notice:  Undefined index:  options in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:21:37] PHP Notice:  Undefined index:  0 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:21:37] PHP Notice:  Undefined index:  Lalala in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:21:37] PHP Warning:  require(forms//options?error=Entry successful!) [<a href='function.require'>function.require</a>]: failed to open stream: No such file or directory in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 146
+[23-Mar-2013 15:21:37] PHP Fatal error:  require() [<a href='function.require'>function.require</a>]: Failed opening required 'forms//options?error=Entry successful!' (include_path='.:/usr/php/54/usr/lib64:/usr/php/54/usr/share/pear') in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 146
+[23-Mar-2013 15:21:53] PHP Notice:  Undefined index:  forms/climb.php in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:21:53] PHP Notice:  Undefined index:  false in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:21:53] PHP Notice:  Undefined index:  0 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:21:53] PHP Notice:  Undefined index:  1 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:21:55] PHP Notice:  Undefined index:  forms/results.php in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:21:55] PHP Notice:  Undefined index:  0 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:21:56] PHP Notice:  Undefined index:  options in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:21:56] PHP Notice:  Undefined index:  0 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:21:56] PHP Notice:  Undefined index:   in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:21:56] PHP Warning:  require(forms//options?error=Entry successful!) [<a href='function.require'>function.require</a>]: failed to open stream: No such file or directory in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 146
+[23-Mar-2013 15:21:56] PHP Fatal error:  require() [<a href='function.require'>function.require</a>]: Failed opening required 'forms//options?error=Entry successful!' (include_path='.:/usr/php/54/usr/lib64:/usr/php/54/usr/share/pear') in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 146
+[23-Mar-2013 15:24:24] PHP Notice:  Undefined index:  forms/autonomous.php in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:24:24] PHP Notice:  Undefined index:  true in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:24:24] PHP Notice:  Undefined index:  false in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:24:24] PHP Notice:  Undefined index:  Ellensberg  in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:24:24] PHP Notice:  Undefined index:  3789 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:24:24] PHP Notice:  Undefined index:  566 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:25:11] PHP Notice:  Undefined index:  forms/autonomous.php in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:25:11] PHP Notice:  Undefined index:  true in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:25:11] PHP Notice:  Undefined index:  false in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:25:11] PHP Notice:  Undefined index:  Regensburg in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:25:11] PHP Notice:  Undefined index:  2811 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:25:11] PHP Notice:  Undefined index:  12 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:25:20] PHP Notice:  Undefined index:  forms/teleop.php in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:25:20] PHP Notice:  Undefined index:  1 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:25:20] PHP Notice:  Undefined index:  0 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:25:20] PHP Notice:  Undefined index:  false in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:25:28] PHP Notice:  Undefined index:  forms/teleop.php in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:25:28] PHP Notice:  Undefined index:  2 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:25:28] PHP Notice:  Undefined index:  0 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:25:28] PHP Notice:  Undefined index:  1 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:25:28] PHP Notice:  Undefined index:  false in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:27:08] PHP Notice:  Undefined index:  forms/climb.php in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:27:08] PHP Notice:  Undefined index:  false in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:27:08] PHP Notice:  Undefined index:  11 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:27:08] PHP Notice:  Undefined index:  0 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:27:08] PHP Notice:  Undefined index:  1 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:27:08] PHP Notice:  Undefined index:  5 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:27:08] PHP Notice:  Undefined index:  8 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:27:13] PHP Notice:  Undefined index:  forms/climb.php in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:27:13] PHP Notice:  Undefined index:  false in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:27:13] PHP Notice:  Undefined index:  0 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:27:13] PHP Notice:  Undefined index:  5 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:27:13] PHP Notice:  Undefined index:  10 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:27:16] PHP Notice:  Undefined index:  forms/results.php in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:27:16] PHP Notice:  Undefined index:  1 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:27:16] PHP Notice:  Undefined index:  0 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:27:16] PHP Notice:  Undefined index:  3 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:27:25] PHP Notice:  Undefined index:  forms/results.php in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:27:25] PHP Notice:  Undefined index:  1 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:27:25] PHP Notice:  Undefined index:  0 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:27:25] PHP Notice:  Undefined index:  3 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:28:11] PHP Notice:  Undefined index:  options in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:28:11] PHP Notice:  Undefined index:  0 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:28:11] PHP Notice:  Undefined index:  Consistently shoots three-pointers, but is a little slow. in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:28:11] PHP Warning:  require(forms//options?error=Entry successful!) [<a href='function.require'>function.require</a>]: failed to open stream: No such file or directory in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 146
+[23-Mar-2013 15:28:11] PHP Fatal error:  require() [<a href='function.require'>function.require</a>]: Failed opening required 'forms//options?error=Entry successful!' (include_path='.:/usr/php/54/usr/lib64:/usr/php/54/usr/share/pear') in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 146
+[23-Mar-2013 15:28:16] PHP Notice:  Undefined index:  options in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:28:16] PHP Notice:  Undefined index:  1 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:28:16] PHP Notice:  Undefined index:  0 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:28:16] PHP Notice:  Undefined index:  Consistently shoots three-pointers, but is a little slow. in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:28:16] PHP Warning:  require(forms//options?error=Entry successful!) [<a href='function.require'>function.require</a>]: failed to open stream: No such file or directory in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 146
+[23-Mar-2013 15:28:16] PHP Fatal error:  require() [<a href='function.require'>function.require</a>]: Failed opening required 'forms//options?error=Entry successful!' (include_path='.:/usr/php/54/usr/lib64:/usr/php/54/usr/share/pear') in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 146
+[23-Mar-2013 15:29:15] PHP Notice:  Undefined index:  options in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:29:15] PHP Notice:  Undefined index:  0 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:29:15] PHP Notice:  Undefined index:   in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:29:15] PHP Warning:  require(forms//options?error=Entry successful!) [<a href='function.require'>function.require</a>]: failed to open stream: No such file or directory in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 146
+[23-Mar-2013 15:29:15] PHP Fatal error:  require() [<a href='function.require'>function.require</a>]: Failed opening required 'forms//options?error=Entry successful!' (include_path='.:/usr/php/54/usr/lib64:/usr/php/54/usr/share/pear') in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 146
+[23-Mar-2013 15:30:29] PHP Notice:  Undefined index:  forms/autonomous.php in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:30:29] PHP Notice:  Undefined index:  true in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:30:29] PHP Notice:  Undefined index:  false in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:30:29] PHP Notice:  Undefined index:   in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:30:29] PHP Notice:  Undefined index:  3711 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:30:29] PHP Notice:  Undefined index:  556 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:31:15] PHP Notice:  Undefined index:  forms/teleop.php in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:31:15] PHP Notice:  Undefined index:  3 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:31:15] PHP Notice:  Undefined index:  0 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:31:15] PHP Notice:  Undefined index:  false in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:33:27] PHP Notice:  Undefined index:  forms/climb.php in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:33:27] PHP Notice:  Undefined index:  false in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:33:27] PHP Notice:  Undefined index:  6 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:33:27] PHP Notice:  Undefined index:  1 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:33:27] PHP Notice:  Undefined index:  0 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:33:27] PHP Notice:  Undefined index:  4 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:33:27] PHP Notice:  Undefined index:  8 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:33:33] PHP Notice:  Undefined index:  forms/results.php in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:33:33] PHP Notice:  Undefined index:  0 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:33:40] PHP Notice:  Undefined index:  options in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:33:40] PHP Notice:  Undefined index:  1 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:33:40] PHP Notice:  Undefined index:  0 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:33:40] PHP Notice:  Undefined index:   in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:33:40] PHP Warning:  require(forms//options?error=Entry successful!) [<a href='function.require'>function.require</a>]: failed to open stream: No such file or directory in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 146
+[23-Mar-2013 15:33:40] PHP Fatal error:  require() [<a href='function.require'>function.require</a>]: Failed opening required 'forms//options?error=Entry successful!' (include_path='.:/usr/php/54/usr/lib64:/usr/php/54/usr/share/pear') in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 146
+[23-Mar-2013 15:35:05] PHP Warning:  key_exists() [<a href='function.key-exists'>function.key-exists</a>]: The second argument should be either an array or an object in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/login.php on line 29
+[23-Mar-2013 15:35:20] PHP Warning:  key_exists() [<a href='function.key-exists'>function.key-exists</a>]: The second argument should be either an array or an object in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/login.php on line 29
+[23-Mar-2013 15:41:01] PHP Notice:  Undefined index:  forms/autonomous.php in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:41:01] PHP Notice:  Undefined index:  true in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:41:01] PHP Notice:  Undefined index:  false in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:41:01] PHP Notice:  Undefined index:  nowhere in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:41:01] PHP Notice:  Undefined index:  -1 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:41:01] PHP Notice:  Undefined index:  0 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:41:22] PHP Notice:  Undefined index:  forms/teleop.php in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:41:22] PHP Notice:  Undefined index:  2 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:41:22] PHP Notice:  Undefined index:  1 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:41:22] PHP Notice:  Undefined index:  true in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:41:48] PHP Notice:  Undefined index:  forms/climb.php in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:41:48] PHP Notice:  Undefined index:  false in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:41:48] PHP Notice:  Undefined index:  2 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:41:48] PHP Notice:  Undefined index:  1 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:41:48] PHP Notice:  Undefined index:  0 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:41:48] PHP Notice:  Undefined index:  5 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:41:48] PHP Notice:  Undefined index:  10 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:42:02] PHP Notice:  Undefined index:  forms/results.php in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:42:02] PHP Notice:  Undefined index:  1 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:42:02] PHP Notice:  Undefined index:  2 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:42:02] PHP Notice:  Undefined index:  3 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:42:11] PHP Notice:  Undefined index:  options in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:42:11] PHP Notice:  Undefined index:  1 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:42:11] PHP Notice:  Undefined index:  0 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:42:11] PHP Notice:  Undefined index:  Delete this in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:42:11] PHP Warning:  require(forms//options?error=Entry successful!) [<a href='function.require'>function.require</a>]: failed to open stream: No such file or directory in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 146
+[23-Mar-2013 15:42:11] PHP Fatal error:  require() [<a href='function.require'>function.require</a>]: Failed opening required 'forms//options?error=Entry successful!' (include_path='.:/usr/php/54/usr/lib64:/usr/php/54/usr/share/pear') in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 146
+[23-Mar-2013 15:43:03] PHP Notice:  Undefined index:  forms/results.php in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:43:03] PHP Notice:  Undefined index:  0 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:43:06] PHP Notice:  Undefined index:  options in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:43:06] PHP Notice:  Undefined index:  0 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:43:06] PHP Notice:  Undefined index:   in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:43:06] PHP Warning:  require(forms//options?error=Entry successful!) [<a href='function.require'>function.require</a>]: failed to open stream: No such file or directory in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 146
+[23-Mar-2013 15:43:06] PHP Fatal error:  require() [<a href='function.require'>function.require</a>]: Failed opening required 'forms//options?error=Entry successful!' (include_path='.:/usr/php/54/usr/lib64:/usr/php/54/usr/share/pear') in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 146
+[23-Mar-2013 15:43:37] PHP Notice:  Undefined index:  forms/autonomous.php in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:43:37] PHP Notice:  Undefined index:  true in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:43:37] PHP Notice:  Undefined index:  false in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:43:37] PHP Notice:  Undefined index:   in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:43:37] PHP Notice:  Undefined index:  3789 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:43:37] PHP Notice:  Undefined index:  556 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:43:59] PHP Notice:  Undefined index:  forms/autonomous.php in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:43:59] PHP Notice:  Undefined index:  true in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:43:59] PHP Notice:  Undefined index:  false in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:43:59] PHP Notice:  Undefined index:  ellensberg in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:43:59] PHP Notice:  Undefined index:  44 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:43:59] PHP Notice:  Undefined index:  444 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:44:12] PHP Notice:  Undefined index:  forms/autonomous.php in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:44:13] PHP Notice:  Undefined index:  true in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:44:13] PHP Notice:  Undefined index:  false in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:44:13] PHP Notice:  Undefined index:  ellensberg in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:44:13] PHP Notice:  Undefined index:  2928 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:44:13] PHP Notice:  Undefined index:  444 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:45:18] PHP Notice:  Undefined index:  forms/teleop.php in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:45:18] PHP Notice:  Undefined index:  1 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:45:18] PHP Notice:  Undefined index:  0 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:45:18] PHP Notice:  Undefined index:  2 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:45:18] PHP Notice:  Undefined index:  false in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:45:20] PHP Notice:  Undefined index:  forms/teleop.php in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:45:20] PHP Notice:  Undefined index:  2 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:45:20] PHP Notice:  Undefined index:  0 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:45:20] PHP Notice:  Undefined index:  false in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:47:39] PHP Notice:  Undefined index:  forms/climb.php in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:47:39] PHP Notice:  Undefined index:  false in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:47:39] PHP Notice:  Undefined index:  0 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:47:39] PHP Notice:  Undefined index:  1 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:47:39] PHP Notice:  Undefined index:  6 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:47:42] PHP Notice:  Undefined index:  forms/results.php in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:47:42] PHP Notice:  Undefined index:  0 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:49:14] PHP Notice:  Undefined index:  options in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:49:14] PHP Notice:  Undefined index:  1 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:49:14] PHP Notice:  Undefined index:  0 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:49:14] PHP Notice:  Undefined index:   in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:49:14] PHP Warning:  require(forms//options?error=Entry successful!) [<a href='function.require'>function.require</a>]: failed to open stream: No such file or directory in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 146
+[23-Mar-2013 15:49:14] PHP Fatal error:  require() [<a href='function.require'>function.require</a>]: Failed opening required 'forms//options?error=Entry successful!' (include_path='.:/usr/php/54/usr/lib64:/usr/php/54/usr/share/pear') in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 146
+[23-Mar-2013 15:49:27] PHP Notice:  Undefined index:  forms/climb.php in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:49:27] PHP Notice:  Undefined index:  false in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:49:27] PHP Notice:  Undefined index:  0 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:49:27] PHP Notice:  Undefined index:  4 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:49:27] PHP Notice:  Undefined index:  5 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:49:59] PHP Notice:  Undefined index:  forms/results.php in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:49:59] PHP Notice:  Undefined index:  0 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:50:08] PHP Notice:  Undefined index:  options in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:50:08] PHP Notice:  Undefined index:  0 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:50:08] PHP Notice:  Undefined index:  Lost a drive motor in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 15:50:08] PHP Warning:  require(forms//options?error=Entry successful!) [<a href='function.require'>function.require</a>]: failed to open stream: No such file or directory in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 146
+[23-Mar-2013 15:50:08] PHP Fatal error:  require() [<a href='function.require'>function.require</a>]: Failed opening required 'forms//options?error=Entry successful!' (include_path='.:/usr/php/54/usr/lib64:/usr/php/54/usr/share/pear') in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 146
+[23-Mar-2013 16:02:04] PHP Notice:  Undefined index:  forms/results.php in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 16:02:04] PHP Notice:  Undefined index:  0 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[23-Mar-2013 16:02:04] PHP Notice:  Undefined index:  MATCH_ID in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 120
+[23-Mar-2013 16:02:04] PHP Warning:  require(forms//options?error=You+must+start+from+the+beginning%21) [<a href='function.require'>function.require</a>]: failed to open stream: No such file or directory in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 146
+[23-Mar-2013 16:02:04] PHP Fatal error:  require() [<a href='function.require'>function.require</a>]: Failed opening required 'forms//options?error=You+must+start+from+the+beginning%21' (include_path='.:/usr/php/54/usr/lib64:/usr/php/54/usr/share/pear') in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 146

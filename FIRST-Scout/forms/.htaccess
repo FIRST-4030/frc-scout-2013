@@ -1,0 +1,20 @@
+<Files autonomous.php>
+  Order allow,deny
+  Deny from all
+</Files>
+<Files climb.php>
+  Order allow,deny
+  Deny from all
+</Files>
+<Files prematch.php>
+  Order allow,deny
+  Deny from all
+</Files>
+<Files results.php>
+  Order allow,deny
+  Deny from all
+</Files>
+<Files teleop.php>
+  Order allow,deny
+  Deny from all
+</Files>

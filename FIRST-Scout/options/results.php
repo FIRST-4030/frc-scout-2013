@@ -12,60 +12,81 @@ if (!isset($_SESSION['UserID'])) {
         ?>
         <title>Team Results</title>
         <script type="text/javascript" src="../tablesorter/jquery.tablesorter.min.js"></script> 
-        <link href="../tablesorter/themes/blue/style.css" rel="text/stylesheet" />
+        <link href="../tablesorter/themes/blue/style.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
 
 
         <div class="container">
-            <table id="resultTable" class="tablesorter table">
+            <p class="title">All Results</p>
+            <table id="resultTable" class="tablesorter">
                 <thead>
                     <tr>
-                        <td>Date/Time</td>
-                        <td>Scout</td>
-                        <td>Team Number</td>
-                        <td>Match Number</td>
-                        <td>Present</td>
-                        <td>Dead Robot</td>
-                        <td>Alliance</td>
-                        <td>Location</td>
-                        <td></td>
+                        <th>UID</th>
+                        <th>Timestamp</th>
+                        <th>Scout</th>
+                        <th>Team</th>
+                        <th>Present</th>
+                        <th>Dead Robot</th>
+                        <th>Alliance</th>
+                        <th>Location</th>
+                        <th>Match</th>
+                        <th>Auto Top</th>
+                        <th>Auto Middle</th>
+                        <th>Auto Bottom</th>
+                        <th>Auto Miss</th>
+                        <th>Auto Kinect</th>
+                        <th>Teleop Frisbee</th>
+                        <th>Teleop Top</th>
+                        <th>Teleop Middle</th>
+                        <th>Teleop Bottom</th>
+                        <th>Teleop Miss</th>
+                        <th>Teleop Blocked</th>
+                        <th>Teleop Pyramid</th>
+                        <th>Teleop Miss</th>
+                        <th>Teleop Range</th>
+                        <th>Teleop Speed</th>
+                        <th>Teleop Steering</th>
+                        <th>climb_attempts</th>
+                        <th>climb_pyramid_goals</th>
+                        <th>climb_level_reached</th>
+                        <th>climb_style</th>
+                        <th>Match outcome</th>
+                        <th>Fouls</th>
+                        <th>Technical fouls</th>
                     </tr>
                 </thead>
                 <tbody>
-                <?
-//            try {
-//                $db = new PDO(DSN, DB_USER, DB_PASSWD);
-//                $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-//            } catch (PDOException $ex) {
-//                die("Unable to connect to DB\n " . $ex->getMessage() . "<br>" . DSN);
-//            }
-//            $getMatchInfo = $db->prepare("SELECT * FROM scout_recording");
-//            $getMatchInfo->execute();
-//            while ($row = $getMatchInfo->fetch(PDO::FETCH_ASSOC)) {
-//                foreach ($row as $key->$value) {
-//                    echo $key . ": " . $value;
-//                }
-//                echo '<br>';
-//            }
+                    <?
+                    $teamID = $_SESSION['TeamID'];
+                    if ($_GET['only'] == true) {
+                        $query = "SELECT * FROM scout_recording WHERE team_id=$teamID";
+                    } else {
+                        $query = "SELECT * FROM scout_recording";
+                    }
+                    $query = "SELECT * FROM scout_recording";
+                    $db = mysqli_connect("localhost", DB_USER, DB_PASSWD, "stevenz9_robotics_scout");
+                    if (mysqli_connect_errno()) {
+                        die('Failed to connect to database: ' . mysqli_connect_error());
+                    }
 
-                $db = mysqli_connect("localhost", DB_USER, DB_PASSWD, "stevenz9_robotics_scout");
-                if (mysqli_connect_errno()) {
-                    die('Failed to connect to database: ' . mysqli_connect_error());
-                }
+                    $result = mysqli_query($db, $query);
 
-                $result = mysqli_query($db, "SELECT * FROM scout_recording");
-
-                while ($row = mysqli_fetch_array($result)) {
-                    print_r($row);
-                    echo "<br>";
-                }
-                ?>
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        echo '<tr>';
+                        foreach ($row as $data) {
+                            echo "<td>$data</td>";
+                        }
+                        echo '</tr>';
+                    }
+                    ?>
+                </tbody>
+            </table>
         </div>
         <script type="text/javascript">
             $(document).ready(function() {
-               $("#resultTable").tablesorter(); 
-            });  
+                $("#resultTable").tablesorter();
+            });
         </script>
     </body>
 </html>

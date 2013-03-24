@@ -1,0 +1,232 @@
+[18-Mar-2013 23:34:20] PHP Notice:  Undefined index:  FIRSTScoutUsername in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 15
+[18-Mar-2013 23:34:32] PHP Notice:  Undefined index:  FIRSTScoutUsername in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 15
+[18-Mar-2013 23:34:39] PHP Notice:  Undefined index:  FIRSTScoutUsername in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 15
+[18-Mar-2013 23:34:53] PHP Notice:  Undefined index:  FIRSTScoutUsername in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 15
+[18-Mar-2013 23:41:17] PHP Notice:  Undefined index:  FIRSTScoutUsername in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 15
+[18-Mar-2013 23:42:11] PHP Notice:  Undefined index:  FIRSTScoutUsername in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 15
+[19-Mar-2013 00:26:46] PHP Notice:  Undefined index:  FIRSTScoutLoggedInUserID in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 15
+[19-Mar-2013 00:26:46] PHP Notice:  Undefined index:  FIRSTScoutLoggedInTeam in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 15
+[19-Mar-2013 00:28:42] PHP Notice:  Undefined index:  FIRSTScoutLoggedInUserID in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 15
+[19-Mar-2013 00:28:42] PHP Notice:  Undefined index:  FIRSTScoutLoggedInTeam in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 15
+[19-Mar-2013 07:46:00] PHP Notice:  Undefined index:  FIRSTScoutLoggedInUserID in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 15
+[19-Mar-2013 07:46:00] PHP Notice:  Undefined index:  FIRSTScoutLoggedInTeam in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 15
+[19-Mar-2013 08:28:03] PHP Notice:  Undefined index:  FIRSTScoutLoggedInUserID in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 15
+[19-Mar-2013 08:28:03] PHP Notice:  Undefined index:  FIRSTScoutLoggedInTeam in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 15
+[19-Mar-2013 09:33:09] PHP Notice:  Undefined index:  FIRSTScoutLoggedInUserID in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 15
+[19-Mar-2013 09:33:09] PHP Notice:  Undefined index:  FIRSTScoutLoggedInTeam in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 15
+[19-Mar-2013 09:39:48] PHP Notice:  Undefined index:  FIRSTScoutLoggedInUserID in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 16
+[19-Mar-2013 09:39:48] PHP Notice:  Undefined index:  FIRSTScoutLoggedInTeam in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 16
+[19-Mar-2013 09:41:54] PHP Notice:  Undefined index:  FIRSTScoutLoggedInUserID in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 16
+[19-Mar-2013 09:41:54] PHP Notice:  Undefined index:  FIRSTScoutLoggedInTeam in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 16
+[19-Mar-2013 09:42:57] PHP Notice:  Undefined index:  FIRSTScoutLoggedInUserID in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 16
+[19-Mar-2013 09:42:57] PHP Notice:  Undefined index:  FIRSTScoutLoggedInTeam in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 16
+[19-Mar-2013 11:13:01] PHP Notice:  Undefined index:  FIRSTScoutLoggedInUserID in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 16
+[19-Mar-2013 11:13:01] PHP Notice:  Undefined index:  FIRSTScoutLoggedInTeam in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 16
+[19-Mar-2013 13:10:23] PHP Notice:  Undefined index:  FIRSTScoutLoggedInUserID in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 16
+[19-Mar-2013 13:10:23] PHP Notice:  Undefined index:  FIRSTScoutLoggedInTeam in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 16
+[19-Mar-2013 13:55:07] PHP Notice:  Undefined index:  FIRSTScoutLoggedInUserID in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 16
+[19-Mar-2013 13:55:07] PHP Notice:  Undefined index:  FIRSTScoutLoggedInTeam in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 16
+[19-Mar-2013 13:56:17] PHP Notice:  Undefined variable: _SESSION in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 16
+[19-Mar-2013 13:56:21] PHP Notice:  Undefined variable: _SESSION in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 16
+[19-Mar-2013 14:00:15] PHP Notice:  Undefined variable: _SESSION in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 16
+[19-Mar-2013 14:00:19] PHP Notice:  Undefined variable: _SESSION in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 16
+[19-Mar-2013 14:00:42] PHP Notice:  Undefined variable: _SESSION in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 16
+[19-Mar-2013 14:01:04] PHP Notice:  Undefined variable: _SESSION in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 16
+[19-Mar-2013 14:01:47] PHP Notice:  Undefined variable: _SESSION in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 16
+[19-Mar-2013 14:02:17] PHP Notice:  Undefined variable: _SESSION in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 16
+[19-Mar-2013 14:02:30] PHP Notice:  Undefined variable: _SESSION in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 16
+[19-Mar-2013 14:02:58] PHP Notice:  Undefined variable: _SESSION in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 17
+[19-Mar-2013 14:03:01] PHP Notice:  Undefined variable: _SESSION in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 17
+[19-Mar-2013 14:03:03] PHP Notice:  Undefined variable: _SESSION in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 17
+[19-Mar-2013 14:03:15] PHP Notice:  Undefined variable: _SESSION in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 17
+[19-Mar-2013 14:03:31] PHP Notice:  Undefined variable: _SESSION in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 17
+[19-Mar-2013 14:04:27] PHP Notice:  Undefined variable: _SESSION in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 17
+[19-Mar-2013 14:04:59] PHP Notice:  Undefined variable: _SESSION in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 17
+[19-Mar-2013 14:05:21] PHP Notice:  Undefined variable: _SESSION in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 17
+[19-Mar-2013 14:08:45] PHP Notice:  Undefined variable: _SESSION in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 17
+[19-Mar-2013 14:56:30] PHP Notice:  Undefined variable: _SESSION in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 17
+[19-Mar-2013 14:57:03] PHP Notice:  Undefined variable: _SESSION in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 17
+[19-Mar-2013 18:42:14] PHP Notice:  Undefined variable: _SESSION in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 17
+[19-Mar-2013 18:44:32] PHP Notice:  Undefined variable: _SESSION in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 17
+[19-Mar-2013 20:47:32] PHP Notice:  Undefined variable: _SESSION in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 17
+[19-Mar-2013 20:47:36] PHP Notice:  Undefined variable: _SESSION in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 17
+[19-Mar-2013 20:51:38] PHP Notice:  Undefined variable: _SESSION in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 17
+[19-Mar-2013 20:59:34] PHP Notice:  Undefined variable: _SESSION in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 17
+[19-Mar-2013 20:59:39] PHP Notice:  Undefined variable: _SESSION in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 17
+[19-Mar-2013 21:03:08] PHP Notice:  Undefined variable: _SESSION in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 17
+[19-Mar-2013 21:04:46] PHP Notice:  Undefined variable: _SESSION in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 17
+[19-Mar-2013 21:11:38] PHP Notice:  Undefined variable: _SESSION in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 17
+[19-Mar-2013 21:39:41] PHP Notice:  Undefined variable: _SESSION in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 17
+[19-Mar-2013 21:46:01] PHP Notice:  Undefined variable: _SESSION in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 17
+[19-Mar-2013 21:47:18] PHP Notice:  Undefined variable: _SESSION in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 17
+[19-Mar-2013 22:12:33] PHP Notice:  Undefined variable: _SESSION in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 17
+[19-Mar-2013 22:13:34] PHP Notice:  Undefined variable: _SESSION in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 17
+[19-Mar-2013 22:14:30] PHP Notice:  Undefined variable: _SESSION in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 17
+[19-Mar-2013 23:32:39] PHP Notice:  Undefined variable: _SESSION in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 17
+[19-Mar-2013 23:33:25] PHP Notice:  Undefined variable: _SESSION in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 17
+[19-Mar-2013 23:46:20] PHP Notice:  Undefined variable: _SESSION in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 17
+[20-Mar-2013 08:35:16] PHP Notice:  Undefined variable: _SESSION in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 17
+[20-Mar-2013 08:36:56] PHP Notice:  Undefined variable: _SESSION in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 17
+[20-Mar-2013 11:20:39] PHP Notice:  Undefined variable: _SESSION in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 17
+[20-Mar-2013 11:21:57] PHP Notice:  Undefined variable: _SESSION in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 17
+[20-Mar-2013 13:40:15] PHP Notice:  Undefined variable: _SESSION in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 17
+[20-Mar-2013 13:43:51] PHP Notice:  Undefined variable: _SESSION in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 17
+[20-Mar-2013 13:49:31] PHP Notice:  Undefined variable: _SESSION in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 17
+[20-Mar-2013 13:51:09] PHP Notice:  Undefined variable: _SESSION in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 17
+[20-Mar-2013 19:13:05] PHP Notice:  Undefined variable: _SESSION in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 17
+[20-Mar-2013 19:15:58] PHP Notice:  Undefined variable: _SESSION in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 17
+[20-Mar-2013 19:31:00] PHP Notice:  Undefined variable: _SESSION in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 17
+[20-Mar-2013 20:04:00] PHP Notice:  Undefined variable: _SESSION in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 17
+[20-Mar-2013 20:14:12] PHP Notice:  Undefined variable: _SESSION in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 17
+[20-Mar-2013 20:16:53] PHP Notice:  Undefined variable: _SESSION in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 17
+[20-Mar-2013 22:24:29] PHP Notice:  Undefined variable: _SESSION in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 17
+[20-Mar-2013 22:29:23] PHP Notice:  Undefined variable: _SESSION in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 17
+[20-Mar-2013 23:50:37] PHP Notice:  Undefined variable: _SESSION in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 17
+[21-Mar-2013 00:58:32] PHP Notice:  Undefined variable: _SESSION in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 17
+[21-Mar-2013 13:15:44] PHP Notice:  Undefined variable: _SESSION in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 17
+[21-Mar-2013 13:18:27] PHP Notice:  Undefined variable: _SESSION in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 17
+[21-Mar-2013 13:20:51] PHP Notice:  Undefined variable: _SESSION in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 17
+[21-Mar-2013 13:25:42] PHP Notice:  Undefined variable: _SESSION in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 17
+[21-Mar-2013 19:46:38] PHP Notice:  Undefined variable: _SESSION in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 17
+[21-Mar-2013 20:02:24] PHP Notice:  Undefined variable: _SESSION in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 17
+[21-Mar-2013 20:02:55] PHP Notice:  Undefined variable: _SESSION in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 17
+[21-Mar-2013 20:22:19] PHP Notice:  Undefined variable: _SESSION in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 17
+[21-Mar-2013 22:18:51] PHP Notice:  Undefined index:  TeamID in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 18
+[21-Mar-2013 22:27:04] PHP Notice:  Undefined index:  UserID in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 23
+[21-Mar-2013 22:27:04] PHP Notice:  Undefined index:  TeamNumber in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 23
+[22-Mar-2013 00:42:35] PHP Notice:  Undefined index:  UserID in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 23
+[22-Mar-2013 00:42:35] PHP Notice:  Undefined index:  TeamNumber in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 23
+[22-Mar-2013 00:42:45] PHP Notice:  Undefined index:  UserID in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 23
+[22-Mar-2013 00:42:45] PHP Notice:  Undefined index:  TeamNumber in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 23
+[22-Mar-2013 00:52:48] PHP Notice:  Undefined index:  UserID in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 23
+[22-Mar-2013 00:52:48] PHP Notice:  Undefined index:  TeamNumber in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 23
+[22-Mar-2013 00:53:35] PHP Notice:  Undefined index:  UserID in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 23
+[22-Mar-2013 00:53:35] PHP Notice:  Undefined index:  TeamNumber in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 23
+[22-Mar-2013 00:54:22] PHP Notice:  Undefined index:  UserID in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 24
+[22-Mar-2013 00:54:22] PHP Notice:  Undefined index:  TeamNumber in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 24
+[22-Mar-2013 00:56:50] PHP Notice:  Undefined index:  UserID in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 5
+[22-Mar-2013 00:56:50] PHP Notice:  Undefined index:  TeamNumber in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 26
+[22-Mar-2013 00:57:28] PHP Notice:  Undefined index:  UserID in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 27
+[22-Mar-2013 00:57:28] PHP Notice:  Undefined index:  TeamNumber in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 27
+[22-Mar-2013 01:01:30] PHP Notice:  Undefined index:  UserID in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 24
+[22-Mar-2013 01:01:30] PHP Notice:  Undefined index:  TeamNumber in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 24
+[22-Mar-2013 01:01:41] PHP Notice:  Undefined index:  UserID in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 24
+[22-Mar-2013 01:01:41] PHP Notice:  Undefined index:  TeamNumber in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 24
+[22-Mar-2013 01:03:50] PHP Notice:  Undefined index:  UserID in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 24
+[22-Mar-2013 01:03:50] PHP Notice:  Undefined index:  TeamNumber in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 24
+[22-Mar-2013 01:07:04] PHP Notice:  Undefined index:  UserID in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 24
+[22-Mar-2013 01:07:04] PHP Notice:  Undefined index:  TeamNumber in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 24
+[22-Mar-2013 11:25:45] PHP Notice:  Undefined index:  UserID in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 24
+[22-Mar-2013 11:25:45] PHP Notice:  Undefined index:  TeamNumber in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 24
+[22-Mar-2013 19:45:54] PHP Notice:  Undefined index:  UserID in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 28
+[22-Mar-2013 19:45:54] PHP Notice:  Undefined index:  TeamNumber in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 28
+[23-Mar-2013 00:31:05] PHP Warning:  require(includes/constants.php) [<a href='function.require'>function.require</a>]: failed to open stream: No such file or directory in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/results.php on line 10
+[23-Mar-2013 00:31:05] PHP Fatal error:  require() [<a href='function.require'>function.require</a>]: Failed opening required 'includes/constants.php' (include_path='.:/usr/php/54/usr/lib64:/usr/php/54/usr/share/pear') in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/results.php on line 10
+[23-Mar-2013 00:38:50] PHP Warning:  mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Can't connect to MySQL server on 'mysql' (110) in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/results.php on line 29
+[23-Mar-2013 00:38:50] PHP Warning:  mysql_query() [<a href='function.mysql-query'>function.mysql-query</a>]: Access denied for user 'stevenz9'@'localhost' (using password: NO) in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/results.php on line 34
+[23-Mar-2013 00:38:50] PHP Warning:  mysql_query() [<a href='function.mysql-query'>function.mysql-query</a>]: A link to the server could not be established in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/results.php on line 34
+[23-Mar-2013 00:38:50] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/results.php on line 36
+[23-Mar-2013 00:40:44] PHP Notice:  Undefined variable: value in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/results.php on line 27
+[23-Mar-2013 00:40:44] PHP Fatal error:  Cannot access empty property in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/results.php on line 27
+[23-Mar-2013 00:40:46] PHP Notice:  Undefined variable: value in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/results.php on line 27
+[23-Mar-2013 00:40:46] PHP Fatal error:  Cannot access empty property in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/results.php on line 27
+[23-Mar-2013 00:40:57] PHP Notice:  Undefined variable: value in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/results.php on line 26
+[23-Mar-2013 00:40:57] PHP Fatal error:  Cannot access empty property in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/results.php on line 26
+[23-Mar-2013 00:41:02] PHP Notice:  Undefined variable: value in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/results.php on line 26
+[23-Mar-2013 00:41:02] PHP Fatal error:  Cannot access empty property in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/results.php on line 26
+[23-Mar-2013 00:42:06] PHP Notice:  Undefined variable: value in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/results.php on line 29
+[23-Mar-2013 00:42:06] PHP Fatal error:  Cannot access empty property in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/results.php on line 29
+[23-Mar-2013 00:46:27] PHP Notice:  Undefined variable: value in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/results.php on line 30
+[23-Mar-2013 00:46:27] PHP Fatal error:  Cannot access empty property in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/results.php on line 30
+[23-Mar-2013 00:51:14] PHP Warning:  mysqli_connect() [<a href='function.mysqli-connect'>function.mysqli-connect</a>]: (HY000/2005): Unknown MySQL server host 'mysql:host=localhost;dbname=stevenz9_robotics_scout;charset=utf8' (0) in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/results.php on line 36
+[23-Mar-2013 00:51:14] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/results.php on line 41
+[23-Mar-2013 00:51:14] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/results.php on line 42
+[23-Mar-2013 00:51:30] PHP Warning:  mysqli_connect() [<a href='function.mysqli-connect'>function.mysqli-connect</a>]: (HY000/2005): Unknown MySQL server host 'mysql:host=localhost;dbname=stevenz9_robotics_scout;charset=utf8' (0) in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/results.php on line 36
+[23-Mar-2013 00:51:30] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/results.php on line 41
+[23-Mar-2013 00:51:30] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/results.php on line 43
+[23-Mar-2013 00:51:48] PHP Warning:  mysqli_connect() [<a href='function.mysqli-connect'>function.mysqli-connect</a>]: (HY000/2005): Unknown MySQL server host 'mysql:host=localhost;dbname=stevenz9_robotics_scout;charset=utf8' (0) in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/results.php on line 36
+[23-Mar-2013 00:51:48] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/results.php on line 41
+[23-Mar-2013 00:51:48] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/results.php on line 43
+[23-Mar-2013 00:51:56] PHP Warning:  mysqli_connect() [<a href='function.mysqli-connect'>function.mysqli-connect</a>]: (HY000/2005): Unknown MySQL server host 'mysql:host=localhost;dbname=stevenz9_robotics_scout;charset=utf8' (0) in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/results.php on line 36
+[23-Mar-2013 00:51:56] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/results.php on line 41
+[23-Mar-2013 00:51:56] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/results.php on line 43
+[23-Mar-2013 00:54:03] PHP Warning:  mysqli_connect() [<a href='function.mysqli-connect'>function.mysqli-connect</a>]: (HY000/2005): Unknown MySQL server host 'mysql:host=localhost;dbname=stevenz9_robotics_scout;charset=utf8' (0) in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/results.php on line 35
+[23-Mar-2013 00:54:46] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/results.php on line 42
+[23-Mar-2013 00:54:50] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/results.php on line 42
+[23-Mar-2013 00:55:53] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/results.php on line 41
+[23-Mar-2013 00:56:12] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/results.php on line 41
+[23-Mar-2013 00:56:25] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/results.php on line 41
+[23-Mar-2013 00:56:30] PHP Parse error:  syntax error, unexpected T_STRING in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/results.php on line 41
+[23-Mar-2013 00:56:31] PHP Parse error:  syntax error, unexpected T_STRING in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/results.php on line 41
+[23-Mar-2013 00:56:39] PHP Parse error:  syntax error, unexpected T_STRING in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/results.php on line 41
+[23-Mar-2013 00:56:52] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/results.php on line 41
+[23-Mar-2013 00:58:09] PHP Fatal error:  Call to undefined function mysql_connect_errno() in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/results.php on line 36
+[23-Mar-2013 00:59:47] PHP Fatal error:  Call to undefined function mysql_connect_errno() in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/results.php on line 36
+[23-Mar-2013 01:01:03] PHP Fatal error:  Call to undefined function mysql_connect_errno() in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/results.php on line 36
+[23-Mar-2013 13:57:53] PHP Notice:  Undefined index:  only in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/results.php on line 43
+[23-Mar-2013 13:58:18] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/results.php on line 55
+[23-Mar-2013 13:59:36] PHP Notice:  Undefined index:  UserID in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 28
+[23-Mar-2013 13:59:36] PHP Notice:  Undefined index:  TeamNumber in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 28
+[23-Mar-2013 14:01:09] PHP Notice:  Undefined index:  only in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/results.php on line 43
+[23-Mar-2013 14:01:13] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/results.php on line 55
+[23-Mar-2013 14:01:14] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/results.php on line 55
+[23-Mar-2013 14:01:14] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/results.php on line 55
+[23-Mar-2013 14:01:15] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/results.php on line 55
+[23-Mar-2013 14:01:20] PHP Notice:  Undefined index:  only in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/results.php on line 43
+[23-Mar-2013 14:31:26] PHP Notice:  Undefined index:  only in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/results.php on line 43
+[23-Mar-2013 14:31:33] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/results.php on line 55
+[23-Mar-2013 14:41:41] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/results.php on line 55
+[23-Mar-2013 14:41:42] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/results.php on line 55
+[23-Mar-2013 14:41:53] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/results.php on line 54
+[23-Mar-2013 15:03:53] PHP Notice:  Undefined index:  only in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/results.php on line 42
+[23-Mar-2013 15:05:44] PHP Notice:  Undefined index:  UserID in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 28
+[23-Mar-2013 15:05:44] PHP Notice:  Undefined index:  TeamNumber in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 28
+[23-Mar-2013 15:13:42] PHP Notice:  Undefined index:  only in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/results.php on line 73
+[23-Mar-2013 15:14:14] PHP Notice:  Undefined index:  only in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/results.php on line 73
+[23-Mar-2013 15:19:08] PHP Notice:  Undefined index:  UserID in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 28
+[23-Mar-2013 15:19:08] PHP Notice:  Undefined index:  TeamNumber in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 28
+[23-Mar-2013 15:19:38] PHP Notice:  Undefined index:  only in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/results.php on line 73
+[23-Mar-2013 15:20:49] PHP Notice:  Undefined index:  only in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/results.php on line 73
+[23-Mar-2013 15:22:12] PHP Notice:  Undefined index:  only in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/results.php on line 73
+[23-Mar-2013 15:22:12] PHP Notice:  Undefined index:  only in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/results.php on line 73
+[23-Mar-2013 15:22:56] PHP Notice:  Undefined variable: matchInfo in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/single-review.php on line 36
+[23-Mar-2013 15:22:56] PHP Warning:  Invalid argument supplied for foreach() in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/single-review.php on line 36
+[23-Mar-2013 15:22:57] PHP Notice:  Undefined variable: matchInfo in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/single-review.php on line 36
+[23-Mar-2013 15:22:57] PHP Warning:  Invalid argument supplied for foreach() in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/single-review.php on line 36
+[23-Mar-2013 15:24:03] PHP Notice:  Undefined index:  only in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/results.php on line 73
+[23-Mar-2013 15:27:39] PHP Notice:  Undefined index:  only in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/results.php on line 73
+[23-Mar-2013 15:28:23] PHP Notice:  Undefined index:  only in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/results.php on line 73
+[23-Mar-2013 15:40:03] PHP Notice:  Undefined index:  only in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/results.php on line 73
+[23-Mar-2013 15:45:08] PHP Notice:  Undefined variable: matchInfo in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/single-review.php on line 37
+[23-Mar-2013 15:45:08] PHP Warning:  Invalid argument supplied for foreach() in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/single-review.php on line 37
+[23-Mar-2013 15:45:37] PHP Notice:  Undefined variable: matchInfo in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/single-review.php on line 37
+[23-Mar-2013 15:45:37] PHP Warning:  Invalid argument supplied for foreach() in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/single-review.php on line 37
+[23-Mar-2013 15:45:42] PHP Notice:  Undefined variable: matchInfo in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/single-review.php on line 37
+[23-Mar-2013 15:45:42] PHP Warning:  Invalid argument supplied for foreach() in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/single-review.php on line 37
+[23-Mar-2013 15:46:07] PHP Notice:  Undefined variable: matchInfo in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/single-review.php on line 37
+[23-Mar-2013 15:46:07] PHP Warning:  Invalid argument supplied for foreach() in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/single-review.php on line 37
+[23-Mar-2013 15:46:07] PHP Notice:  Undefined variable: matchInfo in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/single-review.php on line 37
+[23-Mar-2013 15:46:07] PHP Warning:  Invalid argument supplied for foreach() in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/single-review.php on line 37
+[23-Mar-2013 15:46:07] PHP Warning:  Invalid argument supplied for foreach() in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/single-review.php on line 37
+[23-Mar-2013 15:46:11] PHP Warning:  Invalid argument supplied for foreach() in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/single-review.php on line 37
+[23-Mar-2013 15:46:31] PHP Notice:  Undefined variable: matchInfo in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/single-review.php on line 37
+[23-Mar-2013 15:46:31] PHP Warning:  Invalid argument supplied for foreach() in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/single-review.php on line 37
+[23-Mar-2013 15:46:33] PHP Notice:  Undefined variable: matchInfo in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/single-review.php on line 37
+[23-Mar-2013 15:46:33] PHP Warning:  Invalid argument supplied for foreach() in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/single-review.php on line 37
+[23-Mar-2013 15:46:33] PHP Notice:  Undefined variable: matchInfo in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/single-review.php on line 37
+[23-Mar-2013 15:46:33] PHP Warning:  Invalid argument supplied for foreach() in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/single-review.php on line 37
+[23-Mar-2013 15:46:34] PHP Notice:  Undefined variable: matchInfo in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/single-review.php on line 37
+[23-Mar-2013 15:46:34] PHP Warning:  Invalid argument supplied for foreach() in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/single-review.php on line 37
+[23-Mar-2013 15:46:34] PHP Notice:  Undefined variable: matchInfo in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/single-review.php on line 37
+[23-Mar-2013 15:46:34] PHP Warning:  Invalid argument supplied for foreach() in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/single-review.php on line 37
+[23-Mar-2013 15:46:34] PHP Notice:  Undefined variable: matchInfo in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/single-review.php on line 37
+[23-Mar-2013 15:46:34] PHP Warning:  Invalid argument supplied for foreach() in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/single-review.php on line 37
+[23-Mar-2013 15:46:34] PHP Warning:  Invalid argument supplied for foreach() in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/single-review.php on line 37
+[23-Mar-2013 15:46:36] PHP Warning:  Invalid argument supplied for foreach() in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/single-review.php on line 37
+[23-Mar-2013 15:46:37] PHP Warning:  Invalid argument supplied for foreach() in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/single-review.php on line 37
+[23-Mar-2013 15:50:40] PHP Notice:  Undefined index:  only in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/results.php on line 73
+[23-Mar-2013 17:20:32] PHP Notice:  Undefined index:  only in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/results.php on line 73
+[23-Mar-2013 17:21:07] PHP Notice:  Undefined index:  only in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/results.php on line 73
+[23-Mar-2013 19:37:39] PHP Notice:  Undefined index:  only in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/results.php on line 73
+[23-Mar-2013 19:52:46] PHP Notice:  Undefined index:  UserID in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 28
+[23-Mar-2013 19:52:46] PHP Notice:  Undefined index:  TeamNumber in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 28
