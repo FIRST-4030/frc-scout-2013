@@ -43,8 +43,8 @@ if (isset($_POST['prematch_team_number'])) {
     # Save the data
     try {
         $db->beginTransaction();
-        $stmt = $db->prepare('INSERT INTO ' . $TABLE . ' (ts, user_id, team_id, scouted_team_number, present, dead, alliance, location, match_number) VALUES (now(), ?, ?, ?, ?, ?, ?, ?, ?)');
-        $stmt->execute(array($_SESSION['UserID'], $teamID, $scoutedTeamNumber, $present, $dead, $alliance, $_POST['prematch_location'], $_POST['prematch_match_number']));
+        $stmt = $db->prepare('INSERT INTO ' . $TABLE . ' (ts, user_id, team_id, scouting_team_number, scouted_team_number, present, dead, alliance, location, match_number) VALUES (now(), ?, ?, ?, ?, ?, ?, ?, ?, ?)');
+        $stmt->execute(array($_SESSION['UserID'], $teamID, $_SESSION['TeamNumber'], $scoutedTeamNumber, $present, $dead, $alliance, $_POST['prematch_location'], $_POST['prematch_match_number']));
         $_SESSION['MATCH_ID'] = $db->lastInsertId();
         if (!$_SESSION['MATCH_ID']) {
             throw new PDOException('No auto_ID returned', -1);

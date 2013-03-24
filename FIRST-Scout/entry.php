@@ -87,8 +87,8 @@ else if (isset($_POST['teleop_can_pickup_frisbees'])) {
     $middle = intval($_POST['teleop_middle_goals']);
     $bottom = intval($_POST['teleop_bottom_goals']);
     $miss = intval($_POST['teleop_missed_goals']);
-    $block = intval($_POST['teleop_missed_goals']);
-    $pyramid = intval($_POST['teleop_missed_goals']);
+    $block = intval($_POST['teleop_blocked_goals'] == "true"  ? 1 : 0);
+    $pyramid = intval($_POST['teleop_pyramid_goals']);
     $shootingRange = intval($_POST['teleop_shooting_range']);
     $robotSpeed = intval($_POST['teleop_robot_speed']);
     $robotManeuverability = intval($_POST['teleop_robot_maneuverability']);

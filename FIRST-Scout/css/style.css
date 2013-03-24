@@ -102,3 +102,13 @@ input[type=number]::-webkit-outer-spin-button {
     height: 50px;
     margin: 10px;
 }
+
+.results_container {
+    margin-top: 5px;
+    border: 8px solid rgb(220,220,220);
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 95%;
+    background-color: rgb(220,220,220);
+    margin-bottom: 5px;
+}

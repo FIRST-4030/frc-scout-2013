@@ -23,6 +23,7 @@
         <div class="container">
             <p class="title">Teleoperated: <b><?php echo $scoutedTeamNumber?></b></p>
             <button id="frisbeePickup" onclick="updateCanPickupFrisbees()" class="btn btn-success" data-toggle="button" style="margin-top: 3px; margin-bottom: 8px;">Can pick up Frisbees?</button>
+            <button id="canBlock" onclick="updateCanBlock()" class="btn btn-success" data-toggle="button" style="margin-top: 3px; margin-bottom: 8px;">Can block?</button>
             <p><i>Record points for each goal</i></p>
 
             <button class="btn plus_minus_buttons" style="height: 50px; width: 100px" onclick="update(0, false)">+3</button>
@@ -40,10 +41,6 @@
             <button class="btn plus_minus_buttons" style="height: 50px; width: 100px" onclick="update(3, false)">Missed</button>
             <button class="btn plus_minus_buttons" style="height: 50px; width: 50px" onclick="update(3, true)">&mdash;</button>
             <span id="teleopMissedPoints" class="autonomousIndividual">0</span>
-            <br />
-            <button class="btn plus_minus_buttons" style="height: 50px; width: 100px" onclick="update(4, false)">Blocked</button>
-            <button class="btn plus_minus_buttons" style="height: 50px; width: 50px" onclick="update(4, true)">&mdash;</button>
-            <span id="teleopBlockedPoints" class="autonomousIndividual">0</span>
             <br />
             <button class="btn plus_minus_buttons" style="height: 50px; width: 100px" onclick="update(5, false)">Pyramid Goal</button>
             <button class="btn plus_minus_buttons" style="height: 50px; width: 50px" onclick="update(5, true)">&mdash;</button>
@@ -67,11 +64,6 @@
                 <button class="btn btn-small">3</button>
                 <button class="btn btn-small">4</button>
                 <button class="btn btn-small">5</button>
-                <button class="btn btn-small">6</button>
-                <button class="btn btn-small">7</button>
-                <button class="btn btn-small">8</button>
-                <button class="btn btn-small">9</button>
-                <button class="btn btn-small">10</button>
             </div>
 
 
@@ -82,11 +74,6 @@
                 <button class="btn btn-small">3</button>
                 <button class="btn btn-small">4</button>
                 <button class="btn btn-small">5</button>
-                <button class="btn btn-small">6</button>
-                <button class="btn btn-small">7</button>
-                <button class="btn btn-small">8</button>
-                <button class="btn btn-small">9</button>
-                <button class="btn btn-small">10</button>
             </div>
             <br /><br />
             <button class="btn btn-large" id="NextPageButton" onclick="sendData()">Continue to Climbing &rarr;</button>
@@ -126,13 +113,18 @@
             function updateCanPickupFrisbees() {
                 canPickupFrisbees = !canPickupFrisbees;
             }
+            
+            var canBlock = false;
+            function updateCanBlock() {
+                canBlock = !canBlock;
+            }
 
             function updateIndividualTotals() {
                 document.getElementById('teleopThreePoint').innerHTML = teleopPoints[0];
                 document.getElementById('teleopTwoPoint').innerHTML = teleopPoints[1];
                 document.getElementById('teleopOnePoint').innerHTML = teleopPoints[2];
                 document.getElementById('teleopMissedPoints').innerHTML = teleopPoints[3];
-                document.getElementById('teleopBlockedPoints').innerHTML = teleopPoints[4];
+                document.getElementById('teleopBlockedPoints').innerHTML = canBlock;
                 document.getElementById('teleopPyramidPoints').innerHTML = teleopPoints[5];
             }
 
@@ -148,7 +140,7 @@
                 invisibleForm.innerHTML += "<input type='text' name='teleop_middle_goals' value='" + teleopPoints[1] + "'</input>";
                 invisibleForm.innerHTML += "<input type='text' name='teleop_bottom_goals' value='" + teleopPoints[2] + "'</input>";
                 invisibleForm.innerHTML += "<input type='text' name='teleop_missed_goals' value='" + teleopPoints[3] + "'</input>";
-                invisibleForm.innerHTML += "<input type='text' name='teleop_blocked_goals' value='" + teleopPoints[4] + "'</input>";
+                invisibleForm.innerHTML += "<input type='text' name='teleop_blocked_goals' value='" + canBlock + "'</input>";
                 invisibleForm.innerHTML += "<input type='text' name='teleop_pyramid_goals' value='" + teleopPoints[5] + "'</input>";
                 invisibleForm.innerHTML += "<input type='text' name='teleop_shooting_range' value='" + range + "'</input>";
                 invisibleForm.innerHTML += "<input type='text' name='teleop_robot_speed' value='" + $(".robotSpeed .active").text() + "'</input>";
