@@ -15,6 +15,7 @@
     <body>
         <div class="container">
             <p class="title" id ="title" style="margin-bottom: 10px;">Match Results: <b><?php echo $scoutedTeamNumber ?></b></p>
+            <button id="deadRobot" onclick="updateDead()" class="btn btn-warning" data-toggle="button" style="margin-top: 0px; margin-bottom: 5px">Dead Robot</button><br />
             <div class="btn-group" data-toggle="buttons-radio" style="margin-bottom: 10px">
                 <button class="btn btn-danger active" onclick="update(0)">Lose</button>
                 <button class="btn btn-success" onclick="update(1)">Win</button>
@@ -64,6 +65,11 @@
                     function update(nVal) {
                         loseWinTie = nVal;
                     }
+                    
+                    var deadRobot = false;
+                    function updateDead() {
+                        deadRobot = !deadRobot;
+                    }
 
                     function sendData() {
                         var invisibleForm = document.getElementById('sendForm');
@@ -71,6 +77,7 @@
                         invisibleForm.innerHTML += "<input type='number' name='results_match_outcome' value='" + loseWinTie + "'</input>";
                         invisibleForm.innerHTML += "<input type='number' name='results_fouls' value='" + fouls + "'</input>";
                         invisibleForm.innerHTML += "<input type='number' name='results_technical_fouls' value='" + technicalFouls + "'</input>"; + "'</input>";
+                        invisibleForm.innerHTML += "<input type='text' name='results_dead_robot' value='" + deadRobot + "'></input>";
                         invisibleForm.innerHTML += "<input type='text' name='results_comments' value='" + $("#comments").val() + "'</input>";
                         invisibleForm.submit();
                     }

@@ -18,11 +18,17 @@ if (!isset($_SESSION['UserID'])) {
     <body>
         <?php
         $teamID = $_SESSION['TeamID'];
+        $db = mysqli_connect("localhost", DB_USER, DB_PASSWD, "stevenz9_robotics_scout");
+        if (mysqli_connect_errno()) {
+            die('Failed to connect to database: ' . mysqli_connect_error());
+        }
+
         if (isset($_GET['search'])) {
             $search = preg_replace('/[^\w ]/', '', $_GET['search']);
             $searchQuery = "location LIKE '%{$search}%' OR scouted_team_number LIKE '%{$search}%' OR results_comments LIKE '%{$search}%' OR ts LIKE '%{$search}%'";
         }
         if ($_GET['only'] == true) {
+            $onlyTeam = true;
             $query = "SELECT * FROM scout_recording WHERE team_id=$teamID";
             if (isset($searchQuery)) {
                 $query .= " AND $searchQuery";
@@ -53,7 +59,7 @@ if (!isset($_SESSION['UserID'])) {
                     <tr>
                         <th>Team</th>
                         <th>Date</th>
-                        <th>Scout name</th>
+                        <? if ($onlyTeam) echo '<th>Scout name</th>'; ?>
                         <th>Scouted by team</th>
                         <th>Present</th>
                         <th>Dead Robot</th>
@@ -83,11 +89,6 @@ if (!isset($_SESSION['UserID'])) {
                 </thead>
                 <tbody>
                     <?
-                    $db = mysqli_connect("localhost", DB_USER, DB_PASSWD, "stevenz9_robotics_scout");
-                    if (mysqli_connect_errno()) {
-                        die('Failed to connect to database: ' . mysqli_connect_error());
-                    }
-
                     $result = mysqli_query($db, $query);
 
                     while ($row = mysqli_fetch_assoc($result)) {
@@ -100,9 +101,10 @@ if (!isset($_SESSION['UserID'])) {
                         $teleopAccuracy = $teleopGoals / ($teleopGoals + $row['teleop_miss']) * 100;
 
                         echo '<tr>';
-                        echo '<td>' . $row['scouted_team_number'] . '</td>';
+                        echo '<td><a href=single-review.php?match=' . $row['uid'] . ">" . $row['scouted_team_number'] . '</a></td>';
                         echo '<td>' . substr($row['ts'], 0, 10) . '</td>';
-                        echo '<td>' . $row['user_id'] . '</td>';
+                        if ($onlyTeam)
+                            echo '<td>' . $row['user_id'] . '</td>';
                         echo '<td>' . $row['scouting_team_number'] . '</td>';
                         $present = $row['present'] == 1 ? "Yes" : "No";
                         echo '<td>' . $present . '</td>';

@@ -36,7 +36,7 @@
             <button class="btn plus_minus_buttons" style="height: 50px; width: 50px" onclick="update(0, true)">&mdash;</button>
             <span id="attempts" class="autonomousIndividual">0</span>
             <br />
-            <button class="btn plus_minus_buttons" style="height: 50px; width: 100px" onclick="update(1, false)">Disks Dropped</button>
+            <button class="btn plus_minus_buttons" style="height: 50px; width: 100px" onclick="update(1, false)">Pyramid Goals</button>
             <button class="btn plus_minus_buttons" style="height: 50px; width: 50px" onclick="update(1, true)">&mdash;</button>
             <span id="disksDropped" class="autonomousIndividual">0</span>
 

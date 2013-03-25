@@ -20,7 +20,6 @@
                     <strong id='alertError'></strong>
                 </div>
                 <button id="robotPresent" onclick="updateCheckbox(0)" class="btn btn-success active" data-toggle="button">Present</button>
-                <button id="deadRobot" onclick="updateCheckbox(1)" class="btn btn-warning" data-toggle="button">Dead Robot</button>
                 <br />
                 <input id="location" name="location" type="text" style="margin-bottom: 2px; margin-top: 5px; width: 215px" placeholder="Location" /><br />
                 <input id="teamNumber" placeholder="Team Number" type="number" style="width: 100px"/>
@@ -83,7 +82,6 @@
                                 var invisibleForm = document.getElementById('sendForm');
                                 invisibleForm.innerHTML += "<input type='text' name='next_page' value='" + "forms/autonomous.php" + "'</input>";
                                 invisibleForm.innerHTML += "<input type='text' name='prematch_team_present' value='" + present + "'></input>";
-                                invisibleForm.innerHTML += "<input type='text' name='prematch_dead_robot' value='" + deadRobot + "'></input>";
                                 invisibleForm.innerHTML += "<input type='text' name='prematch_location' value='" + $("#location").val() + "'></input>";
                                 invisibleForm.innerHTML += "<input type='number' name='prematch_team_number' value='" + $("#teamNumber").val() + "'></input>";
                                 invisibleForm.innerHTML += "<input type='number' name='prematch_match_number' value='" + $("#matchNumber").val() + "'></input>";

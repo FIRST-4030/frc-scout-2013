@@ -42,8 +42,8 @@
             <button class="btn plus_minus_buttons" style="height: 50px; width: 50px" onclick="update(3, true)">&mdash;</button>
             <span id="teleopMissedPoints" class="autonomousIndividual">0</span>
             <br />
-            <button class="btn plus_minus_buttons" style="height: 50px; width: 100px" onclick="update(5, false)">Pyramid Goal</button>
-            <button class="btn plus_minus_buttons" style="height: 50px; width: 50px" onclick="update(5, true)">&mdash;</button>
+            <button class="btn plus_minus_buttons" style="height: 50px; width: 100px" onclick="update(4, false)">Pyramid Goal</button>
+            <button class="btn plus_minus_buttons" style="height: 50px; width: 50px" onclick="update(4, true)">&mdash;</button>
             <span id="teleopPyramidPoints" class="autonomousIndividual">0</span>
             <br />
             <p style="font-weight: bold; margin-top: 5px">Total Points: <span id="totalPoints">0</span></p>
@@ -57,17 +57,20 @@
 
 
             <p style="margin-bottom: 2px; margin-top: 10px;" class="small_title"><i>Robot speed</i></p>
-            <!--<input type="range" min="1" max="10" id="RobotSpeed" value="1"/>-->
+            <p style="margin-bottom: 1px">Slow &mdash; Average &mdash; Fast</p>
             <div class="btn-group robotSpeed" data-toggle="buttons-radio">
                 <button class="btn btn-small active">1</button>
+                <span>Slow</span>
                 <button class="btn btn-small">2</button>
                 <button class="btn btn-small">3</button>
                 <button class="btn btn-small">4</button>
                 <button class="btn btn-small">5</button>
+                <span>Fast</span>
             </div>
 
 
-            <p style="margin-bottom: 2px" class="small_title"><i>Robot maneuverability</i></p>
+            <p style="margin-bottom: 2px" class="small_title"><i>Robot steering</i></p>
+            <p style="margin-bottom: 1px">Loose &mdash; Average &mdash; Tight</p>
             <div class="btn-group robotManeuverability" data-toggle="buttons-radio">
                 <button class="btn btn-small active">1</button>
                 <button class="btn btn-small">2</button>
@@ -92,7 +95,7 @@
                 });
             });
             
-            var teleopPoints = [0, 0, 0, 0, 0, 0];
+            var teleopPoints = [0, 0, 0, 0, 0];
             function update(index, negative) {
                 if (teleopPoints[index] > 0) {
                     teleopPoints[index] += 1 * negative ? (-1) : (1);
@@ -124,12 +127,11 @@
                 document.getElementById('teleopTwoPoint').innerHTML = teleopPoints[1];
                 document.getElementById('teleopOnePoint').innerHTML = teleopPoints[2];
                 document.getElementById('teleopMissedPoints').innerHTML = teleopPoints[3];
-                document.getElementById('teleopBlockedPoints').innerHTML = canBlock;
-                document.getElementById('teleopPyramidPoints').innerHTML = teleopPoints[5];
+                document.getElementById('teleopPyramidPoints').innerHTML = teleopPoints[4];
             }
 
             function updateTotals() {
-                document.getElementById('totalPoints').innerHTML = (teleopPoints[0] * 3) + (teleopPoints[1] * 2) + (teleopPoints[2] * 1) + (teleopPoints[5] * 5);
+                document.getElementById('totalPoints').innerHTML = (teleopPoints[0] * 3) + (teleopPoints[1] * 2) + (teleopPoints[2] * 1) + (teleopPoints[4] * 5);
             }
             
             function sendData() {
@@ -141,7 +143,7 @@
                 invisibleForm.innerHTML += "<input type='text' name='teleop_bottom_goals' value='" + teleopPoints[2] + "'</input>";
                 invisibleForm.innerHTML += "<input type='text' name='teleop_missed_goals' value='" + teleopPoints[3] + "'</input>";
                 invisibleForm.innerHTML += "<input type='text' name='teleop_blocked_goals' value='" + canBlock + "'</input>";
-                invisibleForm.innerHTML += "<input type='text' name='teleop_pyramid_goals' value='" + teleopPoints[5] + "'</input>";
+                invisibleForm.innerHTML += "<input type='text' name='teleop_pyramid_goals' value='" + teleopPoints[4] + "'</input>";
                 invisibleForm.innerHTML += "<input type='text' name='teleop_shooting_range' value='" + range + "'</input>";
                 invisibleForm.innerHTML += "<input type='text' name='teleop_robot_speed' value='" + $(".robotSpeed .active").text() + "'</input>";
                 invisibleForm.innerHTML += "<input type='text' name='teleop_robot_maneuverability' value='" + $(".robotManeuverability .active").text() + "'</input>";

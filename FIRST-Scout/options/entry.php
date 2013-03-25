@@ -43,8 +43,8 @@ if (isset($_POST['prematch_team_number'])) {
     # Save the data
     try {
         $db->beginTransaction();
-        $stmt = $db->prepare('INSERT INTO ' . $TABLE . ' (ts, user_id, team_id, scouting_team_number, scouted_team_number, present, dead, alliance, location, match_number) VALUES (now(), ?, ?, ?, ?, ?, ?, ?, ?, ?)');
-        $stmt->execute(array($_SESSION['UserID'], $teamID, $_SESSION['TeamNumber'], $scoutedTeamNumber, $present, $dead, $alliance, $_POST['prematch_location'], $_POST['prematch_match_number']));
+        $stmt = $db->prepare('INSERT INTO ' . $TABLE . ' (ts, user_id, team_id, scouting_team_number, scouted_team_number, present, alliance, location, match_number) VALUES (now(), ?, ?, ?, ?, ?, ?, ?, ?)');
+        $stmt->execute(array($_SESSION['UserID'], $teamID, $_SESSION['TeamNumber'], $scoutedTeamNumber, $present, $alliance, $_POST['prematch_location'], $_POST['prematch_match_number']));
         $_SESSION['MATCH_ID'] = $db->lastInsertId();
         if (!$_SESSION['MATCH_ID']) {
             throw new PDOException('No auto_ID returned', -1);
@@ -109,8 +109,8 @@ else if (isset($_POST['teleop_can_pickup_frisbees'])) {
     
 } else if (isset ($_POST['results_match_outcome'])) {
      $scoutedTeamNumber = $_SESSION['scouted_team'];
-   $db_stmt = "UPDATE " . $TABLE . " SET results_match_outcome=?, results_fouls=?, results_technical_fouls=?, results_comments=?";
-    $db_vals = array($_POST['results_match_outcome'], $_POST['results_fouls'], $_POST['results_technical_fouls'], $_POST['results_comments']);
+   $db_stmt = "UPDATE " . $TABLE . " SET results_match_outcome=?, results_fouls=?, results_technical_fouls=?, results_comments=?, dead=?";
+    $db_vals = array($_POST['results_match_outcome'], $_POST['results_fouls'], $_POST['results_technical_fouls'], $_POST['results_comments'], $_POST['results_dead_robot'] == "true" ? 1 : 0);
     $next_page = "/options?error=Entry successful!";
 }
 # Final DB entry should unset MATCH_ID for safety
