@@ -1,3 +1,4 @@
+<? session_start() ?>
 <!--
 To change this template, choose Tools | Templates
 and open the template in the editor.
@@ -25,8 +26,10 @@ and open the template in the editor.
                 <thead>
                 <th>Team Number</th>
                 <th>Autonomous Points</th>
-                <th>Teleop Points</th>
-                <th>Climb Points</th>
+                <th>Autonomous Accuracy</th>
+                <th>Teleoperated Points</th>
+                <th>Teleoperated Accuracy</th>
+                <th>Climbing Points</th>
                 </thead>
                 <tbody id='resultsTableBody'>
                     

@@ -38,7 +38,6 @@ while ($row = mysqli_fetch_assoc($result)) {
     $autonomousGoals = $row['auto_top'] + $row['auto_middle'] + $row['auto_bottom'];
     $autonomousAccuracy = $autonomousGoals / ($autonomousGoals + $row['auto_miss']) * 100;
     $teleopPoints = $row['teleop_top'] * 3 + $row['teleop_middle'] * 2 + $row['teleop_bottom'] * 1;
-
     $teleopGoals = $row['teleop_top'] + $row['teleop_middle'] + $row['teleop_bottom'];
     $teleopAccuracy = $teleopGoals / ($teleopGoals + $row['teleop_miss']) * 100;
 
@@ -66,7 +65,7 @@ while ($row = mysqli_fetch_assoc($result)) {
     $canBlock = $row['teleop_blocked'] == 1 ? "Yes" : "No";
     echo '<td>' . $canBlock . '</td>';
 
-    echo '<td>' . $teleopGoals . '</td>';
+    echo '<td>' . $teleopPoints . '</td>';
     echo '<td>' . number_format($teleopAccuracy, 1) . "%</td>";
     $shootingInt = $row['teleop_shooting_range'];
     switch ($shootingInt) {
