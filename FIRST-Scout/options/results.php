@@ -18,12 +18,11 @@ $teamNumber = $_SESSION['TeamNumber'];
     <body>                
         <div class="results_container">
             <p class="title" id="title">Results for all teams</input></p>
-            <a href="<? echo $teamButtonAction ?>"><? echo $teamButtonText ?></a>
-            <div class="btn-group" data-toggle="buttons-radio" style="margin-top: 10px; margin-bottom: 10px">
-                <button id="redAlliance" class="btn active" onclick="updateTeams(false)">All Teams</button>
-                <button id="blueAlliance" class="btn" onclick="updateTeams(true)">Only <? echo $teamNumber ?></button>
+            <div class="btn-group resultsByTeam" data-toggle="buttons-radio" style="margin-top: 10px; margin-bottom: 10px">
+                <button class="btn active" value="false" onclick="updateTeams(false, $('#search').val())">All Teams</button>
+                <button class="btn" value="true" onclick="updateTeams(true, $('#search').val())">Only <? echo $teamNumber ?></button>
             </div>
-            <span style="margin-left: 5px;">Search: </span><input type="text" style="margin-top: 9px; margin-left: 2x;" name="search" placeholder='team, location, comments, date'>
+            <span style="margin-left: 5px;">Search: </span><input type="text" onchange="updateTeams($('.resultsByTeam .active').val(), $('#search').val())" style="margin-top: 9px; margin-left: 2x;" id="search" placeholder='team, location, comments, date'>
             <table id="resultTable" class="tablesorter">
                 <thead>
                     <tr>
@@ -63,38 +62,36 @@ $teamNumber = $_SESSION['TeamNumber'];
             </table>
         </div>
         <script type="text/javascript">
-            $(document).ready(function() {
-                $("#resultTable").tablesorter();
-                updateTeams(false);
-            });
-            
-            function updateTeams(onlyTeam) {
-                tableBody = document.getElementById('tableBody');
-                tableBody.innerHTML = "Loading";
-                if(onlyTeam) {
-                    document.getElementById('title').innerHTML = "Results for team <? echo $teamNumber ?>";
-                    $("#scoutName").show();
-                } else {
-                    document.getElementById('title').innerHTML = "Results for all teams";                   
-                    $("#scoutName").hide();
-                }
-                
-                if(window.XMLHttpRequest) {
-                    xmlHttp = new XMLHttpRequest();
-                }
-                xmlHttp.onreadystatechange = function() {
-                    if(xmlHttp.readyState == 4 && xmlHttp.status == 200) {
-                        tableBody.innerHTML = xmlHttp.responseText;
+                    $(document).ready(function() {
+                        updateTeams(false, "");
+                    });
+
+                    function updateTeams(onlyTeam, search) {
+                        tableBody = document.getElementById('tableBody');
+                        tableBody.innerHTML = "Loading";
+                        if (onlyTeam) {
+                            document.getElementById('title').innerHTML = "Results for team <? echo $teamNumber ?>";
+                            $("#scoutName").show();
+                        } else {
+                            document.getElementById('title').innerHTML = "Results for all teams";
+                            $("#scoutName").hide();
+                        }
+
+                        if (window.XMLHttpRequest) {
+                            xmlHttp = new XMLHttpRequest();
+                        }
+
+                        xmlHttp.onreadystatechange = function() {
+                            if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+                                tableBody.innerHTML = xmlHttp.responseText;
+                            }
+                        }
+                        xmlHttp.open("POST", "get-results.php", true);
+                        xmlHttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                        var sendData = "only=" + onlyTeam + "&search=" + search;
+                        xmlHttp.send(sendData);
+                        $("#resultTable").tablesorter();
                     }
-                }
-                xmlHttp.open("POST","get-results.php",true);  
-                xmlHttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");  
-                xmlHttp.send("only=" + onlyTeam);
-            }
-            
-            function updateSearch(searchQuery) {
-                
-            }
         </script>
     </body>
 </html>

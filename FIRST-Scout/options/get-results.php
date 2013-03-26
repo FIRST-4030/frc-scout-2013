@@ -9,19 +9,19 @@ if ($_POST['only'] == "true") {
 }
 
 
-if (isset($_GET['search'])) {
-    $search = preg_replace('/[^\w ]/', '', $_GET['search']);
-    $searchQuery = "location LIKE '%{$search}%' OR scouted_team_number LIKE '%{$search}%' OR results_comments LIKE '%{$search}%' OR ts LIKE '%{$search}%'";
+if (($_POST['search']) != "") {
+    $search = preg_replace('/[^\w ]/', '', $_POST['search']);
+    $searchQuery = "(location LIKE '%{$search}%' OR scouted_team_number LIKE '%{$search}%' OR results_comments LIKE '%{$search}%' OR ts LIKE '%{$search}%')";
 }
 
 if ($onlyTeam) {
     $teamID = $_SESSION['TeamID'];
-    $query = "SELECT * FROM scout_recording WHERE team_id=$teamID";
+    $query = "SELECT * FROM `scout_recording` WHERE team_id='$teamID'";
     if (isset($searchQuery)) {
         $query .= " AND $searchQuery";
     }
 } else {
-    $query = "SELECT * FROM scout_recording";
+    $query = "SELECT * FROM `scout_recording`";
     if (isset($searchQuery)) {
         $query .= " WHERE $searchQuery";
     }
