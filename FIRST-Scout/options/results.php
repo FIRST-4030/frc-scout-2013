@@ -91,6 +91,10 @@ $teamNumber = $_SESSION['TeamNumber'];
                 xmlHttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");  
                 xmlHttp.send("only=" + onlyTeam);
             }
+            
+            function updateSearch(searchQuery) {
+                
+            }
         </script>
     </body>
 </html>
