@@ -46,7 +46,7 @@ and open the template in the editor.
                 $(document).ready(function() {
                     updateTeams('');
                     $("#resultsTable").tablesorter();
-                    $("#resultsTable").visualize();
+                    //$("#resultsTable").visualize();
                 });
 
                 function updateTeams(search) {
@@ -58,7 +58,7 @@ and open the template in the editor.
                         if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
                             $("#tableBody").html(xmlHttp.responseText);
                             $("#resultsTable").trigger("update");
-                            $('.visualize').trigger('visualizeRefresh');
+                            //$('.visualize').trigger('visualizeRefresh');
                         }
                     }
 
