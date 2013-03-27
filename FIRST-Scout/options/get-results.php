@@ -1,5 +1,9 @@
 <?
 session_start();
+
+if(!isset($_SESSION['TeamID'])) {
+    header('location: index.php?error=' . urlencode("You must login first!"));
+}
 require '../includes/constants.php';
 
 if ($_POST['only'] == "true") {
@@ -34,6 +38,7 @@ if (mysqli_connect_errno()) {
 
 $result = mysqli_query($db, $query);
 while ($row = mysqli_fetch_assoc($result)) {
+    $matchID = $row['uid'];
     $autonomousPoints = $row['auto_top'] * 6 + $row['auto_middle'] * 4 + $row['auto_bottom'] * 2;
     $autonomousGoals = $row['auto_top'] + $row['auto_middle'] + $row['auto_bottom'];
     $autonomousAccuracy = $autonomousGoals / ($autonomousGoals + $row['auto_miss']) * 100;
@@ -42,6 +47,9 @@ while ($row = mysqli_fetch_assoc($result)) {
     $teleopAccuracy = $teleopGoals / ($teleopGoals + $row['teleop_miss']) * 100;
 
     echo '<tr>';
+    if($onlyTeam) {
+        echo "<td><a onfocus='this.innerHTML = &timesb;' onblur='this.innerHTML=&times;' onclick='deleteTeam($matchID)' style='font-size:24px'>&times;</a>";
+    }
     echo '<td><a href=single-match-review.php?match=' . $row['uid'] . ">" . $row['scouted_team_number'] . '</a></td>';
     echo '<td>' . substr($row['ts'], 0, 10) . '</td>';
     if ($onlyTeam)

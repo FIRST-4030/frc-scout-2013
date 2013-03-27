@@ -37,14 +37,13 @@ if (isset($_POST['prematch_team_number'])) {
     $scoutedTeamNumber = intval($_POST['prematch_team_number']);
     $_SESSION['scouted_team'] = $scoutedTeamNumber;
     $present = ($_POST['prematch_team_present'] == "true" ? 1 : 0);
-    $dead = ($_POST['prematch_dead_robot'] == "true" ? 1 : 0);
-    $alliance = ($_POST['prematch_red_alliance'] == "true"  ? 'RED' : 'BLUE');
+    $alliance = ($_POST['prematch_red_alliance'] == "true" ? 'RED' : 'BLUE');
     $teamID = $_SESSION['TeamID'];
     # Save the data
     try {
         $db->beginTransaction();
-        $stmt = $db->prepare('INSERT INTO ' . $TABLE . ' (ts, user_id, team_id, scouted_team_number, present, dead, alliance, location, match_number) VALUES (now(), ?, ?, ?, ?, ?, ?, ?, ?)');
-        $stmt->execute(array($_SESSION['UserID'], $teamID, $scoutedTeamNumber, $present, $dead, $alliance, $_POST['prematch_location'], $_POST['prematch_match_number']));
+        $stmt = $db->prepare('INSERT INTO ' . $TABLE . ' (ts, user_id, team_id, scouted_team_number, present, alliance, location, match_number) VALUES (now(), ?, ?, ?, ?, ?, ?, ?)');
+        $stmt->execute(array($_SESSION['UserID'], $teamID, $scoutedTeamNumber, $present, $alliance, $_POST['prematch_location'], $_POST['prematch_match_number']));
         $_SESSION['MATCH_ID'] = $db->lastInsertId();
         if (!$_SESSION['MATCH_ID']) {
             throw new PDOException('No auto_ID returned', -1);
@@ -82,12 +81,12 @@ if (isset($_POST['prematch_team_number'])) {
 else if (isset($_POST['teleop_can_pickup_frisbees'])) {
     # Force the data types
     $scoutedTeamNumber = $_SESSION['scouted_team'];
-    $frisbeePickup = ($_POST['teleop_can_pickup_frisbees'] == "true"  ? 1 : 0);
+    $frisbeePickup = ($_POST['teleop_can_pickup_frisbees'] == "true" ? 1 : 0);
     $top = intval($_POST['teleop_top_goals']);
     $middle = intval($_POST['teleop_middle_goals']);
     $bottom = intval($_POST['teleop_bottom_goals']);
     $miss = intval($_POST['teleop_missed_goals']);
-    $block = intval($_POST['teleop_blocked_goals'] == "true"  ? 1 : 0);
+    $block = intval($_POST['teleop_blocked_goals'] == "true" ? 1 : 0);
     $pyramid = intval($_POST['teleop_pyramid_goals']);
     $shootingRange = intval($_POST['teleop_shooting_range']);
     $robotSpeed = intval($_POST['teleop_robot_speed']);
@@ -101,16 +100,16 @@ else if (isset($_POST['teleop_can_pickup_frisbees'])) {
 
     # Set the next page
     $next_page = 'climb.php';
-} else if (isset($_POST['climb_attempts'])) {     
+} else if (isset($_POST['climb_attempts'])) {
     $scoutedTeamNumber = $_SESSION['scouted_team'];
     $db_stmt = "UPDATE " . $TABLE . " SET climb_attempts=?, climb_pyramid_goals=?, climb_level_reached=?, climb_style=?";
-    $db_vals = array($_POST['climb_attempts'], $_POST['climb_pyramid_goals'], $_POST['climb_level_reached'], $_POST['climb_climb_style']);   
+    $db_vals = array($_POST['climb_attempts'], $_POST['climb_pyramid_goals'], $_POST['climb_level_reached'], $_POST['climb_climb_style']);
     $next_page = "results.php";
-    
-} else if (isset ($_POST['results_match_outcome'])) {
-     $scoutedTeamNumber = $_SESSION['scouted_team'];
-   $db_stmt = "UPDATE " . $TABLE . " SET results_match_outcome=?, results_fouls=?, results_technical_fouls=?, results_comments=?";
-    $db_vals = array($_POST['results_match_outcome'], $_POST['results_fouls'], $_POST['results_technical_fouls'], $_POST['results_comments']);
+} else if (isset($_POST['results_match_outcome'])) {
+    $dead = ($_POST['results_dead_robot'] == "true" ? 1 : 0);
+    $scoutedTeamNumber = $_SESSION['scouted_team'];
+    $db_stmt = "UPDATE " . $TABLE . " SET results_match_outcome=?, results_fouls=?, results_technical_fouls=?, results_comments=?, dead=?";
+    $db_vals = array($_POST['results_match_outcome'], $_POST['results_fouls'], $_POST['results_technical_fouls'], $_POST['results_comments'], $dead);
     $next_page = "/options?error=Entry successful!";
 }
 # Final DB entry should unset MATCH_ID for safety
@@ -138,8 +137,8 @@ if ($db_stmt !== NULL) {
     $db_vals = NULL;
 }
 
-if(isset($_POST['results_fouls'])) {
-    header("location: /options/single-review.php");
+if (isset($_POST['results_fouls'])) {
+    header("location: /options/single-match-review.php");
 }
 
 # Display the next page

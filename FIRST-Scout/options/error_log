@@ -230,3 +230,588 @@
 [23-Mar-2013 19:37:39] PHP Notice:  Undefined index:  only in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/results.php on line 73
 [23-Mar-2013 19:52:46] PHP Notice:  Undefined index:  UserID in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 28
 [23-Mar-2013 19:52:46] PHP Notice:  Undefined index:  TeamNumber in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 28
+[26-Mar-2013 18:38:14] PHP Notice:  Undefined variable: array in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-team-averages.php on line 18
+[26-Mar-2013 18:38:14] PHP Warning:  Invalid argument supplied for foreach() in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-team-averages.php on line 18
+[26-Mar-2013 18:38:15] PHP Notice:  Undefined variable: array in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-team-averages.php on line 18
+[26-Mar-2013 18:38:15] PHP Warning:  Invalid argument supplied for foreach() in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-team-averages.php on line 18
+[26-Mar-2013 18:38:57] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-team-averages.php on line 17
+[26-Mar-2013 18:38:57] PHP Notice:  Undefined variable: array in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-team-averages.php on line 19
+[26-Mar-2013 18:38:57] PHP Warning:  Invalid argument supplied for foreach() in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-team-averages.php on line 19
+[26-Mar-2013 18:39:17] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-team-averages.php on line 17
+[26-Mar-2013 18:39:17] PHP Warning:  Invalid argument supplied for foreach() in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-team-averages.php on line 19
+[26-Mar-2013 18:39:18] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-team-averages.php on line 17
+[26-Mar-2013 18:39:18] PHP Warning:  Invalid argument supplied for foreach() in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-team-averages.php on line 19
+[26-Mar-2013 18:39:18] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-team-averages.php on line 17
+[26-Mar-2013 18:39:18] PHP Warning:  Invalid argument supplied for foreach() in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-team-averages.php on line 19
+[26-Mar-2013 18:39:22] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-team-averages.php on line 17
+[26-Mar-2013 18:39:22] PHP Warning:  Invalid argument supplied for foreach() in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-team-averages.php on line 19
+[26-Mar-2013 18:39:47] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-team-averages.php on line 17
+[26-Mar-2013 18:39:47] PHP Warning:  Invalid argument supplied for foreach() in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-team-averages.php on line 19
+[26-Mar-2013 18:39:48] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-team-averages.php on line 17
+[26-Mar-2013 18:39:48] PHP Warning:  Invalid argument supplied for foreach() in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-team-averages.php on line 19
+[26-Mar-2013 18:39:49] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-team-averages.php on line 17
+[26-Mar-2013 18:39:49] PHP Warning:  Invalid argument supplied for foreach() in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-team-averages.php on line 19
+[26-Mar-2013 18:39:50] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-team-averages.php on line 17
+[26-Mar-2013 18:39:50] PHP Warning:  Invalid argument supplied for foreach() in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-team-averages.php on line 19
+[26-Mar-2013 18:41:31] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-team-averages.php on line 17
+[26-Mar-2013 18:41:32] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-team-averages.php on line 17
+[26-Mar-2013 18:41:48] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-team-averages.php on line 17
+[26-Mar-2013 18:42:02] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-team-averages.php on line 18
+[26-Mar-2013 18:42:03] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-team-averages.php on line 18
+[26-Mar-2013 18:59:32] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-team-averages.php on line 20
+[26-Mar-2013 18:59:33] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-team-averages.php on line 20
+[26-Mar-2013 19:13:41] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-team-averages.php on line 25
+[26-Mar-2013 19:13:43] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-team-averages.php on line 25
+[26-Mar-2013 19:13:46] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-team-averages.php on line 25
+[26-Mar-2013 19:13:47] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-team-averages.php on line 25
+[26-Mar-2013 19:13:47] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-team-averages.php on line 25
+[26-Mar-2013 19:13:59] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-team-averages.php on line 25
+[26-Mar-2013 19:14:01] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-team-averages.php on line 25
+[26-Mar-2013 19:14:05] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-team-averages.php on line 25
+[26-Mar-2013 19:14:08] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-team-averages.php on line 25
+[26-Mar-2013 19:14:09] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-team-averages.php on line 25
+[26-Mar-2013 19:14:28] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-team-averages.php on line 25
+[26-Mar-2013 19:14:38] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-team-averages.php on line 25
+[26-Mar-2013 19:16:00] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-team-averages.php on line 25
+[26-Mar-2013 19:16:01] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-team-averages.php on line 25
+[26-Mar-2013 19:16:11] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-team-averages.php on line 25
+[26-Mar-2013 19:16:34] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-team-averages.php on line 25
+[26-Mar-2013 19:17:13] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-team-averages.php on line 25
+[26-Mar-2013 19:17:18] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-team-averages.php on line 25
+[26-Mar-2013 19:18:50] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-team-averages.php on line 25
+[26-Mar-2013 19:18:52] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-team-averages.php on line 25
+[26-Mar-2013 19:18:55] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-team-averages.php on line 25
+[26-Mar-2013 19:20:11] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-team-averages.php on line 25
+[26-Mar-2013 19:20:17] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-team-averages.php on line 25
+[26-Mar-2013 19:20:17] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-team-averages.php on line 25
+[26-Mar-2013 19:20:18] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-team-averages.php on line 25
+[26-Mar-2013 19:20:49] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-team-averages.php on line 25
+[26-Mar-2013 19:22:04] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-team-averages.php on line 26
+[26-Mar-2013 19:22:06] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-team-averages.php on line 26
+[26-Mar-2013 19:22:46] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-team-averages.php on line 26
+[26-Mar-2013 19:22:51] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-team-averages.php on line 26
+[26-Mar-2013 19:23:16] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-team-averages.php on line 26
+[26-Mar-2013 19:23:18] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-team-averages.php on line 26
+[26-Mar-2013 19:24:05] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-team-averages.php on line 26
+[26-Mar-2013 19:55:04] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 87
+[26-Mar-2013 19:55:04] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 39
+[26-Mar-2013 19:55:04] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 87
+[26-Mar-2013 19:55:04] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 42
+[26-Mar-2013 19:55:04] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 87
+[26-Mar-2013 19:55:04] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 42
+[26-Mar-2013 19:55:04] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 87
+[26-Mar-2013 19:55:38] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 87
+[26-Mar-2013 19:55:38] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 39
+[26-Mar-2013 19:55:38] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 87
+[26-Mar-2013 19:55:38] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 42
+[26-Mar-2013 19:55:38] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 87
+[26-Mar-2013 19:55:38] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 42
+[26-Mar-2013 19:55:38] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 87
+[26-Mar-2013 20:05:58] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 87
+[26-Mar-2013 20:05:58] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 39
+[26-Mar-2013 20:05:58] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 87
+[26-Mar-2013 20:05:58] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 42
+[26-Mar-2013 20:05:58] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 87
+[26-Mar-2013 20:05:58] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 42
+[26-Mar-2013 20:05:58] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 87
+[26-Mar-2013 20:14:34] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 91
+[26-Mar-2013 20:14:34] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 43
+[26-Mar-2013 20:14:34] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 91
+[26-Mar-2013 20:14:34] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 46
+[26-Mar-2013 20:14:34] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 91
+[26-Mar-2013 20:14:34] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 46
+[26-Mar-2013 20:14:34] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 91
+[26-Mar-2013 20:16:20] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 91
+[26-Mar-2013 20:16:20] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 43
+[26-Mar-2013 20:16:20] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 91
+[26-Mar-2013 20:16:20] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 46
+[26-Mar-2013 20:16:20] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 91
+[26-Mar-2013 20:16:20] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 46
+[26-Mar-2013 20:16:20] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 91
+[26-Mar-2013 20:20:02] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 51
+[26-Mar-2013 20:20:37] PHP Notice:  Undefined index:  match_id in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 41
+[26-Mar-2013 20:20:37] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:20:37] PHP Notice:  Undefined index:  match_id in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 41
+[26-Mar-2013 20:20:37] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:20:37] PHP Notice:  Undefined index:  match_id in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 41
+[26-Mar-2013 20:20:37] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 44
+[26-Mar-2013 20:20:37] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:20:37] PHP Notice:  Undefined index:  match_id in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 41
+[26-Mar-2013 20:20:37] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:20:37] PHP Notice:  Undefined index:  match_id in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 41
+[26-Mar-2013 20:20:37] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:20:37] PHP Notice:  Undefined index:  match_id in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 41
+[26-Mar-2013 20:20:37] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:20:37] PHP Notice:  Undefined index:  match_id in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 41
+[26-Mar-2013 20:20:37] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:20:37] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:20:37] PHP Notice:  Undefined index:  match_id in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 41
+[26-Mar-2013 20:20:37] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:20:37] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:20:37] PHP Notice:  Undefined index:  match_id in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 41
+[26-Mar-2013 20:20:37] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:20:37] PHP Notice:  Undefined index:  match_id in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 41
+[26-Mar-2013 20:20:37] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:20:37] PHP Notice:  Undefined index:  match_id in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 41
+[26-Mar-2013 20:20:37] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:20:37] PHP Notice:  Undefined index:  match_id in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 41
+[26-Mar-2013 20:20:37] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:20:37] PHP Notice:  Undefined index:  match_id in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 41
+[26-Mar-2013 20:20:37] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:20:37] PHP Notice:  Undefined index:  match_id in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 41
+[26-Mar-2013 20:20:37] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:20:38] PHP Notice:  Undefined index:  match_id in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 41
+[26-Mar-2013 20:20:38] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:20:38] PHP Notice:  Undefined index:  match_id in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 41
+[26-Mar-2013 20:20:38] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:20:38] PHP Notice:  Undefined index:  match_id in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 41
+[26-Mar-2013 20:20:38] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:20:38] PHP Notice:  Undefined index:  match_id in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 41
+[26-Mar-2013 20:20:38] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:20:38] PHP Notice:  Undefined index:  match_id in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 41
+[26-Mar-2013 20:20:38] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:20:38] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:20:38] PHP Notice:  Undefined index:  match_id in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 41
+[26-Mar-2013 20:20:38] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:20:38] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:20:38] PHP Notice:  Undefined index:  match_id in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 41
+[26-Mar-2013 20:20:38] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:20:38] PHP Notice:  Undefined index:  match_id in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 41
+[26-Mar-2013 20:20:38] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:20:38] PHP Notice:  Undefined index:  match_id in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 41
+[26-Mar-2013 20:20:38] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:20:38] PHP Notice:  Undefined index:  match_id in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 41
+[26-Mar-2013 20:20:38] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:20:38] PHP Notice:  Undefined index:  match_id in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 41
+[26-Mar-2013 20:20:38] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:20:38] PHP Notice:  Undefined index:  match_id in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 41
+[26-Mar-2013 20:20:38] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:20:43] PHP Notice:  Undefined index:  match_id in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 41
+[26-Mar-2013 20:20:43] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:20:43] PHP Notice:  Undefined index:  match_id in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 41
+[26-Mar-2013 20:20:43] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:20:43] PHP Notice:  Undefined index:  match_id in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 41
+[26-Mar-2013 20:20:43] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 44
+[26-Mar-2013 20:20:43] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:20:43] PHP Notice:  Undefined index:  match_id in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 41
+[26-Mar-2013 20:20:43] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:20:43] PHP Notice:  Undefined index:  match_id in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 41
+[26-Mar-2013 20:20:43] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:20:43] PHP Notice:  Undefined index:  match_id in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 41
+[26-Mar-2013 20:20:43] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:20:43] PHP Notice:  Undefined index:  match_id in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 41
+[26-Mar-2013 20:20:43] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:20:43] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:20:43] PHP Notice:  Undefined index:  match_id in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 41
+[26-Mar-2013 20:20:43] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:20:43] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:20:43] PHP Notice:  Undefined index:  match_id in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 41
+[26-Mar-2013 20:20:43] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:20:43] PHP Notice:  Undefined index:  match_id in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 41
+[26-Mar-2013 20:20:43] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:20:43] PHP Notice:  Undefined index:  match_id in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 41
+[26-Mar-2013 20:20:43] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:20:43] PHP Notice:  Undefined index:  match_id in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 41
+[26-Mar-2013 20:20:43] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:20:43] PHP Notice:  Undefined index:  match_id in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 41
+[26-Mar-2013 20:20:43] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:20:43] PHP Notice:  Undefined index:  match_id in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 41
+[26-Mar-2013 20:20:43] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:20:46] PHP Notice:  Undefined index:  match_id in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 41
+[26-Mar-2013 20:20:46] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:20:46] PHP Notice:  Undefined index:  match_id in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 41
+[26-Mar-2013 20:20:46] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:20:46] PHP Notice:  Undefined index:  match_id in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 41
+[26-Mar-2013 20:20:46] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 44
+[26-Mar-2013 20:20:46] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:20:46] PHP Notice:  Undefined index:  match_id in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 41
+[26-Mar-2013 20:20:46] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:20:46] PHP Notice:  Undefined index:  match_id in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 41
+[26-Mar-2013 20:20:46] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:20:46] PHP Notice:  Undefined index:  match_id in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 41
+[26-Mar-2013 20:20:46] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:20:46] PHP Notice:  Undefined index:  match_id in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 41
+[26-Mar-2013 20:20:46] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:20:46] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:20:46] PHP Notice:  Undefined index:  match_id in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 41
+[26-Mar-2013 20:20:46] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:20:46] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:20:46] PHP Notice:  Undefined index:  match_id in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 41
+[26-Mar-2013 20:20:46] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:20:46] PHP Notice:  Undefined index:  match_id in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 41
+[26-Mar-2013 20:20:46] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:20:46] PHP Notice:  Undefined index:  match_id in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 41
+[26-Mar-2013 20:20:46] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:20:46] PHP Notice:  Undefined index:  match_id in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 41
+[26-Mar-2013 20:20:46] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:20:46] PHP Notice:  Undefined index:  match_id in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 41
+[26-Mar-2013 20:20:46] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:20:46] PHP Notice:  Undefined index:  match_id in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 41
+[26-Mar-2013 20:20:46] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:20:49] PHP Notice:  Undefined index:  match_id in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 41
+[26-Mar-2013 20:20:49] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:20:49] PHP Notice:  Undefined index:  match_id in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 41
+[26-Mar-2013 20:20:49] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:20:49] PHP Notice:  Undefined index:  match_id in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 41
+[26-Mar-2013 20:20:49] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:20:49] PHP Notice:  Undefined index:  match_id in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 41
+[26-Mar-2013 20:20:49] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:20:49] PHP Notice:  Undefined index:  match_id in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 41
+[26-Mar-2013 20:20:49] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:20:49] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:20:49] PHP Notice:  Undefined index:  match_id in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 41
+[26-Mar-2013 20:20:49] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:20:49] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:20:49] PHP Notice:  Undefined index:  match_id in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 41
+[26-Mar-2013 20:20:49] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:20:49] PHP Notice:  Undefined index:  match_id in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 41
+[26-Mar-2013 20:20:49] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:20:49] PHP Notice:  Undefined index:  match_id in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 41
+[26-Mar-2013 20:20:49] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:20:49] PHP Notice:  Undefined index:  match_id in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 41
+[26-Mar-2013 20:20:49] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:20:49] PHP Notice:  Undefined index:  match_id in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 41
+[26-Mar-2013 20:20:49] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:20:49] PHP Notice:  Undefined index:  match_id in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 41
+[26-Mar-2013 20:20:49] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:20:56] PHP Notice:  Undefined index:  match_id in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 41
+[26-Mar-2013 20:20:56] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:20:56] PHP Notice:  Undefined index:  match_id in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 41
+[26-Mar-2013 20:20:56] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:20:56] PHP Notice:  Undefined index:  match_id in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 41
+[26-Mar-2013 20:20:56] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 44
+[26-Mar-2013 20:20:56] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:20:56] PHP Notice:  Undefined index:  match_id in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 41
+[26-Mar-2013 20:20:56] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:20:56] PHP Notice:  Undefined index:  match_id in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 41
+[26-Mar-2013 20:20:56] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:20:56] PHP Notice:  Undefined index:  match_id in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 41
+[26-Mar-2013 20:20:56] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:20:56] PHP Notice:  Undefined index:  match_id in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 41
+[26-Mar-2013 20:20:56] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:20:56] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:20:56] PHP Notice:  Undefined index:  match_id in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 41
+[26-Mar-2013 20:20:56] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:20:56] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:20:56] PHP Notice:  Undefined index:  match_id in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 41
+[26-Mar-2013 20:20:56] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:20:56] PHP Notice:  Undefined index:  match_id in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 41
+[26-Mar-2013 20:20:56] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:20:56] PHP Notice:  Undefined index:  match_id in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 41
+[26-Mar-2013 20:20:56] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:20:56] PHP Notice:  Undefined index:  match_id in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 41
+[26-Mar-2013 20:20:56] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:20:56] PHP Notice:  Undefined index:  match_id in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 41
+[26-Mar-2013 20:20:56] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:20:56] PHP Notice:  Undefined index:  match_id in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 41
+[26-Mar-2013 20:20:56] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:21:06] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:21:06] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 44
+[26-Mar-2013 20:21:06] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:21:06] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:21:06] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:21:06] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:21:06] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:21:07] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:21:07] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:21:07] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:21:07] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:21:07] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:21:14] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:21:14] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 44
+[26-Mar-2013 20:21:14] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:21:14] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:21:14] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:21:14] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:21:14] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:21:34] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:21:34] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:21:34] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:21:34] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:21:34] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:22:11] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:22:11] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 44
+[26-Mar-2013 20:22:11] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:22:11] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:22:11] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:22:11] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:22:11] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:23:02] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:23:02] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 44
+[26-Mar-2013 20:23:02] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:23:02] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:23:02] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:23:02] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:23:02] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:23:03] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:23:03] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:23:03] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:23:03] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:23:03] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:25:03] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:25:03] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 44
+[26-Mar-2013 20:25:03] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:25:03] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:25:03] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:25:03] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:25:03] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:25:04] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:25:04] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:25:04] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:25:04] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:25:04] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:25:29] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:25:29] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 44
+[26-Mar-2013 20:25:29] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:25:29] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:25:29] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:25:29] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:25:29] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:25:30] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:25:30] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:25:30] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:25:30] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:25:30] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:25:38] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:25:38] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 44
+[26-Mar-2013 20:25:38] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:25:38] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:25:38] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:25:38] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:25:38] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:25:39] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:25:39] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:25:39] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:25:39] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:25:39] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:25:55] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:25:55] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 44
+[26-Mar-2013 20:25:55] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:25:55] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:25:55] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:25:55] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:25:55] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:25:56] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:25:56] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:25:56] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:25:56] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:25:56] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:26:44] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:26:44] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 44
+[26-Mar-2013 20:26:44] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:26:44] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:26:44] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:26:44] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:26:44] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:26:45] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:26:45] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:26:45] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:26:45] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:26:45] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:28:23] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:28:23] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 44
+[26-Mar-2013 20:28:23] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:28:23] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:28:23] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:28:23] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:28:23] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:28:24] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:28:24] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:28:24] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:28:24] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:28:24] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:38:52] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:38:52] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 44
+[26-Mar-2013 20:38:52] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:38:52] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:38:52] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:38:52] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:38:52] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:38:54] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:38:54] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:38:54] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:38:54] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:38:54] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:38:59] PHP Warning:  mysqli_stmt_execute() expects parameter 1 to be mysqli_stmt, string given in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/delete.php on line 20
+[26-Mar-2013 20:38:59] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:38:59] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:38:59] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:38:59] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:38:59] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:39:03] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:39:03] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 44
+[26-Mar-2013 20:39:03] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:39:03] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:39:03] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:39:03] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:39:03] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:39:45] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:39:45] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 44
+[26-Mar-2013 20:39:45] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:39:45] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:39:45] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:39:45] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:39:45] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:39:46] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:39:46] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:39:46] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:39:46] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:39:46] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:39:48] PHP Warning:  mysqli_stmt_execute() expects parameter 1 to be mysqli_stmt, string given in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/delete.php on line 20
+[26-Mar-2013 20:39:50] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:39:50] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:39:50] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:39:50] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:39:50] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:40:05] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:40:05] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 44
+[26-Mar-2013 20:40:05] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:40:05] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:40:05] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:40:05] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:40:05] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:40:08] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:40:08] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 44
+[26-Mar-2013 20:40:08] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:40:08] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:40:08] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:40:08] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:40:08] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:40:09] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:40:09] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:40:09] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:40:09] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:40:09] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:40:15] PHP Warning:  mysqli_stmt_execute() expects parameter 1 to be mysqli_stmt, string given in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/delete.php on line 20
+[26-Mar-2013 20:40:21] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:40:21] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:40:21] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:40:21] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:40:21] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:41:05] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:41:05] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 44
+[26-Mar-2013 20:41:05] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:41:05] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:41:05] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:41:05] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:41:05] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:41:05] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:41:05] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:41:05] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:41:05] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:41:05] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:41:09] PHP Warning:  mysqli_query() expects at least 2 parameters, 1 given in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/delete.php on line 20
+[26-Mar-2013 20:41:10] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:41:10] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:41:10] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:41:10] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:41:10] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:41:12] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:41:12] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 44
+[26-Mar-2013 20:41:12] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:41:12] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:41:12] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:41:12] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:41:12] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:41:33] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:41:33] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 44
+[26-Mar-2013 20:41:33] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:41:33] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:41:33] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:41:33] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:41:33] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:41:34] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:41:34] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:41:34] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:41:34] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:41:34] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:41:40] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:41:40] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:41:40] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:41:40] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:41:40] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:41:41] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:41:41] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 44
+[26-Mar-2013 20:41:41] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:41:41] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:41:41] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:41:41] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:41:41] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:43:18] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:43:18] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 44
+[26-Mar-2013 20:43:18] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:43:18] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:43:18] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:43:18] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:43:18] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:43:19] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:43:19] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:43:19] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:43:19] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:43:19] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:43:23] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:43:23] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:43:23] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:43:23] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:43:23] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:43:25] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:43:25] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 44
+[26-Mar-2013 20:43:25] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:43:25] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:43:25] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:43:25] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:43:25] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:43:29] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:43:29] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:43:29] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:43:29] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:43:29] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:43:30] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:43:30] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:43:30] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:43:30] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:43:30] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:43:31] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:43:31] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 44
+[26-Mar-2013 20:43:31] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:43:31] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:43:31] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:43:31] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:43:31] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:43:32] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:43:32] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:43:32] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:43:32] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:43:32] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:43:32] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:43:32] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:43:32] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:43:32] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:43:32] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:43:33] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:43:33] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:43:33] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:43:33] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:43:33] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:43:45] PHP Notice:  Undefined index:  id in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/delete.php on line 7
+[26-Mar-2013 20:44:49] PHP Notice:  Undefined index:  TeamID in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 22
+[26-Mar-2013 20:44:50] PHP Notice:  Undefined index:  UserID in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 28
+[26-Mar-2013 20:44:50] PHP Notice:  Undefined index:  TeamNumber in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/index.php on line 28
+[26-Mar-2013 20:45:19] PHP Notice:  Undefined index:  TeamNumber in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/results.php on line 6
+[26-Mar-2013 20:45:45] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:45:45] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 44
+[26-Mar-2013 20:45:45] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:45:45] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:45:45] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:45:45] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:45:45] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:45:47] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:45:47] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:45:47] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:45:47] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:45:47] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:45:51] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:45:51] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:45:51] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95
+[26-Mar-2013 20:45:51] PHP Warning:  Division by zero in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 47
+[26-Mar-2013 20:45:51] PHP Notice:  Undefined index:  pyramid_goals in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/options/get-results.php on line 95

@@ -26,6 +26,7 @@ $teamNumber = $_SESSION['TeamNumber'];
             <table id="resultTable" class="tablesorter">
                 <thead>
                     <tr>
+                        <th id="scoutName">Delete</th>
                         <th>Team</th>
                         <th>Date</th>
                         <th id="scoutName">Scout name</th>
@@ -84,13 +85,32 @@ $teamNumber = $_SESSION['TeamNumber'];
                         xmlHttp.onreadystatechange = function() {
                             if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
                                 tableBody.innerHTML = xmlHttp.responseText;
+                                $("#resultsTable").trigger("update");
                             }
                         }
                         xmlHttp.open("POST", "get-results.php", true);
                         xmlHttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
                         var sendData = "only=" + onlyTeam + "&search=" + search;
                         xmlHttp.send(sendData);
-                        $("#resultTable").tablesorter();
+                    }
+
+                    function deleteTeam(id) {
+                        var answer = confirm("Are you sure you want to delete this match data?");
+                        if (answer) {
+                            if (window.XMLHttpRequest) {
+                                xmlHttp = new XMLHttpRequest();
+                            }
+                            xmlHttp.onreadystatechange = function() {
+                                if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+                                    alert(xmlHttp.responseText);
+                                    updateTeams($('.resultsByTeam .active').val(), $('#search').val())
+                                }
+                            }
+                            xmlHttp.open("POST", "delete.php", true);
+                            xmlHttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                            var sendData = "id=" + id;
+                            xmlHttp.send(sendData);
+                        }
                     }
         </script>
     </body>

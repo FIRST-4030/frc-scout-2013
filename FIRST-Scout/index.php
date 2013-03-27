@@ -34,9 +34,9 @@ if(isset($_SESSION['UserID'])) {
                 <button type="button" class="close" onclick="$('.alert').hide()">&times;</button>
                 <strong id='alertError'><?php if (isset($_GET['error'])) echo stripcslashes($_GET['error']); ?></strong>
             </div>
-            <input type="text" name="team_id" placeholder="Team ID" id="teamID" /><br> 
-            <input type="text" name="user_id" placeholder="User ID" id="userID" /><br>
-            <input type="password" name="team_password" placeholder="Password" id="teamPassword" /><br><br>
+            <input type="text" name="team_id" value="Team ID" onblur="if(this.value === '') this.value = 'Team ID';" onfocus="if(this.value === 'Team ID') this.value = '';" id="teamID" /><br> 
+            <input type="text" name="user_id" value="User ID" onblur="if(this.value === '') this.value = 'User ID';" onfocus="if(this.value === 'User ID') this.value = '';" id="userID" /><br>
+            <input type="password" name="team_password" value="akjsdfha3323rs" onblur="if(this.value === '') this.value = 'akjsdfha3323rs';" onfocus="if(this.value === 'akjsdfha3323rs') this.value = '';" id="teamPassword" /><br><br>
             <button class="btn" type="submit" onclick="sendData()" id='SubmitButton'>Log In</button>
             <br /><br />
         </div>

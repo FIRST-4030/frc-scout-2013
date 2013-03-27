@@ -1,5 +1,8 @@
 <?php
-
+session_start();
+if(!isset($_SESSION['TeamID'])) {
+    header('location: index.php?error=' . urlencode("You must login first!"));
+}
 require '../includes/constants.php';
 
 $query = 'SELECT `scouted_team_number` AS "scouted_team",

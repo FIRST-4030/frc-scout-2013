@@ -19,11 +19,11 @@
                     <button type="button" class="close" onclick="$('.alert').hide()">&times;</button>
                     <strong id='alertError'></strong>
                 </div>
-                <button id="robotPresent" onclick="updateCheckbox(0)" class="btn btn-success active" data-toggle="button">Present</button>
+                <button id="robotPresent" onclick="updateCheckbox(0)" class="btn btn-success active" data-toggle="button" style="width: 225px">Present</button>
                 <br />
-                <input id="location" name="location" type="text" style="margin-bottom: 2px; margin-top: 5px; width: 215px" placeholder="Location" /><br />
-                <input id="teamNumber" placeholder="Team Number" type="number" style="width: 100px"/>
-                <input id="matchNumber" placeholder="Match Number" type="number" style="width: 100px"/>  
+                <input id="location" onblur="if(this.value === '') this.value = 'Location';" onfocus="if(this.value === 'Location') this.value = '';" name="location" type="text" style="margin-bottom: 2px; margin-top: 5px; width: 215px" value="Location" /><br />
+                Team  &nbsp;|&nbsp;  Match <br /><input id="teamNumber" onblur="if(this.value === '') this.value = 'Team Number';" onfocus="if(this.value === 'Team Number') this.value = '';"  type="number" style="width: 100px"/>
+                <input id="matchNumber" onblur="if(this.value === '') this.value = 'Match Number';" onfocus="if(this.value === 'Match Number') this.value = '';"  type="number" style="width: 100px"/>  
                 <br />
                 <div class="btn-group" data-toggle="buttons-radio" style="margin-top: 10px; margin-bottom: 10px">
                     <button id="redAlliance" onclick="updateAlliance(true)" class="btn btn-danger active">Red Alliance</button>

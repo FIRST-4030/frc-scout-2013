@@ -842,3 +842,27 @@
 [23-Mar-2013 16:02:04] PHP Notice:  Undefined index:  MATCH_ID in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 120
 [23-Mar-2013 16:02:04] PHP Warning:  require(forms//options?error=You+must+start+from+the+beginning%21) [<a href='function.require'>function.require</a>]: failed to open stream: No such file or directory in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 146
 [23-Mar-2013 16:02:04] PHP Fatal error:  require() [<a href='function.require'>function.require</a>]: Failed opening required 'forms//options?error=You+must+start+from+the+beginning%21' (include_path='.:/usr/php/54/usr/lib64:/usr/php/54/usr/share/pear') in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 146
+[26-Mar-2013 20:10:21] PHP Notice:  Undefined index:  forms/autonomous.php in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[26-Mar-2013 20:10:21] PHP Notice:  Undefined index:  true in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[26-Mar-2013 20:10:21] PHP Notice:  Undefined index:  DELETE ME  in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[26-Mar-2013 20:10:21] PHP Notice:  Undefined index:  11 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[26-Mar-2013 20:10:21] PHP Notice:  Undefined index:  prematch_dead_robot in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 40
+[26-Mar-2013 20:10:25] PHP Notice:  Undefined index:  forms/teleop.php in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[26-Mar-2013 20:10:25] PHP Notice:  Undefined index:  2 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[26-Mar-2013 20:10:25] PHP Notice:  Undefined index:  false in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[26-Mar-2013 20:10:34] PHP Notice:  Undefined index:  forms/climb.php in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[26-Mar-2013 20:10:34] PHP Notice:  Undefined index:  false in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[26-Mar-2013 20:10:34] PHP Notice:  Undefined index:  2 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[26-Mar-2013 20:10:34] PHP Notice:  Undefined index:  5 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[26-Mar-2013 20:10:34] PHP Notice:  Undefined index:  4 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[26-Mar-2013 20:10:39] PHP Notice:  Undefined index:  forms/results.php in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[26-Mar-2013 20:10:39] PHP Notice:  Undefined index:  2 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[26-Mar-2013 20:10:39] PHP Notice:  Undefined index:  3 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[26-Mar-2013 20:10:43] PHP Notice:  Undefined index:  options in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[26-Mar-2013 20:10:43] PHP Notice:  Undefined index:  0 in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[26-Mar-2013 20:10:43] PHP Notice:  Undefined index:  true in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[26-Mar-2013 20:10:43] PHP Notice:  Undefined index:  aSDFAS in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 17
+[26-Mar-2013 20:10:43] PHP Warning:  require(forms//options?error=Entry successful!) [<a href='function.require'>function.require</a>]: failed to open stream: No such file or directory in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 146
+[26-Mar-2013 20:10:43] PHP Fatal error:  require() [<a href='function.require'>function.require</a>]: Failed opening required 'forms//options?error=Entry successful!' (include_path='.:/usr/php/54/usr/lib64:/usr/php/54/usr/share/pear') in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/entry.php on line 146
+[26-Mar-2013 20:52:26] PHP Parse error:  syntax error, unexpected $end in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/create.php on line 65
+[26-Mar-2013 20:53:30] PHP Parse error:  syntax error, unexpected $end in /home1/stevenz9/public_html/ingrahamrobotics_first_scout/create.php on line 65

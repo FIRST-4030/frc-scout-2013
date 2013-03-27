@@ -139,7 +139,7 @@ if ($db_stmt !== NULL) {
 }
 
 if(isset($_POST['results_fouls'])) {
-    header("location: options/review.php");
+    header("location: options/single-match-review.php");
 }
 
 # Display the next page

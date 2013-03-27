@@ -33,7 +33,6 @@ and open the template in the editor.
                 <th>Climbing Points</th>
                 </thead>
                 <tbody id='tableBody'>
-                    <? //include 'get-team-averages.php'; ?>
                 </tbody>
             </table>
         </div>

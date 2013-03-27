@@ -1,5 +1,8 @@
 <?php
 session_start();
+if(isset($_SESSION['TeamID'])) {
+    header('location: options?error=' . urlencode("Not only do you already have an accout, but you're logged in!"));
+}
 require 'includes/constants.php';
 if (isset($_POST['team_id'])) {
     $teamID = $_POST['team_id'];
@@ -7,50 +10,36 @@ if (isset($_POST['team_id'])) {
     $teamNumber = $_POST['team_number'];
     $adminEmail = $_POST['team_email'];
     $errorMessage = "Please correct the following errors:<br />";
-    if(empty($teamID)) {
+    if (empty($teamID)) {
         $errorMessage .= "&bull; Enter a Team ID.<br />";
-    } 
-    if(empty($teamPassword)) {
+    }
+    if (empty($teamPassword)) {
         $errorMessage .= "&bull; Enter a team password.<br />";
     }
-    if(empty($teamNumber)) {
+    if (empty($teamNumber)) {
         $errorMessage .= "&bull; Enter a team number.<br />";
     }
-    if(empty($teamPassword)) {
+    if (empty($adminEmail)) {
         $errorMessage .= "&bull; Enter an admin email.<br />";
     }
-    
-    if(substr_count($errorMessage, "&bull;") > 0) {
-        header('location: ?error=' . urlencode($errorMessage));
-        exit();
-    }
-    
-    # Connect to the DB
-    echo $teamID . $teamPassword . $teamNumber . $adminEmail;
-    try {
-        $db = new PDO(DSN, DB_USER, DB_PASSWD);
-        $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    } catch (PDOException $ex) {
-        die("Unable to connect to DB\n");
+    if (substr_count($errorMessage, "&bull;") > 0) {
+        header('location:?error=' . urlencode($errorMessage));
     }
 
-    $retrieve = $db->prepare("SELECT team_id FROM scout_login WHERE team_id=?");
-    $retrieve->execute(array($teamID));
-    $otherAccouts = $retrieve->fetch(PDO::FETCH_ASSOC);
-    if (key_exists($teamID, $otherAccouts)) {
-        header('location: ?error=' . urlencode("That Team ID already exists!"));
+    require 'includes/constants.php';
+
+    $db = mysqli_connect("localhost", DB_USER, DB_PASSWD, "stevenz9_robotics_scout");
+    if (mysqli_connect_errno()) {
+        echo('Failed to connect to database: ' . mysqli_connect_error());
     }
 
-    try {
-        $create = $db->prepare("INSERT INTO scout_login (team_id, team_password, team_number, team_admin_email) VALUES (?, md5(?), ?, ?)");
-        $create->execute(array($teamID, $teamPassword, $teamNumber, $adminEmail));
-        //$db->commit();
-    } catch (PDOException $e) {
-        die("Couldn't save data: " . $e->getMessage());
+    $query = "INSERT INTO `scout_login` (team_id, team_password, team_number, team_admin_email) VALUES ('$teamID', md5('$teamPassword'), '$teamNumber', '$adminEmail')";
+    if (mysqli_query($db, $query)) {
+        header('location: index.php?error=' . urlencode("Accout created successfully! Please login now."));
+        mail($adminEmail, "Your account has been created!", "FIRST Scout account created:\r\nTeam ID: $teamID\r\nTeam Password: $teamPassword\r\nTeam Number: $teamNumber\r\nAdmin email: $adminEmail", "From: 'Scout Bot' <scout@ingrahamrobotics.org>");
+    } else {
+        header('location: create.php?error=' . urlencode("Username not unique! Please try again."));
     }
-
-    mail($adminEmail, "FIRST Scout account created!", "You have successfully created an account with FIRST Scout.\r\n\r\nTeam ID: $teamID\r\nTeam Password: $teamPassword\r\nTeam Number: $teamNumber\r\nAdmin Email $adminEmail", "From: 'Scout Bot' <scout@ingrahamrobotics.org");
-    header('location: index.php?error=' . urlencode("Account creation successful! Please login now."));
 }
 ?>
 <!DOCTYPE html>
@@ -61,6 +50,7 @@ if (isset($_POST['team_id'])) {
     </head>
     <body>
         <div class="container">
+            <? echo $check['team_number']; ?>
             <p class="title">Create Account</p>
             <p style="width: 700px; text-align: left; margin-left:  auto; margin-right: auto">FIRST Scout accounts are shared, team-wide. Each team has a shared <b>Team ID</b> and a shared <b>team password.</b> 
                 Your Team ID can be your team number, but it doesn't have to. It is what you will use to login. <br /><br />
@@ -71,11 +61,11 @@ if (isset($_POST['team_id'])) {
                 <br /><br /></p>
             <div class="alert alert-warning" id="inputError">
                 <button type="button" class="close" onclick="$('.alert').hide()">&times;</button>
-                <strong id='alertError'><?php if (isset($_GET['error'])) echo stripcslashes($_GET['error']); ?></strong>
+                <strong id='alertError'><?php if (isset($_GET['error'])) echo ($_GET['error']); ?></strong>
             </div>
             <p><strong>Ready to get started?</strong></p>
             <form method="post" action="create.php">
-                Team ID:<br /><input type="text" name="team_id" placeholder="i.e. NullPointerException" /><br />
+                Team ID:<br /><input type="text" name="team_id" placeholder="i.e. NullPointerException" value="<? $teamID ?>" /><br />
                 Team Password:<br /><input type="password" name="team_password" placeholder="i.e. p@s$w0Rd" /><br />
                 Team Number:<br /><input type="number" name="team_number" placeholder="i.e. 4030" /><br />
                 Admin email:<br /><input type="email" name="team_email" placeholder="i.e. scout@ingrahamrobotics.org"><br /><br />
