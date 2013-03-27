@@ -26,15 +26,17 @@ and open the template in the editor.
             <p class='title'>Team Averages</p>
             <span style="margin-left: 5px;">Narrow by team: &nbsp;</span><input type="text" onkeyup="updateTeams($('#search').val())" style="margin-top: 8px; margin-left: 2px; width: 60px;" id="search">
 
-            <table class='tablesorter line_filter' id='resultsTable'>
+            <table class='tablesorter' id='resultsTable'>
                 <caption style="display: none">Team Averages</caption>
                 <thead>
-                <th scope="col">Team Number</th>
-                <th scope="col">Total Points</th>
-                <th scope="col">Autonomous Points</th>
-                <th scope="col">Teleoperated Points</th>
-                <th scope="col">Pyramid Goal Points</th>
-                <th scope="col">Climbing Points</th>
+                    <tr>
+                        <td>Team Number</td>
+                        <th>Total Points</th>
+                        <th>Autonomous Points</th>
+                        <th>Teleoperated Points</th>
+                        <th>Pyramid Goal Points</th>
+                        <th>Climbing Points</th>
+                    </tr>
                 </thead>
                 <tbody id='tableBody'>
                 </tbody>
@@ -44,7 +46,7 @@ and open the template in the editor.
                 $(document).ready(function() {
                     updateTeams('');
                     $("#resultsTable").tablesorter();
-                    $("table").visualize().appendTo('body');
+                    $("#resultsTable").visualize();
                 });
 
                 function updateTeams(search) {
@@ -56,6 +58,7 @@ and open the template in the editor.
                         if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
                             $("#tableBody").html(xmlHttp.responseText);
                             $("#resultsTable").trigger("update");
+                            $('.visualize').trigger('visualizeRefresh');
                         }
                     }
 
