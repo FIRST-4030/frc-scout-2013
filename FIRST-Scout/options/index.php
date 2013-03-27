@@ -28,7 +28,9 @@ if (!isset($_SESSION['UserID'])) {
             <p class="small_title" style="margin-bottom: 10px;">You are logged in as <b><? echo $_SESSION['UserID'] ?></b> for team <b><? echo $_SESSION["TeamNumber"] ?></b></p>
             <button class="btn btn-large btn-success homepage_buttons" onclick="goToPage('/entry.php')">Scout a new team</button>
             <br />
-            <button class="btn btn-large btn-info homepage_buttons" onclick="goToPage('results.php')">See results</button>
+            <button class="btn btn-large btn-info homepage_buttons" onclick="goToPage('team-averages.php')">See team averages</button>
+            <br />
+            <button class="btn btn-large btn-info homepage_buttons" onclick="goToPage('results.php')">See match results</button>
             <br />
             <button class="btn btn-large btn-warning homepage_buttons" onclick="goToPage('/login.php?intent=logout')">Log out</button>
 

@@ -13,7 +13,7 @@ $teamNumber = $_SESSION['TeamNumber'];
         ?>
         <title>Team Results</title>
         <script type="text/javascript" src="../tablesorter/jquery.tablesorter.min.js"></script> 
-        <link href="../tablesorter/themes/blue/style.css" rel="stylesheet" type="text/css"/>
+        <link href="../tablesorter/themes/blue/style_foo.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>                
         <div class="results_container">

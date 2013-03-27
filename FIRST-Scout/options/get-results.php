@@ -42,7 +42,7 @@ while ($row = mysqli_fetch_assoc($result)) {
     $teleopAccuracy = $teleopGoals / ($teleopGoals + $row['teleop_miss']) * 100;
 
     echo '<tr>';
-    echo '<td><a href=single-review.php?match=' . $row['uid'] . ">" . $row['scouted_team_number'] . '</a></td>';
+    echo '<td><a href=single-match-review.php?match=' . $row['uid'] . ">" . $row['scouted_team_number'] . '</a></td>';
     echo '<td>' . substr($row['ts'], 0, 10) . '</td>';
     if ($onlyTeam)
         echo '<td>' . $row['user_id'] . '</td>';
