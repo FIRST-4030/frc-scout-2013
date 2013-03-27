@@ -15,7 +15,10 @@ and open the template in the editor.
         ?>
         <title>Team Averages</title>
         <script type="text/javascript" src="../tablesorter/jquery.tablesorter.min.js"></script> 
+        <script type="text/javascript" src="../visualize/visualize.jQuery.js"></script> 
+        <!--[if IE]><script type="text/javascript" src="../visualize/excanvas.compiled.js"></script><![endif]-->
         <link href="../tablesorter/themes/blue/style.css" rel="stylesheet" type="text/css"/>
+        <link type="text/css" rel="stylesheet" href="../visualize/css/visualize.css">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     </head>
     <body>
@@ -23,14 +26,15 @@ and open the template in the editor.
             <p class='title'>Team Averages</p>
             <span style="margin-left: 5px;">Narrow by team: &nbsp;</span><input type="text" onkeyup="updateTeams($('#search').val())" style="margin-top: 8px; margin-left: 2px; width: 60px;" id="search">
 
-            <table class='tablesorter' id='resultsTable'>
+            <table class='tablesorter line_filter' id='resultsTable'>
+                <caption style="display: none">Team Averages</caption>
                 <thead>
-                <th>Team Number</th>
-                <th>Total Points</th>
-                <th>Autonomous Points</th>
-                <th>Teleoperated Points</th>
-                <th>Pyramid Goal Points</th>
-                <th>Climbing Points</th>
+                <th scope="col">Team Number</th>
+                <th scope="col">Total Points</th>
+                <th scope="col">Autonomous Points</th>
+                <th scope="col">Teleoperated Points</th>
+                <th scope="col">Pyramid Goal Points</th>
+                <th scope="col">Climbing Points</th>
                 </thead>
                 <tbody id='tableBody'>
                 </tbody>
@@ -40,6 +44,7 @@ and open the template in the editor.
                 $(document).ready(function() {
                     updateTeams('');
                     $("#resultsTable").tablesorter();
+                    $("table").visualize().appendTo('body');
                 });
 
                 function updateTeams(search) {
