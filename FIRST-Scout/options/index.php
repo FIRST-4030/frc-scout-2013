@@ -20,7 +20,7 @@ if (!isset($_SESSION['UserID'])) {
     </head>
     <body>
         <div class="container">
-            <p class="title">Welcome to FIRST Scout!</p>
+            <p class="title">Welcome back to FIRST Scout!</p>
             <div class="alert alert-warning" id="inputError">
                 <button type="button" class="close" onclick="$('.alert').hide()">&times;</button>
                 <strong id='alertError'><?php if (isset($_GET['error'])) echo stripcslashes($_GET['error']); ?></strong>
