@@ -22,8 +22,8 @@ try {
 }
 
 try {
-	$del = $db->prepare('DELETE FROM `scout_recording` WHERE uid = ? AND team_id = ?');
-	$del->execute(array($uid, $_SESSION['TeamID']));
+    $del = $db->prepare('DELETE FROM `scout_recording` WHERE uid = ? AND team_id = ?');
+    $del->execute(array($uid, $_SESSION['TeamID']));
 } catch (PDOException $ex) {
     echo "Unable to delete\n " . $ex->getMessage();
 }
