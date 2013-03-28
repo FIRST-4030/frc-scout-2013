@@ -14,7 +14,9 @@ if (!isset($_SESSION['TeamNumber'])) {
 
 # Sanitize all incoming data (allow only a-z A-Z 0-9, underscore and space in all fields)
 foreach ($_POST as $key) {
-    $_POST[$key] = preg_replace('/[^\w ]/', '', $_POST[$key]);
+	if (array_key_exist($key, $_POST)) {
+		$_POST[$key] = preg_replace('/[^\w ]/', '', $_POST[$key]);
+	}
 }
 
 # Connect to the DB
