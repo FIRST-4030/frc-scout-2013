@@ -5,25 +5,35 @@ if (isset($_SESSION['UserID'])) {
 }
 require 'includes/constants.php';
 if (isset($_POST['team_id'])) {
-    $teamID = $_POST['team_id'];
+
+    $teamID = preg_replace('/[^\w ]/', '', $_POST['team_id']);
     $teamPassword = $_POST['team_password'];
-    $teamNumber = $_POST['team_number'];
-    $adminEmail = $_POST['team_email'];
+    $teamNumber = preg_replace('/[^\w ]/', '', $_POST['team_number']);
+    $adminEmail = preg_replace('/[^\w@\.\-\+]/', '', $_POST['team_email']);
 
     require 'includes/constants.php';
 
-    $db = mysqli_connect("localhost", DB_USER, DB_PASSWD, "stevenz9_robotics_scout");
-    if (mysqli_connect_errno()) {
-        echo('Failed to connect to database: ' . mysqli_connect_error());
-    }
+	try {
+		$db = new PDO(DSN, DB_USER, DB_PASSWD);
+		$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	} catch (PDOException $ex) {
+		die("Unable to connect to DB\n " . $ex->getMessage());
+	}
 
-    $query = "INSERT INTO `scout_login` (team_id, team_password, team_number, team_admin_email) VALUES ('$teamID', md5('$teamPassword'), '$teamNumber', '$adminEmail')";
-    if (mysqli_query($db, $query)) {
-        header('location: index.php?error=' . urlencode("Accout created successfully! Please login now."));
-        mail($adminEmail, "Your account has been created!", "FIRST Scout account created:\r\nTeam ID: $teamID\r\nTeam Password: $teamPassword\r\nTeam Number: $teamNumber\r\nAdmin email: $adminEmail", "From: 'Scout Bot' <scout@ingrahamrobotics.org>");
-    } else {
-        header('location: create.php?error=' . urlencode("Your username was not unique!"));
-    }
+	$success = false;
+	try {
+		$db->prepare('INSERT INTO `scout_login` (team_id, team_password, team_number, team_admin_email) VALUES (?, md5(?), ?, ?)');
+		$success = $db->execute(array($teamID, $teamPassword, $teamNumber, $adminEmail));
+	} catch (PDOException $ex) {
+		die("Unable to add team\n " . $ex->getMessage());
+	}
+	
+	if ($success) {
+		header('location: index.php?error=' . urlencode("Accout created successfully! Please login now."));
+		mail($adminEmail, "Your account has been created!", "FIRST Scout account created:\r\nTeam ID: $teamID\r\nTeam Password: $teamPassword\r\nTeam Number: $teamNumber\r\nAdmin email: $adminEmail", "From: 'Scout Bot' <scout@ingrahamrobotics.org>");
+	} else {
+		header('location: create.php?error=' . urlencode("Your username was not unique!"));
+	}
 }
 ?>
 <!DOCTYPE html>
