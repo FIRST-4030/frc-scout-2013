@@ -1,11 +1,9 @@
 <?
-
+# Require auth
 session_start();
-
-if (!isset($_SESSION['TeamID'])) {
+if(!isset($_SESSION['TeamID'])) {
     header('location: index.php?error=' . urlencode("You must login first!"));
 }
-require '../includes/constants.php';
 
 if ($_POST['only'] == "true") {
     $onlyTeam = true;
@@ -14,31 +12,47 @@ if ($_POST['only'] == "true") {
 }
 
 
+# Allow searching by location, scouted team number, comments and timestamp
+$query  = '';
+$params = array();
 if (($_POST['search']) != "") {
     $search = preg_replace('/[^\w ]/', '', $_POST['search']);
-    $searchQuery = "(location LIKE '%{$search}%' OR scouted_team_number LIKE '%{$search}%' OR results_comments LIKE '%{$search}%' OR ts LIKE '%{$search}%')";
+	$query  = '(location LIKE ? OR scouted_team_number LIKE ? OR results_comments LIKE ? OR ts LIKE ?)';
+	$wild   = '%' . $search . '%';
+	$params = array($wild, $wild, $wild, $wild);
 }
 
+# Limit selection to the logged in team
 if ($onlyTeam) {
-    $teamID = $_SESSION['TeamID'];
-    $query = "SELECT * FROM `scout_recording` WHERE team_id='$teamID'";
-    if (isset($searchQuery)) {
-        $query .= " AND $searchQuery";
-    }
-} else {
-    $query = "SELECT * FROM `scout_recording`";
-    if (isset($searchQuery)) {
-        $query .= " WHERE $searchQuery";
-    }
+	if (strlen($query)) {
+		$query .= ' AND';
+	}
+	$query .= ' team_id = ?';
+	$params[] = $_SESSION['TeamID'];
 }
 
-$db = mysqli_connect("localhost", DB_USER, DB_PASSWD, "stevenz9_robotics_scout");
-if (mysqli_connect_errno()) {
-    echo('Failed to connect to database: ' . mysqli_connect_error());
+# Connect to DB
+require '../includes/constants.php';
+try {
+    $db = new PDO(DSN, DB_USER, DB_PASSWD);
+    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $ex) {
+    die("Unable to connect to DB\n " . $ex->getMessage());
 }
 
-$result = mysqli_query($db, $query);
-while ($row = mysqli_fetch_assoc($result)) {
+# Construct and run a query
+try {
+	$sql = 'SELECT * FROM `scout_recording`';
+	if (strlen($query)) {
+		$sql .= ' WHERE ' . $query;
+	}
+    $stmt = $db->prepare($sql);
+	$stmt->execute($params);
+} catch (PDOException $ex) {
+    die("Unable to read from DB\n " . $ex->getMessage());
+}
+
+while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
     $matchID = $row['uid'];
     $autonomousPoints = $row['auto_top'] * 6 + $row['auto_middle'] * 4 + $row['auto_bottom'] * 2;
     $autonomousGoals = $row['auto_top'] + $row['auto_middle'] + $row['auto_bottom'];
