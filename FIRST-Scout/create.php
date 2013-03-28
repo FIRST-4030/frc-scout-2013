@@ -52,17 +52,17 @@ if (isset($_POST['team_id'])) {
                 The account's <b>admin email</b> should be the email address of whoever is head of scouting for your team. It would only be used in case we need to contact you about something, it is never shared.
                 <br /><br /></p>
             <div class="alert alert-warning" id="inputError">
-                <button type="button" class="close" onclick="$('.alert').hide()">&times;</button>
+                <button type="button" class="close" onclick="$('.alert').hide();">&times;</button>
                 <strong id='alertError'><?php if (isset($_GET['error'])) echo ($_GET['error']); ?></strong>
             </div>
             <p><strong>Ready to get started?</strong></p>
             <form method="post" action="create.php" id="create">
-                <span id="uname">Team ID:</span><br /><input type="text" name="team_id" id="team_id" placeholder="i.e. NullPointerException" onkeyup="checkID($('#team_id').val())" value="<? $teamID ?>" /><br />
+                <span id="uname">Team ID:</span><br /><input type="text" name="team_id" id="team_id" placeholder="i.e. NullPointerException" onkeyup="checkID($('#team_id').val());" value="<? $teamID ?>" /><br />
                 Team Password:<br /><input type="password" name="team_password" id="team_password" placeholder="i.e. p@s$w0Rd" /><br />
                 Team Number:<br /><input type="number" name="team_number" id="team_number" placeholder="i.e. 4030" /><br />
                 Admin email:<br /><input type="email" name="team_email" id="admin_email" placeholder="i.e. scout@ingrahamrobotics.org">
             </form>
-            <button class="btn btn-success" onclick="submit()">Submit</button>
+            <button class="btn btn-success" onclick="submit();">Submit</button>
             <br /><br />
         </div>
         <script type="text/javascript">
@@ -80,17 +80,17 @@ if (isset($_POST['team_id'])) {
                         }
 
                         xmlHttp.onreadystatechange = function() {
-                            if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+                            if (xmlHttp.readyState === 4 && xmlHttp.status === 200) {
                                 var isInUse = xmlHttp.responseText;
                                 if (isInUse.indexOf("true") !== -1) {
                                     $("#team_id").css("color", "red");
-                                    $("#uname").html("Team ID: <b><span style='color:red'>already in use!</span></b>")
+                                    $("#uname").html("Team ID: <b><span style='color:red'>already in use!</span></b>");
                                 } else {
                                     $("#team_id").css("color", "green");
-                                    $("#uname").html("Team ID:")
+                                    $("#uname").html("Team ID:");
                                 }
                             }
-                        }
+                        };
                         xmlHttp.open("POST", "includes/verify.php", true);
                         xmlHttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
                         var sendData = 'team_id=' + id;

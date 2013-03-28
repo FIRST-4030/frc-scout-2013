@@ -51,11 +51,11 @@
             </div>
             <p class="title">Aw, snap! You've encountered an error!</p>
             <p class='small_title'><strong>What to do now?</strong></p>
-            <button class='btn btn-large btn-info homepage_buttons' onclick='window.location = "/options"'>Return home</button>
+            <button class='btn btn-large btn-info homepage_buttons' onclick='window.location = "/options";'>Return home</button>
             <br />
-            <button class='btn btn-large btn-success homepage_buttons' onclick='history.go(-1)'>Go back</button>
+            <button class='btn btn-large btn-success homepage_buttons' onclick='history.go(-1);'>Go back</button>
             <br />
-            <button class='btn btn-large btn-danger homepage_buttons' id="sendAnError" onclick='showError()'>Report this error</button>
+            <button class='btn btn-large btn-danger homepage_buttons' id="sendAnError" onclick='showError();'>Report this error</button>
             <form action="/errordoc.php?error=<? echo $error ?>" id="errorForm" method="post">
                 <textarea name="error_submit" placeholder="Enter any information." style="width: 190px; height: 100px"></textarea>
                 <br />
