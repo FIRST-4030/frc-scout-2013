@@ -8,10 +8,10 @@
         <div class="container">
             <p class="title" id ="title" style="margin-bottom: 10px;">Pre-match Information</p>
             <div class="alert alert-warning" id="inputError">
-                <button type="button" class="close" onclick="$('.alert').hide()">&times;</button>
+                <button type="button" class="close" onclick="$('.alert').hide();">&times;</button>
                 <strong id='alertError'></strong>
             </div>
-            <button id="robotPresent" onclick="updateCheckbox(0)" class="btn btn-success active" data-toggle="button" style="width: 225px">Present</button>
+            <button id="robotPresent" onclick="updateCheckbox(0);" class="btn btn-success active" data-toggle="button" style="width: 225px">Present</button>
             <br />
             <input id="location" onblur="if (this.value === '')
                             this.value = 'Location';" onfocus="if (this.value === 'Location')
@@ -24,11 +24,11 @@
                             this.value = '';"  type="number" style="width: 100px"/>  
             <br />
             <div class="btn-group" data-toggle="buttons-radio" style="margin-top: 10px; margin-bottom: 10px">
-                <button id="redAlliance" onclick="updateAlliance(true)" class="btn btn-danger active">Red Alliance</button>
-                <button id="blueAlliance" onclick="updateAlliance(false)" class="btn btn-primary">Blue Alliance</button>
+                <button id="redAlliance" onclick="updateAlliance(true);" class="btn btn-danger active">Red Alliance</button>
+                <button id="blueAlliance" onclick="updateAlliance(false);" class="btn btn-primary">Blue Alliance</button>
             </div>
             <br />
-            <button class="btn" style="margin-top: 10px" onclick="sendData()">Continue to Autonomous &rarr;</button>
+            <button class="btn" style="margin-top: 10px" onclick="sendData();">Continue to Autonomous &rarr;</button>
             <br /><br />
         </div>
 

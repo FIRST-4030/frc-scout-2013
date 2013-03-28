@@ -19,7 +19,7 @@ if (!isset($_SESSION['TeamID'])) {
     <body>
         <div class="container">
             <p class="title">Averages for team <? echo $teamNumber ?></p>
-            <button class="btn btn-success" onclick="history.go(-1)" style="width: 200px">&larr;&nbsp;Go Back</button><br />
+            <button class="btn btn-success" onclick="history.go(-1);" style="width: 200px">&larr;&nbsp;Go Back</button><br />
 
             <?
             require '../includes/constants.php';

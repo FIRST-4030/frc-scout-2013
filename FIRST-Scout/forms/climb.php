@@ -32,12 +32,12 @@
         <div class="container">
             <p class="title">Climb and Disk Drop: <b><?php echo $scoutedTeamNumber ?></b></p>
             <p class="small_title"><i>Record attempts and disks dropped:</i></p>
-            <button class="btn plus_minus_buttons" style="height: 50px; width: 100px" onclick="update(0, false)">Attempts</button>
-            <button class="btn plus_minus_buttons" style="height: 50px; width: 50px" onclick="update(0, true)">&mdash;</button>
+            <button class="btn plus_minus_buttons" style="height: 50px; width: 100px" onclick="update(0, false);">Attempts</button>
+            <button class="btn plus_minus_buttons" style="height: 50px; width: 50px" onclick="update(0, true);">&mdash;</button>
             <span id="attempts" class="autonomousIndividual">0</span>
             <br />
-            <button class="btn plus_minus_buttons" style="height: 50px; width: 100px" onclick="update(1, false)">Pyramid Goals</button>
-            <button class="btn plus_minus_buttons" style="height: 50px; width: 50px" onclick="update(1, true)">&mdash;</button>
+            <button class="btn plus_minus_buttons" style="height: 50px; width: 100px" onclick="update(1, false);">Pyramid Goals</button>
+            <button class="btn plus_minus_buttons" style="height: 50px; width: 50px" onclick="update(1, true);">&mdash;</button>
             <span id="disksDropped" class="autonomousIndividual">0</span>
 
             <br />
@@ -56,7 +56,7 @@
                 <button class="btn">Face</button>
             </div>
             <br /><br />
-            <button style="margin-top: 10px" class=" btn btn-large" onclick="sendData()">Continue to final comments &rarr;</button>
+            <button style="margin-top: 10px" class=" btn btn-large" onclick="sendData();">Continue to final comments &rarr;</button>
             <br/><br />
         </div>
         <script type="text/javascript">

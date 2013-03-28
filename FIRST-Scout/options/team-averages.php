@@ -24,8 +24,8 @@ and open the template in the editor.
     <body>
         <div class='container'>
             <p class='title'>Team Averages</p>
-            <button class="btn btn-success" onclick="history.go(-1)" style="width: 200px">&larr;&nbsp;Go Back</button><br />
-            <span style="margin-left: 5px;">Narrow by team: &nbsp;</span><input type="text" onkeyup="updateTeams($('#search').val())" style="margin-top: 8px; margin-left: 2px; width: 60px;" id="search">
+            <button class="btn btn-success" onclick="history.go(-1);" style="width: 200px">&larr;&nbsp;Go Back</button><br />
+            <span style="margin-left: 5px;">Narrow by team: &nbsp;</span><input type="text" onkeyup="updateTeams($('#search').val());" style="margin-top: 8px; margin-left: 2px; width: 60px;" id="search">
 
             <table class='tablesorter table-hover' id='resultsTable'>
                 <caption style="display: none">Team Averages</caption>
@@ -56,12 +56,12 @@ and open the template in the editor.
                     }
 
                     xmlHttp.onreadystatechange = function() {
-                        if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+                        if (xmlHttp.readyState === 4 && xmlHttp.status === 200) {
                             $("#tableBody").html(xmlHttp.responseText);
                             $("#resultsTable").trigger("update");
                             //$('.visualize').trigger('visualizeRefresh');
                         }
-                    }
+                    };
 
                     var sendData = "search=" + search;
                     xmlHttp.open("POST", "get-team-averages.php", true);

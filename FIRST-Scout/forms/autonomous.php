@@ -19,27 +19,27 @@
         <div class="container">
             <p class="title">Autonomous: <b><?php echo $scoutedTeamNumber ?></b></p>
 
-            <button id="usedKinect" onclick="updateKinect()" class="btn btn-success" data-toggle="button" style="margin-top: 3px; margin-bottom: 8px;">Used Kinect?</button>
+            <button id="usedKinect" onclick="updateKinect();" class="btn btn-success" data-toggle="button" style="margin-top: 3px; margin-bottom: 8px;">Used Kinect?</button>
             <p><i>Record points for each goal</i></p>
-            <button class="btn plus_minus_buttons" style="height: 50px; width: 100px" onclick="update(0, false)">+6</button>
-            <button class="btn plus_minus_buttons" style="height: 50px; width: 50px" onclick="update(0, true)">&mdash;</button>
+            <button class="btn plus_minus_buttons" style="height: 50px; width: 100px" onclick="update(0, false);">+6</button>
+            <button class="btn plus_minus_buttons" style="height: 50px; width: 50px" onclick="update(0, true);">&mdash;</button>
             <span id="autoSixPoint" class="autonomousIndividual">0</span>
             <br />
-            <button class="btn plus_minus_buttons" style="height: 50px; width: 100px" onclick="update(1, false)">+4</button>
-            <button class="btn plus_minus_buttons" style="height: 50px; width: 50px" onclick="update(1, true)">&mdash;</button>
+            <button class="btn plus_minus_buttons" style="height: 50px; width: 100px" onclick="update(1, false);">+4</button>
+            <button class="btn plus_minus_buttons" style="height: 50px; width: 50px" onclick="update(1, true);">&mdash;</button>
             <span id="autoFourPoint" class="autonomousIndividual">0</span>
             <br />
-            <button class="btn plus_minus_buttons" style="height: 50px; width: 100px" onclick="update(2, false)">+2</button>
-            <button class="btn plus_minus_buttons" style="height: 50px; width: 50px" onclick="update(2, true)">&mdash;</button>
+            <button class="btn plus_minus_buttons" style="height: 50px; width: 100px" onclick="update(2, false);">+2</button>
+            <button class="btn plus_minus_buttons" style="height: 50px; width: 50px" onclick="update(2, true);">&mdash;</button>
             <span id="autoTwoPoint" class="autonomousIndividual">0</span>
             <br />
-            <button class="btn plus_minus_buttons" style="height: 50px; width: 100px" onclick="update(3, false)">Missed</button>
-            <button class="btn plus_minus_buttons" style="height: 50px; width: 50px" onclick="update(3, true)">&mdash;</button>
+            <button class="btn plus_minus_buttons" style="height: 50px; width: 100px" onclick="update(3, false);">Missed</button>
+            <button class="btn plus_minus_buttons" style="height: 50px; width: 50px" onclick="update(3, true);">&mdash;</button>
             <span id="autoMissedPoints" class="autonomousIndividual">0</span>
             <br />
             <p style="font-weight: bold; margin-top: 5px">Total Points: <span id="totalPoints">0</span></p>
 
-            <button class="btn btn-large" id="NextPageButton" onclick="sendData()">Continue to Teleoperated &rarr;</button>
+            <button class="btn btn-large" id="NextPageButton" onclick="sendData();">Continue to Teleoperated &rarr;</button>
             <br /><br />
         </div>
         <script type="text/javascript">
@@ -48,7 +48,7 @@
 
                 $(document).ready(function() {
                     //get rid of the title bar if it's a mobile device
-                    window.scrollTo(0, 1)
+                    window.scrollTo(0, 1);
                 });
 
                 function updateKinect() {

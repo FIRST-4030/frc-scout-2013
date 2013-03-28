@@ -15,26 +15,27 @@
     <body>
         <div class="container">
             <p class="title" id ="title" style="margin-bottom: 10px;">Match Results: <b><?php echo $scoutedTeamNumber ?></b></p>
-            <button id="deadRobot" onclick="updateDead()" class="btn btn-warning" data-toggle="button" style="margin-top: 0px; margin-bottom: 5px">Dead Robot</button><br />
+            <button id="deadRobot" onclick="updateDead();" class="btn btn-warning" data-toggle="button" style="margin-top: 0px; margin-bottom: 5px">Dead Robot</button><br />
             <div class="btn-group" data-toggle="buttons-radio" style="margin-bottom: 10px">
-                <button class="btn btn-danger active" onclick="update(0)">Lose</button>
-                <button class="btn btn-success" onclick="update(1)">Win</button>
-                <button class="btn btn-warning" onclick="update(2)">Tie</button>
+                <button class="btn btn-danger active" onclick="update(0);">Lose</button>
+                <button class="btn btn-success" onclick="update(1);">Win</button>
+                <button class="btn btn-warning" onclick="update(2);">Tie</button>
             </div>
             <br />
-            <button class="btn plus_minus_buttons" style="height: 50px; width: 100px" onclick="updateFouls(false)">Fouls</button>
-            <button class="btn plus_minus_buttons" style="height: 50px; width: 50px" onclick="updateFouls(true)">&mdash;</button>
+            <button class="btn plus_minus_buttons" style="height: 50px; width: 100px" onclick="updateFouls(false);">Fouls</button>
+            <button class="btn plus_minus_buttons" style="height: 50px; width: 50px" onclick="updateFouls(true);">&mdash;</button>
             <span id="foulsIndicator" class="autonomousIndividual">0</span>
 
             <br />
-            <button class="btn plus_minus_buttons" style="height: 50px; width: 100px" onclick="updateTechnicalFouls(false)">Technical Fouls</button>
-            <button class="btn plus_minus_buttons" style="height: 50px; width: 50px" onclick="updateTechnicalFouls(true)">&mdash;</button>
+            <button class="btn plus_minus_buttons" style="height: 50px; width: 100px" onclick="updateTechnicalFouls(false);">Technical Fouls</button>
+            <button class="btn plus_minus_buttons" style="height: 50px; width: 50px" onclick="updateTechnicalFouls(true);">&mdash;</button>
             <span id="technicalFoulsIndicator" class="autonomousIndividual">0</span>
 
             <p class="small_title">Comments:</p>
             <textarea id="comments" rows="5"></textarea>
             <br />
-            <button class="btn btn-large" style="margin-bottom: 10px" onclick="sendData()">Finish &rarr;</button>
+            <button class="btn btn-large" style="margin-bottom: 10px" onclick="sendData();
+                    ;">Finish &rarr;</button>
             <br />
         </div>
         <script type="text/javascript">

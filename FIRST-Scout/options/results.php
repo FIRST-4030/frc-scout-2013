@@ -18,14 +18,14 @@ $teamNumber = $_SESSION['TeamNumber'];
     <body>                
         <div class="results_container">
             <p class="title" id="title">Results collected by all teams</input></p>
-            <button class="btn btn-success" onclick="history.go(-1)" style="width: 200px">&larr;&nbsp;Go Back</button><br />
+            <button class="btn btn-success" onclick="history.go(-1);" style="width: 200px">&larr;&nbsp;Go Back</button><br />
             <div class="btn-group" data-toggle="buttons-radio" style="margin-top: 10px; margin-bottom: 10px">
-                <button class="btn active" value="false" onclick="updateTeams(false, $('#search').val())">All Teams</button>
+                <button class="btn active" value="false" onclick="updateTeams(false, $('#search').val());">All Teams</button>
 
 
-                <button class="btn" value="true "onclick="updateTeams(true, $('#search').val())">Only <? echo $teamNumber ?></button>
+                <button class="btn" value="true "onclick="updateTeams(true, $('#search').val());">Only <? echo $teamNumber ?></button>
             </div>
-            <span style="margin-left: 5px;">Search: </span><input type="text" onkeyup="updateTeams($('.resultsByTeam .active').val(), $('#search').val())" style="margin-top: 9px; margin-left: 2x;" id="search" placeholder='team, location, comments, date'>
+            <span style="margin-left: 5px;">Search: </span><input type="text" onkeyup="updateTeams($('.resultsByTeam .active').val(), $('#search').val());" style="margin-top: 9px; margin-left: 2x;" id="search" placeholder='team, location, comments, date'>
             <table id="resultTable" class="tablesorter table-hover">
                 <thead>
                     <tr>
@@ -89,11 +89,11 @@ $teamNumber = $_SESSION['TeamNumber'];
                     }
 
                     xmlHttp.onreadystatechange = function() {
-                        if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+                        if (xmlHttp.readyState === 4 && xmlHttp.status === 200) {
                             tableBody.innerHTML = xmlHttp.responseText;
                             $("#resultTable").trigger("update");
                         }
-                    }
+                    };
                     xmlHttp.open("POST", "get-results.php", true);
                     xmlHttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
                     var sendData = "only=" + onlyTeam + "&search=" + search;
@@ -107,11 +107,11 @@ $teamNumber = $_SESSION['TeamNumber'];
                             xmlHttp = new XMLHttpRequest();
                         }
                         xmlHttp.onreadystatechange = function() {
-                            if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+                            if (xmlHttp.readyState === 4 && xmlHttp.status === 200) {
                                 alert(xmlHttp.responseText);
-                                updateTeams($('.resultsByTeam .active').val(), $('#search').val())
+                                updateTeams($('.resultsByTeam .active').val(), $('#search').val());
                             }
-                        }
+                        };
                         xmlHttp.open("POST", "delete.php", true);
                         xmlHttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
                         var sendData = "id=" + id;

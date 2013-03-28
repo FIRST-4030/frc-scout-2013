@@ -22,17 +22,17 @@ if (!isset($_SESSION['UserID'])) {
         <div class="container">
             <p class="title">Welcome back to FIRST Scout!</p>
             <div class="alert alert-warning" id="inputError">
-                <button type="button" class="close" onclick="$('.alert').hide()">&times;</button>
+                <button type="button" class="close" onclick="$('.alert').hide();">&times;</button>
                 <strong id='alertError'><?php if (isset($_GET['error'])) echo stripcslashes($_GET['error']); ?></strong>
             </div>
             <p class="small_title" style="margin-bottom: 10px;">You are logged in as <b><? echo $_SESSION['UserID'] ?></b> for team <b><? echo $_SESSION["TeamNumber"] ?></b></p>
-            <button class="btn btn-large btn-success homepage_buttons" onclick="goToPageCheck('/entry.php')">Scout a new team</button>
+            <button class="btn btn-large btn-success homepage_buttons" onclick="goToPageCheck('/entry.php');">Scout a new team</button>
             <br />
-            <button class="btn btn-large btn-info homepage_buttons" onclick="goToPage('team-averages.php')">See team averages</button>
+            <button class="btn btn-large btn-info homepage_buttons" onclick="goToPage('team-averages.php');">See team averages</button>
             <br />
-            <button class="btn btn-large btn-info homepage_buttons" onclick="goToPage('results.php')">See match results</button>
+            <button class="btn btn-large btn-info homepage_buttons" onclick="goToPage('results.php');">See match results</button>
             <br />
-            <button class="btn btn-large btn-warning homepage_buttons" onclick="goToPage('/login.php?intent=logout')">Log out</button>
+            <button class="btn btn-large btn-warning homepage_buttons" onclick="goToPage('/login.php?intent=logout');">Log out</button>
 
         </div>
         <script type="text/javascript">
