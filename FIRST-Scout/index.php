@@ -30,17 +30,30 @@ if (isset($_SESSION['UserID'])) {
         <div class="container">
             <!--<a href="/index.php">--><img src="/images/ram-logo.png" alt="FIRST Scout"><!--</a>-->
             <br>
-            <p class="title" style="margin-bottom: 20px;">FIRST Scout: Login</p>
+            <p class="title" style="margin-bottom: 20px;">FIRST Scout <b>beta</b>: Login</p>
             <div class="alert alert-warning" id="inputError">
                 <button type="button" class="close" onclick="$('.alert').hide()">&times;</button>
                 <strong id='alertError'><?php if (isset($_GET['error'])) echo stripcslashes($_GET['error']); ?></strong>
             </div>
-            <input type="text" name="team_id" value="Team ID" onblur="if(this.value === '') this.value = 'Team ID';" onfocus="if(this.value === 'Team ID') this.value = '';" id="teamID" /><br> 
-            <input type="text" name="user_id" value="User ID" onblur="if(this.value === '') this.value = 'User ID';" onfocus="if(this.value === 'User ID') this.value = '';" id="userID" /><br>
-            <input type="password" name="team_password" value="akjsdfha3323rs" onblur="if(this.value === '') this.value = 'akjsdfha3323rs';" onfocus="if(this.value === 'akjsdfha3323rs') this.value = '';" id="teamPassword" /><br><br>
+            <input type="text" name="team_id" value="Team ID" onblur="if (this.value === '')
+                    this.value = 'Team ID';" onfocus="if (this.value === 'Team ID')
+                    this.value = '';" id="teamID" /><br> 
+            <input type="text" name="user_id" value="Your name" onblur="if (this.value === '')
+                    this.value = 'Your name';" onfocus="if (this.value === 'Your name')
+                    this.value = '';" id="userID" /><br>
+            <input type="password" name="team_password" value="akjsdfha3323rs" onblur="if (this.value === '')
+                    this.value = 'akjsdfha3323rs';" onfocus="if (this.value === 'akjsdfha3323rs')
+                    this.value = '';" id="teamPassword" /><br><br>
             <button class="btn" type="submit" style="height: 30px; width: 220px" onclick="sendData()" id='SubmitButton'>Log In</button><p style="margin-top: 5px; margin-bottom: 5px; font-weight: bold">or</p>
             <button class="btn btn-success" style="height: 30px; width: 220px" onclick="window.location = 'create.php'">Create an account</button><br /><br />
-            <a onclick="pwdreset()">Forgot your password?</a>
+            <p style="color: #be3b3b">Comments, questions, concerns, bugs? Talk to Sam in team 4030's pit (at the Seattle regional) or <a href="#" onclick="reportError()" style="">click here</a>.</p>
+            <div id="reportError">
+                <textarea id="error_submit" placeholder="Enter any information." style="width: 190px; height: 100px"></textarea>
+                <br />
+                <button class="btn btn-success" onclick="submitFeedback()">Submit</button>
+                <br /><br />
+            </div>
+            <a href="#" onclick="pwdreset()">Forgot your password?</a>
             <div id="resetPane">
                 Name: <input type="text" id="name" /><br />
                 Email: <input type="email" id="email" /><br />
@@ -55,6 +68,7 @@ if (isset($_SESSION['UserID'])) {
             $(document).ready(function() {
                 $('#inputError').hide();
                 $("#resetPane").hide();
+                $("#reportError").hide();
                 //$("#submitButton").popover({title: "Need an account?", content: "Don't have an accout? <a href='create.php'>Click here</a> to get one!", placement: 'left'});
                 //$("#submitButton").popover('show');
                 if (document.getElementById('alertError').innerHTML !== "") {
@@ -91,7 +105,7 @@ if (isset($_SESSION['UserID'])) {
                     $("#inputError").show();
                 }
             }
-            
+
             function resetPass() {
                 if (window.XMLHttpRequest) {
                     xmlHttp = new XMLHttpRequest();
@@ -109,9 +123,34 @@ if (isset($_SESSION['UserID'])) {
                 xmlHttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
                 xmlHttp.send(sendData);
             }
-            
+
             function pwdreset() {
                 $("#resetPane").toggle();
+            }
+
+            function reportError() {
+                $("#reportError").toggle();
+            }
+
+            function submitFeedback() {
+                if (window.XMLHttpRequest) {
+                    xmlHttp = new XMLHttpRequest();
+                }
+
+                xmlHttp.onreadystatechange = function() {
+                    if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+                        $('#alertError').html(xmlHttp.responseText);
+                        $('#inputError').show();
+                        if (xmlHttp.responseText === "Submitted successfully!") {
+                            $("#reportError").hide();
+                        }
+                    }
+                }
+
+                var sendData = "error=" + encodeURI($("#error_submit").val());
+                xmlHttp.open("POST", "includes/reporterror.php", true);
+                xmlHttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                xmlHttp.send(sendData);
             }
         </script>
         <form id="sendForm" action="/login.php" class="invisible_form" method="post"></form>

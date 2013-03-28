@@ -8,7 +8,7 @@ if (!isset($_SESSION['UserID'])) {
 <!DOCTYPE html>
 <html>
     <head>
-        <title>FIRST Scout: Home</title> 
+        <title>FIRST Scout <b>beta</b>: Home</title> 
         <!-- These work! -->
         <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
