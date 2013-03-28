@@ -109,7 +109,7 @@ $teamNumber = $_SESSION['TeamNumber'];
                         xmlHttp.onreadystatechange = function() {
                             if (xmlHttp.readyState === 4 && xmlHttp.status === 200) {
                                 alert(xmlHttp.responseText);
-                                updateTeams($('.resultsByTeam .active').val(), $('#search').val());
+                                updateTeams(false, $('#search').val());
                             }
                         };
                         xmlHttp.open("POST", "delete.php", true);
