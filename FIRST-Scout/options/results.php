@@ -17,16 +17,18 @@ $teamNumber = $_SESSION['TeamNumber'];
     </head>
     <body>                
         <div class="results_container">
-            <p class="title" id="title">Results for all teams</input></p>
-            <div class="btn-group resultsByTeam" data-toggle="buttons-radio" style="margin-top: 10px; margin-bottom: 10px">
+            <p class="title" id="title">Results collected by all teams</input></p>
+            <div class="btn-group" data-toggle="buttons-radio" style="margin-top: 10px; margin-bottom: 10px">
                 <button class="btn active" value="false" onclick="updateTeams(false, $('#search').val())">All Teams</button>
-                <button class="btn" value="true" onclick="updateTeams(true, $('#search').val())">Only <? echo $teamNumber ?></button>
+                
+                
+                <button class="btn" value="true "onclick="updateTeams(true, $('#search').val())">Only <? echo $teamNumber ?></button>
             </div>
-            <span style="margin-left: 5px;">Search: </span><input type="text" onchange="updateTeams($('.resultsByTeam .active').val(), $('#search').val())" style="margin-top: 9px; margin-left: 2x;" id="search" placeholder='team, location, comments, date'>
-            <table id="resultTable" class="tablesorter">
+            <span style="margin-left: 5px;">Search: </span><input type="text" onkeyup="updateTeams($('.resultsByTeam .active').val(), $('#search').val())" style="margin-top: 9px; margin-left: 2x;" id="search" placeholder='team, location, comments, date'>
+            <table id="resultTable" class="tablesorter table-hover">
                 <thead>
                     <tr>
-                        <th id="scoutName">Delete</th>
+                        <th id="delete">Delete</th>
                         <th>Team</th>
                         <th>Date</th>
                         <th id="scoutName">Scout name</th>
@@ -63,55 +65,58 @@ $teamNumber = $_SESSION['TeamNumber'];
             </table>
         </div>
         <script type="text/javascript">
-                    $(document).ready(function() {
-                        updateTeams(false, "");
-                    });
+            $(document).ready(function() {
+                updateTeams(false, "");
+                $("#resultTable").tablesorter();                       
+            });
 
-                    function updateTeams(onlyTeam, search) {
-                        tableBody = document.getElementById('tableBody');
-                        tableBody.innerHTML = "Loading";
-                        if (onlyTeam) {
-                            document.getElementById('title').innerHTML = "Results for team <? echo $teamNumber ?>";
-                            $("#scoutName").show();
-                        } else {
-                            document.getElementById('title').innerHTML = "Results for all teams";
-                            $("#scoutName").hide();
-                        }
+            function updateTeams(onlyTeam, search) {
+                tableBody = document.getElementById('tableBody');
+                tableBody.innerHTML = "Loading";
+                if (onlyTeam) {
+                    document.getElementById('title').innerHTML = "Results collected by team <? echo $teamNumber ?>";
+                    $("#delete").show();
+                    $("#scoutName").show();
+                } else {
+                    document.getElementById('title').innerHTML = "Results collected by all teams";
+                    $("#delete").hide();
+                    $("#scoutName").hide();
+                }
 
-                        if (window.XMLHttpRequest) {
-                            xmlHttp = new XMLHttpRequest();
-                        }
+                if (window.XMLHttpRequest) {
+                    xmlHttp = new XMLHttpRequest();
+                }
 
-                        xmlHttp.onreadystatechange = function() {
-                            if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
-                                tableBody.innerHTML = xmlHttp.responseText;
-                                $("#resultsTable").trigger("update");
-                            }
-                        }
-                        xmlHttp.open("POST", "get-results.php", true);
-                        xmlHttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-                        var sendData = "only=" + onlyTeam + "&search=" + search;
-                        xmlHttp.send(sendData);
+                xmlHttp.onreadystatechange = function() {
+                    if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+                        tableBody.innerHTML = xmlHttp.responseText;
+                        $("#resultTable").trigger("update");
                     }
+                }
+                xmlHttp.open("POST", "get-results.php", true);
+                xmlHttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                var sendData = "only=" + onlyTeam + "&search=" + search;
+                xmlHttp.send(sendData);
+            }
 
-                    function deleteTeam(id) {
-                        var answer = confirm("Are you sure you want to delete this match data?");
-                        if (answer) {
-                            if (window.XMLHttpRequest) {
-                                xmlHttp = new XMLHttpRequest();
-                            }
-                            xmlHttp.onreadystatechange = function() {
-                                if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
-                                    alert(xmlHttp.responseText);
-                                    updateTeams($('.resultsByTeam .active').val(), $('#search').val())
-                                }
-                            }
-                            xmlHttp.open("POST", "delete.php", true);
-                            xmlHttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-                            var sendData = "id=" + id;
-                            xmlHttp.send(sendData);
+            function deleteTeam(id) {
+                var answer = confirm("Are you sure you want to delete this match data?");
+                if (answer) {
+                    if (window.XMLHttpRequest) {
+                        xmlHttp = new XMLHttpRequest();
+                    }
+                    xmlHttp.onreadystatechange = function() {
+                        if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+                            alert(xmlHttp.responseText);
+                            updateTeams($('.resultsByTeam .active').val(), $('#search').val())
                         }
                     }
+                    xmlHttp.open("POST", "delete.php", true);
+                    xmlHttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                    var sendData = "id=" + id;
+                    xmlHttp.send(sendData);
+                }
+            }
         </script>
     </body>
 </html>

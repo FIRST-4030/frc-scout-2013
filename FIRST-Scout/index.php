@@ -17,6 +17,7 @@ if(isset($_SESSION['UserID'])) {
         <!-- These work! -->
         <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>        
         <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="bootstrap/js/bootstrap-tooltip.js"></script>
     </head>
     <body>
 
@@ -37,13 +38,15 @@ if(isset($_SESSION['UserID'])) {
             <input type="text" name="team_id" value="Team ID" onblur="if(this.value === '') this.value = 'Team ID';" onfocus="if(this.value === 'Team ID') this.value = '';" id="teamID" /><br> 
             <input type="text" name="user_id" value="User ID" onblur="if(this.value === '') this.value = 'User ID';" onfocus="if(this.value === 'User ID') this.value = '';" id="userID" /><br>
             <input type="password" name="team_password" value="akjsdfha3323rs" onblur="if(this.value === '') this.value = 'akjsdfha3323rs';" onfocus="if(this.value === 'akjsdfha3323rs') this.value = '';" id="teamPassword" /><br><br>
-            <button class="btn" type="submit" onclick="sendData()" id='SubmitButton'>Log In</button>
+            <button class="btn" type="submit" onclick="sendData()" id='SubmitButton'>Log In</button><p style="margin-top: 5px; margin-bottom: 5px; font-weight: bold">or</p>
+            <button class="btn btn-success" style="height: 30px; width: 200px" onclick="window.location = 'create.php'">Create an account</button>
             <br /><br />
         </div>
         <script type="text/javascript">
             $(document).ready(function() {
                 $('#inputError').hide();
-
+                //$("#submitButton").popover({title: "Need an account?", content: "Don't have an accout? <a href='create.php'>Click here</a> to get one!", placement: 'left'});
+                //$("#submitButton").popover('show');
                 if (document.getElementById('alertError').innerHTML !== "") {
                     $('#inputError').show();
                 }
@@ -55,10 +58,10 @@ if(isset($_SESSION['UserID'])) {
                 if ($("#teamID").val() === "") {
                     errors += "<br />&bull; Enter your Team ID.";
                 }
-                if ($("#userID").val() === "") {
+                else if ($("#userID").val() === "") {
                     errors += "<br />&bull; Enter your User ID.";
                 }
-                if ($("#teamPassword").val() === "") {
+                else if ($("#teamPassword").val() === "") {
                     errors += "<br />&bull; Enter your team password.";
                 } else {
                     return true;
@@ -79,6 +82,6 @@ if(isset($_SESSION['UserID'])) {
                 }
             }
         </script>
-        <form id="sendForm" action="/login.php?intent=login" class="invisible_form" method="post"></form>
+        <form id="sendForm" action="/login.php" class="invisible_form" method="post"></form>
     </body>
 </html>

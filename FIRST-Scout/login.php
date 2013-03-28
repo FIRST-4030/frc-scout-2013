@@ -36,6 +36,7 @@ if (isset($_POST['team_id'])) {
     } else {
         unset($_SESSION['TeamNumber']);
         unset($_SESSION['UserID']);
+        unset($_SESSION['TeamID']);
         header('location: index.php?error=' . urlencode("Your username or password are incorrect."));
     }
 } else {

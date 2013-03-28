@@ -30,7 +30,7 @@ while ($row = mysqli_fetch_assoc($results)) {
     $totalAveragePoints = $row['auto_average_points'] + $row['teleop_average_points'] 
             + $row['pyramid_average_points'] + $row['pyramid_average_climb_points'];
     echo '<tr>';
-    echo '<th scope="row"><a href="single-team-review.php?team=' . $row['scouted_team'] . '"><b>' . $row['scouted_team'] . '</b></a></th>';
+    echo '<td><a href="single-team-review.php?team=' . $row['scouted_team'] . '"><b>' . $row['scouted_team'] . '</b></a></td>';
     echo '<td><b>' . round($totalAveragePoints, 1) . '</b></td>';
     echo '<td>' . round($row['auto_average_points'], 1) . '</td>';
     echo '<td>' . round($row['teleop_average_points'], 1) . '</td>';

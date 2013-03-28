@@ -2,15 +2,7 @@
 <html>    
     <head>
         <title>Pre-match Information</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/> <!--320-->
-        <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
-
-        <!-- These work! -->
-        <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-        <link href="../css/style.css" rel="stylesheet" type="text/css">
-        <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>        
-        <script type="text/javascript" src="../bootstrap/js/bootstrap.min.js"></script>
+        <? include 'includes/form-headers.html'; ?>
     </head>
     <body>
         <div class="container">
@@ -21,7 +13,7 @@
                 </div>
                 <button id="robotPresent" onclick="updateCheckbox(0)" class="btn btn-success active" data-toggle="button" style="width: 225px">Present</button>
                 <br />
-                <input id="location" onblur="if(this.value === '') this.value = 'Location';" onfocus="if(this.value === 'Location') this.value = '';" name="location" type="text" style="margin-bottom: 2px; margin-top: 5px; width: 215px" value="Location" /><br />
+                <input id="location" onblur="if(this.value === '') this.value = 'Location';" onfocus="if(this.value === 'Location') this.value = '';" name="location" type="text" style="margin-bottom: 2px; margin-top: 5px; width: 215px" value="Seattle" /><br />
                 Team  &nbsp;|&nbsp;  Match <br /><input id="teamNumber" onblur="if(this.value === '') this.value = 'Team Number';" onfocus="if(this.value === 'Team Number') this.value = '';"  type="number" style="width: 100px"/>
                 <input id="matchNumber" onblur="if(this.value === '') this.value = 'Match Number';" onfocus="if(this.value === 'Match Number') this.value = '';"  type="number" style="width: 100px"/>  
                 <br />

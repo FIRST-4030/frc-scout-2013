@@ -1,5 +1,4 @@
 <?php
-
 # Config
 require 'includes/constants.php';
 $TABLE = "scout_recording";

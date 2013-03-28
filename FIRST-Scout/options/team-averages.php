@@ -30,7 +30,7 @@ and open the template in the editor.
                 <caption style="display: none">Team Averages</caption>
                 <thead>
                     <tr>
-                        <td>Team Number</td>
+                        <th>Team Number</th>
                         <th>Total Points</th>
                         <th>Autonomous Points</th>
                         <th>Teleoperated Points</th>

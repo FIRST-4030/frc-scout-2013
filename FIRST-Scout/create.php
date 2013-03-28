@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(isset($_SESSION['TeamID'])) {
+if (isset($_SESSION['UserID'])) {
     header('location: options?error=' . urlencode("Not only do you already have an accout, but you're logged in!"));
 }
 require 'includes/constants.php';
@@ -9,22 +9,6 @@ if (isset($_POST['team_id'])) {
     $teamPassword = $_POST['team_password'];
     $teamNumber = $_POST['team_number'];
     $adminEmail = $_POST['team_email'];
-    $errorMessage = "Please correct the following errors:<br />";
-    if (empty($teamID)) {
-        $errorMessage .= "&bull; Enter a Team ID.<br />";
-    }
-    if (empty($teamPassword)) {
-        $errorMessage .= "&bull; Enter a team password.<br />";
-    }
-    if (empty($teamNumber)) {
-        $errorMessage .= "&bull; Enter a team number.<br />";
-    }
-    if (empty($adminEmail)) {
-        $errorMessage .= "&bull; Enter an admin email.<br />";
-    }
-    if (substr_count($errorMessage, "&bull;") > 0) {
-        header('location:?error=' . urlencode($errorMessage));
-    }
 
     require 'includes/constants.php';
 
@@ -38,7 +22,7 @@ if (isset($_POST['team_id'])) {
         header('location: index.php?error=' . urlencode("Accout created successfully! Please login now."));
         mail($adminEmail, "Your account has been created!", "FIRST Scout account created:\r\nTeam ID: $teamID\r\nTeam Password: $teamPassword\r\nTeam Number: $teamNumber\r\nAdmin email: $adminEmail", "From: 'Scout Bot' <scout@ingrahamrobotics.org>");
     } else {
-        header('location: create.php?error=' . urlencode("Username not unique! Please try again."));
+        header('location: create.php?error=' . urlencode("Your username was not unique!"));
     }
 }
 ?>
@@ -64,22 +48,77 @@ if (isset($_POST['team_id'])) {
                 <strong id='alertError'><?php if (isset($_GET['error'])) echo ($_GET['error']); ?></strong>
             </div>
             <p><strong>Ready to get started?</strong></p>
-            <form method="post" action="create.php">
-                Team ID:<br /><input type="text" name="team_id" placeholder="i.e. NullPointerException" value="<? $teamID ?>" /><br />
-                Team Password:<br /><input type="password" name="team_password" placeholder="i.e. p@s$w0Rd" /><br />
-                Team Number:<br /><input type="number" name="team_number" placeholder="i.e. 4030" /><br />
-                Admin email:<br /><input type="email" name="team_email" placeholder="i.e. scout@ingrahamrobotics.org"><br /><br />
-                <button class="btn btn-success" type="submit">Submit</button>
+            <form method="post" action="create.php" id="create">
+                <span id="uname">Team ID:</span><br /><input type="text" name="team_id" id="team_id" placeholder="i.e. NullPointerException" onkeyup="checkID($('#team_id').val())" value="<? $teamID ?>" /><br />
+                Team Password:<br /><input type="password" name="team_password" id="team_password" placeholder="i.e. p@s$w0Rd" /><br />
+                Team Number:<br /><input type="number" name="team_number" id="team_number" placeholder="i.e. 4030" /><br />
+                Admin email:<br /><input type="email" name="team_email" id="admin_email" placeholder="i.e. scout@ingrahamrobotics.org">
             </form>
+            <button class="btn btn-success" onclick="submit()">Submit</button>
+            <br /><br />
         </div>
         <script type="text/javascript">
-                    $(document).ready(function() {
-                        $('#inputError').hide();
+            $(document).ready(function() {
+                $('#inputError').hide();
 
-                        if (document.getElementById('alertError').innerHTML !== "") {
-                            $('#inputError').show();
+                if (document.getElementById('alertError').innerHTML !== "") {
+                    $('#inputError').show();
+                }
+            });
+                    
+            function checkID(id) {
+                if (window.XMLHttpRequest) {
+                    xmlHttp = new XMLHttpRequest();
+                }
+
+                xmlHttp.onreadystatechange = function() {
+                    if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+                        var isInUse = xmlHttp.responseText;
+                        if(isInUse === "true") {
+                            $("#team_id").css("color", "red");
+                            $("#uname").html("Team ID: <b><span style='color:red'>already in use!</span></b>")
+                        } else {
+                            $("#team_id").css("color", "green");
+                            $("#uname").html("Team ID:")
                         }
-                    });
+                    }
+                }
+                xmlHttp.open("POST", "includes/verify.php", true);
+                xmlHttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                var sendData = 'team_id=' + id;
+                xmlHttp.send(sendData);
+            }
+            
+            function checkInputs() {
+                var returned = true;
+                errors = "Please correct the following errors:";
+                if ($("#team_id").val() === "") {
+                    errors += "<br />&bull; Enter a Team ID.";
+                    returned = false;
+                }
+                if ($("#team_password").val() === "") {
+                    errors += "<br />&bull; Enter a team password.";
+                    returned = false;
+                }
+                if ($("#team_number").val() === "") {
+                    errors += "<br />&bull; Enter your team's number.";
+                    returned = false;
+                }
+                if ($("#admin_email").val() === "") {
+                    errors += "<br />&bull; Enter an email address.";
+                    returned = false;
+                }
+                return returned;
+            }
+            
+            function submit() {
+                if(checkInputs()) {
+                    $("#create").submit();               
+                } else {
+                    document.getElementById('alertError').innerHTML = errors;
+                    $("#inputError").show();
+                }
+            }
         </script>
     </body>
 </html>

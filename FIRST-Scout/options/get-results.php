@@ -50,7 +50,7 @@ while ($row = mysqli_fetch_assoc($result)) {
     if($onlyTeam) {
         echo "<td><a onfocus='this.innerHTML = &timesb;' onblur='this.innerHTML=&times;' onclick='deleteTeam($matchID)' style='font-size:24px'>&times;</a>";
     }
-    echo '<td><a href=single-match-review.php?match=' . $row['uid'] . ">" . $row['scouted_team_number'] . '</a></td>';
+    echo '<td><a href=single-match-review.php?redir&match=' . $row['uid'] . ">" . $row['scouted_team_number'] . '</a></td>';
     echo '<td>' . substr($row['ts'], 0, 10) . '</td>';
     if ($onlyTeam)
         echo '<td>' . $row['user_id'] . '</td>';
