@@ -43,7 +43,6 @@ if (isset($_POST['team_id'])) {
     </head>
     <body>
         <div class="container">
-            <? echo $check['team_number']; ?>
             <p class="title">Create Account</p>
             <p style="width: 700px; text-align: left; margin-left:  auto; margin-right: auto">FIRST Scout accounts are shared, team-wide. Each team has a shared <b>Team ID</b> and a shared <b>team password.</b> 
                 Your Team ID can be your team number, but it doesn't have to. It is what you will use to login. <br /><br />
