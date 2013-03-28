@@ -3,6 +3,7 @@ session_start();
 if (isset($_SESSION['UserID'])) {
     header('location: options?error=' . urlencode("Not only do you already have an accout, but you're logged in!"));
 }
+
 require 'includes/constants.php';
 if (isset($_POST['team_id'])) {
 
@@ -10,8 +11,6 @@ if (isset($_POST['team_id'])) {
     $teamPassword = $_POST['team_password'];
     $teamNumber = preg_replace('/[^\w ]/', '', $_POST['team_number']);
     $adminEmail = preg_replace('/[^\w@\.\-\+]/', '', $_POST['team_email']);
-
-    require 'includes/constants.php';
 
 	try {
 		$db = new PDO(DSN, DB_USER, DB_PASSWD);
@@ -22,8 +21,8 @@ if (isset($_POST['team_id'])) {
 
 	$success = false;
 	try {
-		$db->prepare('INSERT INTO `scout_login` (team_id, team_password, team_number, team_admin_email) VALUES (?, md5(?), ?, ?)');
-		$success = $db->execute(array($teamID, $teamPassword, $teamNumber, $adminEmail));
+		$stmt = $db->prepare('INSERT INTO `scout_login` (team_id, team_password, team_number, team_admin_email) VALUES (?, md5(?), ?, ?)');
+		$success = $stmt->execute(array($teamID, $teamPassword, $teamNumber, $adminEmail));
 	} catch (PDOException $ex) {
 		die("Unable to add team\n " . $ex->getMessage());
 	}
