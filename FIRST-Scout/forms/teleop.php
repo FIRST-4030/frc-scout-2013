@@ -22,37 +22,37 @@
     <body>
         <div class="container">
             <p class="title">Teleoperated: <b><?php echo $scoutedTeamNumber ?></b></p>
-            <button id="frisbeePickup" onclick="updateCanPickupFrisbees()" class="btn btn-success" data-toggle="button" style="margin-top: 3px; margin-bottom: 8px;">Can pick up Frisbees?</button>
-            <button id="canBlock" onclick="updateCanBlock()" class="btn btn-success" data-toggle="button" style="margin-top: 3px; margin-bottom: 8px;">Can block?</button>
+            <button id="frisbeePickup" onclick="updateCanPickupFrisbees();" class="btn btn-success" data-toggle="button" style="margin-top: 3px; margin-bottom: 8px;">Can pick up Frisbees?</button>
+            <button id="canBlock" onclick="updateCanBlock();" class="btn btn-success" data-toggle="button" style="margin-top: 3px; margin-bottom: 8px;">Can block?</button>
             <p><i>Record points for each goal</i></p>
 
-            <button class="btn plus_minus_buttons" style="height: 50px; width: 100px" onclick="update(0, false)">+3</button>
-            <button class="btn plus_minus_buttons" style="height: 50px; width: 50px" onclick="update(0, true)">&mdash;</button>
+            <button class="btn plus_minus_buttons" style="height: 50px; width: 100px" onclick="update(0, false);">+3</button>
+            <button class="btn plus_minus_buttons" style="height: 50px; width: 50px" onclick="update(0, true);">&mdash;</button>
             <span id="teleopThreePoint" class="autonomousIndividual">0</span>
             <br />
-            <button class="btn plus_minus_buttons" style="height: 50px; width: 100px" onclick="update(1, false)">+2</button>
-            <button class="btn plus_minus_buttons" style="height: 50px; width: 50px" onclick="update(1, true)">&mdash;</button>
+            <button class="btn plus_minus_buttons" style="height: 50px; width: 100px" onclick="update(1, false);">+2</button>
+            <button class="btn plus_minus_buttons" style="height: 50px; width: 50px" onclick="update(1, true);">&mdash;</button>
             <span id="teleopTwoPoint" class="autonomousIndividual">0</span>
             <br />
-            <button class="btn plus_minus_buttons" style="height: 50px; width: 100px" onclick="update(2, false)">+1</button>
-            <button class="btn plus_minus_buttons" style="height: 50px; width: 50px" onclick="update(2, true)">&mdash;</button>
+            <button class="btn plus_minus_buttons" style="height: 50px; width: 100px" onclick="update(2, false);">+1</button>
+            <button class="btn plus_minus_buttons" style="height: 50px; width: 50px" onclick="update(2, true);">&mdash;</button>
             <span id="teleopOnePoint" class="autonomousIndividual">0</span>
             <br />
-            <button class="btn plus_minus_buttons" style="height: 50px; width: 100px" onclick="update(3, false)">Missed</button>
-            <button class="btn plus_minus_buttons" style="height: 50px; width: 50px" onclick="update(3, true)">&mdash;</button>
+            <button class="btn plus_minus_buttons" style="height: 50px; width: 100px" onclick="update(3, false);">Missed</button>
+            <button class="btn plus_minus_buttons" style="height: 50px; width: 50px" onclick="update(3, true);">&mdash;</button>
             <span id="teleopMissedPoints" class="autonomousIndividual">0</span>
             <br />
-            <button class="btn plus_minus_buttons" style="height: 50px; width: 100px" onclick="update(4, false)">Pyramid Goal</button>
-            <button class="btn plus_minus_buttons" style="height: 50px; width: 50px" onclick="update(4, true)">&mdash;</button>
+            <button class="btn plus_minus_buttons" style="height: 50px; width: 100px" onclick="update(4, false);">Pyramid Goal</button>
+            <button class="btn plus_minus_buttons" style="height: 50px; width: 50px" onclick="update(4, true);">&mdash;</button>
             <span id="teleopPyramidPoints" class="autonomousIndividual">0</span>
             <br />
             <p style="font-weight: bold; margin-top: 5px">Total Points: <span id="totalPoints">0</span></p>
 
             <p style="margin-bottom:2px;"><i>Shooting range:</i></p>
             <div class="btn-group" data-toggle="buttons-radio">
-                <button class="btn btn-danger active" onclick="updateRange(0)">Under half court</button>
-                <button class="btn btn-warning" onclick="updateRange(1)">Half court</button>
-                <button class="btn btn-success" onclick="updateRange(2)">Full court</button>
+                <button class="btn btn-danger active" onclick="updateRange(0);">Under half court</button>
+                <button class="btn btn-warning" onclick="updateRange(1);">Half court</button>
+                <button class="btn btn-success" onclick="updateRange(2);">Full court</button>
             </div>
 
 
@@ -79,7 +79,7 @@
                 <button class="btn btn-small">5</button>
             </div>
             <br /><br />
-            <button class="btn btn-large" id="NextPageButton" onclick="sendData()">Continue to Climbing &rarr;</button>
+            <button class="btn btn-large" id="NextPageButton" onclick="sendData();">Continue to Climbing &rarr;</button>
             <br /><br />
         </div>
         <script type="text/javascript">
