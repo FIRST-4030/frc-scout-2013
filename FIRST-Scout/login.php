@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-if ($_GET['intent'] == "logout") {
+if (isset($_GET['intent']) && $_GET['intent'] == "logout") {
     unset($_SESSION['TeamNumber']);
     unset($_SESSION['UserID']);
     unset($_SESSION['MATCH_ID']);
