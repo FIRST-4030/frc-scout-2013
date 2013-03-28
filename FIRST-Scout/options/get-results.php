@@ -5,12 +5,12 @@ if(!isset($_SESSION['TeamID'])) {
     header('location: index.php?error=' . urlencode("You must login first!"));
 }
 
+# Allow filtering by logged in team
 if ($_POST['only'] == "true") {
     $onlyTeam = true;
 } else {
     $onlyTeam = false;
 }
-
 
 # Allow searching by location, scouted team number, comments and timestamp
 $query  = '';
