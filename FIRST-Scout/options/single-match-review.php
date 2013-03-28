@@ -15,7 +15,7 @@
     <body>
         <div class="container">
             <p class="title">Review Match</p>
-            <button class="btn btn-success" onclick="<? echo $redir ?>">&larr;&nbsp;Go Back</button><br />
+            <button class="btn btn-success" onclick="<? echo $redir ?>" style="width: 200px">&larr;&nbsp;Go Back</button><br />
             <?php
             #Grab the match ID to get information and then delete it as to not get confused
             if (isset($_SESSION['MATCH_ID']) || isset($_GET['match'])) {

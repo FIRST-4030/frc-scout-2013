@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(isset($_SESSION['UserID'])) {
+if (isset($_SESSION['UserID'])) {
     header('location: options?error=' . urlencode("You're logged in!"));
 }
 ?>
@@ -38,13 +38,23 @@ if(isset($_SESSION['UserID'])) {
             <input type="text" name="team_id" value="Team ID" onblur="if(this.value === '') this.value = 'Team ID';" onfocus="if(this.value === 'Team ID') this.value = '';" id="teamID" /><br> 
             <input type="text" name="user_id" value="User ID" onblur="if(this.value === '') this.value = 'User ID';" onfocus="if(this.value === 'User ID') this.value = '';" id="userID" /><br>
             <input type="password" name="team_password" value="akjsdfha3323rs" onblur="if(this.value === '') this.value = 'akjsdfha3323rs';" onfocus="if(this.value === 'akjsdfha3323rs') this.value = '';" id="teamPassword" /><br><br>
-            <button class="btn" type="submit" onclick="sendData()" id='SubmitButton'>Log In</button><p style="margin-top: 5px; margin-bottom: 5px; font-weight: bold">or</p>
-            <button class="btn btn-success" style="height: 30px; width: 200px" onclick="window.location = 'create.php'">Create an account</button>
+            <button class="btn" type="submit" style="height: 30px; width: 220px" onclick="sendData()" id='SubmitButton'>Log In</button><p style="margin-top: 5px; margin-bottom: 5px; font-weight: bold">or</p>
+            <button class="btn btn-success" style="height: 30px; width: 220px" onclick="window.location = 'create.php'">Create an account</button><br /><br />
+            <a onclick="pwdreset()">Forgot your password?</a>
+            <div id="resetPane">
+                Name: <input type="text" id="name" /><br />
+                Email: <input type="email" id="email" /><br />
+                Team ID: <input type="text" id="team_id" /><br />
+                Team Number: <input type="number" id="team_number" /><br />
+                New Password: <input type="password" id="new_password" /><br />
+                <button id="resetSubmit" onclick="resetPass()" class="btn">Submit</button>
+            </div>
             <br /><br />
         </div>
         <script type="text/javascript">
             $(document).ready(function() {
                 $('#inputError').hide();
+                $("#resetPane").hide();
                 //$("#submitButton").popover({title: "Need an account?", content: "Don't have an accout? <a href='create.php'>Click here</a> to get one!", placement: 'left'});
                 //$("#submitButton").popover('show');
                 if (document.getElementById('alertError').innerHTML !== "") {
@@ -80,6 +90,28 @@ if(isset($_SESSION['UserID'])) {
                     document.getElementById('alertError').innerHTML = errors;
                     $("#inputError").show();
                 }
+            }
+            
+            function resetPass() {
+                if (window.XMLHttpRequest) {
+                    xmlHttp = new XMLHttpRequest();
+                }
+
+                xmlHttp.onreadystatechange = function() {
+                    if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+                        alert(xmlHttp.responseText);
+                        $("#resetPane").hide();
+                    }
+                }
+
+                var sendData = "email=" + $("#email").val() + "&team_number=" + $("#team_number").val() + "&name=" + $("#name").val() + "&new_password=" + $("#new_password").val() + "&team_id=" + $("#team_id").val();
+                xmlHttp.open("POST", "includes/passwordreset.php", true);
+                xmlHttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                xmlHttp.send(sendData);
+            }
+            
+            function pwdreset() {
+                $("#resetPane").toggle();
             }
         </script>
         <form id="sendForm" action="/login.php" class="invisible_form" method="post"></form>
