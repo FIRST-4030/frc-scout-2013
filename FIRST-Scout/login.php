@@ -1,4 +1,5 @@
 <?php
+
 session_start();
 if ($_GET['intent'] == "logout") {
     unset($_SESSION['TeamNumber']);
@@ -21,15 +22,15 @@ if (isset($_POST['team_id'])) {
     $userID = preg_replace('/[^\w ]/', '', $_POST['user_id']);
     $teamPassword = $_POST['team_password'];
 
-	try {
-		$authenticate = $db->prepare('SELECT team_number FROM scout_login WHERE team_id = ? AND team_password = md5(?)');
-		$authenticate->execute(array($teamID, $teamPassword));
-		$teams = $authenticate->fetch(PDO::FETCH_ASSOC);
-	} catch (PDOException $ex) {
+    try {
+        $authenticate = $db->prepare('SELECT team_number FROM scout_login WHERE team_id = ? AND team_password = md5(?)');
+        $authenticate->execute(array($teamID, $teamPassword));
+        $teams = $authenticate->fetch(PDO::FETCH_ASSOC);
+    } catch (PDOException $ex) {
         die("Unable to connect to DB\n " . $ex->getMessage());
-	}
+    }
 
-	$team_number = NULL;
+    $team_number = NULL;
     if (key_exists('team_number', $teams)) {
         $team_number = $teams['team_number'];
         # Login success

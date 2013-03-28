@@ -38,7 +38,7 @@ if (isset($_POST['prematch_team_number'])) {
     $_SESSION['scouted_team'] = $scoutedTeamNumber;
     $present = ($_POST['prematch_team_present'] == "true" ? 1 : 0);
     $dead = ($_POST['prematch_dead_robot'] == "true" ? 1 : 0);
-    $alliance = ($_POST['prematch_red_alliance'] == "true"  ? 'RED' : 'BLUE');
+    $alliance = ($_POST['prematch_red_alliance'] == "true" ? 'RED' : 'BLUE');
     $teamID = $_SESSION['TeamID'];
     # Save the data
     try {
@@ -82,7 +82,7 @@ if (isset($_POST['prematch_team_number'])) {
 else if (isset($_POST['teleop_can_pickup_frisbees'])) {
     # Force the data types
     $scoutedTeamNumber = $_SESSION['scouted_team'];
-    $frisbeePickup = ($_POST['teleop_can_pickup_frisbees'] == "true"  ? 1 : 0);
+    $frisbeePickup = ($_POST['teleop_can_pickup_frisbees'] == "true" ? 1 : 0);
     $top = intval($_POST['teleop_top_goals']);
     $middle = intval($_POST['teleop_middle_goals']);
     $bottom = intval($_POST['teleop_bottom_goals']);
@@ -101,15 +101,14 @@ else if (isset($_POST['teleop_can_pickup_frisbees'])) {
 
     # Set the next page
     $next_page = 'climb.php';
-} else if (isset($_POST['climb_attempts'])) {     
+} else if (isset($_POST['climb_attempts'])) {
     $scoutedTeamNumber = $_SESSION['scouted_team'];
     $db_stmt = "UPDATE " . $TABLE . " SET climb_attempts=?, climb_pyramid_goals=?, climb_level_reached=?, climb_style=?";
-    $db_vals = array($_POST['climb_attempts'], $_POST['climb_pyramid_goals'], $_POST['climb_level_reached'], $_POST['climb_climb_style']);   
+    $db_vals = array($_POST['climb_attempts'], $_POST['climb_pyramid_goals'], $_POST['climb_level_reached'], $_POST['climb_climb_style']);
     $next_page = "results.php";
-    
-} else if (isset ($_POST['results_match_outcome'])) {
-     $scoutedTeamNumber = $_SESSION['scouted_team'];
-   $db_stmt = "UPDATE " . $TABLE . " SET results_match_outcome=?, results_fouls=?, results_technical_fouls=?, results_comments=?, dead=?";
+} else if (isset($_POST['results_match_outcome'])) {
+    $scoutedTeamNumber = $_SESSION['scouted_team'];
+    $db_stmt = "UPDATE " . $TABLE . " SET results_match_outcome=?, results_fouls=?, results_technical_fouls=?, results_comments=?, dead=?";
     $db_vals = array($_POST['results_match_outcome'], $_POST['results_fouls'], $_POST['results_technical_fouls'], $_POST['results_comments'], $_POST['results_dead_robot'] == "true" ? 1 : 0);
     $next_page = "/options?error=Entry successful!";
 }
@@ -138,7 +137,7 @@ if ($db_stmt !== NULL) {
     $db_vals = NULL;
 }
 
-if(isset($_POST['results_fouls'])) {
+if (isset($_POST['results_fouls'])) {
     header("location: options/single-match-review.php");
 }
 

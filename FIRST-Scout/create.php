@@ -13,27 +13,27 @@ if (isset($_POST['team_id'])) {
 
     require 'includes/constants.php';
 
-	try {
-		$db = new PDO(DSN, DB_USER, DB_PASSWD);
-		$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-	} catch (PDOException $ex) {
-		die("Unable to connect to DB\n " . $ex->getMessage());
-	}
+    try {
+        $db = new PDO(DSN, DB_USER, DB_PASSWD);
+        $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    } catch (PDOException $ex) {
+        die("Unable to connect to DB\n " . $ex->getMessage());
+    }
 
-	$success = false;
-	try {
-		$db->prepare('INSERT INTO `scout_login` (team_id, team_password, team_number, team_admin_email) VALUES (?, md5(?), ?, ?)');
-		$success = $db->execute(array($teamID, $teamPassword, $teamNumber, $adminEmail));
-	} catch (PDOException $ex) {
-		die("Unable to add team\n " . $ex->getMessage());
-	}
-	
-	if ($success) {
-		header('location: index.php?error=' . urlencode("Accout created successfully! Please login now."));
-		mail($adminEmail, "Your account has been created!", "FIRST Scout account created:\r\nTeam ID: $teamID\r\nTeam Password: $teamPassword\r\nTeam Number: $teamNumber\r\nAdmin email: $adminEmail", "From: 'Scout Bot' <scout@ingrahamrobotics.org>");
-	} else {
-		header('location: create.php?error=' . urlencode("Your username was not unique!"));
-	}
+    $success = false;
+    try {
+        $db->prepare('INSERT INTO `scout_login` (team_id, team_password, team_number, team_admin_email) VALUES (?, md5(?), ?, ?)');
+        $success = $db->execute(array($teamID, $teamPassword, $teamNumber, $adminEmail));
+    } catch (PDOException $ex) {
+        die("Unable to add team\n " . $ex->getMessage());
+    }
+
+    if ($success) {
+        header('location: index.php?error=' . urlencode("Accout created successfully! Please login now."));
+        mail($adminEmail, "Your account has been created!", "FIRST Scout account created:\r\nTeam ID: $teamID\r\nTeam Password: $teamPassword\r\nTeam Number: $teamNumber\r\nAdmin email: $adminEmail", "From: 'Scout Bot' <scout@ingrahamrobotics.org>");
+    } else {
+        header('location: create.php?error=' . urlencode("Your username was not unique!"));
+    }
 }
 ?>
 <!DOCTYPE html>
@@ -68,67 +68,67 @@ if (isset($_POST['team_id'])) {
             <br /><br />
         </div>
         <script type="text/javascript">
-            $(document).ready(function() {
-                $('#inputError').hide();
+                    $(document).ready(function() {
+                        $('#inputError').hide();
 
-                if (document.getElementById('alertError').innerHTML !== "") {
-                    $('#inputError').show();
-                }
-            });
-                    
-            function checkID(id) {
-                if (window.XMLHttpRequest) {
-                    xmlHttp = new XMLHttpRequest();
-                }
+                        if (document.getElementById('alertError').innerHTML !== "") {
+                            $('#inputError').show();
+                        }
+                    });
 
-                xmlHttp.onreadystatechange = function() {
-                    if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
-                        var isInUse = xmlHttp.responseText;
-                        if(isInUse === "true") {
-                            $("#team_id").css("color", "red");
-                            $("#uname").html("Team ID: <b><span style='color:red'>already in use!</span></b>")
+                    function checkID(id) {
+                        if (window.XMLHttpRequest) {
+                            xmlHttp = new XMLHttpRequest();
+                        }
+
+                        xmlHttp.onreadystatechange = function() {
+                            if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+                                var isInUse = xmlHttp.responseText;
+                                if (isInUse.indexOf("true") !== -1) {
+                                    $("#team_id").css("color", "red");
+                                    $("#uname").html("Team ID: <b><span style='color:red'>already in use!</span></b>")
+                                } else {
+                                    $("#team_id").css("color", "green");
+                                    $("#uname").html("Team ID:")
+                                }
+                            }
+                        }
+                        xmlHttp.open("POST", "includes/verify.php", true);
+                        xmlHttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                        var sendData = 'team_id=' + id;
+                        xmlHttp.send(sendData);
+                    }
+
+                    function checkInputs() {
+                        var returned = true;
+                        errors = "Please correct the following errors:";
+                        if ($("#team_id").val() === "") {
+                            errors += "<br />&bull; Enter a Team ID.";
+                            returned = false;
+                        }
+                        if ($("#team_password").val() === "") {
+                            errors += "<br />&bull; Enter a team password.";
+                            returned = false;
+                        }
+                        if ($("#team_number").val() === "") {
+                            errors += "<br />&bull; Enter your team's number.";
+                            returned = false;
+                        }
+                        if ($("#admin_email").val() === "") {
+                            errors += "<br />&bull; Enter an email address.";
+                            returned = false;
+                        }
+                        return returned;
+                    }
+
+                    function submit() {
+                        if (checkInputs()) {
+                            $("#create").submit();
                         } else {
-                            $("#team_id").css("color", "green");
-                            $("#uname").html("Team ID:")
+                            document.getElementById('alertError').innerHTML = errors;
+                            $("#inputError").show();
                         }
                     }
-                }
-                xmlHttp.open("POST", "includes/verify.php", true);
-                xmlHttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-                var sendData = 'team_id=' + id;
-                xmlHttp.send(sendData);
-            }
-            
-            function checkInputs() {
-                var returned = true;
-                errors = "Please correct the following errors:";
-                if ($("#team_id").val() === "") {
-                    errors += "<br />&bull; Enter a Team ID.";
-                    returned = false;
-                }
-                if ($("#team_password").val() === "") {
-                    errors += "<br />&bull; Enter a team password.";
-                    returned = false;
-                }
-                if ($("#team_number").val() === "") {
-                    errors += "<br />&bull; Enter your team's number.";
-                    returned = false;
-                }
-                if ($("#admin_email").val() === "") {
-                    errors += "<br />&bull; Enter an email address.";
-                    returned = false;
-                }
-                return returned;
-            }
-            
-            function submit() {
-                if(checkInputs()) {
-                    $("#create").submit();               
-                } else {
-                    document.getElementById('alertError').innerHTML = errors;
-                    $("#inputError").show();
-                }
-            }
         </script>
     </body>
 </html>

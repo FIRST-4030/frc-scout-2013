@@ -44,30 +44,30 @@ and open the template in the editor.
             </table>
         </div>
         <script type='text/javascript'>
-            $(document).ready(function() {
-                updateTeams('');
-                $("#resultsTable").tablesorter();
-                //$("#resultsTable").visualize();
-            });
+                $(document).ready(function() {
+                    updateTeams('');
+                    $("#resultsTable").tablesorter();
+                    //$("#resultsTable").visualize();
+                });
 
-            function updateTeams(search) {
-                if (window.XMLHttpRequest) {
-                    xmlHttp = new XMLHttpRequest();
-                }
-
-                xmlHttp.onreadystatechange = function() {
-                    if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
-                        $("#tableBody").html(xmlHttp.responseText);
-                        $("#resultsTable").trigger("update");
-                        //$('.visualize').trigger('visualizeRefresh');
+                function updateTeams(search) {
+                    if (window.XMLHttpRequest) {
+                        xmlHttp = new XMLHttpRequest();
                     }
-                }
 
-                var sendData = "search=" + search;
-                xmlHttp.open("POST", "get-team-averages.php", true);
-                xmlHttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-                xmlHttp.send(sendData);
-            }
+                    xmlHttp.onreadystatechange = function() {
+                        if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+                            $("#tableBody").html(xmlHttp.responseText);
+                            $("#resultsTable").trigger("update");
+                            //$('.visualize').trigger('visualizeRefresh');
+                        }
+                    }
+
+                    var sendData = "search=" + search;
+                    xmlHttp.open("POST", "get-team-averages.php", true);
+                    xmlHttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                    xmlHttp.send(sendData);
+                }
         </script>
     </body>
 </html>

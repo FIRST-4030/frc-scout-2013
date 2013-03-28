@@ -1,15 +1,15 @@
 <project name="tablesorter" default="default" basedir=".">
 
     <!-- SETUP -->
-	<property description="Files for parsing etc." name="BUILD_DIR" value="build" />
+    <property description="Files for parsing etc." name="BUILD_DIR" value="build" />
     <property description="Rhino JS Engine" name="JAR" value="${BUILD_DIR}/js.jar" />
 
     <!-- Files names for distribution -->
     <property name="TS" value="jquery.tablesorter.js" />
-	<property name="TS_MIN" value="jquery.tablesorter.min.js" />
+    <property name="TS_MIN" value="jquery.tablesorter.min.js" />
 
     <!-- MAIN -->
-	<target name="min">
+    <target name="min">
         <echo message="Building ${TS_MIN}" />
         <java jar="${JAR}" fork="true">
             <arg value="${BUILD_DIR}/min.js" />
@@ -19,8 +19,8 @@
         <echo message="${TS_MIN} built." />
     </target>
 
-   <target name="default">
-		<antcall target="min"/>
+    <target name="default">
+        <antcall target="min"/>
     </target>
 	
 </project>

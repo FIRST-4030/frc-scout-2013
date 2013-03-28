@@ -26,7 +26,6 @@
             case "":
                 $errorMessage = "Somehow you've reached the error page in error. Now how did that happen?";
                 break;
-                
         }
         if (isset($_POST['error_submit'])) {
             $userMessage = stripslashes($_POST['error_submit']);

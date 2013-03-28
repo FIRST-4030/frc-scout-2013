@@ -39,7 +39,7 @@ if (!isset($_SESSION['TeamID'])) {
             if (mysqli_connect_errno()) {
                 echo('Failed to connect to database: ' . mysqli_connect_error());
             }
-            
+
             $getResults = mysqli_query($db, $query);
             $results = mysqli_fetch_assoc($getResults);
             ?>

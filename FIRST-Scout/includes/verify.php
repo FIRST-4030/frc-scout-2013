@@ -1,22 +1,30 @@
 <?php
-$teamID = $_POST['team_id'];
+
+$teamID = $_REQUEST['team_id'];
 
 require 'constants.php';
 
-$db = mysqli_connect("localhost", DB_USER, DB_PASSWD, "stevenz9_robotics_scout");
-if (mysqli_connect_errno()) {
-    echo('Failed to connect to database: ' . mysqli_connect_error());
+try {
+    $db = new PDO(DSN, DB_USER, DB_PASSWD);
+    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $ex) {
+    die("Unable to connect to DB\n " . $ex->getMessage());
 }
 
-$query = "SELECT team_id FROM scout_login WHERE team_id=$teamID";
+try {
+    $verify = $db->prepare('SELECT `team_id` FROM `scout_login` WHERE team_id=?');
+    $verify->execute(array($teamID));
+} catch (PDOException $ex) {
+    die("Unable to check team\n " . $ex->getMessage());
+}
 
-$result =  mysqli_query($db, $query);
+$fetch = $verify->fetch(PDO::FETCH_ASSOC);
 
-$fetch = mysqli_fetch_assoc($result);
 
-if(key_exists('team_id', $fetch)) {
+if (key_exists('team_id', $fetch)) {
     echo "true";
 } else {
     echo "false";
 }
 ?>
+ 

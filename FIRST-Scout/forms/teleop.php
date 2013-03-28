@@ -21,7 +21,7 @@
 
     <body>
         <div class="container">
-            <p class="title">Teleoperated: <b><?php echo $scoutedTeamNumber?></b></p>
+            <p class="title">Teleoperated: <b><?php echo $scoutedTeamNumber ?></b></p>
             <button id="frisbeePickup" onclick="updateCanPickupFrisbees()" class="btn btn-success" data-toggle="button" style="margin-top: 3px; margin-bottom: 8px;">Can pick up Frisbees?</button>
             <button id="canBlock" onclick="updateCanBlock()" class="btn btn-success" data-toggle="button" style="margin-top: 3px; margin-bottom: 8px;">Can block?</button>
             <p><i>Record points for each goal</i></p>
@@ -83,72 +83,72 @@
             <br /><br />
         </div>
         <script type="text/javascript">
-            $(document).ready(function() {
-                window.scrollTo(0, 1);  
-                
-                $('#RobotSpeed').on('change', function() {
-                    document.getElementById('robotSpeedFeedback').innerHTML = " " + $('#RobotSpeed').val();
+                $(document).ready(function() {
+                    window.scrollTo(0, 1);
+
+                    $('#RobotSpeed').on('change', function() {
+                        document.getElementById('robotSpeedFeedback').innerHTML = " " + $('#RobotSpeed').val();
+                    });
+
+                    $('#RobotManeuverability').on('change', function() {
+                        document.getElementById('RobotManeuverabilityFeedback').innerHTML = " " + $('#RobotManeuverability').val();
+                    });
                 });
-                
-                $('#RobotManeuverability').on('change', function() {
-                    document.getElementById('RobotManeuverabilityFeedback').innerHTML = " " + $('#RobotManeuverability').val();
-                });
-            });
-            
-            var teleopPoints = [0, 0, 0, 0, 0];
-            function update(index, negative) {
-                if (teleopPoints[index] > 0) {
-                    teleopPoints[index] += 1 * negative ? (-1) : (1);
-                } else if (!negative) {
-                    teleopPoints[index]++;
+
+                var teleopPoints = [0, 0, 0, 0, 0];
+                function update(index, negative) {
+                    if (teleopPoints[index] > 0) {
+                        teleopPoints[index] += 1 * negative ? (-1) : (1);
+                    } else if (!negative) {
+                        teleopPoints[index]++;
+                    }
+                    updateIndividualTotals();
+                    updateTotals();
                 }
-                updateIndividualTotals();
-                updateTotals();
-            }
-            
-            var range = 0;
-            function updateRange(newRange) {
-                range = newRange;
-            }
-            
-            var canPickupFrisbees = false;
-            
-            function updateCanPickupFrisbees() {
-                canPickupFrisbees = !canPickupFrisbees;
-            }
-            
-            var canBlock = false;
-            function updateCanBlock() {
-                canBlock = !canBlock;
-            }
 
-            function updateIndividualTotals() {
-                document.getElementById('teleopThreePoint').innerHTML = teleopPoints[0];
-                document.getElementById('teleopTwoPoint').innerHTML = teleopPoints[1];
-                document.getElementById('teleopOnePoint').innerHTML = teleopPoints[2];
-                document.getElementById('teleopMissedPoints').innerHTML = teleopPoints[3];
-                document.getElementById('teleopPyramidPoints').innerHTML = teleopPoints[4];
-            }
+                var range = 0;
+                function updateRange(newRange) {
+                    range = newRange;
+                }
 
-            function updateTotals() {
-                document.getElementById('totalPoints').innerHTML = (teleopPoints[0] * 3) + (teleopPoints[1] * 2) + (teleopPoints[2] * 1) + (teleopPoints[4] * 5);
-            }
-            
-            function sendData() {
-                var invisibleForm = document.getElementById('sendForm');
-                invisibleForm.innerHTML += "<input type='text' name='next_page' value='" + "forms/climb.php" + "'</input>";
-                invisibleForm.innerHTML += "<input type='text' name='teleop_can_pickup_frisbees' value='" + canPickupFrisbees + "'</input>";
-                invisibleForm.innerHTML += "<input type='text' name='teleop_top_goals' value='" + teleopPoints[0] + "'</input>";
-                invisibleForm.innerHTML += "<input type='text' name='teleop_middle_goals' value='" + teleopPoints[1] + "'</input>";
-                invisibleForm.innerHTML += "<input type='text' name='teleop_bottom_goals' value='" + teleopPoints[2] + "'</input>";
-                invisibleForm.innerHTML += "<input type='text' name='teleop_missed_goals' value='" + teleopPoints[3] + "'</input>";
-                invisibleForm.innerHTML += "<input type='text' name='teleop_blocked_goals' value='" + canBlock + "'</input>";
-                invisibleForm.innerHTML += "<input type='text' name='teleop_pyramid_goals' value='" + teleopPoints[4] + "'</input>";
-                invisibleForm.innerHTML += "<input type='text' name='teleop_shooting_range' value='" + range + "'</input>";
-                invisibleForm.innerHTML += "<input type='text' name='teleop_robot_speed' value='" + $(".robotSpeed .active").text() + "'</input>";
-                invisibleForm.innerHTML += "<input type='text' name='teleop_robot_maneuverability' value='" + $(".robotManeuverability .active").text() + "'</input>";
-                invisibleForm.submit();      
-            }
+                var canPickupFrisbees = false;
+
+                function updateCanPickupFrisbees() {
+                    canPickupFrisbees = !canPickupFrisbees;
+                }
+
+                var canBlock = false;
+                function updateCanBlock() {
+                    canBlock = !canBlock;
+                }
+
+                function updateIndividualTotals() {
+                    document.getElementById('teleopThreePoint').innerHTML = teleopPoints[0];
+                    document.getElementById('teleopTwoPoint').innerHTML = teleopPoints[1];
+                    document.getElementById('teleopOnePoint').innerHTML = teleopPoints[2];
+                    document.getElementById('teleopMissedPoints').innerHTML = teleopPoints[3];
+                    document.getElementById('teleopPyramidPoints').innerHTML = teleopPoints[4];
+                }
+
+                function updateTotals() {
+                    document.getElementById('totalPoints').innerHTML = (teleopPoints[0] * 3) + (teleopPoints[1] * 2) + (teleopPoints[2] * 1) + (teleopPoints[4] * 5);
+                }
+
+                function sendData() {
+                    var invisibleForm = document.getElementById('sendForm');
+                    invisibleForm.innerHTML += "<input type='text' name='next_page' value='" + "forms/climb.php" + "'</input>";
+                    invisibleForm.innerHTML += "<input type='text' name='teleop_can_pickup_frisbees' value='" + canPickupFrisbees + "'</input>";
+                    invisibleForm.innerHTML += "<input type='text' name='teleop_top_goals' value='" + teleopPoints[0] + "'</input>";
+                    invisibleForm.innerHTML += "<input type='text' name='teleop_middle_goals' value='" + teleopPoints[1] + "'</input>";
+                    invisibleForm.innerHTML += "<input type='text' name='teleop_bottom_goals' value='" + teleopPoints[2] + "'</input>";
+                    invisibleForm.innerHTML += "<input type='text' name='teleop_missed_goals' value='" + teleopPoints[3] + "'</input>";
+                    invisibleForm.innerHTML += "<input type='text' name='teleop_blocked_goals' value='" + canBlock + "'</input>";
+                    invisibleForm.innerHTML += "<input type='text' name='teleop_pyramid_goals' value='" + teleopPoints[4] + "'</input>";
+                    invisibleForm.innerHTML += "<input type='text' name='teleop_shooting_range' value='" + range + "'</input>";
+                    invisibleForm.innerHTML += "<input type='text' name='teleop_robot_speed' value='" + $(".robotSpeed .active").text() + "'</input>";
+                    invisibleForm.innerHTML += "<input type='text' name='teleop_robot_maneuverability' value='" + $(".robotManeuverability .active").text() + "'</input>";
+                    invisibleForm.submit();
+                }
         </script>
         <form id="sendForm" action="entry.php" class="invisible_form" method="post"></form>
     </body>

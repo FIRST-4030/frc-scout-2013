@@ -32,13 +32,13 @@
             } else {
                 header('location: /options?error=' . urlencode("You must scout a match first!"));
             }
-            
+
             foreach ($matchInfo as $value) {
                 echo "<p>" . $value . "</p>";
             }
             ?>
-            
-           
+
+
         </div>
     </body>
 </html>

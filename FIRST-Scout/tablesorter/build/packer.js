@@ -1,8 +1,8 @@
 /*
-    packer, version 2.0.2 (2005-08-19)
-    Copyright 2004-2005, Dean Edwards
-    License: http://creativecommons.org/licenses/LGPL/2.1/
-*/
+ packer, version 2.0.2 (2005-08-19)
+ Copyright 2004-2005, Dean Edwards
+ License: http://creativecommons.org/licenses/LGPL/2.1/
+ */
 
 function pack(_script, _encoding, _fastDecode, _specialChars) {
     // constants
@@ -19,7 +19,8 @@ function pack(_script, _encoding, _fastDecode, _specialChars) {
             $script = $parse($script);
         }
         return $script;
-    };
+    }
+    ;
 
     // unpacking function - this is the boot strap function
     //  data extracted from this packing routine is passed to
@@ -37,11 +38,16 @@ function pack(_script, _encoding, _fastDecode, _specialChars) {
         //  replacement value is a function?
         if (!''.replace(/^/, String)) {
             // decode all the values we need
-            while ($count--) $decode[$encode($count)] = $keywords[$count] || $encode($count);
+            while ($count--)
+                $decode[$encode($count)] = $keywords[$count] || $encode($count);
             // global replacement function
-            $keywords = [function($encoded){return $decode[$encoded]}];
+            $keywords = [function($encoded) {
+                    return $decode[$encoded]
+                }];
             // generic match
-            $encode = function(){return'\\w+'};
+            $encode = function() {
+                return'\\w+'
+            };
             // reset the loop counter -  we are now doing a global replace
             $count = 1;
         }
@@ -51,7 +57,8 @@ function pack(_script, _encoding, _fastDecode, _specialChars) {
     var _parsers = [];
     function _addParser($parser) {
         _parsers[_parsers.length] = $parser;
-    };
+    }
+    ;
 
     // zero encoding - just removal of white space and comments
     function _basicCompression($script) {
@@ -68,7 +75,8 @@ function pack(_script, _encoding, _fastDecode, _specialChars) {
         $parser.add(/\s+(\/[^\/\n\r\*][^\/\n\r]*\/g?i?)/, "$2"); // IGNORE
         $parser.add(/[^\w\x24\/'"*)\?:]\/[^\/\n\r\*][^\/\n\r]*\/g?i?/, $IGNORE);
         // remove: ;;; doSomething();
-        if (_specialChars) $parser.add(/;;;[^\n\r]+[\n\r]/);
+        if (_specialChars)
+            $parser.add(/;;;[^\n\r]+[\n\r]/);
         // remove redundant semi-colons
         $parser.add(/\(;;\)/, $IGNORE); // protect for (;;) loops
         $parser.add(/;+\s*([};])/, "$2");
@@ -81,7 +89,8 @@ function pack(_script, _encoding, _fastDecode, _specialChars) {
         $parser.add(/\s+/, "");
         // done
         return $parser.exec($script);
-    };
+    }
+    ;
 
     function _encodeSpecialChars($script) {
         var $parser = new ParseMaster;
@@ -101,11 +110,13 @@ function pack(_script, _encoding, _fastDecode, _specialChars) {
             return $encoded[$match[$offset]];
         });
         return $parser.exec($script);
-    };
+    }
+    ;
 
     function _encodeKeywords($script) {
         // escape high-ascii values already in the script (i.e. in strings)
-        if (_encoding > 62) $script = _escape95($script);
+        if (_encoding > 62)
+            $script = _escape95($script);
         // create the parser
         var $parser = new ParseMaster;
         var $encode = _getEncoder(_encoding);
@@ -116,11 +127,12 @@ function pack(_script, _encoding, _fastDecode, _specialChars) {
         var $encoded = $keywords.$encoded;
         // encode
         $parser.add($regexp, function($match, $offset) {
-        return $encoded[$match[$offset]];
+            return $encoded[$match[$offset]];
         });
         // if encoded, wrap the script in a decoding function
         return $script && _bootStrap($parser.exec($script), $keywords);
-    };
+    }
+    ;
 
     function _analyze($script, $regexp, $encode) {
         // analyse
@@ -171,12 +183,14 @@ function pack(_script, _encoding, _fastDecode, _specialChars) {
             // because there are "protected" words in the list
             //  we must add the sorted words around them
             do {
-                if ($$sorted[i] == null) $$sorted[i] = $unsorted[j++].slice(1);
+                if ($$sorted[i] == null)
+                    $$sorted[i] = $unsorted[j++].slice(1);
                 $$encoded[$$sorted[i]] = $values[i];
             } while (++i < $unsorted.length);
         }
         return {$sorted: $$sorted, $encoded: $$encoded, $protected: $$protected};
-    };
+    }
+    ;
 
     // build the boot function used for loading and decoding
     function _bootStrap($packed, $keywords) {
@@ -192,7 +206,8 @@ function pack(_script, _encoding, _fastDecode, _specialChars) {
         var $count = $keywords.$sorted.length;
 
         // $keywords: list of words contained in the script
-        for (var i in $keywords.$protected) $keywords.$sorted[i] = "";
+        for (var i in $keywords.$protected)
+            $keywords.$sorted[i] = "";
         // convert from a string to an array
         $keywords = "'" + $keywords.$sorted.join("|") + "'.split('|')";
 
@@ -205,12 +220,15 @@ function pack(_script, _encoding, _fastDecode, _specialChars) {
         if (_fastDecode) {
             // create the decoder
             var $decode = _getFunctionBody(_decode);
-            if (_encoding > 62) $decode = $decode.replace(/\\\\w/g, "[\\xa1-\\xff]");
+            if (_encoding > 62)
+                $decode = $decode.replace(/\\\\w/g, "[\\xa1-\\xff]");
             // perform the encoding inline for lower ascii values
-            else if ($ascii < 36) $decode = $decode.replace($ENCODE, $inline);
+            else if ($ascii < 36)
+                $decode = $decode.replace($ENCODE, $inline);
             // special case: when $count==0 there are no keywords. I want to keep
             //  the basic shape of the unpacking funcion so i'll frig the code...
-            if (!$count) $decode = $decode.replace(_safeRegExp("($count)\\s*=\\s*1"), "$1=0");
+            if (!$count)
+                $decode = $decode.replace(_safeRegExp("($count)\\s*=\\s*1"), "$1=0");
         }
 
         // boot function
@@ -243,12 +261,14 @@ function pack(_script, _encoding, _fastDecode, _specialChars) {
 
         // the whole thing
         return "eval(" + $unpack + "(" + $params + "))\n";
-    };
+    }
+    ;
 
     // mmm.. ..which one do i need ??
     function _getEncoder($ascii) {
         return $ascii > 10 ? $ascii > 36 ? $ascii > 62 ? _encode95 : _encode62 : _encode36 : _encode10;
-    };
+    }
+    ;
 
     // zero encoding
     // characters: 0123456789
@@ -266,13 +286,13 @@ function pack(_script, _encoding, _fastDecode, _specialChars) {
     // characters: 0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ
     var _encode62 = function($charCode) {
         return ($charCode < _encoding ? '' : arguments.callee(parseInt($charCode / _encoding))) +
-            (($charCode = $charCode % _encoding) > 35 ? String.fromCharCode($charCode + 29) : $charCode.toString(36));
+                (($charCode = $charCode % _encoding) > 35 ? String.fromCharCode($charCode + 29) : $charCode.toString(36));
     };
 
     // use high-ascii values
     var _encode95 = function($charCode) {
         return ($charCode < _encoding ? '' : arguments.callee($charCode / _encoding)) +
-            String.fromCharCode($charCode % _encoding + 161);
+                String.fromCharCode($charCode % _encoding + 161);
     };
 
     // special _chars
@@ -283,34 +303,43 @@ function pack(_script, _encoding, _fastDecode, _specialChars) {
     // protect characters used by the parser
     function _escape($script) {
         return $script.replace(/([\\'])/g, "\\$1");
-    };
+    }
+    ;
 
     // protect high-ascii characters already in the script
     function _escape95($script) {
         return $script.replace(/[\xa1-\xff]/g, function($match) {
             return "\\x" + $match.charCodeAt(0).toString(16);
         });
-    };
+    }
+    ;
 
     function _safeRegExp($string, $flags) {
         return new RegExp($string.replace(/\$/g, "\\$"), $flags);
-    };
+    }
+    ;
 
     // extract the body of a function
     function _getFunctionBody($function) {
-        with (String($function)) return slice(indexOf("{") + 1, lastIndexOf("}"));
-    };
+        with (String($function))
+            return slice(indexOf("{") + 1, lastIndexOf("}"));
+    }
+    ;
 
     // set the global flag on a RegExp (you have to create a new one)
     function _globalize($regexp) {
         return new RegExp(String($regexp).slice(1, -1), "g");
-    };
+    }
+    ;
 
     // build the parsing routine
     _addParser(_basicCompression);
-    if (_specialChars) _addParser(_encodeSpecialChars);
-    if (_encoding) _addParser(_encodeKeywords);
+    if (_specialChars)
+        _addParser(_encodeSpecialChars);
+    if (_encoding)
+        _addParser(_encodeKeywords);
 
     // go!
     return _pack(_script);
-};
+}
+;

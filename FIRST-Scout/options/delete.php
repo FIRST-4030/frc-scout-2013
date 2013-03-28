@@ -1,12 +1,13 @@
 <?php
+
 session_start();
 
-if(!isset($_POST['id'])) {
+if (!isset($_POST['id'])) {
     header('location: index.php?error=' . urlencode("YOU CANNOT DO THAT!"));
 }
 $uid = $_POST['id'];
 
-if(!isset($_SESSION['TeamID'])) {
+if (!isset($_SESSION['TeamID'])) {
     header('location: ../index.php?error=' . urlencode("No."));
 }
 

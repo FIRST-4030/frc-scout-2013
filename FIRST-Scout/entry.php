@@ -1,4 +1,5 @@
 <?php
+
 # Config
 require 'includes/constants.php';
 $TABLE = "scout_recording";
@@ -109,7 +110,7 @@ else if (isset($_POST['teleop_can_pickup_frisbees'])) {
     $scoutedTeamNumber = $_SESSION['scouted_team'];
     $db_stmt = "UPDATE " . $TABLE . " SET results_match_outcome=?, results_fouls=?, results_technical_fouls=?, results_comments=?, dead=?";
     $db_vals = array($_POST['results_match_outcome'], $_POST['results_fouls'], $_POST['results_technical_fouls'], $_POST['results_comments'], $dead);
-    $next_page = "/options?error=Entry successful!";
+    $next_page = "../options?error=Entry successful!";
 }
 # Final DB entry should unset MATCH_ID for safety
 # Nothing explictly breaks if you don't, but it avoids potential user error

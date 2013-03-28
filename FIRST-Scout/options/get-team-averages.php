@@ -1,6 +1,7 @@
 <?php
+
 session_start();
-if(!isset($_SESSION['TeamID'])) {
+if (!isset($_SESSION['TeamID'])) {
     header('location: index.php?error=' . urlencode("You must login first!"));
 }
 require '../includes/constants.php';
@@ -12,8 +13,8 @@ AVG((`climb_pyramid_goals` + `teleop_pyramid`) *  5) AS "pyramid_average_points"
 AVG((`climb_level_reached`) * 10) AS "pyramid_average_climb_points"
 FROM  `scout_recording`';
 
-if(!empty($_POST['search'])) {
-    $search = preg_replace('/[^\w ]/', '', $_POST['search']);    
+if (!empty($_POST['search'])) {
+    $search = preg_replace('/[^\w ]/', '', $_POST['search']);
     $query .= " WHERE `scouted_team_number` LIKE '%{$search}%' GROUP BY  `scouted_team_number`";
 } else {
     $query .= " GROUP BY  `scouted_team_number`";
@@ -27,8 +28,7 @@ if (mysqli_connect_errno()) {
 $results = mysqli_query($db, $query);
 
 while ($row = mysqli_fetch_assoc($results)) {
-    $totalAveragePoints = $row['auto_average_points'] + $row['teleop_average_points'] 
-            + $row['pyramid_average_points'] + $row['pyramid_average_climb_points'];
+    $totalAveragePoints = $row['auto_average_points'] + $row['teleop_average_points'] + $row['pyramid_average_points'] + $row['pyramid_average_climb_points'];
     echo '<tr>';
     echo '<td><a href="single-team-review.php?team=' . $row['scouted_team'] . '"><b>' . $row['scouted_team'] . '</b></a></td>';
     echo '<td><b>' . round($totalAveragePoints, 1) . '</b></td>';

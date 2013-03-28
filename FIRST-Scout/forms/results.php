@@ -25,7 +25,7 @@
             <button class="btn plus_minus_buttons" style="height: 50px; width: 100px" onclick="updateFouls(false)">Fouls</button>
             <button class="btn plus_minus_buttons" style="height: 50px; width: 50px" onclick="updateFouls(true)">&mdash;</button>
             <span id="foulsIndicator" class="autonomousIndividual">0</span>
-            
+
             <br />
             <button class="btn plus_minus_buttons" style="height: 50px; width: 100px" onclick="updateTechnicalFouls(false)">Technical Fouls</button>
             <button class="btn plus_minus_buttons" style="height: 50px; width: 50px" onclick="updateTechnicalFouls(true)">&mdash;</button>
@@ -38,49 +38,50 @@
             <br />
         </div>
         <script type="text/javascript">
-                    $(document).ready(function() {
-                        window.scrollTo(0, 1);
-                    });
-                    var fouls = 0;
-                    var loseWinTie = 0;
-                    function updateFouls(negative) {
-                        if (fouls > 0) {
-                            fouls += 1 * negative ? (-1) : (1);
-                        } else if (!negative) {
-                            fouls++;
-                        }
-                        document.getElementById('foulsIndicator').innerHTML = fouls;
+                $(document).ready(function() {
+                    window.scrollTo(0, 1);
+                });
+                var fouls = 0;
+                var loseWinTie = 0;
+                function updateFouls(negative) {
+                    if (fouls > 0) {
+                        fouls += 1 * negative ? (-1) : (1);
+                    } else if (!negative) {
+                        fouls++;
                     }
-                    
-                    var technicalFouls = 0;
-                    function updateTechnicalFouls(negative) {
-                        if (technicalFouls > 0) {
-                            technicalFouls += 1 * negative ? (-1) : (1);
-                        } else if (!negative) {
-                            technicalFouls++;
-                        }
-                        document.getElementById('technicalFoulsIndicator').innerHTML = technicalFouls;
-                    }
+                    document.getElementById('foulsIndicator').innerHTML = fouls;
+                }
 
-                    function update(nVal) {
-                        loseWinTie = nVal;
+                var technicalFouls = 0;
+                function updateTechnicalFouls(negative) {
+                    if (technicalFouls > 0) {
+                        technicalFouls += 1 * negative ? (-1) : (1);
+                    } else if (!negative) {
+                        technicalFouls++;
                     }
-                    
-                    var deadRobot = false;
-                    function updateDead() {
-                        deadRobot = !deadRobot;
-                    }
+                    document.getElementById('technicalFoulsIndicator').innerHTML = technicalFouls;
+                }
 
-                    function sendData() {
-                        var invisibleForm = document.getElementById('sendForm');
-                        invisibleForm.innerHTML += "<input type='text' name='next_page' value='" + "options" + "'</input>";
-                        invisibleForm.innerHTML += "<input type='number' name='results_match_outcome' value='" + loseWinTie + "'</input>";
-                        invisibleForm.innerHTML += "<input type='number' name='results_fouls' value='" + fouls + "'</input>";
-                        invisibleForm.innerHTML += "<input type='number' name='results_technical_fouls' value='" + technicalFouls + "'</input>"; + "'</input>";
-                        invisibleForm.innerHTML += "<input type='text' name='results_dead_robot' value='" + deadRobot + "'></input>";
-                        invisibleForm.innerHTML += "<input type='text' name='results_comments' value='" + $("#comments").val() + "'</input>";
-                        invisibleForm.submit();
-                    }
+                function update(nVal) {
+                    loseWinTie = nVal;
+                }
+
+                var deadRobot = false;
+                function updateDead() {
+                    deadRobot = !deadRobot;
+                }
+
+                function sendData() {
+                    var invisibleForm = document.getElementById('sendForm');
+                    invisibleForm.innerHTML += "<input type='text' name='next_page' value='" + "options" + "'</input>";
+                    invisibleForm.innerHTML += "<input type='number' name='results_match_outcome' value='" + loseWinTie + "'</input>";
+                    invisibleForm.innerHTML += "<input type='number' name='results_fouls' value='" + fouls + "'</input>";
+                    invisibleForm.innerHTML += "<input type='number' name='results_technical_fouls' value='" + technicalFouls + "'</input>";
+                    +"'</input>";
+                    invisibleForm.innerHTML += "<input type='text' name='results_dead_robot' value='" + deadRobot + "'></input>";
+                    invisibleForm.innerHTML += "<input type='text' name='results_comments' value='" + $("#comments").val() + "'</input>";
+                    invisibleForm.submit();
+                }
         </script>
         <form id="sendForm" action="entry.php" class="invisible_form" method="post"></form>
     </body>

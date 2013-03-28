@@ -36,24 +36,24 @@ if (!isset($_SESSION['UserID'])) {
 
         </div>
         <script type="text/javascript">
-            function goToPage(page) {
-                window.location = page;
-            }
-            
-            function goToPageCheck(page) {
-                var response = confirm("Are you sure? Once you begin you cannot go back!");
-                if(response) {
-                    window.location = page;
-                }
-            }
-            
-            $(document).ready(function() {
-                $("#inputError").hide(); 
-                
-                if (document.getElementById('alertError').innerHTML !== "") {
-                    $('#inputError').show();
-                }
-            });
+                    function goToPage(page) {
+                        window.location = page;
+                    }
+
+                    function goToPageCheck(page) {
+                        var response = confirm("Are you sure? Once you begin you cannot go back!");
+                        if (response) {
+                            window.location = page;
+                        }
+                    }
+
+                    $(document).ready(function() {
+                        $("#inputError").hide();
+
+                        if (document.getElementById('alertError').innerHTML !== "") {
+                            $('#inputError').show();
+                        }
+                    });
         </script>
     </body>
 </html>

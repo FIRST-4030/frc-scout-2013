@@ -17,8 +17,8 @@
     </head>
     <body>
         <div class="container">
-            <p class="title">Autonomous: <b><?php echo $scoutedTeamNumber?></b></p>
-            
+            <p class="title">Autonomous: <b><?php echo $scoutedTeamNumber ?></b></p>
+
             <button id="usedKinect" onclick="updateKinect()" class="btn btn-success" data-toggle="button" style="margin-top: 3px; margin-bottom: 8px;">Used Kinect?</button>
             <p><i>Record points for each goal</i></p>
             <button class="btn plus_minus_buttons" style="height: 50px; width: 100px" onclick="update(0, false)">+6</button>
@@ -43,50 +43,50 @@
             <br /><br />
         </div>
         <script type="text/javascript">
-            var autonomousPoints = [0, 0, 0, 0];
-            var usedKinect = false;
+                var autonomousPoints = [0, 0, 0, 0];
+                var usedKinect = false;
 
-            $(document).ready(function() {
-                //get rid of the title bar if it's a mobile device
-                window.scrollTo(0, 1)
-            });
+                $(document).ready(function() {
+                    //get rid of the title bar if it's a mobile device
+                    window.scrollTo(0, 1)
+                });
 
-            function updateKinect() {
-                usedKinect = !usedKinect;
-            }
-
-
-            function update(index, negative) {
-                if (autonomousPoints[index] > 0) {
-                    autonomousPoints[index] += 1 * negative ? (-1) : (1);
-                } else if (!negative) {
-                    autonomousPoints[index]++;
+                function updateKinect() {
+                    usedKinect = !usedKinect;
                 }
-                updateIndividualTotals();
-                updateTotals();
-            }
 
-            function updateIndividualTotals() {
-                document.getElementById('autoSixPoint').innerHTML = autonomousPoints[0];
-                document.getElementById('autoFourPoint').innerHTML = autonomousPoints[1];
-                document.getElementById('autoTwoPoint').innerHTML = autonomousPoints[2];
-                document.getElementById('autoMissedPoints').innerHTML = autonomousPoints[3];
-            }
 
-            function updateTotals() {
-                document.getElementById('totalPoints').innerHTML = (autonomousPoints[0] * 6) + (autonomousPoints[1] * 4) + (autonomousPoints[2] * 2);
-            }
+                function update(index, negative) {
+                    if (autonomousPoints[index] > 0) {
+                        autonomousPoints[index] += 1 * negative ? (-1) : (1);
+                    } else if (!negative) {
+                        autonomousPoints[index]++;
+                    }
+                    updateIndividualTotals();
+                    updateTotals();
+                }
 
-            function sendData() {
-                var invisibleForm = document.getElementById('sendForm');
-                invisibleForm.innerHTML += "<input type='text' name='next_page' value='" + "forms/teleop.php" + "'</input>";
-                invisibleForm.innerHTML += "<input type='text' name='autonomous_top_goals' value='" + autonomousPoints[0] + "'</input>";
-                invisibleForm.innerHTML += "<input type='text' name='autonomous_middle_goals' value='" + autonomousPoints[1] + "'</input>";
-                invisibleForm.innerHTML += "<input type='text' name='autonomous_bottom_goals' value='" + autonomousPoints[2] + "'</input>";
-                invisibleForm.innerHTML += "<input type='text' name='autonomous_missed_goals' value='" + autonomousPoints[3] + "'</input>";
-                invisibleForm.innerHTML += "<input type='text' name='autonomous_used_kinect' value='" + usedKinect + "'</input>";
-                invisibleForm.submit();
-            }
+                function updateIndividualTotals() {
+                    document.getElementById('autoSixPoint').innerHTML = autonomousPoints[0];
+                    document.getElementById('autoFourPoint').innerHTML = autonomousPoints[1];
+                    document.getElementById('autoTwoPoint').innerHTML = autonomousPoints[2];
+                    document.getElementById('autoMissedPoints').innerHTML = autonomousPoints[3];
+                }
+
+                function updateTotals() {
+                    document.getElementById('totalPoints').innerHTML = (autonomousPoints[0] * 6) + (autonomousPoints[1] * 4) + (autonomousPoints[2] * 2);
+                }
+
+                function sendData() {
+                    var invisibleForm = document.getElementById('sendForm');
+                    invisibleForm.innerHTML += "<input type='text' name='next_page' value='" + "forms/teleop.php" + "'</input>";
+                    invisibleForm.innerHTML += "<input type='text' name='autonomous_top_goals' value='" + autonomousPoints[0] + "'</input>";
+                    invisibleForm.innerHTML += "<input type='text' name='autonomous_middle_goals' value='" + autonomousPoints[1] + "'</input>";
+                    invisibleForm.innerHTML += "<input type='text' name='autonomous_bottom_goals' value='" + autonomousPoints[2] + "'</input>";
+                    invisibleForm.innerHTML += "<input type='text' name='autonomous_missed_goals' value='" + autonomousPoints[3] + "'</input>";
+                    invisibleForm.innerHTML += "<input type='text' name='autonomous_used_kinect' value='" + usedKinect + "'</input>";
+                    invisibleForm.submit();
+                }
         </script>
         <form id="sendForm" action="entry.php" class="invisible_form" method="post"></form>
     </body>

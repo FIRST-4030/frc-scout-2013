@@ -1,7 +1,8 @@
 <?
+
 session_start();
 
-if(!isset($_SESSION['TeamID'])) {
+if (!isset($_SESSION['TeamID'])) {
     header('location: index.php?error=' . urlencode("You must login first!"));
 }
 require '../includes/constants.php';
@@ -47,7 +48,7 @@ while ($row = mysqli_fetch_assoc($result)) {
     $teleopAccuracy = $teleopGoals / ($teleopGoals + $row['teleop_miss']) * 100;
 
     echo '<tr>';
-    if($onlyTeam) {
+    if ($onlyTeam) {
         echo "<td><a onfocus='this.innerHTML = &timesb;' onblur='this.innerHTML=&times;' onclick='deleteTeam($matchID)' style='font-size:24px'>&times;</a>";
     }
     echo '<td><a href=single-match-review.php?redir&match=' . $row['uid'] . ">" . $row['scouted_team_number'] . '</a></td>';
