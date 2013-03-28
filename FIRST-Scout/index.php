@@ -32,7 +32,7 @@ if (isset($_SESSION['UserID'])) {
             <br>
             <p class="title" style="margin-bottom: 20px;">FIRST Scout <b>beta</b>: Login</p>
             <div class="alert alert-warning" id="inputError">
-                <button type="button" class="close" onclick="$('.alert').hide()">&times;</button>
+                <button type="button" class="close" onclick="$('.alert').hide();">&times;</button>
                 <strong id='alertError'><?php if (isset($_GET['error'])) echo stripcslashes($_GET['error']); ?></strong>
             </div>
             <input type="text" name="team_id" value="Team ID" onblur="if (this.value === '')
@@ -44,23 +44,23 @@ if (isset($_SESSION['UserID'])) {
             <input type="password" name="team_password" value="akjsdfha3323rs" onblur="if (this.value === '')
                     this.value = 'akjsdfha3323rs';" onfocus="if (this.value === 'akjsdfha3323rs')
                     this.value = '';" id="teamPassword" /><br><br>
-            <button class="btn" type="submit" style="height: 30px; width: 220px" onclick="sendData()" id='SubmitButton'>Log In</button><p style="margin-top: 5px; margin-bottom: 5px; font-weight: bold">or</p>
-            <button class="btn btn-success" style="height: 30px; width: 220px" onclick="window.location = 'create.php'">Create an account</button><br /><br />
-            <p style="color: #be3b3b">Comments, questions, concerns, bugs? Talk to Sam in team 4030's pit (at the Seattle regional) or <a href="#" onclick="reportError()" style="">click here</a>.</p>
+            <button class="btn" type="submit" style="height: 30px; width: 220px" onclick="sendData();" id='SubmitButton'>Log In</button><p style="margin-top: 5px; margin-bottom: 5px; font-weight: bold">or</p>
+            <button class="btn btn-success" style="height: 30px; width: 220px" onclick="window.location = 'create.php';">Create an account</button><br /><br />
+            <p style="color: #be3b3b">Comments, questions, concerns, bugs? Talk to Sam in team 4030's pit (at the Seattle regional) or <a href="#" onclick="reportError();" style="">click here</a>.</p>
             <div id="reportError">
                 <textarea id="error_submit" placeholder="Enter any information." style="width: 190px; height: 100px"></textarea>
                 <br />
-                <button class="btn btn-success" onclick="submitFeedback()">Submit</button>
+                <button class="btn btn-success" onclick="submitFeedback();">Submit</button>
                 <br /><br />
             </div>
-            <a href="#" onclick="pwdreset()">Forgot your password?</a>
+            <a href="#" onclick="pwdreset();">Forgot your password?</a>
             <div id="resetPane">
                 Name: <input type="text" id="name" /><br />
                 Email: <input type="email" id="email" /><br />
                 Team ID: <input type="text" id="team_id" /><br />
                 Team Number: <input type="number" id="team_number" /><br />
                 New Password: <input type="password" id="new_password" /><br />
-                <button id="resetSubmit" onclick="resetPass()" class="btn">Submit</button>
+                <button id="resetSubmit" onclick="resetPass();" class="btn">Submit</button>
             </div>
             <br /><br />
         </div>
@@ -112,11 +112,11 @@ if (isset($_SESSION['UserID'])) {
                 }
 
                 xmlHttp.onreadystatechange = function() {
-                    if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+                    if (xmlHttp.readyState === 4 && xmlHttp.status === 200) {
                         alert(xmlHttp.responseText);
                         $("#resetPane").hide();
                     }
-                }
+                };
 
                 var sendData = "email=" + $("#email").val() + "&team_number=" + $("#team_number").val() + "&name=" + $("#name").val() + "&new_password=" + $("#new_password").val() + "&team_id=" + $("#team_id").val();
                 xmlHttp.open("POST", "includes/passwordreset.php", true);
@@ -138,14 +138,14 @@ if (isset($_SESSION['UserID'])) {
                 }
 
                 xmlHttp.onreadystatechange = function() {
-                    if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+                    if (xmlHttp.readyState === 4 && xmlHttp.status === 200) {
                         $('#alertError').html(xmlHttp.responseText);
                         $('#inputError').show();
                         if (xmlHttp.responseText === "Submitted successfully!") {
                             $("#reportError").hide();
                         }
                     }
-                }
+                };
 
                 var sendData = "error=" + encodeURI($("#error_submit").val());
                 xmlHttp.open("POST", "includes/reporterror.php", true);
