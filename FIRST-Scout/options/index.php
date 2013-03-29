@@ -61,7 +61,7 @@ if (!isset($_SESSION['UserID'])) {
                     $('#inputError').show();
                     $("#alertError").html($("#alertError").html() + "<br>");
                 }
-                $("#alertError").html($("#alertError").html() + "Warning: all fake match data from Seattle will be deleted the morning of March 29th, before the actual matches start!");
+                $("#alertError").html($("#alertError").html() + "Please <b>do not</b> enter fake match data at this point, it will interfere with the real data!");
                 //$("#inputError").hide();
                 $("#reportError").hide();
             });

@@ -33,7 +33,7 @@ if (!isset($_SESSION['TeamID'])) {
             AVG((`climb_level_reached`) * 10) AS "pyramid_average_climb_points",
             COUNT(`scouted_team_number`) AS "matches_scouted"
             FROM  `scout_recording`
-            WHERE `scouted_team_number`=' . $teamNumber;
+            WHERE `scouted_team_number`=' . $teamNumber . ' AND `results_match_outcome` != 3';
 
             $db = mysqli_connect("localhost", DB_USER, DB_PASSWD, "stevenz9_robotics_scout");
             if (mysqli_connect_errno()) {

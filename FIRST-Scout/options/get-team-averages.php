@@ -33,7 +33,7 @@ try {
 	AVG((`climb_pyramid_goals` + `teleop_pyramid`) *  5) AS "pyramid_average_points",
 	AVG((`climb_level_reached`) * 10) AS "pyramid_average_climb_points",
         COUNT(`scouted_team_number`) AS "matches_scouted"
-	FROM  `scout_recording`';
+	FROM  `scout_recording` WHERE `results_match_outcome` != 3';
 	
 	if (strlen($query)) {
 		$sql .= ' WHERE ' . $query;

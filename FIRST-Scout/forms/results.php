@@ -31,7 +31,7 @@
             <button class="btn plus_minus_buttons" style="height: 50px; width: 50px" onclick="updateTechnicalFouls(true);">&mdash;</button>
             <span id="technicalFoulsIndicator" class="autonomousIndividual">0</span>
 
-            <p class="small_title">Comments:</p>
+            <p class="small_title">Comments (do not use single or double quotes):</p>
             <textarea id="comments" rows="5"></textarea>
             <br />
             <button class="btn btn-large" style="margin-bottom: 10px" onclick="sendData();

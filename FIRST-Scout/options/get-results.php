@@ -135,6 +135,9 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
         case 2:
             $matchOutcome = "Tie";
             break;
+        case 3:
+            $matchOutcome = "Incomplete";
+            break;
     }
 
     echo '<td>' . $matchOutcome . '</td>';

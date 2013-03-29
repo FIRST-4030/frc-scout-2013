@@ -114,6 +114,9 @@
                         case 2:
                             $matchOutcome = "Tie";
                             break;
+                        case 3:
+                            $matchOutcome = "Incomplete";
+                            break;
                     }
                     echo '<tr><td>Outcome</td><td>' . $matchOutcome . '</td></tr>';
                     echo '<tr><td>Fouls</td><td>' . $matchInfo['results_fouls'] . '</td></tr>';
