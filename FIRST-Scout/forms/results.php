@@ -78,7 +78,6 @@
                     invisibleForm.innerHTML += "<input type='number' name='results_match_outcome' value='" + loseWinTie + "'</input>";
                     invisibleForm.innerHTML += "<input type='number' name='results_fouls' value='" + fouls + "'</input>";
                     invisibleForm.innerHTML += "<input type='number' name='results_technical_fouls' value='" + technicalFouls + "'</input>";
-                    +"'</input>";
                     invisibleForm.innerHTML += "<input type='text' name='results_dead_robot' value='" + deadRobot + "'></input>";
                     invisibleForm.innerHTML += "<input type='text' name='results_comments' value='" + $("#comments").val() + "'</input>";
                     invisibleForm.submit();

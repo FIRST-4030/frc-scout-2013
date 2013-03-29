@@ -46,11 +46,11 @@ if (isset($_SESSION['UserID'])) {
                     this.value = '';" id="teamPassword" /><br><br>
             <button class="btn" type="submit" style="height: 30px; width: 220px" onclick="sendData();" id='SubmitButton'>Log In</button><p style="margin-top: 5px; margin-bottom: 5px; font-weight: bold">or</p>
             <button class="btn btn-success" style="height: 30px; width: 220px" onclick="window.location = 'create.php';">Create an account</button><br /><br />
-            <p style="color: #be3b3b">Comments, questions, concerns, bugs? Talk to Sam in team 4030's pit (at the Seattle regional) or <a href="#" onclick="reportError();" style="">click here</a>.</p>
+            <p style="color: #be3b3b">Comments, questions, concerns, bugs? Talk to Sam in team 4030's pit (at the Seattle regional) or <a href="#" onclick="reportError();" style=""><span style="color: #be3b3b">click here</span></a>.</p>
             <div id="reportError">
                 <textarea id="error_submit" placeholder="Enter any information." style="width: 190px; height: 100px"></textarea>
                 <br />
-                <button class="btn btn-success" onclick="submitFeedback();">Submit</button>
+                <button class="btn btn-success" id="submit_feedback" onclick="submitFeedback();" data-loading-text="Submitting...">Submit</button>
                 <br /><br />
             </div>
             <a href="#" onclick="pwdreset();">Forgot your password?</a>
@@ -133,6 +133,7 @@ if (isset($_SESSION['UserID'])) {
             }
 
             function submitFeedback() {
+                $("#submit_feedback").button('loading');
                 if (window.XMLHttpRequest) {
                     xmlHttp = new XMLHttpRequest();
                 }
@@ -141,8 +142,10 @@ if (isset($_SESSION['UserID'])) {
                     if (xmlHttp.readyState === 4 && xmlHttp.status === 200) {
                         $('#alertError').html(xmlHttp.responseText);
                         $('#inputError').show();
+                        $("#submit_feedback").button('reset');
                         if (xmlHttp.responseText === "Submitted successfully!") {
                             $("#reportError").hide();
+                            $("#errorSubmit").html("");
                         }
                     }
                 };
@@ -151,7 +154,7 @@ if (isset($_SESSION['UserID'])) {
                 xmlHttp.open("POST", "includes/reporterror.php", true);
                 xmlHttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
                 xmlHttp.send(sendData);
-            }
+            }    
         </script>
         <form id="sendForm" action="/login.php" class="invisible_form" method="post"></form>
     </body>

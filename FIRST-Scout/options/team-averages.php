@@ -32,6 +32,7 @@ and open the template in the editor.
                 <thead>
                     <tr>
                         <th>Team Number</th>
+                        <th>Matches Scouted</th>
                         <th>Total Points</th>
                         <th>Autonomous Points</th>
                         <th>Teleoperated Points</th>

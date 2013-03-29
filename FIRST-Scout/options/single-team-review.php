@@ -30,10 +30,10 @@ if (!isset($_SESSION['TeamID'])) {
             AVG((`teleop_top` * 3.0) +  (`teleop_middle` * 2.0) +  (`teleop_bottom`)) AS "teleop_average_points",
             AVG(100.00 * (`teleop_top` +  `teleop_middle` +  `teleop_bottom`) / (`teleop_top` +  `teleop_middle` + `teleop_bottom` + `teleop_miss`)) AS "teleop_accuracy",
             AVG((`climb_pyramid_goals` + `teleop_pyramid`) *  5) AS "pyramid_average_points",
-            AVG((`climb_level_reached`) * 10) AS "pyramid_average_climb_points"
+            AVG((`climb_level_reached`) * 10) AS "pyramid_average_climb_points",
+            COUNT(`scouted_team_number`) AS "matches_scouted"
             FROM  `scout_recording`
             WHERE `scouted_team_number`=' . $teamNumber;
-
 
             $db = mysqli_connect("localhost", DB_USER, DB_PASSWD, "stevenz9_robotics_scout");
             if (mysqli_connect_errno()) {
@@ -42,6 +42,8 @@ if (!isset($_SESSION['TeamID'])) {
 
             $getResults = mysqli_query($db, $query);
             $results = mysqli_fetch_assoc($getResults);
+
+            $totalAveragePoints = $results['auto_average_points'] + $results['teleop_average_points'] + $results['pyramid_average_points'] + $results['pyramid_average_climb_points'];
             ?>
             <br />
             <table class="table table-hover" style="text-align: left">
@@ -49,6 +51,8 @@ if (!isset($_SESSION['TeamID'])) {
                 <thead>
                 <tbody>
                     <?
+                    echo '<tr><td>Matches Scouted</td><td>' . $results['matches_scouted'] . '</td></tr>';
+                    echo '<tr><td>Total Average Points</td><td>' . round($totalAveragePoints, 1) . '</td></tr>';
                     echo "<tr><td>Autonomous Average Points</td><td>" . round($results['auto_average_points'], 1) . "</td></tr>";
                     echo "<tr><td>Autonomous Average Accuracy</td><td>" . round($results['auto_accuracy'], 1) . "%</td></tr>";
                     echo "<tr><td>Teleop Average Points</td><td>" . round($results['teleop_average_points'], 1) . "</td></tr>";
