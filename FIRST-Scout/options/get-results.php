@@ -67,7 +67,7 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
     }
     echo '<td><a href=single-match-review.php?redir&match=' . $row['uid'] . ">" . $row['scouted_team_number'] . '</a></td>';
     echo '<td>' . substr($row['ts'], 0, 10) . '</td>';
-    if ($onlyTeam)
+    //if ($onlyTeam)
         echo '<td>' . $row['user_id'] . '</td>';
     echo '<td>' . $row['scouting_team_number'] . '</td>';
     $present = $row['present'] == 1 ? "Yes" : "No";
@@ -143,7 +143,7 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
     echo '<td>' . $matchOutcome . '</td>';
     echo '<td>' . $row['results_fouls'] . '</td>';
     echo '<td>' . $row['results_technical_fouls'] . '</td>';
-    echo '<td>' . $row['results_comments'] . '</td>';
+    echo '<td>' . stripslashes($row['results_comments']) . '</td>';
     echo '</tr>';
 }
 ?>

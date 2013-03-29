@@ -31,7 +31,7 @@
             <button class="btn plus_minus_buttons" style="height: 50px; width: 50px" onclick="updateTechnicalFouls(true);">&mdash;</button>
             <span id="technicalFoulsIndicator" class="autonomousIndividual">0</span>
 
-            <p class="small_title">Comments (do not use single or double quotes):</p>
+            <p class="small_title">Comments:</p>
             <textarea id="comments" rows="5"></textarea>
             <br />
             <button class="btn btn-large" style="margin-bottom: 10px" onclick="sendData();
@@ -79,7 +79,7 @@
                     invisibleForm.innerHTML += "<input type='number' name='results_fouls' value='" + fouls + "'</input>";
                     invisibleForm.innerHTML += "<input type='number' name='results_technical_fouls' value='" + technicalFouls + "'</input>";
                     invisibleForm.innerHTML += "<input type='text' name='results_dead_robot' value='" + deadRobot + "'></input>";
-                    invisibleForm.innerHTML += "<input type='text' name='results_comments' value='" + $("#comments").val() + "'</input>";
+                    invisibleForm.innerHTML += "<textarea name='results_comments'>" + $("#comments").val() + "</textarea>";
                     invisibleForm.submit();
                 }
         </script>

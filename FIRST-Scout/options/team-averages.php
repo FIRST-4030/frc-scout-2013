@@ -57,6 +57,7 @@ and open the template in the editor.
                     }
 
                     xmlHttp.onreadystatechange = function() {
+                        $("#tableBody").html("Loading...");
                         if (xmlHttp.readyState === 4 && xmlHttp.status === 200) {
                             $("#tableBody").html(xmlHttp.responseText);
                             $("#resultsTable").trigger("update");

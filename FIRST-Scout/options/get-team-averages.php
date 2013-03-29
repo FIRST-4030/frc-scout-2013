@@ -36,7 +36,7 @@ try {
 	FROM  `scout_recording` WHERE `results_match_outcome` != 3';
 	
 	if (strlen($query)) {
-		$sql .= ' WHERE ' . $query;
+		$sql .= ' AND ' . $query;
 	}
 	
 	$sql .= ' GROUP BY `scouted_team_number`';

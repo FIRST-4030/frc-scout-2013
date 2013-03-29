@@ -32,7 +32,7 @@ $teamNumber = $_SESSION['TeamNumber'];
                         <th id="delete">Delete</th>
                         <th>Team</th>
                         <th>Date</th>
-                        <th id="scoutName">Scout name</th>
+                        <th>Scout name</th>
                         <th>Scouted by team</th>
                         <th>Present</th>
                         <th>Dead Robot</th>
@@ -67,8 +67,8 @@ $teamNumber = $_SESSION['TeamNumber'];
         </div>
         <script type="text/javascript">
                 $(document).ready(function() {
-                    updateTeams(false, "");
                     $("#resultTable").tablesorter();
+                    updateTeams(false, "");
                 });
 
                 function updateTeams(onlyTeam, search) {
@@ -77,11 +77,11 @@ $teamNumber = $_SESSION['TeamNumber'];
                     if (onlyTeam) {
                         document.getElementById('title').innerHTML = "Results collected by team <? echo $teamNumber ?>";
                         $("#delete").show();
-                        $("#scoutName").show();
+                        //$("#scoutName").show();
                     } else {
                         document.getElementById('title').innerHTML = "Results collected by all teams";
                         $("#delete").hide();
-                        $("#scoutName").hide();
+                        //$("#scoutName").hide();
                     }
 
                     if (window.XMLHttpRequest) {

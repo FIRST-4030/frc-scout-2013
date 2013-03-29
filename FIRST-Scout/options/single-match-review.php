@@ -121,7 +121,7 @@
                     echo '<tr><td>Outcome</td><td>' . $matchOutcome . '</td></tr>';
                     echo '<tr><td>Fouls</td><td>' . $matchInfo['results_fouls'] . '</td></tr>';
                     echo '<tr><td>Technical Fouls</td><td>' . $matchInfo['results_technical_fouls'] . '</td></tr>';
-                    echo '<tr><td>Comments</td><td>' . $matchInfo['results_comments'] . '</td></tr>';
+                    echo '<tr><td>Comments</td><td>' . stripslashes($matchInfo['results_comments']) . '</td></tr>';
                     ?>
                 </tbody>
             </table>
