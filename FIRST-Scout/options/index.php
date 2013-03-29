@@ -7,6 +7,14 @@ if (!isset($_SESSION['UserID'])) {
 ?>
 <!DOCTYPE html>
 <html>
+    <style type="text/css">
+        .container {
+            /* blue */
+            background-color:#5261ff;
+            /* red */
+            background-color:#ff3838;
+        }
+    </style>
     <head>
         <title>FIRST Scout: Home</title> 
         <!-- These work! -->

@@ -91,6 +91,7 @@ $teamNumber = $_SESSION['TeamNumber'];
                     xmlHttp.onreadystatechange = function() {
                         if (xmlHttp.readyState === 4 && xmlHttp.status === 200) {
                             tableBody.innerHTML = xmlHttp.responseText;
+                            $("#resultTable").tablesorter();
                             $("#resultTable").trigger("update");
                         }
                     };

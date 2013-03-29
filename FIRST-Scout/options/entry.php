@@ -12,6 +12,7 @@ if (!isset($_SESSION['TeamNumber'])) {
     exit(0);
 }
 
+
 # Sanitize all incoming data (allow only a-z A-Z 0-9, underscore and space in all fields)
 foreach ($_POST as $key) {
     $_POST[$key] = preg_replace('/[^\w ]/', '', $_POST[$key]);
@@ -39,6 +40,7 @@ if (isset($_POST['prematch_team_number'])) {
     $present = ($_POST['prematch_team_present'] == "true" ? 1 : 0);
     $dead = ($_POST['prematch_dead_robot'] == "true" ? 1 : 0);
     $alliance = ($_POST['prematch_red_alliance'] == "true" ? 'RED' : 'BLUE');
+    setcookie("alliance", $alliance);
     $teamID = $_SESSION['TeamID'];
     # Save the data
     try {
@@ -143,6 +145,10 @@ if (isset($_POST['results_fouls'])) {
 
 # Display the next page
 require 'forms/' . $next_page;
+
+
+
+
 
 # Cleanup
 $db = null;
