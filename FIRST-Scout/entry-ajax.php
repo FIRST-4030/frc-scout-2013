@@ -8,20 +8,45 @@ session_start();
         <? include 'includes/form-headers.html'; ?>
     </head>
     <body>
-        <button class="btn" onclick="load()">load</button>
         <div class="container">
-            <div id="holder"></div>
+            <div class="alert alert-warning" id="inputError">
+                <button type="button" class="close" onclick="$('.alert').hide();">&times;</button>
+                <strong id='alertError'><?php if (isset($_GET['error'])) echo stripcslashes($_GET['error']); ?></strong>
+            </div>
+            <div id="container"></div>
         </div>
-
         <script type="text/javascript">
-            $(document).ready(function() {
-                $("#holder").load("ajax-forms/prematch.php");
+                    $(document).ready(function() {
+                        $("#container").load("ajax-forms/prematch.php");
+                        $("#inputError").hide();
+                    });
 
-            });
+                    function setTeamColor() {
+                        $color;
+                    }
 
-            function load() {
-                $("#holder").load("ajax-forms/teleop.php");
-            }
+                    function nextPage(page) {
+                        $("#container").load("ajax-forms/" + page);
+                    }
+
+                    function processResponse(response, textStatus) {
+                        console.log(response);
+                        var responseData = JSON.parse(response);
+                        console.log("hooray, it worked!");
+                        console.log("response: " + responseData.nextPage);
+                        if (responseData.length > 1) {
+                            var errorString = "The following errors were encountered:<br />";
+                            for (var i = 0; i < responseData.length - 1; i++) {
+                                errorString += responseData[i] + "<br />";
+                            }
+                            $("#alertError").html(errorString);
+                            $("#inputError").show();
+                            console.log("errors occured: " + responseData);
+
+                        } else {
+                            //nextPage(responseData.nextPage);
+                        }
+                    }
         </script>
     </body>
 </html>
