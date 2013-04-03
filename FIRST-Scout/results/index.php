@@ -1,0 +1,1 @@
+<?php header('location: ../options/team-averages.php') ?>
