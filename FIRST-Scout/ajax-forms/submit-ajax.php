@@ -115,9 +115,9 @@ teleop_bottom=?, teleop_miss=?, teleop_blocked=?, teleop_pyramid=?, teleop_shoot
     } else if (isset($_POST['results_match_outcome'])) {
         $dead = ($_POST['results_dead_robot'] == "true" ? 1 : 0);
         $scoutedTeamNumber = $_SESSION['scouted_team'];
-        $db_stmt = "UPDATE " . $TABLE . " SET results_match_outcome=?, results_fouls=?, results_technical_fouls=?, results_comments=?, dead=?";
-        $db_vals = array($_POST['results_match_outcome'], $_POST['results_fouls'], $_POST['results_technical_fouls'], $_POST['results_comments'], $dead);
-        $next_page = "../options?error=Entry successful!";
+        $db_stmt = "UPDATE " . $TABLE . " SET results_match_outcome=?, results_technical_fouls=?, results_comments=?, dead=?";
+        $db_vals = array($_POST['results_match_outcome'], $_POST['results_technical_fouls'], $_POST['results_comments'], $dead);
+        $next_page = "../options/single-match-review.php";
     }
 # Final DB entry should unset MATCH_ID for safety
 # Nothing explictly breaks if you don't, but it avoids potential user error

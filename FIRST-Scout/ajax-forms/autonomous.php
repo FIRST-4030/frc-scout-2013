@@ -1,6 +1,3 @@
-<!-- done -->
-<p class="title">Autonomous: <b><?php echo $scoutedTeamNumber ?></b></p>
-
 <p><i>Record points for each goal</i></p>
 <button class="btn plus_minus_buttons" style="height: 50px; width: 100px" onclick="update(0, false);">+6</button>
 <button class="btn plus_minus_buttons" style="height: 50px; width: 50px" onclick="update(0, true);">&mdash;</button>
@@ -24,6 +21,10 @@
 <br /><br />
 </div>
 <script type="text/javascript">
+    
+    function prepare() {
+        $("#pageHeader").text("Autonomous");
+    }
     var autonomousPoints = [0, 0, 0, 0];
     var usedKinect = false;
 

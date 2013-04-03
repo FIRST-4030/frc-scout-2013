@@ -241,7 +241,7 @@
     }
 
     $.fn.button.defaults = {
-        loadingText: 'loading...'
+        loadingText: 'Loading...'
     }
 
     $.fn.button.Constructor = Button

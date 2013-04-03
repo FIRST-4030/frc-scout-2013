@@ -1,21 +1,16 @@
-<p class="title">Climb and Disk Goals:
-    <b>
-        <?php echo $scoutedTeamNumber ?>
-    </b>
-</p>
 <p class="small_title">
     <i>Record attempts and disks dropped:</i>
 </p>
 <button class="btn plus_minus_buttons" style="height: 50px; width: 100px"
-onclick="update(0, false);">Attempts</button>
+        onclick="update(0, false);">Attempts</button>
 <button class="btn plus_minus_buttons" style="height: 50px; width: 50px"
-onclick="update(0, true);">&mdash;</button>
+        onclick="update(0, true);">&mdash;</button>
 <span id="attempts" class="autonomousIndividual">0</span>
 <br />
 <button class="btn plus_minus_buttons" style="height: 50px; width: 100px"
-onclick="update(1, false);">Pyramid Goals</button>
+        onclick="update(1, false);">Pyramid Goals</button>
 <button class="btn plus_minus_buttons" style="height: 50px; width: 50px"
-onclick="update(1, true);">&mdash;</button>
+        onclick="update(1, true);">&mdash;</button>
 <span id="disksDropped" class="autonomousIndividual">0</span>
 <br />
 <p class="small_title">Level Reached</p>
@@ -34,12 +29,16 @@ onclick="update(1, true);">&mdash;</button>
 </div>
 <br />
 <br />
-<button style="margin-top: 10px" class=" btn btn-large" onclick="sendData();">Continue to final comments &rarr;</button>
+<button style="margin-top: 10px" id="NextPageButton" class=" btn btn-large" onclick="sendData();">Continue to final comments &rarr;</button>
 <br/>
 <br />
 </div>
 <script type="text/javascript">
     var climbing = [0, 0];
+
+    function prepare() {
+        $("#pageHeader").text("Climb and Disk Goals");
+    }
 
     function update(index, negative) {
         if (climbing[index] > 0) {
@@ -60,27 +59,32 @@ onclick="update(1, true);">&mdash;</button>
     function sendData() {
         var climbStyle = 0;
         switch ($(".climbStyle .active").text()) {
-        case "n/a":
-            climbStyle = 0;
-            break;
-        case "Corner":
-            climbStyle = 1;
-            break;
-        case "Inside":
-            climbStyle = 2;
-            break;
-        case "Face":
-            climbStyle = 3;
-            break;
+            case "n/a":
+                climbStyle = 0;
+                break;
+            case "Corner":
+                climbStyle = 1;
+                break;
+            case "Inside":
+                climbStyle = 2;
+                break;
+            case "Face":
+                climbStyle = 3;
+                break;
         }
-        var invisibleForm = document.getElementById('sendForm');
-        invisibleForm.innerHTML += "<input type='text' name='next_page' value='" + "forms/results.php" + "'</input>";
-        invisibleForm.innerHTML += "<input type='number' name='climb_attempts' value='" + climbing[0] + "'</input>";
-        invisibleForm.innerHTML += "<input type='number' name='climb_pyramid_goals' value='" + climbing[1] + "'</input>";
-        invisibleForm.innerHTML += "<input type='number' name='climb_level_reached' value='" + $(".levelReached .active").text() + "'</input>";
-        invisibleForm.innerHTML += "<input type='number' name='climb_climb_style' value='" + climbStyle + "'</input>";
-        invisibleForm.submit();
+        $("#NextPageButton").button("loading");
+        $.ajax({
+            url: 'ajax-forms/submit-ajax.php',
+            type: "POST",
+            data: {'climb_attempts': climbing[0],
+                'climb_pyramid_goals': climbing[1],
+                'climb_level_reached': $(".levelReached .active").text(),
+                'climb_climb_style': climbStyle},
+            success: function(response, textStatus, jqXHR) {
+                processResponse(response, textStatus);
+            }
+        });
     }
 </script>
 <form id="sendForm" action="entry.php" class="invisible_form"
-method="post"></form>
+      method="post"></form>

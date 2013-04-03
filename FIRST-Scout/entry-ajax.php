@@ -21,47 +21,43 @@ if (!isset($_SESSION['UserID'])) {
             <div id="container"></div>
         </div>
         <script type="text/javascript">
-            console.log(location);
-            $(document).ready(function() {
-                $("#inputError").hide();
-                $("#container").load("ajax-forms/prematch.php", function() {
-                    prepare();
-                });
-            });
+                    $(document).ready(function() {
+                        $("#inputError").hide();
+                        nextPage("prematch.php");
+                    });
 
-            function nextPage(page) {
-                $("#container").load("ajax-forms/" + page, function() {
-                    prepare();
-                });
-            }
-
-            function processResponse(response, textStatus) {
-                console.log(response);
-                var responseData = JSON.parse(response);
-                console.log("hooray, it worked!");
-                console.log("response: " + responseData.nextPage);
-                $("#NextPageButton").button("reset");
-                if (responseData.length > 1) {
-                    var errorString = "The following errors were encountered:<br />";
-                    for (var i = 0; i < responseData.length - 1; i++) {
-                        errorString += responseData[i] + "<br />";
+                    function nextPage(page) {
+                        $("#container").load("ajax-forms/" + page, function() {
+                            prepare();
+                        });
                     }
-                    $("#alertError").html(errorString);
-                    $("#inputError").show();
-                    console.log("errors occured: " + responseData);
-                } else {
-                    //nextPage(responseData.nextPage);
-                    prepare();
-                }
-            }
-                    
-            $(window).bind('beforeunload', function(){
-                return 'You have unsaved data on this page. I would recommend against leaving yet.';
-            });
 
-            $(window).unload(function(){
-                alert('Bye.');
-            });
+                    function processResponse(response, textStatus) {
+                        console.log(response);
+                        var responseData = JSON.parse(response);
+                        console.log("hooray, it worked!");
+                        $("#NextPageButton").button("reset");
+                        if (responseData.length > 1) {
+                            var errorString = "The following errors were encountered:<br />";
+                            for (var i = 0; i < responseData.length - 1; i++) {
+                                errorString += responseData[i] + "<br />";
+                            }
+                            $("#alertError").html(errorString);
+                            $("#inputError").show();
+                            console.log("errors occured: " + responseData);
+                        } else {
+                            console.log("Next page: " + responseData[0]);
+                            if (responseData[0] === "finished") {
+                                nextPage("../options/single-match-review.php");
+                            } else {
+                                nextPage(responseData[0]);
+                            }
+                        }
+                    }
+
+                    $(window).bind('beforeunload', function() {
+                        return 'You have unsaved data on this page. I would recommend against leaving yet.';
+                    });
 
         </script>
     </body>
