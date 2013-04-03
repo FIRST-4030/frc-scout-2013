@@ -54,12 +54,16 @@
     }
 
     function sendData() {
-        var invisibleForm = document.getElementById('sendForm');
-        invisibleForm.innerHTML += "<input type='text' name='next_page' value='" + "forms/teleop.php" + "'</input>";
-        invisibleForm.innerHTML += "<input type='text' name='autonomous_top_goals' value='" + autonomousPoints[0] + "'</input>";
-        invisibleForm.innerHTML += "<input type='text' name='autonomous_middle_goals' value='" + autonomousPoints[1] + "'</input>";
-        invisibleForm.innerHTML += "<input type='text' name='autonomous_bottom_goals' value='" + autonomousPoints[2] + "'</input>";
-        invisibleForm.innerHTML += "<input type='text' name='autonomous_missed_goals' value='" + autonomousPoints[3] + "'</input>";
-        invisibleForm.submit();
+        $.ajax({
+            url: 'ajax-forms/submit-ajax.php',
+            type: "POST",
+            data: {'auto_top': autonomousPoints[0], 
+                'auto_middle': autonomousPoints[1], 
+                'auto_bottom': autonomousPoints[2], 
+                'auto_missed': autonomousPoints[3]},
+            success: function(response, textStatus, jqXHR) {
+                processResponse(response, textStatus);
+            }
+        });
     }
 </script>
