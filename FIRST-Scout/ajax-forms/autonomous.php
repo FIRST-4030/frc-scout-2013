@@ -1,4 +1,4 @@
-
+<!-- done -->
 <p class="title">Autonomous: <b><?php echo $scoutedTeamNumber ?></b></p>
 
 <p><i>Record points for each goal</i></p>
@@ -54,6 +54,7 @@
     }
 
     function sendData() {
+        $("#NextPageButton").button("loading");
         $.ajax({
             url: 'ajax-forms/submit-ajax.php',
             type: "POST",

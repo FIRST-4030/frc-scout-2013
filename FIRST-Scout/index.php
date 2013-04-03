@@ -35,15 +35,19 @@ if (isset($_SESSION['UserID'])) {
                 <button type="button" class="close" onclick="$('.alert').hide();">&times;</button>
                 <strong id='alertError'><?php if (isset($_GET['error'])) echo stripcslashes($_GET['error']); ?></strong>
             </div>
-            <input type="text" name="team_id" value="Team ID" onblur="if (this.value === '')
-                    this.value = 'Team ID';" onfocus="if (this.value === 'Team ID')
-                    this.value = '';" id="teamID" /><br> 
-            <input type="text" name="user_id" value="Your name" onblur="if (this.value === '')
-                    this.value = 'Your name';" onfocus="if (this.value === 'Your name')
-                    this.value = '';" id="userID" /><br>
-            <input type="password" name="team_password" value="akjsdfha3323rs" onblur="if (this.value === '')
-                    this.value = 'akjsdfha3323rs';" onfocus="if (this.value === 'akjsdfha3323rs')
-                    this.value = '';" id="teamPassword" /><br><br>
+                   <input type="text" name="team_id" value="Team ID" onblur="if (this.value === '')
+                       this.value = 'Team ID';" onfocus="if (this.value === 'Team ID')
+                       this.value = '';" id="teamID" /><br> 
+                   <input type="text" name="user_id" value="Your name" onblur="if (this.value === '')
+                       this.value = 'Your name';" onfocus="if (this.value === 'Your name')
+                       this.value = '';" id="userID" /><br>
+                   <input type="text" name="location" value="Location" onblur="if (this.value === '')
+                       this.value = 'Location';" onfocus="if (this.value === 'Location')
+                       this.value = '';" id="location"><br />
+                   <input type="password" name="team_password" value="akjsdfha3323rs" onblur="if (this.value === '')
+                       this.value = 'akjsdfha3323rs';" onfocus="if (this.value === 'akjsdfha3323rs')
+                       this.value = '';" id="teamPassword" />
+            <br><br>
             <button class="btn" type="submit" style="height: 30px; width: 220px" onclick="sendData();" id='SubmitButton'>Log In</button><p style="margin-top: 5px; margin-bottom: 5px; font-weight: bold">or</p>
             <button class="btn btn-success" style="height: 30px; width: 220px" onclick="window.location = 'create.php';">Create an account</button><br /><br />
             <p style="color: #be3b3b">Comments, questions, concerns, bugs? Talk to Sam in team 4030's pit (at the Seattle regional) or <a href="#" onclick="reportError();" style=""><span style="color: #be3b3b">click here</span></a>.</p>
@@ -98,8 +102,10 @@ if (isset($_SESSION['UserID'])) {
                     var invisibleForm = document.getElementById('sendForm');
                     invisibleForm.innerHTML += "<input type='text' name='team_id' value='" + $('#teamID').val() + "'</input>";
                     invisibleForm.innerHTML += "<input type='text' name='user_id' value='" + $('#userID').val() + "'></input>";
+                    invisibleForm.innerHTML += "<input type='text' name='location' value='" + $('#location').val() + "'></input>";
                     invisibleForm.innerHTML += "<input type='password' name='team_password' value='" + $('#teamPassword').val() + "'></input>";
                     invisibleForm.submit();
+
                 } else {
                     document.getElementById('alertError').innerHTML = errors;
                     $("#inputError").show();

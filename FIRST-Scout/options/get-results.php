@@ -103,7 +103,7 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
             break;
     }
     echo '<td>' . $shootingRange . '</td>';
-    echo '<td>' . $row['teleop_robot_speed'] . '</td>';
+    //echo '<td>' . $row['teleop_robot_speed'] . '</td>';
     echo '<td>' . $row['teleop_robot_steering'] . '</td>';
     echo '<td>' . $row['climb_attempts'] . '</td>';
     echo '<td>' . $row['climb_level_reached'] . '</td>';

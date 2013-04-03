@@ -5,6 +5,7 @@ if (isset($_GET['intent']) && $_GET['intent'] == "logout") {
     unset($_SESSION['TeamNumber']);
     unset($_SESSION['UserID']);
     unset($_SESSION['MATCH_ID']);
+    unset($_SESSION['Location']);
     header('location: /index.php?error=' . urlencode("Successfully logged out!"));
     exit();
 }
@@ -20,6 +21,7 @@ if (isset($_POST['team_id'])) {
 
     $teamID = preg_replace('/[^\w ]/', '', $_POST['team_id']);
     $userID = preg_replace('/[^\w ]/', '', $_POST['user_id']);
+    $location = preg_replace('/[^\w ]/', '', $_POST['location']);
     $teamPassword = $_POST['team_password'];
 
     try {
@@ -37,6 +39,7 @@ if (isset($_POST['team_id'])) {
         $_SESSION['TeamNumber'] = $team_number;
         $_SESSION['UserID'] = $userID;
         $_SESSION['TeamID'] = $teamID;
+        $_SESSION['Location'] = $location;
         header('location: options');
     } else {
         unset($_SESSION['TeamNumber']);
