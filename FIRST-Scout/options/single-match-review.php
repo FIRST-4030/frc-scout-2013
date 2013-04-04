@@ -83,7 +83,7 @@
                             break;
                     }
                     echo '<tr><td>Teleop Shooting Range</td><td id="teleop_shooting_range">' . $shootingRange . '</td></tr>';
-                    echo '<tr><td>Teleop Robot Speed (1-5)</td><td id="teleop_robot_speed">' . $matchInfo['teleop_robot_speed'] . '</td></tr>';
+                    echo '<tr><td>Teleop Robot Speed (1-3)</td><td id="teleop_robot_speed">' . $matchInfo['teleop_robot_speed'] . '</td></tr>';
                     //echo '<tr><td>Teleop Robot Steering (1-5)</td><td id="teleop_robot_steering">' . $matchInfo['teleop_robot_steering'] . '</td></tr>';
                     //echo '<tr><td>Pyramid Climb Attempts</td><td id="climb_attempts">' . $matchInfo['climb_attempts'] . '</td></tr>';
                     echo '<tr><td>Pyramid Goals</td><td id="climb_pyramid_goals">' . $matchInfo['climb_pyramid_goals'] . '</td></tr>';

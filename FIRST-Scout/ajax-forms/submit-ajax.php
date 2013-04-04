@@ -129,10 +129,10 @@ teleop_bottom=?, teleop_miss=?, teleop_blocked=?, teleop_pyramid=?, teleop_shoot
                 $stmt = $db->prepare($db_stmt . ' WHERE uid=?');
                 $db_vals[] = $_SESSION['MATCH_ID'];
                 $stmt->execute($db_vals);
-                if (!$stmt->rowCount()) {
-                    array_push($responseData, 'Invalid MATCH_ID: ' . $_SESSION['MATCH_ID']);
-                    throw new PDOException();
-                }
+//                if (!$stmt->rowCount()) {
+//                    array_push($responseData, 'Invalid MATCH_ID: ' . $_SESSION['MATCH_ID']);
+//                    throw new PDOException();
+//                }
                 $db->commit();
             } catch (PDOException $ex) {
                 ## TODO -- Debug
