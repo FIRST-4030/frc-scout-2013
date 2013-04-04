@@ -34,7 +34,7 @@ if (!isset($_SESSION['UserID'])) {
                 <strong id='alertError'><?php if (isset($_GET['error'])) echo stripcslashes($_GET['error']); ?></strong>
             </div>
             <p class="small_title" style="margin-bottom: 10px;">You are logged in as <b><? echo $_SESSION['UserID'] ?></b> for team <b><? echo $_SESSION["TeamNumber"] ?></b> in <b><? echo $_SESSION['Location'] ?></b></p>
-            <button class="btn btn-large btn-success homepage_buttons" onclick="goToPage('/entry.php');">Scout a new team</button>
+            <button class="btn btn-large btn-success homepage_buttons" onclick="goToPage('/entry-ajax.php');">Scout a new team</button>
             <br />
             <button class="btn btn-large btn-info homepage_buttons" onclick="goToPage('team-averages.php');">See team averages</button>
             <br />

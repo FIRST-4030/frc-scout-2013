@@ -56,8 +56,8 @@
         $.ajax({
             url: 'ajax-forms/submit-ajax.php',
             type: "POST",
-            data: {'results_match_outcome': climbing[0],
-                'results_technical_fouls': $(".levelReached .active").text(),
+            data: {'results_match_outcome': loseWinTie,
+                'results_technical_fouls': technicalFouls,
                 'results_dead_robot': deadRobot,
                 'results_comments': $("#comments").val()},
             success: function(response, textStatus, jqXHR) {

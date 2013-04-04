@@ -97,13 +97,13 @@ if ($connect) {
         $block = intval($_POST['teleop_blocked_goals'] == "true" ? 1 : 0);
         $pyramid = intval($_POST['teleop_pyramid_goals']);
         $shootingRange = intval($_POST['teleop_shooting_range']);
-        //$robotSpeed = intval($_POST['teleop_robot_speed']);
-        $robotManeuverability = intval($_POST['teleop_robot_maneuverability']);
+        $robotSpeed = intval($_POST['teleop_robot_speed']);
+        //$robotManeuverability = intval($_POST['teleop_robot_maneuverability']);
 
 
         $db_stmt = 'UPDATE ' . $TABLE . ' SET teleop_frisbee_pickup=?, teleop_top=?, teleop_middle=?, 
-teleop_bottom=?, teleop_miss=?, teleop_blocked=?, teleop_pyramid=?, teleop_shooting_range=?, teleop_robot_steering=?';
-        $db_vals = array($frisbeePickup, $top, $middle, $bottom, $miss, $block, $pyramid, $shootingRange, $robotManeuverability);
+teleop_bottom=?, teleop_miss=?, teleop_blocked=?, teleop_pyramid=?, teleop_shooting_range=?, teleop_robot_speed=?';
+        $db_vals = array($frisbeePickup, $top, $middle, $bottom, $miss, $block, $pyramid, $shootingRange, $robotSpeed);
 
 # Set the next page
         $next_page = 'climb.php';

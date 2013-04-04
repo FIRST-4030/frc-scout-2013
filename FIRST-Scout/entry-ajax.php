@@ -25,6 +25,7 @@ if (!isset($_SESSION['UserID'])) {
                     $(document).ready(function() {
                         $("#inputError").hide();
                         nextPage("prematch.php");
+                        window.scrollTo(0, 1);
                     });
 
                     function nextPage(page) {
@@ -49,6 +50,7 @@ if (!isset($_SESSION['UserID'])) {
                         } else {
                             console.log("Next page: " + responseData[0]);
                             if (responseData[0] === "FINISHED") {
+                                var lastPage = true;
                                 window.location = "../options/single-match-review.php";
                             } else {
                                 nextPage(responseData[0]);
@@ -57,7 +59,9 @@ if (!isset($_SESSION['UserID'])) {
                     }
 
                     $(window).bind('beforeunload', function() {
-                        return 'You have unsaved data on this page. I would recommend against leaving yet.';
+                        if (!lastPage) {
+                            return 'You have unsaved data on this page. I would recommend against leaving yet.';
+                        }
                     });
 
         </script>

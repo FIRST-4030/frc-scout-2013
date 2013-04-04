@@ -38,7 +38,6 @@
     <button class="btn btn-small active">1</button>
     <button class="btn btn-small">2</button>
     <button class="btn btn-small">3</button>
-    <span>Fast</span>
 </div>
 
 <br /><br />
