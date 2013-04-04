@@ -42,7 +42,7 @@ if (!isset($_SESSION['UserID'])) {
             <br />
             <button class="btn btn-large btn-warning homepage_buttons" onclick="goToPage('/login.php?intent=logout');">Log out</button>
             <br /><br />
-            <p style="color: #be3b3b">Comments, questions, concerns, bugs? Talk to Sam in team 4030's pit (at the Seattle regional) or <a href="#" onclick="$('#reportError').toggle()" style=""><span style="color: #be3b3b">click here</span></a>.</p>
+            <p style="color: #be3b3b">Comments, questions, concerns, bugs?<br />Talk to Sam in team 4030's pit (at the Spokane, WA regional) or <a href="#" onclick="$('#reportError').toggle()" style=""><span style="color: #be3b3b">click here</span></a>.</p>
 
             <div id="reportError">
                 <textarea id="error_submit" placeholder="Enter any information." style="width: 190px; height: 100px"></textarea>

@@ -50,7 +50,7 @@ if (isset($_SESSION['UserID'])) {
             <br><br>
             <button class="btn" type="submit" style="height: 30px; width: 220px" onclick="sendData();" id='SubmitButton'>Log In</button><p style="margin-top: 5px; margin-bottom: 5px; font-weight: bold">or</p>
             <button class="btn btn-success" style="height: 30px; width: 220px" onclick="window.location = 'create.php';">Create an account</button><br /><br />
-            <p style="color: #be3b3b">Comments, questions, concerns, bugs? Talk to Sam in team 4030's pit (at the Seattle regional) or <a href="#" onclick="reportError();" style=""><span style="color: #be3b3b">click here</span></a>.</p>
+            <p style="color: #be3b3b">Comments, questions, concerns, bugs?<br />Talk to Sam in team 4030's pit (at the Spokane, WA regional) or <a href="#" onclick="reportError();" style=""><span style="color: #be3b3b">click here</span></a>.</p>
             <div id="reportError">
                 <textarea id="error_submit" placeholder="Enter any information." style="width: 190px; height: 100px"></textarea>
                 <br />

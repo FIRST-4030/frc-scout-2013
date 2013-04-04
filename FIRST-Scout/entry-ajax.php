@@ -19,7 +19,11 @@ if (!isset($_SESSION['UserID'])) {
                 <button type="button" class="close" onclick="$('.alert').hide();">&times;</button>
                 <strong id='alertError'><?php if (isset($_GET['error'])) echo stripcslashes($_GET['error']); ?></strong>
             </div>
-            <div id="container"></div>
+            <div id="container">
+                Loading...
+                <div class="progress progress-striped active">
+                    <div class="bar"></div>
+                </div></div>
         </div>
         <script type="text/javascript">
                     $(document).ready(function() {
