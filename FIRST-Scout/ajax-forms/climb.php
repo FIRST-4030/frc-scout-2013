@@ -1,12 +1,14 @@
 <p class="small_title">
-    <i>Record attempts and disks dropped:</i>
+    <i>Record pyramid goals:</i>
 </p>
+<!--
 <button class="btn plus_minus_buttons" style="height: 50px; width: 100px"
         onclick="update(0, false);">Attempts</button>
 <button class="btn plus_minus_buttons" style="height: 50px; width: 50px"
         onclick="update(0, true);">&mdash;</button>
 <span id="attempts" class="autonomousIndividual">0</span>
 <br />
+-->
 <button class="btn plus_minus_buttons" style="height: 50px; width: 100px"
         onclick="update(1, false);">Pyramid Goals</button>
 <button class="btn plus_minus_buttons" style="height: 50px; width: 50px"
@@ -51,7 +53,6 @@
     }
 
     function updateIndividualTotals() {
-        document.getElementById('attempts').innerHTML = climbing[0];
         document.getElementById('disksDropped').innerHTML = climbing[1];
 
     }
@@ -76,8 +77,7 @@
         $.ajax({
             url: 'ajax-forms/submit-ajax.php',
             type: "POST",
-            data: {'climb_attempts': climbing[0],
-                'climb_pyramid_goals': climbing[1],
+            data: {'climb_pyramid_goals': climbing[1],
                 'climb_level_reached': $(".levelReached .active").text(),
                 'climb_climb_style': climbStyle},
             success: function(response, textStatus, jqXHR) {

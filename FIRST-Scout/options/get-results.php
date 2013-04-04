@@ -105,7 +105,7 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
     echo '<td>' . $shootingRange . '</td>';
     //echo '<td>' . $row['teleop_robot_speed'] . '</td>';
     echo '<td>' . $row['teleop_robot_steering'] . '</td>';
-    echo '<td>' . $row['climb_attempts'] . '</td>';
+    //echo '<td>' . $row['climb_attempts'] . '</td>';
     echo '<td>' . $row['climb_level_reached'] . '</td>';
     echo '<td>' . $row['pyramid_goals'] . '</td>';
     $styleInt = $row['climb_style'];
@@ -141,7 +141,7 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
     }
 
     echo '<td>' . $matchOutcome . '</td>';
-    echo '<td>' . $row['results_fouls'] . '</td>';
+    //echo '<td>' . $row['results_fouls'] . '</td>';
     echo '<td>' . $row['results_technical_fouls'] . '</td>';
     echo '<td>' . stripslashes($row['results_comments']) . '</td>';
     echo '</tr>';

@@ -107,17 +107,17 @@ teleop_bottom=?, teleop_miss=?, teleop_blocked=?, teleop_pyramid=?, teleop_shoot
 
 # Set the next page
         $next_page = 'climb.php';
-    } else if (isset($_POST['climb_attempts'])) {
+    } else if (isset($_POST['climb_climb_style'])) {
         $scoutedTeamNumber = $_SESSION['scouted_team'];
-        $db_stmt = "UPDATE " . $TABLE . " SET climb_attempts=?, climb_pyramid_goals=?, climb_level_reached=?, climb_style=?";
-        $db_vals = array($_POST['climb_attempts'], $_POST['climb_pyramid_goals'], $_POST['climb_level_reached'], $_POST['climb_climb_style']);
+        $db_stmt = "UPDATE " . $TABLE . " SET climb_pyramid_goals=?, climb_level_reached=?, climb_style=?";
+        $db_vals = array($_POST['climb_pyramid_goals'], $_POST['climb_level_reached'], $_POST['climb_climb_style']);
         $next_page = "results.php";
     } else if (isset($_POST['results_match_outcome'])) {
         $dead = ($_POST['results_dead_robot'] == "true" ? 1 : 0);
         $scoutedTeamNumber = $_SESSION['scouted_team'];
         $db_stmt = "UPDATE " . $TABLE . " SET results_match_outcome=?, results_technical_fouls=?, results_comments=?, dead=?";
         $db_vals = array($_POST['results_match_outcome'], $_POST['results_technical_fouls'], $_POST['results_comments'], $dead);
-        $next_page = "../options/single-match-review.php";
+        $next_page = "FINISHED";
     }
 # Final DB entry should unset MATCH_ID for safety
 # Nothing explictly breaks if you don't, but it avoids potential user error

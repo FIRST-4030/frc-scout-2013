@@ -31,6 +31,7 @@ and open the template in the editor.
                 <caption style="display: none">Team Averages</caption>
                 <thead>
                     <tr>
+                        <th>Rank</th>
                         <th>Team Number</th>
                         <th>Matches Scouted</th>
                         <th>Total Points</th>

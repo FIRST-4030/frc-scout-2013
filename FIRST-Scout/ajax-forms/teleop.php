@@ -1,4 +1,3 @@
-<p class="title">Teleoperated: <b><?php echo $scoutedTeamNumber ?></b></p>
 <button id="frisbeePickup" onclick="updateCanPickupFrisbees();" class="btn btn-success" data-toggle="button" style="margin-top: 3px; margin-bottom: 8px;">Can pick up Frisbees?</button>
 <button id="canBlock" onclick="updateCanBlock();" class="btn btn-success" data-toggle="button" style="margin-top: 3px; margin-bottom: 8px;">Can block?</button>
 <p><i>Record points for each goal</i></p>
@@ -37,11 +36,8 @@
 <p style="margin-bottom: 1px">Slow &mdash; Average &mdash; Fast</p>
 <div class="btn-group robotSpeed" data-toggle="buttons-radio">
     <button class="btn btn-small active">1</button>
-    <span>Slow</span>
     <button class="btn btn-small">2</button>
     <button class="btn btn-small">3</button>
-    <button class="btn btn-small">4</button>
-    <button class="btn btn-small">5</button>
     <span>Fast</span>
 </div>
 
@@ -49,13 +45,11 @@
 <button class="btn btn-large" id="NextPageButton" onclick="sendData();">Continue to Climbing &rarr;</button>
 <br /><br />
 <script type="text/javascript">
-    $(document).ready(function() {
-        window.scrollTo(0, 1);
+    
+    function prepare() {
+        $("#pageHeader").text("Teleoperated");
+    }
 
-        $('#RobotSpeed').on('change', function() {
-            document.getElementById('robotSpeedFeedback').innerHTML = " " + $('#RobotSpeed').val();
-        });
-    });
 
     var teleopPoints = [0, 0, 0, 0, 0];
     function update(index, negative) {
@@ -96,33 +90,19 @@
         document.getElementById('totalPoints').innerHTML = (teleopPoints[0] * 3) + (teleopPoints[1] * 2) + (teleopPoints[2] * 1) + (teleopPoints[4] * 5);
     }
 
-    //                function sendData() {
-    //                    var invisibleForm = document.getElementById('sendForm');
-    //                    invisibleForm.innerHTML += "<input type='text' name='next_page' value='" + "forms/climb.php" + "'</input>";
-    //                    invisibleForm.innerHTML += "<input type='text' name='teleop_can_pickup_frisbees' value='" + canPickupFrisbees + "'</input>";
-    //                    invisibleForm.innerHTML += "<input type='text' name='teleop_top_goals' value='" + teleopPoints[0] + "'</input>";
-    //                    invisibleForm.innerHTML += "<input type='text' name='teleop_middle_goals' value='" + teleopPoints[1] + "'</input>";
-    //                    invisibleForm.innerHTML += "<input type='text' name='teleop_bottom_goals' value='" + teleopPoints[2] + "'</input>";
-    //                    invisibleForm.innerHTML += "<input type='text' name='teleop_missed_goals' value='" + teleopPoints[3] + "'</input>";
-    //                    invisibleForm.innerHTML += "<input type='text' name='teleop_blocked_goals' value='" + canBlock + "'</input>";
-    //                    invisibleForm.innerHTML += "<input type='text' name='teleop_pyramid_goals' value='" + teleopPoints[4] + "'</input>";
-    //                    invisibleForm.innerHTML += "<input type='text' name='teleop_shooting_range' value='" + range + "'</input>";
-    //                    invisibleForm.innerHTML += "<input type='text' name='teleop_robot_speed' value='" + $(".robotSpeed .active").text() + "'</input>";
-    //                    invisibleForm.submit();
-    //                }
     function sendData() {
         $("#NextPageButton").button("loading");
         $.ajax({
             url: 'ajax-forms/submit-ajax.php',
             type: "POST",
-            data: {'teleop_can_pickup_frisbees': canPickupFrisbees, 
-                'teleop_top_goals': teleopPoints[0], 
-                'teleop_middle_goals': teleopPoints[1], 
-                'teleop_bottom_goals': teleopPoints[2], 
-                'teleop_missed_goals': teleopPoints[3], 
-                'teleop_blocked_goals': canBlock, 
-                'teleop_pyramid_goals': teleopPoints[4], 
-                'teleop_shooting_range': range, 
+            data: {'teleop_can_pickup_frisbees': canPickupFrisbees,
+                'teleop_top_goals': teleopPoints[0],
+                'teleop_middle_goals': teleopPoints[1],
+                'teleop_bottom_goals': teleopPoints[2],
+                'teleop_missed_goals': teleopPoints[3],
+                'teleop_blocked_goals': canBlock,
+                'teleop_pyramid_goals': teleopPoints[4],
+                'teleop_shooting_range': range,
                 'teleop_robot_speed': $(".robotSpeed .active").text()},
             success: function(response, textStatus, jqXHR) {
                 processResponse(response, textStatus);

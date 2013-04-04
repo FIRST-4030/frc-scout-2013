@@ -61,7 +61,7 @@
                     echo '<tr><td>Autonomous Bottom Goals</td><td id="auto_bottom">' . $matchInfo['auto_bottom'] . '</td></tr>';
                     echo '<tr><td>Autonomous Missed Goals</td><td id="auto_miss">' . $matchInfo['auto_miss'] . '</td></tr>';
                     $kinect = $matchInfo['kinect'] == 1 ? "Yes" : "No";
-                    echo '<tr><td>Used Kinect in Autonomous</td><td id="kinect">' . $kinect . '</td></tr>';
+                    //echo '<tr><td>Used Kinect in Autonomous</td><td id="kinect">' . $kinect . '</td></tr>';
                     $frisbeePickup = $matchInfo['teleop_frisbee_pickup'] == 1 ? "Yes" : "No";
                     echo '<tr><td>Can pick up Frisbees?</td><td id="teleop_frisbee_pickup">' . $frisbeePickup . '</td></tr>';
                     echo '<tr><td>Teleop Top Goals</td><td id="teleop_top">' . $matchInfo['teleop_top'] . '</td></tr>';
@@ -85,7 +85,7 @@
                     echo '<tr><td>Teleop Shooting Range</td><td id="teleop_shooting_range">' . $shootingRange . '</td></tr>';
                     echo '<tr><td>Teleop Robot Speed (1-5)</td><td id="teleop_robot_speed">' . $matchInfo['teleop_robot_speed'] . '</td></tr>';
                     echo '<tr><td>Teleop Robot Steering (1-5)</td><td id="teleop_robot_steering">' . $matchInfo['teleop_robot_steering'] . '</td></tr>';
-                    echo '<tr><td>Pyramid Climb Attempts</td><td id="climb_attempts">' . $matchInfo['climb_attempts'] . '</td></tr>';
+                    //echo '<tr><td>Pyramid Climb Attempts</td><td id="climb_attempts">' . $matchInfo['climb_attempts'] . '</td></tr>';
                     echo '<tr><td>Pyramid Goals</td><td id="climb_pyramid_goals">' . $matchInfo['climb_pyramid_goals'] . '</td></tr>';
                     echo '<tr><td>Pyramid Level Reached</td><td id="climb_level_reached">' . $matchInfo['climb_level_reached'] . '</td></tr>';
                     $styleInt = $matchInfo['climb_style'];
@@ -103,7 +103,7 @@
                             $climbStyle = "Face";
                             break;
                     }
-                    echo '<tr><td>Timestamp</td><td>' . $climbStyle . '</td></tr>';
+                    echo '<tr><td>Climb Style</td><td>' . $climbStyle . '</td></tr>';
                     $matchInt = $matchInfo['results_match_outcome'];
                     switch ($matchInt) {
                         case 0:
@@ -120,7 +120,7 @@
                             break;
                     }
                     echo '<tr><td>Outcome</td><td>' . $matchOutcome . '</td></tr>';
-                    echo '<tr><td>Fouls</td><td>' . $matchInfo['results_fouls'] . '</td></tr>';
+                    //echo '<tr><td>Fouls</td><td>' . $matchInfo['results_fouls'] . '</td></tr>';
                     echo '<tr><td>Technical Fouls</td><td>' . $matchInfo['results_technical_fouls'] . '</td></tr>';
                     echo '<tr><td>Comments</td><td>' . stripslashes($matchInfo['results_comments']) . '</td></tr>';
                     ?>

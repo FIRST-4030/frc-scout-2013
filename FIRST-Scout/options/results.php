@@ -49,12 +49,12 @@ $teamNumber = $_SESSION['TeamNumber'];
                         <th>Teleop Accuracy</th>
                         <th>Shooting Range</th>
                         <th>Speed (1-4)</th>
-                        <th>Climb Attempts</th>
+                        <!--<th>Climb Attempts</th>-->
                         <th>Level Reached</th>
                         <th>Pyramid Goals</th>
                         <th>Style</th>
                         <th>Match Outcome</th>
-                        <th>Fouls</th>
+                        <!--<th>Fouls</th>-->
                         <th>Technical Fouls</th>
                         <th>Comments</th>
                     </tr>

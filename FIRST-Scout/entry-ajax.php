@@ -12,6 +12,7 @@ if (!isset($_SESSION['UserID'])) {
         <? include 'includes/form-headers.html'; ?>
     </head>
     <body>
+        <p class="invisible_form" id="location"><? echo $_SESSION['Location']; ?></p>
         <div class="container" id="outsideContainer">
             <div class="title"><span id="pageHeader" style="margin-bottom: 10px;"></span><span id="teamNumberFeedback"></span></div>           
             <div class="alert alert-warning" id="inputError">
@@ -29,6 +30,7 @@ if (!isset($_SESSION['UserID'])) {
                     function nextPage(page) {
                         $("#container").load("ajax-forms/" + page, function() {
                             prepare();
+                            $("#NextPageButton").button("reset");
                         });
                     }
 
@@ -36,7 +38,6 @@ if (!isset($_SESSION['UserID'])) {
                         console.log(response);
                         var responseData = JSON.parse(response);
                         console.log("hooray, it worked!");
-                        $("#NextPageButton").button("reset");
                         if (responseData.length > 1) {
                             var errorString = "The following errors were encountered:<br />";
                             for (var i = 0; i < responseData.length - 1; i++) {
@@ -47,8 +48,8 @@ if (!isset($_SESSION['UserID'])) {
                             console.log("errors occured: " + responseData);
                         } else {
                             console.log("Next page: " + responseData[0]);
-                            if (responseData[0] === "finished") {
-                                nextPage("../options/single-match-review.php");
+                            if (responseData[0] === "FINISHED") {
+                                window.location = "../options/single-match-review.php";
                             } else {
                                 nextPage(responseData[0]);
                             }
