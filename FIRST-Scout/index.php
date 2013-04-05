@@ -58,6 +58,8 @@ if (isset($_SESSION['UserID'])) {
                 <br /><br />
             </div>
             <a href="#" onclick="pwdreset();">Forgot your password?</a>
+            <br />
+            <a href="http://github.com/FIRST-4030/Scout" target="_blank"><b>Open Source: </b>view source code</a>
             <div id="resetPane">
                 Name: <input type="text" id="name" /><br />
                 Email: <input type="email" id="email" /><br />
@@ -65,8 +67,9 @@ if (isset($_SESSION['UserID'])) {
                 Team Number: <input type="number" id="team_number" /><br />
                 New Password: <input type="password" id="new_password" /><br />
                 <button id="resetSubmit" onclick="resetPass();" class="btn">Submit</button>
+                <br />
             </div>
-            <br /><br />
+            <br />
         </div>
         <script type="text/javascript">
             $(document).ready(function() {
