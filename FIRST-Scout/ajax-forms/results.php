@@ -1,8 +1,8 @@
 <button id="deadRobot" onclick="updateDead();" class="btn btn-warning" data-toggle="button" style="margin-top: 0px; margin-bottom: 5px">Dead Robot</button><br />
 <div class="btn-group" data-toggle="buttons-radio" style="margin-bottom: 10px">
-    <button class="btn btn-danger active" onclick="update(0);">Lose</button>
-    <button class="btn btn-success" onclick="update(1);">Win</button>
-    <button class="btn btn-warning" onclick="update(2);">Tie</button>
+    <button class="btn btn-danger active" value='0' onclick="update(0);">Lose</button>
+    <button class="btn btn-success" value='1' onclick="update(1);">Win</button>
+    <button class="btn btn-warning" value='2' onclick="update(2);">Tie</button>
 </div>
 <br />
 <button class="btn plus_minus_buttons" style="height: 50px; width: 100px" onclick="updateTechnicalFouls(false);">Technical Fouls</button>

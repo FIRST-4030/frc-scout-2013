@@ -53,6 +53,7 @@
                     echo '<tr><td>Timestamp</td><td>' . $matchInfo['ts'] . '</td></tr>';
                     echo '<tr><td>Total Points:</td><td>' . ($teleopPoints + $autonomousPoints + ($matchInfo['climb_level_reached'] * 10)) . '</td>';
                     echo '<tr><td>Scout</td><td id="user_id">' . $matchInfo['user_id'] . '</td></tr>';
+                    echo '<tr><td>Scouting Team</td><td id="user_id">' . $matchInfo['scouting_team_number'] . '</td></tr>';
                     $present = $matchInfo['present'] == 1 ? "Yes" : "No";
                     echo '<tr><td>Present</td><td id="present">' . $present . '</td></tr>';
                     $dead = $matchInfo['dead'] == 1 ? "Yes" : "No";

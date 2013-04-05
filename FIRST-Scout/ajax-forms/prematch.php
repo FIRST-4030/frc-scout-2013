@@ -69,9 +69,9 @@ Match Number: <br />
     }
 
     function sendData() {
-        $("#NextPageButton").button("loading");
         var valid = !checkInputs();
         if (valid) {
+            $("#NextPageButton").button("loading");
             $.ajax({
                 url: 'ajax-forms/submit-ajax.php',
                 type: "POST",

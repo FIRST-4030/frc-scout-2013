@@ -20,12 +20,14 @@ $teamNumber = $_SESSION['TeamNumber'];
             <p class="title" id="title">Results collected by all teams</input></p>
             <button class="btn btn-success" onclick="history.go(-1);" style="width: 200px">&larr;&nbsp;Go Back</button><br />
             <div id="singleTeam" class="btn-group" data-toggle="buttons-radio" style="margin-top: 10px; margin-bottom: 10px">
-                <button class="btn active" value="false" onclick="updateTeams(false, $('#search').val());">All Teams</button>
-
-
-                <button class="btn" value="true "onclick="updateTeams(true, $('#search').val());">Only <? echo $teamNumber ?></button>
+                <button class="btn active" value="false" onclick="updateTeams(false, $('#search').val(), $('#citySelector').val());">All Teams</button>
+                <button class="btn" value="true "onclick="updateTeams(true, $('#search').val(), $('#citySelector').val());">Only <? echo $teamNumber ?></button>
             </div>
-            <span style="margin-left: 5px;">Search: </span><input type="text" onkeyup="updateTeams($('.resultsByTeam .active').val(), $('#search').val());" style="margin-top: 9px; margin-left: 2x;" id="search" placeholder='team, location, comments, date'>
+            <span> &nbsp;narrow by city:&nbsp; </span>
+            <select onchange="updateTeams($('.resultsByTeam .active').val(), $('#search').val(), $('#citySelector').val());" style="width: 140px; margin-top: 5px" id="citySelector"></select>
+
+
+            <span style="margin-left: 5px;">Search: </span><input type="text" onkeyup="updateTeams($('.resultsByTeam .active').val(), $('#search').val(), $('#citySelector').val());" style="margin-top: 9px; margin-left: 2x;" id="search" placeholder='team, location, comments, date'>
             <table id="resultTable" class="tablesorter table-hover">
                 <thead>
                     <tr>
@@ -41,8 +43,8 @@ $teamNumber = $_SESSION['TeamNumber'];
                         <th>Match</th>
                         <th>Total Points</th>
                         <th>Total Goals</th>
-                        <th>Autonomous Points</th>
-                        <th>Autonomous Accuracy</th>
+                        <th>Auto Points</th>
+                        <th>Auto Accuracy</th>
                         <th>Frisbee pickup</th>
                         <th>Can block?</th>
                         <th>Teleop Points</th>
@@ -67,10 +69,11 @@ $teamNumber = $_SESSION['TeamNumber'];
         <script type="text/javascript">
                 $(document).ready(function() {
                     $("#resultTable").tablesorter();
-                    updateTeams(false, "");
+                    updateTeams(false, "", "All");
+                    getLocations();
                 });
 
-                function updateTeams(onlyTeam, search) {
+                function updateTeams(onlyTeam, search, city) {
                     tableBody = document.getElementById('tableBody');
                     tableBody.innerHTML = "Loading";
                     if (onlyTeam) {
@@ -96,6 +99,9 @@ $teamNumber = $_SESSION['TeamNumber'];
                     xmlHttp.open("POST", "get-results.php", true);
                     xmlHttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
                     var sendData = "only=" + onlyTeam + "&search=" + search;
+                    if(city !== "All") {
+                        sendData += "&location=" + city;
+                    }
                     xmlHttp.send(sendData);
                 }
 
@@ -116,6 +122,22 @@ $teamNumber = $_SESSION['TeamNumber'];
                         var sendData = "id=" + id;
                         xmlHttp.send(sendData);
                     }
+                }
+
+                function getLocations() {
+                    $.ajax({
+                        url: '../includes/get-location.php',
+                        type: 'POST',
+                        success: function(response, textStatus, jqXHR) {
+                            var locations = JSON.parse(response);
+                            console.log(locations);
+                            $("#citySelector").html("");
+                            for (var i = 0; i < locations.length; i++) {
+                                $("#citySelector").append('<option>' + locations[i] + '</option>');
+                                console.log(locations[i]);
+                            }
+                        }
+                    });
                 }
         </script>
     </body>

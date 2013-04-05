@@ -36,6 +36,7 @@ if (!isset($_SESSION['UserID'])) {
                         $("#container").load("ajax-forms/" + page, function() {
                             prepare();
                             $("#NextPageButton").button("reset");
+                            window.scrollTo(0, 1);
                         });
                     }
 

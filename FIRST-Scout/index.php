@@ -20,13 +20,6 @@ if (isset($_SESSION['UserID'])) {
         <script type="text/javascript" src="bootstrap/js/bootstrap-tooltip.js"></script>
     </head>
     <body>
-
-        <script type="text/javascript">
-            $(document).ready(function() {
-                window.scrollTo(0, 1);
-            });
-        </script>
-
         <div class="container">
             <!--<a href="/index.php">--><img src="/images/ram-logo.png" alt="FIRST Scout"><!--</a>-->
             <br>
@@ -35,18 +28,22 @@ if (isset($_SESSION['UserID'])) {
                 <button type="button" class="close" onclick="$('.alert').hide();">&times;</button>
                 <strong id='alertError'><?php if (isset($_GET['error'])) echo stripcslashes($_GET['error']); ?></strong>
             </div>
-                   <input type="text" name="team_id" value="Team ID" onblur="if (this.value === '')
-                       this.value = 'Team ID';" onfocus="if (this.value === 'Team ID')
-                       this.value = '';" id="teamID" /><br> 
-                   <input type="text" name="user_id" value="Your name" onblur="if (this.value === '')
-                       this.value = 'Your name';" onfocus="if (this.value === 'Your name')
-                       this.value = '';" id="userID" /><br>
-                   <input type="text" name="location" value="Location" onblur="if (this.value === '')
-                       this.value = 'Location';" onfocus="if (this.value === 'Location')
-                       this.value = '';" id="location"><br />
-                   <input type="password" name="team_password" value="akjsdfha3323rs" onblur="if (this.value === '')
-                       this.value = 'akjsdfha3323rs';" onfocus="if (this.value === 'akjsdfha3323rs')
-                       this.value = '';" id="teamPassword" />
+            <input type="text" name="team_id" value="Team ID" onblur="if (this.value === '')
+                    this.value = 'Team ID';" onfocus="if (this.value === 'Team ID')
+                    this.value = '';" id="teamID" /><br> 
+            <input type="text" name="user_id" value="Your name" onblur="if (this.value === '')
+                    this.value = 'Your name';" onfocus="if (this.value === 'Your name')
+                    this.value = '';" id="userID" /><br>
+            <!--<input type="text" name="location" value="Location" onblur="if (this.value === '')
+                this.value = 'Location';" onfocus="if (this.value === 'Location')
+                this.value = '';" id="location"><br />-->
+                        <span> &nbsp;Location:&nbsp; </span>
+            <select style="width: 155px; margin-top: 5px" id="citySelector">
+            </select>
+            <br />
+            <input type="password" name="team_password" value="akjsdfha3323rs" onblur="if (this.value === '')
+                    this.value = 'akjsdfha3323rs';" onfocus="if (this.value === 'akjsdfha3323rs')
+                    this.value = '';" id="teamPassword" />
             <br><br>
             <button class="btn" type="submit" style="height: 30px; width: 220px" onclick="sendData();" id='SubmitButton'>Log In</button><p style="margin-top: 5px; margin-bottom: 5px; font-weight: bold">or</p>
             <button class="btn btn-success" style="height: 30px; width: 220px" onclick="window.location = 'create.php';">Create an account</button><br /><br />
@@ -73,11 +70,13 @@ if (isset($_SESSION['UserID'])) {
         </div>
         <script type="text/javascript">
             $(document).ready(function() {
+                window.scrollTo(0,1);
                 $('#inputError').hide();
                 $("#resetPane").hide();
                 $("#reportError").hide();
                 //$("#submitButton").popover({title: "Need an account?", content: "Don't have an accout? <a href='create.php'>Click here</a> to get one!", placement: 'left'});
                 //$("#submitButton").popover('show');
+                getLocations();
                 if (document.getElementById('alertError').innerHTML !== "") {
                     $('#inputError').show();
                 }
@@ -105,7 +104,7 @@ if (isset($_SESSION['UserID'])) {
                     var invisibleForm = document.getElementById('sendForm');
                     invisibleForm.innerHTML += "<input type='text' name='team_id' value='" + $('#teamID').val() + "'</input>";
                     invisibleForm.innerHTML += "<input type='text' name='user_id' value='" + $('#userID').val() + "'></input>";
-                    invisibleForm.innerHTML += "<input type='text' name='location' value='" + $('#location').val() + "'></input>";
+                    invisibleForm.innerHTML += "<input type='text' name='location' value='" + $('#citySelector').val() + "'></input>";
                     invisibleForm.innerHTML += "<input type='password' name='team_password' value='" + $('#teamPassword').val() + "'></input>";
                     invisibleForm.submit();
 
@@ -163,7 +162,25 @@ if (isset($_SESSION['UserID'])) {
                 xmlHttp.open("POST", "includes/reporterror.php", true);
                 xmlHttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
                 xmlHttp.send(sendData);
-            }    
+            }
+
+            function getLocations() {
+                $.ajax({
+                    url: 'includes/get-location.php?have_not_yet_occured',
+                    type: 'POST',
+                    success: function(response, textStatus, jqXHR) {
+                        var locations = JSON.parse(response);
+                        console.log(locations);
+                        $("#citySelector").html("");
+                        //start at 1 so you can't select the "all" option
+                        for (var i = 1; i < locations.length; i++) {
+                            $("#citySelector").html($("#citySelector").html() + '<option>' + locations[i] + '</option>');
+                            //$("#citySelector").append();
+                            console.log(locations[i]);
+                        }
+                    }
+                });
+            }
         </script>
         <form id="sendForm" action="/login.php" class="invisible_form" method="post"></form>
     </body>

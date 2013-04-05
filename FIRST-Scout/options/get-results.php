@@ -1,7 +1,8 @@
 <?
+
 # Require auth
 session_start();
-if(!isset($_SESSION['TeamID'])) {
+if (!isset($_SESSION['TeamID'])) {
     header('location: index.php?error=' . urlencode("You must login first!"));
 }
 
@@ -13,22 +14,31 @@ if ($_POST['only'] == "true") {
 }
 
 # Allow searching by location, scouted team number, comments and timestamp
-$query  = '';
+$query = '';
 $params = array();
 if (($_POST['search']) != "") {
     $search = preg_replace('/[^\w ]/', '', $_POST['search']);
-	$query  = '(location LIKE ? OR scouted_team_number LIKE ? OR results_comments LIKE ? OR ts LIKE ?)';
-	$wild   = '%' . $search . '%';
-	$params = array($wild, $wild, $wild, $wild);
+    $query = '(location LIKE ? OR scouted_team_number LIKE ? OR results_comments LIKE ? OR ts LIKE ?)';
+    $wild = '%' . $search . '%';
+    $params = array($wild, $wild, $wild, $wild);
 }
 
 # Limit selection to the logged in team
 if ($onlyTeam) {
-	if (strlen($query)) {
-		$query .= ' AND';
-	}
-	$query .= ' team_id = ?';
-	$params[] = $_SESSION['TeamID'];
+    if (strlen($query)) {
+        $query .= ' AND';
+    }
+    $query .= ' team_id = ?';
+    $params[] = $_SESSION['TeamID'];
+}
+
+if (isset($_POST['location'])) {
+    $location = preg_replace('/[^\w ]/', '', $_POST['location']);
+    if(strlen($query)) {
+        $query .= ' AND';
+    }
+    $query .= ' `location` = ?';
+    $params[] = $location;
 }
 
 # Connect to DB
@@ -42,14 +52,14 @@ try {
 
 # Construct and run a query
 try {
-	$sql = 'SELECT * FROM `scout_recording`';
-	if (strlen($query)) {
-		$sql .= ' WHERE ' . $query;
-	}
+    $sql = 'SELECT * FROM ' . MATCH_TABLE;
+    if (strlen($query)) {
+        $sql .= ' WHERE ' . $query;
+    }
     $stmt = $db->prepare($sql);
-	$stmt->execute($params);
+    $stmt->execute($params);
 } catch (PDOException $ex) {
-    die("Unable to read from DB\n " . $ex->getMessage());
+    die("Unable to read from DB\n " . $stmt->queryString);
 }
 
 while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
@@ -68,7 +78,7 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
     echo '<td><a href=single-match-review.php?redir&match=' . $row['uid'] . ">" . $row['scouted_team_number'] . '</a></td>';
     echo '<td>' . substr($row['ts'], 0, 10) . '</td>';
     //if ($onlyTeam)
-        echo '<td>' . $row['user_id'] . '</td>';
+    echo '<td>' . $row['user_id'] . '</td>';
     echo '<td>' . $row['scouting_team_number'] . '</td>';
     $present = $row['present'] == 1 ? "Yes" : "No";
     echo '<td>' . $present . '</td>';

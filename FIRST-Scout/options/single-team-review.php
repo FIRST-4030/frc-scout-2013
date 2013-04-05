@@ -6,6 +6,8 @@ if (!isset($_SESSION['TeamID'])) {
 ?>
 <html>
     <head>
+        <link href="../tablesorter/themes/blue/style_foo.css" rel="stylesheet" type="text/css"/>
+
         <title>Individual Results</title>
         <?
         include '../includes/form-headers.html';
@@ -22,10 +24,12 @@ if (!isset($_SESSION['TeamID'])) {
     </head>
     <body>
         <div class="container">
-            <p class="title">Averages for team <? echo $teamNumber;
-        if (isset($location)) {
-            echo " in $location";
-        } ?></p>
+            <p class="title">Averages for team <?
+                echo $teamNumber;
+                if (isset($location)) {
+                    echo " in $location";
+                }
+                ?></p>
             <button class="btn btn-success" onclick="history.go(-1);" style="width: 200px">&larr;&nbsp;Go Back</button><br />
 
             <?
@@ -79,6 +83,46 @@ if (!isset($_SESSION['TeamID'])) {
                     ?>
                 </tbody>
             </table>
+            <br />
+            <div id='comment_feed_load' style='margin: 5px; padding: 5px'>
+                <p class='small_title'>Observations about this team's matches:</p>
+                <table id='comment_feed_table' class='tablesorter table-hover'>
+                    <thead>
+                    <th>Date</th>
+                    <th>Match</th>
+                    <th>Location</th>
+                    <th>Comments</th>
+                    </thead>
+                    <tbody id='comments_feed'>
+
+                    </tbody>
+                </table>
+            </div>       
         </div>
+        <script type='text/javascript'>
+                $(document).ready(function() {
+                    loadComments();
+                });
+
+                function loadComments() {
+                    $.ajax({
+                        url: 'get-comments.php',
+                        type: "POST",
+                        data: {'tn': <? echo $teamNumber ?>, 'location': '<? echo $location ?>'},
+                        success: function(response, textStatus, jqXHR) {
+                            var comments = JSON.parse(response);
+                            for (var i = 0; i < comments.length; i++) {
+                                $("#comments_feed").append('<tr>');
+                                $("#comments_feed").append('<td>' + comments[i].timestamp.substring(0, 10) + '</td>');
+                                $("#comments_feed").append('<td><a href="single-match-review.php?redir&match=' + comments[i].match_id + '">' + comments[i].match_number + '</a></td>');
+                                $("#comments_feed").append('<td>' + comments[i].location + '</td>');
+                                $("#comments_feed").append('<td>' + comments[i].comments.replace("\\", "") + '</td>');
+                                $("#comments_feed").append('</tr>');
+                            }
+                            $("#comment_feed_table").trigger("update");
+                        }
+                    });
+                }
+        </script>
     </body>
 </html>
