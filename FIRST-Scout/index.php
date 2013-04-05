@@ -35,25 +35,31 @@ if (isset($_SESSION['UserID'])) {
                 <button type="button" class="close" onclick="$('.alert').hide();">&times;</button>
                 <strong id='alertError'><?php if (isset($_GET['error'])) echo stripcslashes($_GET['error']); ?></strong>
             </div>
-            <input type="text" name="team_id" value="Team ID" onblur="if (this.value === '')
-                    this.value = 'Team ID';" onfocus="if (this.value === 'Team ID')
-                    this.value = '';" id="teamID" /><br> 
-            <input type="text" name="user_id" value="Your name" onblur="if (this.value === '')
-                    this.value = 'Your name';" onfocus="if (this.value === 'Your name')
-                    this.value = '';" id="userID" /><br>
-            <input type="password" name="team_password" value="akjsdfha3323rs" onblur="if (this.value === '')
-                    this.value = 'akjsdfha3323rs';" onfocus="if (this.value === 'akjsdfha3323rs')
-                    this.value = '';" id="teamPassword" /><br><br>
+                   <input type="text" name="team_id" value="Team ID" onblur="if (this.value === '')
+                       this.value = 'Team ID';" onfocus="if (this.value === 'Team ID')
+                       this.value = '';" id="teamID" /><br> 
+                   <input type="text" name="user_id" value="Your name" onblur="if (this.value === '')
+                       this.value = 'Your name';" onfocus="if (this.value === 'Your name')
+                       this.value = '';" id="userID" /><br>
+                   <input type="text" name="location" value="Location" onblur="if (this.value === '')
+                       this.value = 'Location';" onfocus="if (this.value === 'Location')
+                       this.value = '';" id="location"><br />
+                   <input type="password" name="team_password" value="akjsdfha3323rs" onblur="if (this.value === '')
+                       this.value = 'akjsdfha3323rs';" onfocus="if (this.value === 'akjsdfha3323rs')
+                       this.value = '';" id="teamPassword" />
+            <br><br>
             <button class="btn" type="submit" style="height: 30px; width: 220px" onclick="sendData();" id='SubmitButton'>Log In</button><p style="margin-top: 5px; margin-bottom: 5px; font-weight: bold">or</p>
             <button class="btn btn-success" style="height: 30px; width: 220px" onclick="window.location = 'create.php';">Create an account</button><br /><br />
-            <p style="color: #be3b3b">Comments, questions, concerns, bugs? Talk to Sam in team 4030's pit (at the Seattle regional) or <a href="#" onclick="reportError();" style="">click here</a>.</p>
+            <p style="color: #be3b3b">Comments, questions, concerns, bugs?<br />Talk to Sam in team 4030's pit (at the Spokane, WA regional) or <a href="#" onclick="reportError();" style=""><span style="color: #be3b3b">click here</span></a>.</p>
             <div id="reportError">
                 <textarea id="error_submit" placeholder="Enter any information." style="width: 190px; height: 100px"></textarea>
                 <br />
-                <button class="btn btn-success" onclick="submitFeedback();">Submit</button>
+                <button class="btn btn-success" id="submit_feedback" onclick="submitFeedback();" data-loading-text="Submitting...">Submit</button>
                 <br /><br />
             </div>
             <a href="#" onclick="pwdreset();">Forgot your password?</a>
+            <br />
+            <a href="http://github.com/FIRST-4030/Scout" target="_blank"><b>Open Source: </b>view source code</a>
             <div id="resetPane">
                 Name: <input type="text" id="name" /><br />
                 Email: <input type="email" id="email" /><br />
@@ -61,8 +67,9 @@ if (isset($_SESSION['UserID'])) {
                 Team Number: <input type="number" id="team_number" /><br />
                 New Password: <input type="password" id="new_password" /><br />
                 <button id="resetSubmit" onclick="resetPass();" class="btn">Submit</button>
+                <br />
             </div>
-            <br /><br />
+            <br />
         </div>
         <script type="text/javascript">
             $(document).ready(function() {
@@ -98,8 +105,10 @@ if (isset($_SESSION['UserID'])) {
                     var invisibleForm = document.getElementById('sendForm');
                     invisibleForm.innerHTML += "<input type='text' name='team_id' value='" + $('#teamID').val() + "'</input>";
                     invisibleForm.innerHTML += "<input type='text' name='user_id' value='" + $('#userID').val() + "'></input>";
+                    invisibleForm.innerHTML += "<input type='text' name='location' value='" + $('#location').val() + "'></input>";
                     invisibleForm.innerHTML += "<input type='password' name='team_password' value='" + $('#teamPassword').val() + "'></input>";
                     invisibleForm.submit();
+
                 } else {
                     document.getElementById('alertError').innerHTML = errors;
                     $("#inputError").show();
@@ -133,6 +142,7 @@ if (isset($_SESSION['UserID'])) {
             }
 
             function submitFeedback() {
+                $("#submit_feedback").button('loading');
                 if (window.XMLHttpRequest) {
                     xmlHttp = new XMLHttpRequest();
                 }
@@ -141,8 +151,10 @@ if (isset($_SESSION['UserID'])) {
                     if (xmlHttp.readyState === 4 && xmlHttp.status === 200) {
                         $('#alertError').html(xmlHttp.responseText);
                         $('#inputError').show();
+                        $("#submit_feedback").button('reset');
                         if (xmlHttp.responseText === "Submitted successfully!") {
                             $("#reportError").hide();
+                            $("#errorSubmit").html("");
                         }
                     }
                 };
@@ -151,7 +163,7 @@ if (isset($_SESSION['UserID'])) {
                 xmlHttp.open("POST", "includes/reporterror.php", true);
                 xmlHttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
                 xmlHttp.send(sendData);
-            }
+            }    
         </script>
         <form id="sendForm" action="/login.php" class="invisible_form" method="post"></form>
     </body>

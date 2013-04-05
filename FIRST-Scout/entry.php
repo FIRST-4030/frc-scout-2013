@@ -40,6 +40,7 @@ if (isset($_POST['prematch_team_number'])) {
     $_SESSION['scouted_team'] = $scoutedTeamNumber;
     $present = ($_POST['prematch_team_present'] == "true" ? 1 : 0);
     $alliance = ($_POST['prematch_red_alliance'] == "true" ? 'RED' : 'BLUE');
+    setcookie("alliance", $alliance);
     $teamID = $_SESSION['TeamID'];
     # Save the data
     try {

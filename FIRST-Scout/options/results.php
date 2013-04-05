@@ -19,7 +19,7 @@ $teamNumber = $_SESSION['TeamNumber'];
         <div class="results_container">
             <p class="title" id="title">Results collected by all teams</input></p>
             <button class="btn btn-success" onclick="history.go(-1);" style="width: 200px">&larr;&nbsp;Go Back</button><br />
-            <div class="btn-group" data-toggle="buttons-radio" style="margin-top: 10px; margin-bottom: 10px">
+            <div id="singleTeam" class="btn-group" data-toggle="buttons-radio" style="margin-top: 10px; margin-bottom: 10px">
                 <button class="btn active" value="false" onclick="updateTeams(false, $('#search').val());">All Teams</button>
 
 
@@ -32,7 +32,7 @@ $teamNumber = $_SESSION['TeamNumber'];
                         <th id="delete">Delete</th>
                         <th>Team</th>
                         <th>Date</th>
-                        <th id="scoutName">Scout name</th>
+                        <th>Scout name</th>
                         <th>Scouted by team</th>
                         <th>Present</th>
                         <th>Dead Robot</th>
@@ -48,14 +48,13 @@ $teamNumber = $_SESSION['TeamNumber'];
                         <th>Teleop Points</th>
                         <th>Teleop Accuracy</th>
                         <th>Shooting Range</th>
-                        <th>Speed (1-4)</th>
-                        <th>Maneuverability (1-4)</th>
-                        <th>Climb Attempts</th>
+                        <th>Speed (1-3)</th>
+                        <!--<th>Climb Attempts</th>-->
                         <th>Level Reached</th>
                         <th>Pyramid Goals</th>
                         <th>Style</th>
                         <th>Match Outcome</th>
-                        <th>Fouls</th>
+                        <!--<th>Fouls</th>-->
                         <th>Technical Fouls</th>
                         <th>Comments</th>
                     </tr>
@@ -67,8 +66,8 @@ $teamNumber = $_SESSION['TeamNumber'];
         </div>
         <script type="text/javascript">
                 $(document).ready(function() {
-                    updateTeams(false, "");
                     $("#resultTable").tablesorter();
+                    updateTeams(false, "");
                 });
 
                 function updateTeams(onlyTeam, search) {
@@ -77,11 +76,11 @@ $teamNumber = $_SESSION['TeamNumber'];
                     if (onlyTeam) {
                         document.getElementById('title').innerHTML = "Results collected by team <? echo $teamNumber ?>";
                         $("#delete").show();
-                        $("#scoutName").show();
+                        //$("#scoutName").show();
                     } else {
                         document.getElementById('title').innerHTML = "Results collected by all teams";
                         $("#delete").hide();
-                        $("#scoutName").hide();
+                        //$("#scoutName").hide();
                     }
 
                     if (window.XMLHttpRequest) {
@@ -109,7 +108,7 @@ $teamNumber = $_SESSION['TeamNumber'];
                         xmlHttp.onreadystatechange = function() {
                             if (xmlHttp.readyState === 4 && xmlHttp.status === 200) {
                                 alert(xmlHttp.responseText);
-                                updateTeams(false, $('#search').val());
+                                updateTeams($("#singleTeam .active").val(), $('#search').val());
                             }
                         };
                         xmlHttp.open("POST", "delete.php", true);

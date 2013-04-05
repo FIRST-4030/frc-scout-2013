@@ -16,9 +16,11 @@
             <input id="location" onblur="if (this.value === '')
                             this.value = 'Location';" onfocus="if (this.value === 'Location')
                             this.value = '';" name="location" type="text" style="margin-bottom: 2px; margin-top: 5px; width: 215px" value="Seattle" /><br />
-            Team  &nbsp;|&nbsp;  Match <br /><input id="teamNumber" onblur="if (this.value === '')
+            Scouted Team Number: <br />
+            <input id="teamNumber" onblur="if (this.value === '')
                             this.value = 'Team Number';" onfocus="if (this.value === 'Team Number')
-                            this.value = '';"  type="number" style="width: 100px"/>
+                            this.value = '';"  type="number" style="width: 100px"/><br />
+            Match Time (format: 0900 for 9:00AM) <br />
             <input id="matchNumber" onblur="if (this.value === '')
                             this.value = 'Match Number';" onfocus="if (this.value === 'Match Number')
                             this.value = '';"  type="number" style="width: 100px"/>  
@@ -68,7 +70,7 @@
                             errors += "<br />&bull; Enter a team number.";
                         }
                         if ($("#matchNumber").val() === "") {
-                            errors += "<br />&bull; Enter a match number.";
+                            errors += "<br />&bull; Enter a match time.";
                         } else {
                             return true;
                         }

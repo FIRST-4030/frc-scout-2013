@@ -11,6 +11,8 @@
         <link href="../css/style.css" rel="stylesheet" type="text/css">
         <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>        
         <script type="text/javascript" src="../bootstrap/js/bootstrap.min.js"></script>
+        <? include 'includes/borders.php'; ?>
+
     </head>
     <body>
         <div class="container">
@@ -37,6 +39,7 @@
             <button class="btn btn-large" style="margin-bottom: 10px" onclick="sendData();
                     ;">Finish &rarr;</button>
             <br />
+
         </div>
         <script type="text/javascript">
                 $(document).ready(function() {
@@ -78,9 +81,8 @@
                     invisibleForm.innerHTML += "<input type='number' name='results_match_outcome' value='" + loseWinTie + "'</input>";
                     invisibleForm.innerHTML += "<input type='number' name='results_fouls' value='" + fouls + "'</input>";
                     invisibleForm.innerHTML += "<input type='number' name='results_technical_fouls' value='" + technicalFouls + "'</input>";
-                    +"'</input>";
                     invisibleForm.innerHTML += "<input type='text' name='results_dead_robot' value='" + deadRobot + "'></input>";
-                    invisibleForm.innerHTML += "<input type='text' name='results_comments' value='" + $("#comments").val() + "'</input>";
+                    invisibleForm.innerHTML += "<textarea name='results_comments'>" + $("#comments").val() + "</textarea>";
                     invisibleForm.submit();
                 }
         </script>
