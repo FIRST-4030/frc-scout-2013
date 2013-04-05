@@ -57,13 +57,13 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
     $autonomousPoints = $row['auto_top'] * 6 + $row['auto_middle'] * 4 + $row['auto_bottom'] * 2;
     $autonomousGoals = $row['auto_top'] + $row['auto_middle'] + $row['auto_bottom'];
     $autonomousAccuracy = $autonomousGoals / ($autonomousGoals + $row['auto_miss']) * 100;
-    $teleopPoints = $row['teleop_top'] * 3 + $row['teleop_middle'] * 2 + $row['teleop_bottom'] * 1;
-    $teleopGoals = $row['teleop_top'] + $row['teleop_middle'] + $row['teleop_bottom'];
+    $teleopPoints = $row['teleop_top'] * 3 + $row['teleop_middle'] * 2 + $row['teleop_bottom'] * 1 + $row['teleop_pyramid'] * 5;
+    $teleopGoals = $row['teleop_top'] + $row['teleop_middle'] + $row['teleop_bottom'] + $row['teleop_pyramid'];
     $teleopAccuracy = $teleopGoals / ($teleopGoals + $row['teleop_miss']) * 100;
 
     echo '<tr>';
     if ($onlyTeam) {
-        echo "<td><a onfocus='this.innerHTML = &timesb;' onblur='this.innerHTML=&times;' onclick='deleteTeam($matchID)' style='font-size:24px'>&times;</a>";
+        echo "<td><a onfocus='this.innerHTML = &timesb;' href='#' onblur='this.innerHTML=&times;' onclick='deleteTeam($matchID)' style='font-size:24px'>&times;</a>";
     }
     echo '<td><a href=single-match-review.php?redir&match=' . $row['uid'] . ">" . $row['scouted_team_number'] . '</a></td>';
     echo '<td>' . substr($row['ts'], 0, 10) . '</td>';
@@ -79,7 +79,7 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
     echo '<td>' . $row['location'] . '</td>';
     echo '<td>' . $row['match_number'] . '</td>';
     echo '<td>' . ($autonomousPoints + $teleopPoints) . '</td>';
-    echo '<td>' . ($autonomousGoals + $teleopGoals) . '</td>';
+    echo '<td>' . (($autonomousGoals + $teleopGoals) + ($row['climb_level_reached'] * 10)) . '</td>';
     echo '<td>' . $autonomousPoints . '</td>';
 
     echo '<td>' . number_format($autonomousAccuracy, 1) . "%</td>";

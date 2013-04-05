@@ -14,11 +14,18 @@ if (!isset($_SESSION['TeamID'])) {
         } else {
             header('location: options?error=' . urlencode("You must first select a team to navigate to this page!"));
         }
+
+        if (isset($_GET['location'])) {
+            $location = $_GET['location'];
+        }
         ?>
     </head>
     <body>
         <div class="container">
-            <p class="title">Averages for team <? echo $teamNumber ?></p>
+            <p class="title">Averages for team <? echo $teamNumber;
+        if (isset($location)) {
+            echo " in $location";
+        } ?></p>
             <button class="btn btn-success" onclick="history.go(-1);" style="width: 200px">&larr;&nbsp;Go Back</button><br />
 
             <?
@@ -33,15 +40,25 @@ if (!isset($_SESSION['TeamID'])) {
             AVG((`climb_level_reached`) * 10) AS "pyramid_average_climb_points",
             COUNT(`scouted_team_number`) AS "matches_scouted"
             FROM  `scout_recording`
-            WHERE `scouted_team_number`=' . $teamNumber . ' AND `results_match_outcome` != 3';
+            WHERE `scouted_team_number`=? AND `results_match_outcome` != 3';
 
-            $db = mysqli_connect("localhost", DB_USER, DB_PASSWD, "stevenz9_robotics_scout");
-            if (mysqli_connect_errno()) {
-                echo('Failed to connect to database: ' . mysqli_connect_error());
+            $params = array($teamNumber);
+            if (strlen($location)) {
+                $locationParam = "%" . $location . "%";
+                $query .= " AND location LIKE ?";
+                array_push($params, $locationParam);
             }
 
-            $getResults = mysqli_query($db, $query);
-            $results = mysqli_fetch_assoc($getResults);
+            try {
+                $db = new PDO(DSN, DB_USER, DB_PASSWD);
+                $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            } catch (PDOException $ex) {
+                die("Unable to connect to DB\n " . $ex->getMessage());
+            }
+            $stmt = $db->prepare($query);
+            $stmt->execute($params);
+
+            $results = $stmt->fetch(PDO::FETCH_ASSOC);
 
             $totalAveragePoints = $results['auto_average_points'] + $results['teleop_average_points'] + $results['pyramid_average_points'] + $results['pyramid_average_climb_points'];
             ?>

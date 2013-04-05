@@ -19,7 +19,7 @@ $teamNumber = $_SESSION['TeamNumber'];
         <div class="results_container">
             <p class="title" id="title">Results collected by all teams</input></p>
             <button class="btn btn-success" onclick="history.go(-1);" style="width: 200px">&larr;&nbsp;Go Back</button><br />
-            <div class="btn-group" data-toggle="buttons-radio" style="margin-top: 10px; margin-bottom: 10px">
+            <div id="singleTeam" class="btn-group" data-toggle="buttons-radio" style="margin-top: 10px; margin-bottom: 10px">
                 <button class="btn active" value="false" onclick="updateTeams(false, $('#search').val());">All Teams</button>
 
 
@@ -90,7 +90,6 @@ $teamNumber = $_SESSION['TeamNumber'];
                     xmlHttp.onreadystatechange = function() {
                         if (xmlHttp.readyState === 4 && xmlHttp.status === 200) {
                             tableBody.innerHTML = xmlHttp.responseText;
-                            $("#resultTable").tablesorter();
                             $("#resultTable").trigger("update");
                         }
                     };
@@ -109,7 +108,7 @@ $teamNumber = $_SESSION['TeamNumber'];
                         xmlHttp.onreadystatechange = function() {
                             if (xmlHttp.readyState === 4 && xmlHttp.status === 200) {
                                 alert(xmlHttp.responseText);
-                                updateTeams(false, $('#search').val());
+                                updateTeams($("#singleTeam .active").val(), $('#search').val());
                             }
                         };
                         xmlHttp.open("POST", "delete.php", true);

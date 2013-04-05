@@ -39,6 +39,7 @@ if (!isset($_SESSION['UserID'])) {
                         });
                     }
 
+                    var lastPage = false;
                     function processResponse(response, textStatus) {
                         console.log(response);
                         var responseData = JSON.parse(response);
@@ -54,7 +55,7 @@ if (!isset($_SESSION['UserID'])) {
                         } else {
                             console.log("Next page: " + responseData[0]);
                             if (responseData[0] === "FINISHED") {
-                                var lastPage = true;
+                                lastPage = true;
                                 window.location = "../options/single-match-review.php";
                             } else {
                                 nextPage(responseData[0]);
@@ -64,7 +65,7 @@ if (!isset($_SESSION['UserID'])) {
 
                     $(window).bind('beforeunload', function() {
                         if (!lastPage) {
-                            return 'You have unsaved data on this page. I would recommend against leaving yet.';
+                            return 'You have not yet saved your match recording! I would recommend that you not close the page yet.';
                         }
                     });
 

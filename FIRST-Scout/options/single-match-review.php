@@ -47,7 +47,11 @@
                 </thead>
                 <tbody>
                     <?
+                    $autonomousPoints = $matchInfo['auto_top'] * 6 + $matchInfo['auto_middle'] * 4 + $matchInfo['auto_bottom'] * 2;
+                    $teleopPoints = $matchInfo['teleop_top'] * 3 + $matchInfo['teleop_middle'] * 2 + $matchInfo['teleop_bottom'] * 1 + $matchInfo['teleop_pyramid'] * 5;
+
                     echo '<tr><td>Timestamp</td><td>' . $matchInfo['ts'] . '</td></tr>';
+                    echo '<tr><td>Total Points:</td><td>' . ($teleopPoints + $autonomousPoints + ($matchInfo['climb_level_reached'] * 10)) . '</td>';
                     echo '<tr><td>Scout</td><td id="user_id">' . $matchInfo['user_id'] . '</td></tr>';
                     $present = $matchInfo['present'] == 1 ? "Yes" : "No";
                     echo '<tr><td>Present</td><td id="present">' . $present . '</td></tr>';

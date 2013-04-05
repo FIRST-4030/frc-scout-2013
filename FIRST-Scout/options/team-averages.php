@@ -25,7 +25,11 @@ and open the template in the editor.
         <div class='container'>
             <p class='title'>Team Averages</p>
             <button class="btn btn-success" onclick="history.go(-1);" style="width: 200px">&larr;&nbsp;Go Back</button><br />
-            <span style="margin-left: 5px;">Narrow by team: &nbsp;</span><input type="text" onkeyup="updateTeams($('#search').val());" style="margin-top: 8px; margin-left: 2px; width: 60px;" id="search">
+            <span style="margin-left: 5px;">Narrow by team: &nbsp;</span><input type="text" onkeyup="update($('#team').val(), $('#citySelector').val());" style="margin-top: 8px; margin-left: 2px; width: 60px;" id="team">
+            <!--span style="margin-left: 5px;">or by location: &nbsp;</span><input type="text" onkeyup="update($('#team').val(), $('#location').val());" style="margin-top: 8px; margin-left: 2px; width: 60px;" id="location">-->
+            <span> &nbsp;and/or city:&nbsp; </span>
+            <select onchange="update($('#team').val(), $('#citySelector').val());" style="width: 140px; margin-top: 5px" id="citySelector"></select>
+
 
             <table class='tablesorter table-hover' id='resultsTable'>
                 <caption style="display: none">Team Averages</caption>
@@ -47,12 +51,12 @@ and open the template in the editor.
         </div>
         <script type='text/javascript'>
                 $(document).ready(function() {
-                    updateTeams('');
+                    update('', '');
                     $("#resultsTable").tablesorter();
-                    //$("#resultsTable").visualize();
+                    getLocations();
                 });
 
-                function updateTeams(search) {
+                function updateTeams(team) {
                     if (window.XMLHttpRequest) {
                         xmlHttp = new XMLHttpRequest();
                     }
@@ -70,6 +74,39 @@ and open the template in the editor.
                     xmlHttp.open("POST", "get-team-averages.php", true);
                     xmlHttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
                     xmlHttp.send(sendData);
+                }
+
+                function update(team, location) {
+                    if(location === "All") {
+                        location = "";
+                    }
+                    $("#tableBody").html("Loading...");
+                    $.ajax({
+                        url: 'get-team-averages.php',
+                        type: "POST",
+                        data: {'team': team,
+                            'location': location},
+                        success: function(response, textStatus, jqXHR) {
+                            $("#tableBody").html(response);
+                            $("#resultsTable").trigger("update");
+                        }
+                    });
+                }
+
+                function getLocations() {
+                    $.ajax({
+                        url: '../includes/get-location.php',
+                        type: 'POST',
+                        success: function(response, textStatus, jqXHR) {
+                            var locations = JSON.parse(response);
+                            console.log(locations);
+                            $("#citySelector").html("");
+                            for (var i = 0; i < locations.length; i++) {
+                                $("#citySelector").append('<option>' + locations[i] + '</option>');
+                                console.log(locations[i]);
+                            }
+                        }
+                    });
                 }
         </script>
     </body>
