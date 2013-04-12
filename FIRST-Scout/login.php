@@ -1,5 +1,10 @@
 <?php
 
+# Do not accept or generate URL-based session IDs
+# TODO: Set this globally (via apache config in .htaccess files)
+ini_set('session.use_only_cookies', true);
+ini_set('session.use_trans_sid', false);
+
 session_start();
 if (isset($_GET['intent']) && $_GET['intent'] == "logout") {
     unset($_SESSION['TeamNumber']);
@@ -34,12 +39,20 @@ if (isset($_POST['team_id'])) {
 
     $team_number = NULL;
     if (key_exists('team_number', $teams)) {
-        $team_number = $teams['team_number'];
         # Login success
-        $_SESSION['TeamNumber'] = $team_number;
+        $_SESSION['TeamNumber'] = $teams['team_number'];
         $_SESSION['UserID'] = $userID;
         $_SESSION['TeamID'] = $teamID;
+
+	# TODO: This is not secure.
+	# We should at least validate that $location exists in our list of locations.
+	# We should probably also validate that it's happening around the current time.
         $_SESSION['Location'] = $location;
+
+	# Regenerate the session ID to avoid session fixation
+	session_regenerate_id();
+
+	# Redirect to the post-login page
         header('location: options');
     } else {
         unset($_SESSION['TeamNumber']);
