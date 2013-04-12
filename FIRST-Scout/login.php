@@ -40,6 +40,11 @@ if (isset($_POST['team_id'])) {
     $team_number = NULL;
     if (key_exists('team_number', $teams)) {
         # Login success
+
+	# Regenerate the session ID to avoid session fixation
+	session_regenerate_id();
+
+	# Store the team/user data. $userID is not validated. $teamID was verified via auth query.
         $_SESSION['TeamNumber'] = $teams['team_number'];
         $_SESSION['UserID'] = $userID;
         $_SESSION['TeamID'] = $teamID;
@@ -48,9 +53,6 @@ if (isset($_POST['team_id'])) {
 	# We should at least validate that $location exists in our list of locations.
 	# We should probably also validate that it's happening around the current time.
         $_SESSION['Location'] = $location;
-
-	# Regenerate the session ID to avoid session fixation
-	session_regenerate_id();
 
 	# Redirect to the post-login page
         header('location: options');
