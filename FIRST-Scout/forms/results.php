@@ -7,10 +7,10 @@
         <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
 
         <!-- These work! -->
-        <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <link href="../bootstrap2/css/bootstrap.min.css" rel="stylesheet" type="text/css">
         <link href="../css/style.css" rel="stylesheet" type="text/css">
         <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>        
-        <script type="text/javascript" src="../bootstrap/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="../bootstrap2/js/bootstrap.min.js"></script>
         <? include 'includes/borders.php'; ?>
 
     </head>
